@@ -4,19 +4,27 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <h2 className="section-title">Get in Touch</h2>
         <div className="contact-content">
+          <h2 className="contact-title">Let's build something together</h2>
           <p className="contact-intro">
-            Available for consulting, contract work, and collaboration opportunities.
-            Feel free to reach out to discuss your project.
+            Whether you're looking to modernize your stack, build a new product, or scale your team—we're here to help.
           </p>
-          <div className="contact-methods">
+          <div className="contact-cta">
+            <a href="mailto:antonio.bunicic@gmail.com" className="btn btn-primary btn-large">
+              Start a Conversation
+            </a>
+          </div>
+          <div className="contact-info">
             <div className="contact-item">
-              <h3>Email</h3>
+              <span className="contact-label">Email</span>
               <a href="mailto:antonio.bunicic@gmail.com">antonio.bunicic@gmail.com</a>
             </div>
             <div className="contact-item">
-              <h3>LinkedIn</h3>
+              <span className="contact-label">Location</span>
+              <span>Zagreb, Croatia</span>
+            </div>
+            <div className="contact-item">
+              <span className="contact-label">LinkedIn</span>
               <a
                 href="https://linkedin.com/in/b-antonio"
                 target="_blank"
@@ -24,11 +32,6 @@ function Contact() {
               >
                 linkedin.com/in/b-antonio
               </a>
-            </div>
-            <div className="contact-item">
-              <h3>Location</h3>
-              <p>Zagreb, Croatia</p>
-              <p className="contact-note">Remote-first, international teams</p>
             </div>
           </div>
         </div>

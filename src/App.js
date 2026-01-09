@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Hero from './components/Hero';
 import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Education from './components/Education';
+import Services from './components/Services';
+import Approach from './components/Approach';
 import Contact from './components/Contact';
+import logo from './assets/logo.svg';
 
 function App() {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'experience', 'education', 'contact'];
+      const sections = ['hero', 'about', 'services', 'approach', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -43,16 +43,10 @@ function App() {
     <div className="App">
       <nav className="nav">
         <div className="nav-container">
-          <div className="nav-logo">Antonio Buničić</div>
+          <div className="nav-logo">
+            <img src={logo} alt="Vreva" />
+          </div>
           <ul className="nav-menu">
-            <li>
-              <button
-                className={activeSection === 'hero' ? 'active' : ''}
-                onClick={() => scrollToSection('hero')}
-              >
-                Home
-              </button>
-            </li>
             <li>
               <button
                 className={activeSection === 'about' ? 'active' : ''}
@@ -63,26 +57,18 @@ function App() {
             </li>
             <li>
               <button
-                className={activeSection === 'skills' ? 'active' : ''}
-                onClick={() => scrollToSection('skills')}
+                className={activeSection === 'services' ? 'active' : ''}
+                onClick={() => scrollToSection('services')}
               >
-                Skills
+                Services
               </button>
             </li>
             <li>
               <button
-                className={activeSection === 'experience' ? 'active' : ''}
-                onClick={() => scrollToSection('experience')}
+                className={activeSection === 'approach' ? 'active' : ''}
+                onClick={() => scrollToSection('approach')}
               >
-                Experience
-              </button>
-            </li>
-            <li>
-              <button
-                className={activeSection === 'education' ? 'active' : ''}
-                onClick={() => scrollToSection('education')}
-              >
-                Education
+                Approach
               </button>
             </li>
             <li>
@@ -100,14 +86,13 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Skills />
-        <Experience />
-        <Education />
+        <Services />
+        <Approach />
         <Contact />
       </main>
 
       <footer className="footer">
-        <p>&copy; 2026 Antonio Buničić. All rights reserved.</p>
+        <p>&copy; 2026 Vreva. All rights reserved.</p>
       </footer>
     </div>
   );
