@@ -18,6 +18,14 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+[data-theme='light'] {
+  --color-dark: #E6E1D5;
+  --color-darker: #EDEDED;
+  --color-text: #222222;
+  --color-text-muted: #8c8c8c;
+  --color-border: #e0e0e0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -43,7 +51,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(21, 19, 19, 0.8);
+  background: rgba(10, 10, 10, 0.8);
   backdrop-filter: blur(20px);
   z-index: 1000;
   border-bottom: 1px solid var(--color-border);
@@ -56,14 +64,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--color-text);
-  text-transform: uppercase;
 }
 
 .nav-logo img {
@@ -98,7 +98,72 @@ body {
 
 .nav-menu button.active {
   color: var(--color-accent);
-  background: rgba(220, 51, 83, 0.1);
+  background: rgba(255, 204, 51, 0.1);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.theme-icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease-in-out;
+}
+
+.sun-icon {
+  color: var(--color-text);
+  opacity: 0;
+}
+
+.moon-icon {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.theme-icon.dark .sun-icon {
+  transform: rotate(180deg) scale(1);
+  opacity: 1;
+}
+
+.theme-icon.dark .moon-icon {
+  transform: rotate(90deg) scale(0);
+  opacity: 0;
+}
+
+.theme-icon.light .sun-icon {
+  transform: rotate(-90deg) scale(0);
+  opacity: 0;
+}
+
+.theme-icon.light .moon-icon {
+  transform: scale(1);
+  opacity: 1;
 }
 
 /* Main Content */
@@ -170,23 +235,16 @@ section {
   z-index: 1;
 }
 
-.hero-brand {
-  font-size: 2rem;
-  color: var(--color-accent);
-  margin-bottom: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
-}
-
 .hero-dots {
   width: auto;
   height: 6rem;
   margin: 2rem auto 2rem;
   display: block;
   opacity: 0.8;
+}
+
+[data-theme='light'] .hero-dots {
+  filter: invert(1) brightness(0);
 }
 
 .hero-description {
@@ -247,11 +305,6 @@ section {
   transform: translateY(-2px);
 }
 
-.btn-large {
-  padding: 1.25rem 3rem;
-  font-size: 1.1rem;
-}
-
 /* About Section */
 .about {
   background: var(--color-darker);
@@ -305,7 +358,7 @@ section {
 .stat-number {
   font-size: 3rem;
   font-weight: 900;
-  color: var(--color-accent);
+  color: var(--color-secondary);
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
@@ -468,7 +521,7 @@ section {
   width: 60px;
   height: 60px;
   background: var(--color-accent);
-  color: white;
+  color: #000;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -618,24 +671,43 @@ section {
 
   .nav-container {
     padding: 0.75rem 1rem;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.75rem;
+    justify-content: space-between;
   }
 
-  .nav-logo img {
-    height: 24px;
+  .nav-logo {
+    order: 1;
+  }
+
+  .theme-toggle {
+    order: 2;
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
+  }
+
+  .theme-icon {
+    width: 20px;
+    height: 20px;
   }
 
   .nav-menu {
+    order: 3;
     flex-wrap: nowrap;
     justify-content: center;
     gap: 0;
     width: 100%;
   }
 
+  .nav-logo img {
+    height: 24px;
+  }
+
   .nav-menu button {
-    font-size: 0.8rem;
-    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.85rem;
   }
 
   section {
@@ -678,17 +750,24 @@ section {
     height: 20px;
   }
 
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    padding: 0.4rem;
+  }
+
+  .theme-icon {
+    width: 18px;
+    height: 18px;
+  }
+
   .nav-menu button {
-    font-size: 0.7rem;
-    padding: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.65rem;
   }
 
   .hero-title {
     font-size: 2rem;
-  }
-
-  .hero-brand {
-    font-size: 1.5rem;
   }
 
   .hero-dots {

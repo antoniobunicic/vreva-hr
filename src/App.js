@@ -5,10 +5,28 @@ import About from './components/About';
 import Services from './components/Services';
 import Approach from './components/Approach';
 import Contact from './components/Contact';
+import ThemeToggle from './components/ThemeToggle';
 import logo from './assets/logo.svg';
 
 function App() {
   const [activeSection, setActiveSection] = useState('');
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+    }
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,6 +98,7 @@ function App() {
               </button>
             </li>
           </ul>
+          <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleTheme} />
         </div>
       </nav>
 
