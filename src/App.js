@@ -11,6 +11,7 @@ import logo from './assets/logo.svg';
 function App() {
   const [activeSection, setActiveSection] = useState('');
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -54,7 +55,12 @@ function App() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
     }
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -64,41 +70,50 @@ function App() {
           <div className="nav-logo">
             <img src={logo} alt="Vreva" />
           </div>
-          <ul className="nav-menu">
-            <li>
-              <button
-                className={activeSection === 'about' ? 'active' : ''}
-                onClick={() => scrollToSection('about')}
-              >
-                About
-              </button>
-            </li>
-            <li>
-              <button
-                className={activeSection === 'services' ? 'active' : ''}
-                onClick={() => scrollToSection('services')}
-              >
-                Services
-              </button>
-            </li>
-            <li>
-              <button
-                className={activeSection === 'approach' ? 'active' : ''}
-                onClick={() => scrollToSection('approach')}
-              >
-                Approach
-              </button>
-            </li>
-            <li>
-              <button
-                className={activeSection === 'contact' ? 'active' : ''}
-                onClick={() => scrollToSection('contact')}
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
-          <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleTheme} />
+          <div className="nav-right">
+            <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+              <li>
+                <button
+                  className={activeSection === 'about' ? 'active' : ''}
+                  onClick={() => scrollToSection('about')}
+                >
+                  About
+                </button>
+              </li>
+              <li>
+                <button
+                  className={activeSection === 'services' ? 'active' : ''}
+                  onClick={() => scrollToSection('services')}
+                >
+                  Services
+                </button>
+              </li>
+              <li>
+                <button
+                  className={activeSection === 'approach' ? 'active' : ''}
+                  onClick={() => scrollToSection('approach')}
+                >
+                  Approach
+                </button>
+              </li>
+              <li>
+                <button
+                  className={activeSection === 'contact' ? 'active' : ''}
+                  onClick={() => scrollToSection('contact')}
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+            <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleTheme} />
+            <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
+              <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
         </div>
       </nav>
 
