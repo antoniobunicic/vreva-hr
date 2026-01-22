@@ -1,6 +1,6 @@
 {
   "section": {
-    "title": "Naš Pristup"
+    "title": "Naš pristup"
   },
   "intro": "Izgrađeno na gotovo desetljeću iskustva kroz međunarodne timove i raznolike projekte. Radili smo s energetskom tehnologijom u Amsterdamu, industrijskim sustavima u Zagrebu i startupovima u inkubatorima. Ova širina nam daje perspektivu o tome što funkcionira.",
   "principles": {
@@ -11,12 +11,12 @@
         "description": "Radimo zajedno s vašim timom, ne izolirano. Redovita komunikacija i usklađenost osiguravaju da uvijek gradimo ono što je važno."
       },
       "detailOriented": {
-        "title": "Orijentirano na Detalje",
+        "title": "Orijentirano na detalje",
         "description": "Kvaliteta je u detaljima. Od pregleda koda do dokumentacije, održavamo visoke standarde u svakom aspektu razvoja."
       },
       "pragmatic": {
         "title": "Pragmatično",
-        "description": "Biramo tehnologije i uzorke koji rješavaju stvarne probleme. Bez pretjeranog inženjeringa, bez razvoja vođenog hypeom."
+        "description": "Biramo tehnologije i uzorke koji rješavaju stvarne probleme. Bez nepotrebnog, bez hypeoa."
       },
       "maintainable": {
         "title": "Održivo",

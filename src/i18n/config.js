@@ -6,6 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import commonEN from './locales/en/common.json';
 import heroEN from './locales/en/hero.json';
 import aboutEN from './locales/en/about.json';
+import projectsEN from './locales/en/projects.json';
 import servicesEN from './locales/en/services.json';
 import approachEN from './locales/en/approach.json';
 import contactEN from './locales/en/contact.json';
@@ -14,6 +15,7 @@ import contactEN from './locales/en/contact.json';
 import commonHR from './locales/hr/common.json';
 import heroHR from './locales/hr/hero.json';
 import aboutHR from './locales/hr/about.json';
+import projectsHR from './locales/hr/projects.json';
 import servicesHR from './locales/hr/services.json';
 import approachHR from './locales/hr/approach.json';
 import contactHR from './locales/hr/contact.json';
@@ -23,6 +25,7 @@ const resources = {
     common: commonEN,
     hero: heroEN,
     about: aboutEN,
+    projects: projectsEN,
     services: servicesEN,
     approach: approachEN,
     contact: contactEN
@@ -31,6 +34,7 @@ const resources = {
     common: commonHR,
     hero: heroHR,
     about: aboutHR,
+    projects: projectsHR,
     services: servicesHR,
     approach: approachHR,
     contact: contactHR

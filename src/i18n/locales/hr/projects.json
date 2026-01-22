@@ -1,0 +1,37 @@
+{
+  "section": {
+    "title": "Projekti"
+  },
+  "cards": {
+    "flexportal": {
+      "title": "FlexPortal",
+      "description": "Web portal razvijen koristeći TypeScript i React.js. Uključuje upravljanje korisnicima i klijentima, white-labeling, praćenje resursa, postavke i izvještavanje.",
+      "tags": ["React", "TypeScript", "Material UI", "Kotlin", "AWS"]
+    },
+    "timetable": {
+      "title": "Sustav za upravljanje podacima u javnom prijevozu",
+      "description": "Sustav za import i upravljanje voznim redovima javnog prijevoza u VDV 452 i NeTEx standardima. Uključuje planiranje autobusnih ruta, obilaznica i najava. Podržava napredne značajke kao što su kontrola semafora na križanjima.",
+      "tags": ["Java", "Microservices", "Kafka", "PostgreSQL", "Kubernetes"]
+    },
+    "angler": {
+      "title": "Angler",
+      "description": "Android aplikacija koja koristi računalni vid za rješavanje geometrijskih problema putem skeniranja pametnim telefonom. Pobjednik App Start Contesta 2016.",
+      "tags": ["Android", "Java", "Computer Vision", "OpenCV"]
+    },
+    "bonfon": {
+      "title": "Bonfon",
+      "description": "Android aplikacija za praćenje i pomoć u terapiji govora djece. Osmišljena primarno za tablete, služi za korekciju poremećaja artikulacije kroz različite vježbe. Rad o razvoju aplikacije nagrađen je Rektorovom nagradom.",
+      "tags": ["Android", "Java"]
+    },
+    "thesis": {
+      "title": "Distribuirani mehanizam za senzorske mreže",
+      "description": "Projekt koji analizira različite aspekte distribuirane obrade kompleksnih zahtjeva u senzorskim mrežama. Predloženi mehanizam inspiriran fog computingom i aukcijskim algoritmima.",
+      "tags": ["IoT", "Fog Computing", "Algorithms"]
+    },
+    "smarthome": {
+      "title": "Smart Home aplikacije",
+      "description": "IoT okruženja s pripadajućim Android aplikacijama za kontrolu pametnih kućnih uređaja i praćenje senzora u stvarnom vremenu s intuitivnom vizualizacijom podataka.",
+      "tags": ["Android", "Java", "IoT"]
+    }
+  }
+}

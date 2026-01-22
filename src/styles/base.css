@@ -19,7 +19,7 @@
 }
 
 [data-theme='light'] {
-  --color-background1: #EDEDED;
+  --color-background1: #F6F6F6FF;
   --color-background2: #e7e4dd;
   --color-text: #222222;
   --color-text-muted: #8c8c8c;

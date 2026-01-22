@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './styles/index.css';
 import Hero from './components/Hero';
 import About from './components/About';
+import Projects from './components/Projects';
 import Services from './components/Services';
 import Approach from './components/Approach';
 import Contact from './components/Contact';
@@ -34,7 +35,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'services', 'approach', 'contact'];
+      const sections = ['hero', 'about', 'projects', 'services', 'approach', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -85,6 +86,14 @@ function App() {
               </li>
               <li>
                 <button
+                  className={activeSection === 'projects' ? 'active' : ''}
+                  onClick={() => scrollToSection('projects')}
+                >
+                  {t('nav.projects')}
+                </button>
+              </li>
+              <li>
+                <button
                   className={activeSection === 'services' ? 'active' : ''}
                   onClick={() => scrollToSection('services')}
                 >
@@ -124,6 +133,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Projects />
         <Services />
         <Approach />
         <Contact />

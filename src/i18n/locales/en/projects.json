@@ -1,0 +1,37 @@
+{
+  "section": {
+    "title": "Projects"
+  },
+  "cards": {
+    "flexportal": {
+      "title": "FlexPortal",
+      "description": "Web portal built using TypeScript and React.js. Features include user and customer management, white-labeling, resource activation tracking, settings, and reporting.",
+      "tags": ["React", "TypeScript", "Material UI"]
+    },
+    "timetable": {
+      "title": "Timetable Management System for public transport",
+      "description": "Cloud-based system for importing and managing public transport timetables using VDV 452 and NeTEx standards. Includes routing, detours, announcements, and traffic light control.",
+      "tags": ["Java", "Microservices", "Kafka", "PostgreSQL"]
+    },
+    "angler": {
+      "title": "Angler",
+      "description": "Android app using computer vision to solve geometry problems via smartphone scanning. Winner of App Start Contest 2016, Croatia's largest student startup competition.",
+      "tags": ["Android", "Computer Vision", "OpenCV"]
+    },
+    "bonfon": {
+      "title": "Bonfon",
+      "description": "Android application for monitoring and assisting child speech and language therapy. Designed primarily for tablets, it helps correct articulation disorders through various exercises. Rector's Award winner.",
+      "tags": ["Android", "Education", "Rector's Award"]
+    },
+    "thesis": {
+      "title": "Distributed Mechanism for Sensor Networks",
+      "description": "Master's thesis analyzing different aspects of distributed processing of complex requests in sensor networks. Proposed mechanism inspired by fog computing and auction algorithms.",
+      "tags": ["IoT", "Fog Computing", "Algorithms"]
+    },
+    "smarthome": {
+      "title": "Smart Home Apps",
+      "description": "IoT environments developed as part of academic projects. Android apps for smart home device control and real-time sensor monitoring with intuitive data visualization.",
+      "tags": ["Android", "IoT", "Real-time"]
+    }
+  }
+}
