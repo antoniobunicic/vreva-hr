@@ -1,0 +1,48 @@
+{
+  "section": {
+    "title": "Naš Pristup"
+  },
+  "intro": "Izgrađeno na gotovo desetljeću iskustva kroz međunarodne timove i raznolike projekte. Radili smo s energetskom tehnologijom u Amsterdamu, industrijskim sustavima u Zagrebu i startupovima u inkubatorima. Ova širina nam daje perspektivu o tome što funkcionira.",
+  "principles": {
+    "title": "Principi",
+    "items": {
+      "collaborative": {
+        "title": "Suradnički",
+        "description": "Radimo zajedno s vašim timom, ne izolirano. Redovita komunikacija i usklađenost osiguravaju da uvijek gradimo ono što je važno."
+      },
+      "detailOriented": {
+        "title": "Orijentirano na Detalje",
+        "description": "Kvaliteta je u detaljima. Od pregleda koda do dokumentacije, održavamo visoke standarde u svakom aspektu razvoja."
+      },
+      "pragmatic": {
+        "title": "Pragmatično",
+        "description": "Biramo tehnologije i uzorke koji rješavaju stvarne probleme. Bez pretjeranog inženjeringa, bez razvoja vođenog hypeom."
+      },
+      "maintainable": {
+        "title": "Održivo",
+        "description": "Kod koji je lako razumjeti, testirati i proširiti. Gradimo za dugoročno, ne samo za sljedeći sprint."
+      }
+    }
+  },
+  "process": {
+    "title": "Proces",
+    "steps": {
+      "discovery": {
+        "phase": "Otkrivanje",
+        "description": "Razumijevanje vaših ciljeva, ograničenja i tehnološkog okruženja"
+      },
+      "planning": {
+        "phase": "Planiranje",
+        "description": "Definiranje arhitekture, ključnih točaka i kriterija uspjeha"
+      },
+      "development": {
+        "phase": "Razvoj",
+        "description": "Iterativna implementacija s redovitim pregledima i demo-ima"
+      },
+      "delivery": {
+        "phase": "Isporuka",
+        "description": "Produkcijsko postavljanje, dokumentacija i prijenos znanja"
+      }
+    }
+  }
+}

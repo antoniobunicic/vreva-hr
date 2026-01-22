@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "approach": "Approach",
+    "contact": "Contact",
+    "ariaToggleTheme": "Toggle theme",
+    "ariaToggleMenu": "Toggle menu"
+  },
+  "footer": {
+    "copyright": "© 2026 Vreva. All rights reserved."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "about": "O nama",
+    "services": "Usluge",
+    "approach": "Pristup",
+    "contact": "Kontakt",
+    "ariaToggleTheme": "Promijeni temu",
+    "ariaToggleMenu": "Otvori izbornik"
+  },
+  "footer": {
+    "copyright": "© 2026 Vreva. Sva prava pridržana."
+  }
+}

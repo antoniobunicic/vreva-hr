@@ -21,3 +21,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.idea/aws.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.claude/settings.local.json
+/.idea/vcs.xml
+/.idea/vreva-hr.iml
+/.idea/copilot.data.migration.agent.xml

@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function ThemeToggle({ isDarkMode, onToggle }) {
+  const { t } = useTranslation('common');
+
   return (
-    <button className="theme-toggle" onClick={onToggle} aria-label="Toggle theme">
+    <button className="theme-toggle" onClick={onToggle} aria-label={t('nav.ariaToggleTheme')}>
       <div className={`theme-icon ${isDarkMode ? 'dark' : 'light'}`}>
         <svg className="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="5"></circle>

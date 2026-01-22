@@ -1,0 +1,67 @@
+{
+  "section": {
+    "title": "Što radimo"
+  },
+  "cards": {
+    "backend": {
+      "title": "Backend razvoj",
+      "description": "Skalabilni microservices i API-ji izgrađeni s Java, Kotlin i Python",
+      "capabilities": [
+        "Spring Boot & Quarkus microservices",
+        "Event-driven arhitekture s Kafka & Pulsar",
+        "REST API-ji & sustavi autentikacije",
+        "Dizajn i optimizacija baza podataka"
+      ]
+    },
+    "frontend": {
+      "title": "Frontend razvoj",
+      "description": "Moderna, responzivna sučelja koja korisnici vole",
+      "capabilities": [
+        "React aplikacije s TypeScript",
+        "Biblioteke komponenti & design sustavi",
+        "Optimizacija performansi",
+        "Responzivna & pristupačna sučelja"
+      ]
+    },
+    "cloud": {
+      "title": "Cloud i infrastruktura",
+      "description": "Produkcijski spremno postavljanje i skaliranje",
+      "capabilities": [
+        "AWS cloud arhitektura",
+        "Docker & Kubernetes orkestracija",
+        "CI/CD pipelines",
+        "Infrastruktura kao kod"
+      ]
+    },
+    "modernization": {
+      "title": "Modernizacija sustava",
+      "description": "Transformacija legacy sustava u moderne arhitekture",
+      "capabilities": [
+        "Migracija monolita u microservices",
+        "Migracije i optimizacija baza podataka",
+        "Redizajn arhitekture",
+        "Smanjenje tehničkog duga"
+      ]
+    },
+    "leadership": {
+      "title": "Tehničko vodstvo",
+      "description": "Strateško vodstvo i suradnja s timom",
+      "capabilities": [
+        "Planiranje i pregled arhitekture",
+        "Kvaliteta koda & standardi",
+        "Mentorstvo timova",
+        "Agile razvojne prakse"
+      ]
+    },
+    "fullstack": {
+      "title": "Full-Stack rješenja",
+      "description": "Razvoj od kraja do kraja od baze podataka do korisničkog sučelja",
+      "capabilities": [
+        "Kompletna implementacija funkcionalnosti",
+        "Dizajn API-ja & integracija",
+        "Testiranje & osiguranje kvalitete",
+        "Produkcijska podrška"
+      ]
+    }
+  }
+}

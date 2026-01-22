@@ -1,0 +1,24 @@
+{
+  "section": {
+    "title": "Who We Are"
+  },
+  "content": {
+    "lead": "Vreva is a software development agency founded on nearly a decade of engineering excellence. We build products that matter.",
+    "paragraph1": "We specialize in migrating monolithic systems to modern microservices, designing robust APIs, and crafting user-centric interfaces that users love. Our approach is collaborative, detail-oriented, and focused on delivering high-quality, maintainable solutions.",
+    "paragraph2": "Working with international teams across time zones, we bring adaptability, accountability, and technical leadership to every project. Whether you're a startup building your MVP or an established company modernizing your stack, we deliver."
+  },
+  "stats": {
+    "experience": {
+      "number": "~10",
+      "label": "Years Experience"
+    },
+    "location": {
+      "number": "Remote",
+      "label": "Based in Zagreb"
+    },
+    "reach": {
+      "number": "Global",
+      "label": "International Teams"
+    }
+  }
+}

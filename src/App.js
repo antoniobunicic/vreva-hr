@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import { useTranslation } from 'react-i18next';
+import './styles/index.css';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Approach from './components/Approach';
 import Contact from './components/Contact';
 import ThemeToggle from './components/ThemeToggle';
+import LanguageSwitcher from './components/LanguageSwitcher';
 import logo from './assets/logo.svg';
 
 function App() {
+  const { t } = useTranslation('common');
   const [activeSection, setActiveSection] = useState('');
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -77,7 +80,7 @@ function App() {
                   className={activeSection === 'about' ? 'active' : ''}
                   onClick={() => scrollToSection('about')}
                 >
-                  About
+                  {t('nav.about')}
                 </button>
               </li>
               <li>
@@ -85,7 +88,7 @@ function App() {
                   className={activeSection === 'services' ? 'active' : ''}
                   onClick={() => scrollToSection('services')}
                 >
-                  Services
+                  {t('nav.services')}
                 </button>
               </li>
               <li>
@@ -93,7 +96,7 @@ function App() {
                   className={activeSection === 'approach' ? 'active' : ''}
                   onClick={() => scrollToSection('approach')}
                 >
-                  Approach
+                  {t('nav.approach')}
                 </button>
               </li>
               <li>
@@ -101,12 +104,13 @@ function App() {
                   className={activeSection === 'contact' ? 'active' : ''}
                   onClick={() => scrollToSection('contact')}
                 >
-                  Contact
+                  {t('nav.contact')}
                 </button>
               </li>
             </ul>
+            <LanguageSwitcher />
             <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleTheme} />
-            <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
+            <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label={t('nav.ariaToggleMenu')}>
               <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
                 <span></span>
                 <span></span>
@@ -126,7 +130,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2026 Vreva. All rights reserved.</p>
+        <p>{t('footer.copyright')} </p>
       </footer>
     </div>
   );

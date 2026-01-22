@@ -1,0 +1,48 @@
+{
+  "section": {
+    "title": "Our Approach"
+  },
+  "intro": "Built on nearly a decade of experience across international teams and diverse projects. We've worked with energy tech in Amsterdam, industrial systems in Zagreb, and startups in incubators. This breadth gives us perspective on what works.",
+  "principles": {
+    "title": "Principles",
+    "items": {
+      "collaborative": {
+        "title": "Collaborative",
+        "description": "We work alongside your team, not in isolation. Regular communication and alignment ensure we're always building what matters."
+      },
+      "detailOriented": {
+        "title": "Detail-Oriented",
+        "description": "Quality is in the details. From code reviews to documentation, we maintain high standards across every aspect of development."
+      },
+      "pragmatic": {
+        "title": "Pragmatic",
+        "description": "We choose technologies and patterns that solve real problems. No over-engineering, no hype-driven development."
+      },
+      "maintainable": {
+        "title": "Maintainable",
+        "description": "Code that's easy to understand, test, and extend. We build for the long term, not just the next sprint."
+      }
+    }
+  },
+  "process": {
+    "title": "Process",
+    "steps": {
+      "discovery": {
+        "phase": "Discovery",
+        "description": "Understand your goals, constraints, and technical landscape"
+      },
+      "planning": {
+        "phase": "Planning",
+        "description": "Define architecture, milestones, and success criteria"
+      },
+      "development": {
+        "phase": "Development",
+        "description": "Iterative implementation with regular reviews and demos"
+      },
+      "delivery": {
+        "phase": "Delivery",
+        "description": "Production deployment, documentation, and knowledge transfer"
+      }
+    }
+  }
+}
