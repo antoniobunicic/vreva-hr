@@ -37,6 +37,7 @@
 }
 
 .hero-title {
+  bottom: 5rem;
   font-size: 6rem;
   line-height: 1.1;
   margin-bottom: 2rem;
@@ -48,6 +49,7 @@
 }
 
 .hero-services {
+  bottom: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +61,7 @@
 }
 
 .hero-service {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   color: var(--color-vreva-yellow-dark);
@@ -69,37 +71,26 @@
 .hero-service-separator {
   color: var(--color-text-muted);
   opacity: 0.5;
-  font-size: 0.8rem;
-}
-
-.hero-dots {
-  position: absolute;
-  bottom: 10rem;
-  width: auto;
-  height: 6rem;
-  opacity: 0.9;
-}
-
-[data-theme='light'] .hero-dots {
-  filter: invert(1) brightness(0);
-}
-
-.hero-description {
-  font-size: 1.25rem;
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  opacity: 0.8;
-  line-height: 1.8;
-  font-weight: 300;
-  position: relative;
-  z-index: 1;
+  font-size: 1rem;
 }
 
 .hero-cta {
+  bottom: 5rem;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
+}
+
+.hero-dots {
+  position: relative;
+  width: auto;
+  height: 5rem;
+  opacity: 0.9;
+}
+
+[data-theme='light'] .hero-dots {
+  filter: invert(1) brightness(0);
 }
