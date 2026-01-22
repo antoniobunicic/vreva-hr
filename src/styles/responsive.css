@@ -125,21 +125,40 @@
     font-size: 2.5rem;
   }
 
-  .projects-grid,
   .services-grid,
   .principles-grid {
     grid-template-columns: 1fr;
   }
 
+  .projects-grid {
+    gap: 4rem;
+  }
+
   .project-card {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+  }
+
+  .project-card:hover {
+    transform: scale(1);
+  }
+
+  .project-card:hover .project-image,
+  .project-card:hover .project-content {
+    transform: translateX(0);
   }
 
   .project-image {
     flex: 0 0 auto;
     width: 100%;
-    max-height: 200px;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
   }
 
   .about-stats {
@@ -212,10 +231,6 @@
     display: none;
   }
 
-  .hero-dots {
-    height: 4rem;
-  }
-
   .section-title {
     font-size: 1.75rem;
   }
@@ -229,11 +244,25 @@
     font-size: 0.95rem;
   }
 
-  .project-card {
-    padding: 1.5rem;
+  .projects-grid {
+    gap: 3rem;
   }
 
-  .project-image {
-    padding: 0.75rem;
+  .project-card {
+    gap: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .project-tag {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
   }
 }

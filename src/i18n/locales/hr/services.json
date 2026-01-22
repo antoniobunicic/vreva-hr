@@ -54,13 +54,15 @@
       ]
     },
     "fullstack": {
-      "title": "Full-Stack rješenja",
-      "description": "Razvoj od kraja do kraja od baze podataka do korisničkog sučelja",
+      "title": "Full-Stack razvoj",
+      "description": "Razvoj od kraja do kraja od baze podataka do korisničkog sučelja s modernim tehnologijama",
       "capabilities": [
-        "Kompletna implementacija funkcionalnosti",
+        "Backend: Spring Boot, Kafka, REST API-ji",
+        "Frontend: React, TypeScript, responzivna sučelja",
+        "Dizajn i optimizacija baza podataka",
         "Dizajn API-ja & integracija",
         "Testiranje & osiguranje kvalitete",
-        "Produkcijska podrška"
+        "Produkcijsko postavljanje & podrška"
       ]
     }
   }

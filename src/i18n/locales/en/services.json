@@ -54,13 +54,15 @@
       ]
     },
     "fullstack": {
-      "title": "Full-Stack Solutions",
-      "description": "End-to-end development from database to UI",
+      "title": "Full-Stack Development",
+      "description": "End-to-end development from database to UI with modern technologies",
       "capabilities": [
-        "Complete feature implementation",
+        "Backend: Spring Boot, Kafka, REST APIs",
+        "Frontend: React, TypeScript, responsive UIs",
+        "Database design & optimization",
         "API design & integration",
         "Testing & quality assurance",
-        "Production support"
+        "Production deployment & support"
       ]
     }
   }

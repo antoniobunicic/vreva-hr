@@ -1,7 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import ProjectCard from './ProjectCard';
 import flexportalImg from '../assets/flexportal.png';
-import anglerImg from '../assets/angler.png';
+import anglerSS0 from '../assets/SS0.jpg';
+import anglerSS1 from '../assets/SS1.jpg';
+import anglerSS4 from '../assets/SS4.jpg';
+import timetableImg from '../assets/timetable-system.svg';
+import sensorNetworkImg from '../assets/sensor-network.svg';
+import atronLogo from '../assets/atron.svg';
+import sympowerLogo from '../assets/sympower.svg';
 
 function Projects() {
   const { t } = useTranslation('projects');
@@ -10,7 +17,14 @@ function Projects() {
 
   const projectImages = {
     flexportal: flexportalImg,
-    angler: anglerImg
+    timetable: timetableImg,
+    angler: [anglerSS0, anglerSS1, anglerSS4],
+    thesis: sensorNetworkImg
+  };
+
+  const clientLogos = {
+    flexportal: sympowerLogo,
+    timetable: atronLogo,
   };
 
   return (
@@ -19,24 +33,12 @@ function Projects() {
         <h2 className="section-title">{t('section.title')}</h2>
         <div className="projects-grid">
           {projectKeys.map((key) => (
-            <div key={key} className={`project-card ${!projectImages[key] ? 'no-image' : ''}`}>
-              {projectImages[key] && (
-                <div className="project-image">
-                  <img src={projectImages[key]} alt={t(`cards.${key}.title`)} />
-                </div>
-              )}
-              <div className="project-content">
-                <h3 className="project-title">{t(`cards.${key}.title`)}</h3>
-                <p className="project-description">{t(`cards.${key}.description`)}</p>
-                {t(`cards.${key}.tags`, { returnObjects: true }).length > 0 && (
-                  <div className="project-tags">
-                    {t(`cards.${key}.tags`, { returnObjects: true }).map((tag, index) => (
-                      <span key={index} className="project-tag">{tag}</span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
+            <ProjectCard
+              key={key}
+              projectKey={key}
+              projectImage={projectImages[key]}
+              clientLogo={clientLogos[key]}
+            />
           ))}
         </div>
       </div>

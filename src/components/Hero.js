@@ -18,12 +18,12 @@ function Hero() {
                     <span className="hero-service-separator">•</span>
                     <span className="hero-service">{t('services.consulting')}</span>
                 </div>
-                <img src={dots} alt="Vreva" className="hero-dots"/>
                 <div className="hero-cta">
                     <a href="#contact" className="btn btn-primary">{t('cta.primary')}</a>
                     <a href="#services" className="btn btn-secondary">{t('cta.secondary')}</a>
                 </div>
             </div>
+            <img src={dots} alt="Vreva logo" className="hero-dots"/>
         </section>
     );
 }

@@ -9,16 +9,16 @@
   },
   "stats": {
     "experience": {
-      "number": "~10",
-      "label": "Godina Iskustva"
+      "number": "10 godina",
+      "label": "Iskustvo"
     },
     "location": {
       "number": "Remote",
-      "label": "Sa Sjedištem u Zagrebu"
+      "label": "Sa sjedištem u Zagrebu"
     },
     "reach": {
-      "number": "Globalno",
-      "label": "Međunarodni Timovi"
+      "number": "Global",
+      "label": "Međunarodni timovi"
     }
   }
 }

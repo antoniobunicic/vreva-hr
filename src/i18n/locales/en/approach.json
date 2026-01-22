@@ -17,10 +17,6 @@
       "pragmatic": {
         "title": "Pragmatic",
         "description": "We choose technologies and patterns that solve real problems. No over-engineering, no hype-driven development."
-      },
-      "maintainable": {
-        "title": "Maintainable",
-        "description": "Code that's easy to understand, test, and extend. We build for the long term, not just the next sprint."
       }
     }
   },

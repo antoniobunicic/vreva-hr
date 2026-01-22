@@ -17,10 +17,6 @@
       "pragmatic": {
         "title": "Pragmatično",
         "description": "Biramo tehnologije i uzorke koji rješavaju stvarne probleme. Bez nepotrebnog, bez hypeoa."
-      },
-      "maintainable": {
-        "title": "Održivo",
-        "description": "Kod koji je lako razumjeti, testirati i proširiti. Gradimo za dugoročno, ne samo za sljedeći sprint."
       }
     }
   },

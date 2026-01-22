@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 function Services() {
   const { t } = useTranslation('services');
 
-  const serviceKeys = ['backend', 'frontend', 'cloud', 'modernization', 'leadership', 'fullstack'];
+  const serviceKeys = ['fullstack', 'leadership', 'modernization'];
 
   return (
     <section id="services" className="services">

@@ -73,11 +73,11 @@
 }
 
 .hero-dots {
+  position: absolute;
+  bottom: 10rem;
   width: auto;
   height: 6rem;
-  margin: 2rem auto 2rem;
-  display: block;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 [data-theme='light'] .hero-dots {

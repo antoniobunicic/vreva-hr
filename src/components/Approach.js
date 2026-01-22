@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 function Approach() {
   const { t } = useTranslation('approach');
 
-  const principleKeys = ['collaborative', 'detailOriented', 'pragmatic', 'maintainable'];
+  const principleKeys = ['collaborative', 'detailOriented', 'pragmatic'];
   const processKeys = ['discovery', 'planning', 'development', 'delivery'];
 
   return (
