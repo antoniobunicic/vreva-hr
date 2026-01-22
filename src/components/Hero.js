@@ -12,9 +12,9 @@ function Hero() {
             <div className="container">
                 <div className="hero-services">
                     <span className="hero-service">{t('services.web')}</span>
-                    <span className="hero-service-separator">•</span>
+                    <span className="hero-service-separator">—</span>
                     <span className="hero-service">{t('services.software')}</span>
-                    <span className="hero-service-separator">•</span>
+                    <span className="hero-service-separator">—</span>
                     <span className="hero-service">{t('services.consulting')}</span>
                 </div>
                 <h1 className="hero-title">{t('title')}</h1>

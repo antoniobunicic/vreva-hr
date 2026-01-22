@@ -2,10 +2,50 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.03 109.9">
   <defs>
     <style>
-      .cls-1 {
+      .dot {
         fill: #fff;
+      }
+
+      .dot-1 {
+        animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite;
+        transform-origin: 15.76px 15.76px;
+      }
+
+      .dot-2 {
+        animation: float 3s ease-in-out infinite 0.5s, pulse 2s ease-in-out infinite 0.3s;
+        transform-origin: 61px 94px;
+      }
+
+      .dot-3 {
+        animation: float 3s ease-in-out infinite 1s, pulse 2s ease-in-out infinite 0.6s;
+        transform-origin: 106.15px 15.76px;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.8;
+          transform: scale(0.92);
+        }
       }
     </style>
   </defs>
-  <path class="cls-1" d="M15.76,31.64c-4.19,0-7.86-1.58-11.02-4.74C1.58,23.74,0,20.03,0,15.76S1.58,7.81,4.74,4.68C7.9,1.56,11.57,0,15.76,0s7.88,1.56,11.08,4.68c3.2,3.12,4.8,6.82,4.8,11.08s-1.6,7.97-4.8,11.13c-3.2,3.16-6.89,4.74-11.08,4.74Zm29.43,62.39c0-4.11,1.58-7.77,4.74-10.97,3.16-3.2,6.87-4.8,11.13-4.8s7.95,1.6,11.08,4.8c3.12,3.2,4.68,6.85,4.68,10.97s-1.56,7.88-4.68,11.08c-3.12,3.2-6.82,4.8-11.08,4.8s-7.97-1.6-11.13-4.8c-3.16-3.2-4.74-6.89-4.74-11.08ZM106.15,31.64c-4.12,0-7.77-1.58-10.97-4.74-3.2-3.16-4.8-6.87-4.8-11.13s1.6-7.95,4.8-11.08c3.2-3.12,6.85-4.68,10.97-4.68s7.88,1.56,11.08,4.68c3.2,3.12,4.8,6.82,4.8,11.08s-1.6,7.97-4.8,11.13c-3.2,3.16-6.89,4.74-11.08,4.74Z"/>
+  <!-- Top-left dot -->
+  <circle class="dot dot-1" cx="15.76" cy="15.76" r="15.76"/>
+  <!-- Bottom-center dot -->
+  <circle class="dot dot-2" cx="61.06" cy="94.03" r="15.87"/>
+  <!-- Top-right dot -->
+  <circle class="dot dot-3" cx="106.15" cy="15.76" r="15.88"/>
 </svg>
