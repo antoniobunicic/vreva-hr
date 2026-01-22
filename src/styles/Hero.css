@@ -19,8 +19,8 @@
 }
 
 .hero-blur-1 {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background: var(--color-secondary);
   top: -200px;
   left: -200px;
@@ -87,8 +87,7 @@
 .hero-dots {
   position: relative;
   width: auto;
-  height: 5rem;
-  opacity: 0.9;
+  height: 6rem;
 }
 
 [data-theme='light'] .hero-dots {
