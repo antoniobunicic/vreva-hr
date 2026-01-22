@@ -11,9 +11,13 @@ function Hero() {
             <div className="hero-blur hero-blur-2"></div>
             <div className="container">
                 <h1 className="hero-title">{t('title')}</h1>
-                <p className="hero-description">
-                    {t('description')}
-                </p>
+                <div className="hero-services">
+                    <span className="hero-service">{t('services.web')}</span>
+                    <span className="hero-service-separator">•</span>
+                    <span className="hero-service">{t('services.software')}</span>
+                    <span className="hero-service-separator">•</span>
+                    <span className="hero-service">{t('services.consulting')}</span>
+                </div>
                 <img src={dots} alt="Vreva" className="hero-dots"/>
                 <div className="hero-cta">
                     <a href="#contact" className="btn btn-primary">{t('cta.primary')}</a>

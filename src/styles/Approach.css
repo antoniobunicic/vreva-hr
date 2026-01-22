@@ -1,6 +1,6 @@
 /* Approach Section */
 .approach {
-  background: var(--color-darker);
+  background: var(--color-background1);
 }
 
 .approach-intro {
@@ -34,7 +34,7 @@
 }
 
 .principle-card {
-  background: var(--color-dark);
+  background: var(--color-background2);
   padding: 2.5rem;
   border-radius: 12px;
   border: 1px solid var(--color-border);
@@ -48,7 +48,7 @@
 
 .principle-title {
   font-size: 1.5rem;
-  color: var(--color-accent);
+  color: var(--color-vreva-yellow);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -79,7 +79,7 @@
   flex-shrink: 0;
   width: 60px;
   height: 60px;
-  background: var(--color-accent);
+  background: var(--color-vreva-yellow);
   color: #000;
   border-radius: 50%;
   display: flex;

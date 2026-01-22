@@ -1,6 +1,6 @@
 /* Footer */
 .footer {
-  background: var(--color-darker);
+  background: var(--color-background1);
   color: var(--color-text-muted);
   text-align: center;
   padding: 3rem;

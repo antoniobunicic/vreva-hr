@@ -1,6 +1,10 @@
 {
   "title": "LET US COOK",
-  "description": "Vreva is a software development agency delivering scalable backend systems, user-centric frontends, and maintainable solutions for ambitious projects.",
+  "services": {
+    "web": "WEB DEVELOPMENT",
+    "software": "SOFTWARE SOLUTIONS",
+    "consulting": "CONSULTING"
+  },
   "cta": {
     "primary": "Start a Project",
     "secondary": "Our Services"

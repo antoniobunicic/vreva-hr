@@ -12,14 +12,14 @@
 }
 
 .btn-primary {
-  background: var(--color-accent);
+  background: var(--color-vreva-yellow);
   color: black;
-  border-color: var(--color-accent);
+  border-color: var(--color-vreva-yellow);
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-hover);
-  border-color: var(--color-accent-hover);
+  background: var(--color-vreva-yellow-dark);
+  border-color: var(--color-vreva-yellow-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(220, 51, 83, 0.3);
 }

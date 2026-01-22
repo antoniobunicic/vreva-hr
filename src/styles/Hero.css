@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-  background: var(--color-dark);
+  background: var(--color-background2);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@
 .hero-blur-2 {
   width: 500px;
   height: 500px;
-  background: var(--color-accent);
+  background: var(--color-vreva-yellow);
   bottom: -200px;
   right: -200px;
   transform: rotate(25deg);
@@ -45,6 +45,31 @@
   text-transform: uppercase;
   position: relative;
   z-index: 1;
+}
+
+.hero-services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-service {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-vreva-yellow-dark);
+  text-transform: uppercase;
+}
+
+.hero-service-separator {
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  font-size: 0.8rem;
 }
 
 .hero-dots {

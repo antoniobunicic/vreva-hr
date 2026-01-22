@@ -1,6 +1,10 @@
 {
   "title": "LET US COOK",
-  "description": "Vreva je agencija za razvoj softvera koja isporučuje skalabilne backend sustave, frontend aplikacije fokusirane na korisnike i održiva rješenja za ambiciozne projekte.",
+  "services": {
+    "web": "IZRADA WEB STRANICA",
+    "software": "SOFTVERSKA RJEŠENJA",
+    "consulting": "SAVJETOVANJE"
+  },
   "cta": {
     "primary": "Započni projekt",
     "secondary": "Naše usluge"

@@ -1,6 +1,6 @@
 /* About Section */
 .about {
-  background: var(--color-darker);
+  background: var(--color-background1);
 }
 
 .about-content {
@@ -37,14 +37,14 @@
 .stat-item {
   text-align: center;
   padding: 2rem;
-  background: var(--color-dark);
+  background: var(--color-background2);
   border-radius: 12px;
   border: 1px solid var(--color-border);
   transition: var(--transition);
 }
 
 .stat-item:hover {
-  border-color: var(--color-accent);
+  border-color: var(--color-vreva-yellow);
   transform: translateY(-4px);
 }
 

@@ -1,6 +1,6 @@
 /* Services Section */
 .services {
-  background: var(--color-dark);
+  background: var(--color-background2);
 }
 
 .services-grid {
@@ -12,7 +12,7 @@
 }
 
 .service-card {
-  background: var(--color-darker);
+  background: var(--color-background1);
   padding: 2.5rem;
   border-radius: 12px;
   border: 1px solid var(--color-border);
@@ -20,7 +20,7 @@
 }
 
 .service-card:hover {
-  border-color: var(--color-accent);
+  border-color: var(--color-vreva-yellow);
   transform: translateY(-6px);
   box-shadow: 0 12px 40px rgba(220, 51, 83, 0.15);
 }
@@ -62,6 +62,6 @@
   content: "→";
   position: absolute;
   left: 0;
-  color: var(--color-accent);
+  color: var(--color-vreva-yellow);
   font-weight: bold;
 }

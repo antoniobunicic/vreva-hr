@@ -41,7 +41,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--color-darker);
+    background: var(--color-background1);
     flex-direction: column;
     width: 100%;
     max-height: 0;
@@ -107,6 +107,14 @@
 
   .hero-title {
     font-size: 3rem;
+  }
+
+  .hero-services {
+    gap: 1rem;
+  }
+
+  .hero-service {
+    font-size: 0.85rem;
   }
 
   .section-title {
@@ -177,6 +185,19 @@
 
   .hero-title {
     font-size: 2rem;
+  }
+
+  .hero-services {
+    gap: 0.75rem;
+    flex-direction: column;
+  }
+
+  .hero-service {
+    font-size: 0.75rem;
+  }
+
+  .hero-service-separator {
+    display: none;
   }
 
   .hero-dots {

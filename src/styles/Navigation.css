@@ -56,7 +56,7 @@
 }
 
 .nav-menu button.active {
-  color: var(--color-accent);
+  color: var(--color-vreva-yellow);
   background: rgba(255, 204, 51, 0.1);
 }
 
@@ -154,7 +154,7 @@
 }
 
 .language-btn.active {
-  color: var(--color-accent);
+  color: var(--color-vreva-yellow);
   background: rgba(255, 204, 51, 0.1);
 }
 
