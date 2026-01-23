@@ -6,11 +6,12 @@ function ProjectCard({ projectKey, projectImage, clientLogo }) {
 
   const isAngler = projectKey === 'angler';
   const isMultiImage = Array.isArray(projectImage);
+  const isMonochromeSvg = projectKey === 'timetable';
 
   return (
     <div className={`project-card ${!projectImage ? 'no-image' : ''} ${isAngler ? 'angler-multi-image' : ''}`}>
       {projectImage && !isMultiImage && (
-        <div className="project-image">
+        <div className={`project-image ${isMonochromeSvg ? 'project-image-mono' : ''}`}>
           <img src={projectImage} alt={t(`cards.${projectKey}.title`)} />
         </div>
       )}

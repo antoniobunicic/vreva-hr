@@ -3,66 +3,37 @@
     "title": "Što radimo"
   },
   "cards": {
-    "backend": {
-      "title": "Backend razvoj",
-      "description": "Skalabilni microservices i API-ji izgrađeni s Java, Kotlin i Python",
+    "webdev": {
+      "title": "Izrada web stranica",
+      "description": "Profesionalne web stranice brzo i pristupačno. Idealno za male poduzetnike i tvrtke koje žele snažnu online prisutnost.",
       "capabilities": [
-        "Spring Boot & Quarkus microservices",
-        "Event-driven arhitekture s Kafka & Pulsar",
-        "REST API-ji & sustavi autentikacije",
-        "Dizajn i optimizacija baza podataka"
-      ]
-    },
-    "frontend": {
-      "title": "Frontend razvoj",
-      "description": "Moderna, responzivna sučelja koja korisnici vole",
-      "capabilities": [
-        "React aplikacije s TypeScript",
-        "Biblioteke komponenti & design sustavi",
-        "Optimizacija performansi",
-        "Responzivna & pristupačna sučelja"
-      ]
-    },
-    "cloud": {
-      "title": "Cloud i infrastruktura",
-      "description": "Produkcijski spremno postavljanje i skaliranje",
-      "capabilities": [
-        "AWS cloud arhitektura",
-        "Docker & Kubernetes orkestracija",
-        "CI/CD pipelines",
-        "Infrastruktura kao kod"
-      ]
-    },
-    "modernization": {
-      "title": "Modernizacija sustava",
-      "description": "Transformacija legacy sustava u moderne arhitekture",
-      "capabilities": [
-        "Migracija monolita u microservices",
-        "Migracije i optimizacija baza podataka",
-        "Redizajn arhitekture",
-        "Smanjenje tehničkog duga"
-      ]
-    },
-    "leadership": {
-      "title": "Tehničko vodstvo",
-      "description": "Strateško vodstvo i suradnja s timom",
-      "capabilities": [
-        "Planiranje i pregled arhitekture",
-        "Kvaliteta koda & standardi",
-        "Mentorstvo timova",
-        "Agile razvojne prakse"
+        "Moderna, responzivna sučelja",
+        "Brza izrada i lansiranje",
+        "SEO optimizacija",
+        "Pristupačne cijene bez skrivenih troškova",
+        "Održavanje i podrška"
       ]
     },
     "fullstack": {
-      "title": "Full-Stack razvoj",
-      "description": "Razvoj od kraja do kraja od baze podataka do korisničkog sučelja s modernim tehnologijama",
+      "title": "Razvoj softvera",
+      "description": "Full-stack razvoj od baze podataka do korisničkog sučelja s modernim tehnologijama",
       "capabilities": [
-        "Backend: Spring Boot, Kafka, REST API-ji",
+        "Backend: Java, Kotlin, Spring Boot, Kafka, REST API",
         "Frontend: React, TypeScript, responzivna sučelja",
         "Dizajn i optimizacija baza podataka",
         "Dizajn API-ja & integracija",
         "Testiranje & osiguranje kvalitete",
         "Produkcijsko postavljanje & podrška"
+      ]
+    },
+    "leadership": {
+      "title": "IT savjetovanje",
+      "description": "Strateško savjetovanje za digitalizaciju i optimizaciju poslovanja",
+      "capabilities": [
+        "Analiza postojećih sustava",
+        "Odabir tehnologija i alata",
+        "Planiranje digitalne transformacije",
+        "Optimizacija poslovnih procesa"
       ]
     }
   }

@@ -3,14 +3,13 @@
     "title": "O nama"
   },
   "content": {
-    "lead": "Vreva je agencija za razvoj softvera osnovana na gotovo desetljeću inženjerske izvrsnosti. Gradimo proizvode koji su važni.",
-    "paragraph1": "Specijalizirani smo za migraciju monolitnih sustava u moderne microservices, dizajniranje robusnih API-ja i stvaranje korisničkih sučelja fokusiranih na korisnike. Naš pristup je suradnički, orijentiran na detalje i fokusiran na isporuku visokokvalitetnih, održivih rješenja.",
-    "paragraph2": "Radeći s međunarodnim timovima kroz različite vremenske zone, donosimo prilagodljivost, odgovornost i tehničko vodstvo svakom projektu. Bilo da ste startup koji gradi svoj MVP ili etablirana tvrtka koja modernizira svoj tehnološki stack, mi isporučujemo."
+    "lead": "Vreva je mali, iskusni software tim. Radimo ozbiljan kod i digitalne proizvode koji imaju smisla.",
+    "paragraph1": "Pomažemo tvrtkama ojačati online prisutnost, razvijati nove proizvode i raščistiti postojeće sustave. Radimo remote, s klijentima diljem svijeta."
   },
   "stats": {
     "experience": {
-      "number": "10 godina",
-      "label": "Iskustvo"
+      "number": "10+",
+      "label": "godina iskustva"
     },
     "location": {
       "number": "Remote",
@@ -18,7 +17,7 @@
     },
     "reach": {
       "number": "Global",
-      "label": "Međunarodni timovi"
+      "label": "Međunarodni klijenti"
     }
   }
 }

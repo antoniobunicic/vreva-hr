@@ -1,12 +1,13 @@
 {
-  "title": "LET US COOK",
+  "title": "Recept za dobar web",
+  "description": "Od landing stranica do kompleksnih softverskih rješenja.",
   "services": {
     "web": "IZRADA WEB STRANICA",
     "software": "SOFTVERSKA RJEŠENJA",
     "consulting": "SAVJETOVANJE"
   },
   "cta": {
-    "primary": "Započni projekt",
+    "primary": "Zatraži ponudu",
     "secondary": "Naše usluge"
   }
 }

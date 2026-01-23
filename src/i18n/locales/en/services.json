@@ -3,54 +3,15 @@
     "title": "What We Do"
   },
   "cards": {
-    "backend": {
-      "title": "Backend Development",
-      "description": "Scalable microservices and APIs built with Java, Kotlin, and Python",
+    "webdev": {
+      "title": "Web Development",
+      "description": "Professional websites, fast and affordable. Perfect for small businesses looking for a strong online presence.",
       "capabilities": [
-        "Spring Boot & Quarkus microservices",
-        "Event-driven architectures with Kafka & Pulsar",
-        "REST APIs & authentication systems",
-        "Database design & optimization"
-      ]
-    },
-    "frontend": {
-      "title": "Frontend Development",
-      "description": "Modern, responsive interfaces that users love",
-      "capabilities": [
-        "React applications with TypeScript",
-        "Component libraries & design systems",
-        "Performance optimization",
-        "Responsive & accessible UIs"
-      ]
-    },
-    "cloud": {
-      "title": "Cloud & Infrastructure",
-      "description": "Production-ready deployment and scaling",
-      "capabilities": [
-        "AWS cloud architecture",
-        "Docker & Kubernetes orchestration",
-        "CI/CD pipelines",
-        "Infrastructure as code"
-      ]
-    },
-    "modernization": {
-      "title": "System Modernization",
-      "description": "Transform legacy systems into modern architectures",
-      "capabilities": [
-        "Monolith to microservices migration",
-        "Database migrations & optimization",
-        "Architecture redesign",
-        "Technical debt reduction"
-      ]
-    },
-    "leadership": {
-      "title": "Technical Leadership",
-      "description": "Strategic guidance and team collaboration",
-      "capabilities": [
-        "Architecture planning & reviews",
-        "Code quality & standards",
-        "Team mentorship",
-        "Agile development practices"
+        "Modern, responsive design",
+        "Fast turnaround",
+        "SEO optimization",
+        "Affordable pricing, no hidden costs",
+        "Maintenance & support"
       ]
     },
     "fullstack": {
@@ -63,6 +24,16 @@
         "API design & integration",
         "Testing & quality assurance",
         "Production deployment & support"
+      ]
+    },
+    "leadership": {
+      "title": "IT Consulting",
+      "description": "Strategic consulting for digitalization and business optimization",
+      "capabilities": [
+        "Existing systems analysis",
+        "Technology & tools selection",
+        "Digital transformation planning",
+        "Business process optimization"
       ]
     }
   }

@@ -106,7 +106,11 @@
   }
 
   .hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    display: none;
   }
 
   .hero-services {
@@ -135,7 +139,7 @@
   }
 
   .project-card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
 
@@ -215,7 +219,7 @@
   }
 
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
   }
 
   .hero-services {

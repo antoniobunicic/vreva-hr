@@ -16,9 +16,6 @@ function About() {
             <p>
               {t('content.paragraph1')}
             </p>
-            <p>
-              {t('content.paragraph2')}
-            </p>
           </div>
           <div className="about-stats">
             <div className="stat-item">

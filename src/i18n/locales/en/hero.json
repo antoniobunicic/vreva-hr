@@ -1,12 +1,13 @@
 {
-  "title": "LET US COOK",
+  "title": "Let us cook",
+  "description": "From landing pages to complex software solutions.",
   "services": {
     "web": "WEB DEVELOPMENT",
     "software": "SOFTWARE SOLUTIONS",
     "consulting": "CONSULTING"
   },
   "cta": {
-    "primary": "Start a Project",
+    "primary": "Let's Talk",
     "secondary": "Our Services"
   }
 }

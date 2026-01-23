@@ -7,6 +7,8 @@ import anglerSS1 from '../assets/SS1.jpg';
 import anglerSS4 from '../assets/SS4.jpg';
 import timetableImg from '../assets/timetable-system.svg';
 import sensorNetworkImg from '../assets/sensor-network.svg';
+import bonfonImg from '../assets/bonfon.png';
+import smarthomeImg from '../assets/smarthome.png';
 import atronLogo from '../assets/atron.svg';
 import sympowerLogo from '../assets/sympower.svg';
 
@@ -19,7 +21,9 @@ function Projects() {
     flexportal: flexportalImg,
     timetable: timetableImg,
     angler: [anglerSS0, anglerSS1, anglerSS4],
-    thesis: sensorNetworkImg
+    bonfon: bonfonImg,
+    thesis: sensorNetworkImg,
+    smarthome: smarthomeImg
   };
 
   const clientLogos = {
