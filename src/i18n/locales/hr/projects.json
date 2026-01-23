@@ -4,7 +4,7 @@
   },
   "cards": {
     "flexportal": {
-      "title": "FlexPortal",
+      "title": "Platforma i web portal za balansiranje energetske mreže",
       "description": "Web portal razvijen koristeći TypeScript i React.js. Uključuje upravljanje korisnicima i klijentima, white-labeling, praćenje resursa, postavke i izvještavanje.",
       "tags": ["React", "TypeScript", "Material UI", "Kotlin", "AWS"]
     },
@@ -14,12 +14,12 @@
       "tags": ["Java", "Microservices", "Kafka", "PostgreSQL", "Kubernetes"]
     },
     "angler": {
-      "title": "Angler",
+      "title": "Angler — aplikacija za skeniranje geometrijskih zadataka",
       "description": "Android aplikacija koja koristi računalni vid za rješavanje geometrijskih problema putem skeniranja pametnim telefonom. Pobjednik App Start Contesta.",
       "tags": ["Android", "Java", "Computer Vision", "OpenCV"]
     },
     "bonfon": {
-      "title": "Bonfon",
+      "title": "Bonfon — aplikacija za rehabilitaciju govora kod djece",
       "description": "Android aplikacija za praćenje i pomoć u terapiji govora djece. Osmišljena primarno za tablete, služi za korekciju poremećaja artikulacije kroz različite vježbe. Rad o razvoju aplikacije nagrađen je Rektorovom nagradom.",
       "tags": ["Android", "Java"]
     },

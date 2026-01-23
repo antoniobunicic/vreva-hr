@@ -4,24 +4,24 @@
   },
   "cards": {
     "flexportal": {
-      "title": "FlexPortal",
-      "description": "Web portal built using TypeScript and React.js. Features include user and customer management, white-labeling, resource activation tracking, settings, and reporting.",
-      "tags": ["React", "TypeScript", "Material UI", "Kotlin", "AWS"]
+      "title": "Energy Grid Balancing Platform & Web Portal",
+      "description": "Worked on a web portal built using TypeScript and React.js. Features include user and customer management, white-labeling, resource activation tracking, settings, and reporting.",
+      "tags": ["React", "TypeScript", "Material UI", "Kotlin", "Pulsar" ,"AWS"]
     },
     "timetable": {
-      "title": "Timetable Management System for public transport",
+      "title": "Timetable Management System for Public Transport",
       "description": "Cloud-based system for importing and managing public transport timetables using VDV 452 and NeTEx standards. Includes routing, detours, announcements, and traffic light control.",
       "tags": ["Java", "Microservices", "Kafka", "PostgreSQL"]
     },
     "angler": {
-      "title": "Angler",
+      "title": "Angler — Geometry Scanner App",
       "description": "Android app using computer vision to solve geometry problems via smartphone scanning. Winner of App Start Contest, Croatia's largest student startup competition.",
       "tags": ["Android", "Computer Vision", "OpenCV"]
     },
     "bonfon": {
-      "title": "Bonfon",
+      "title": "Bonfon — Speech Therapy App for Children",
       "description": "Android application for monitoring and assisting child speech and language therapy. Designed primarily for tablets, it helps correct articulation disorders through various exercises. Rector's Award winner.",
-      "tags": ["Android", "Java"]
+      "tags": ["Android", "Java", "Healthcare"]
     },
     "thesis": {
       "title": "Distributed Mechanism for Sensor Networks",
@@ -31,7 +31,7 @@
     "smarthome": {
       "title": "Smart Home Apps",
       "description": "IoT environments with accompanying Android apps for smart home device control and real-time sensor monitoring with intuitive data visualization.",
-      "tags": ["Android", "IoT"]
+      "tags": ["Android", "Java", "IoT"]
     }
   }
 }
