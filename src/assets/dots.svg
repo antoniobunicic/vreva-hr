@@ -11,17 +11,17 @@
       }
 
       .dot-1 {
-        animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite;
+        animation: float 3s ease-in-out infinite, pulse 1.5s ease-in-out infinite;
         transform-origin: 15.76px 15.76px;
       }
 
       .dot-2 {
-        animation: float 3s ease-in-out infinite 0.5s, pulse 2s ease-in-out infinite 0.3s;
+        animation: float 3s ease-in-out infinite 0.5s, pulse 1.5s ease-in-out infinite 0.3s;
         transform-origin: 61px 94px;
       }
 
       .dot-3 {
-        animation: float 3s ease-in-out infinite 1s, pulse 2s ease-in-out infinite 0.6s;
+        animation: float 3s ease-in-out infinite 1s, pulse 1.5s ease-in-out infinite 0.6s;
         transform-origin: 106.15px 15.76px;
       }
 

@@ -49,7 +49,7 @@
 }
 
 .nav-menu button:hover {
-  color: var(--color-text);
+  color: #FAFAF9;
   background: rgba(255, 255, 255, 0.05);
 }
 

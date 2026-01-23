@@ -28,8 +28,8 @@
 }
 
 .hero-blur-2 {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background: var(--color-vreva-yellow);
   bottom: -200px;
   right: -200px;

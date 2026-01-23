@@ -58,6 +58,7 @@ section {
 }
 
 .section-title {
+  font-family: 'Unbounded', sans-serif;
   font-size: 4rem;
   color: var(--color-text);
   margin-bottom: 4rem;
