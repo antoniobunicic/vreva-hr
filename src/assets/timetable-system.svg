@@ -10,39 +10,100 @@
         0% { offset-distance: 0%; }
         100% { offset-distance: 100%; }
       }
+
+      @keyframes fileFall {
+        0% { transform: translateY(-60px); opacity: 0; }
+        10% { opacity: 0.5; }
+        90% { opacity: 0.4; }
+        100% { transform: translateY(100px); opacity: 0; }
+      }
+
+      .file {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+      }
+
+      @keyframes timetableOut {
+        0% { transform: translateY(-20px); opacity: 0; }
+        25% { opacity: 0.5; }
+        85% { opacity: 0.4; }
+        100% { transform: translateY(60px); opacity: 0; }
+      }
     </style>
+
+    <!-- File icon symbol -->
+    <symbol id="file-icon" viewBox="0 0 24 30">
+      <path d="M2 0 L16 0 L22 6 L22 28 L2 28 Z" class="file"/>
+      <path d="M16 0 L16 6 L22 6" class="file"/>
+      <line x1="6" y1="12" x2="18" y2="12" class="file"/>
+      <line x1="6" y1="18" x2="18" y2="18" class="file"/>
+      <line x1="6" y1="24" x2="14" y2="24" class="file"/>
+    </symbol>
+
+    <!-- Timetable symbol -->
+    <symbol id="timetable" viewBox="0 0 50 40">
+      <rect x="0" y="0" width="50" height="40" rx="4" fill="none" stroke="#fff" stroke-width="2"/>
+      <line x1="0" y1="10" x2="50" y2="10" stroke="#fff" stroke-width="1.5"/>
+      <line x1="12" y1="10" x2="12" y2="40" stroke="#fff" stroke-width="1" opacity="0.5"/>
+      <line x1="25" y1="10" x2="25" y2="40" stroke="#fff" stroke-width="1" opacity="0.5"/>
+      <line x1="38" y1="10" x2="38" y2="40" stroke="#fff" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="20" x2="50" y2="20" stroke="#fff" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="30" x2="50" y2="30" stroke="#fff" stroke-width="1" opacity="0.5"/>
+      <rect x="3" y="13" width="7" height="5" rx="1" fill="#fff" opacity="0.5"/>
+      <rect x="27" y="22" width="9" height="6" rx="1" fill="#fff" opacity="0.5"/>
+      <rect x="14" y="32" width="8" height="5" rx="1" fill="#fff" opacity="0.5"/>
+    </symbol>
   </defs>
 
+  <!-- Falling files -->
+  <g>
+    <!-- Column 1 -->
+    <use href="#file-icon" x="300" y="150" width="24" height="30" style="opacity: 0; animation: fileFall 5s linear infinite backwards;"/>
+    <use href="#file-icon" x="300" y="150" width="24" height="30" style="opacity: 0; animation: fileFall 5s linear infinite 1.7s backwards;"/>
+    <use href="#file-icon" x="300" y="150" width="24" height="30" style="opacity: 0; animation: fileFall 5s linear infinite 3.4s backwards;"/>
+
+    <!-- Column 2 -->
+    <use href="#file-icon" x="340" y="150" width="24" height="30" style="opacity: 0; animation: fileFall 5s linear infinite 0.8s backwards;"/>
+    <use href="#file-icon" x="340" y="150" width="24" height="30" style="opacity: 0; animation: fileFall 5s linear infinite 2.5s backwards;"/>
+    <use href="#file-icon" x="340" y="150" width="24" height="30" style="opacity: 0; animation: fileFall 5s linear infinite 4.2s backwards;"/>
+  </g>
+
+  <!-- Timetable output -->
+  <g>
+    <use href="#timetable" x="300" y="420" width="60" height="48" style="opacity: 0; animation: timetableOut 5s linear infinite 4.2s backwards;"/>
+  </g>
+
   <!-- Main route highlighted -->
-  <path d="M 150 450 L 250 350 L 450 350 L 550 250 L 650 250"
+  <path d="M 150 450 L 250 350 L 450 350 L 550 250 L 700 250"
         stroke="#fff"
-        stroke-width="6"
+        stroke-width="3"
         fill="none"
         stroke-linecap="round"
         stroke-linejoin="round"
-        opacity="0.35"/>
+        opacity="0.5"/>
 
   <!-- Bus stops on route -->
   <circle cx="150" cy="450" r="8" fill="#fff" opacity="0.8"/>
   <circle cx="250" cy="350" r="8" fill="#fff" opacity="0.8"/>
   <circle cx="450" cy="350" r="8" fill="#fff" opacity="0.8"/>
   <circle cx="550" cy="250" r="8" fill="#fff" opacity="0.8"/>
-  <circle cx="650" cy="250" r="8" fill="#fff" opacity="0.8"/>
+  <circle cx="700" cy="250" r="8" fill="#fff" opacity="0.8"/>
 
-  <!-- Bus with signal waves -->
+  <!-- Arrow with signal waves -->
   <g class="nav-arrow">
-    <!-- Signal waves emanating from bus -->
+    <!-- Signal waves emanating from arrow -->
     <circle cx="0" cy="0" r="20" fill="none" stroke="#fff" stroke-width="3">
-      <animate attributeName="r" values="20;80;80" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="20;80;80" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0" dur="3s" repeatCount="indefinite"/>
     </circle>
     <circle cx="0" cy="0" r="20" fill="none" stroke="#fff" stroke-width="2">
-      <animate attributeName="r" values="20;100;100" dur="2s" begin="0.7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0;0" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="20;100;100" dur="3s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0" dur="3s" begin="1s" repeatCount="indefinite"/>
     </circle>
     <circle cx="0" cy="0" r="20" fill="none" stroke="#fff" stroke-width="2">
-      <animate attributeName="r" values="20;120;120" dur="2s" begin="1.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.4;0;0" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="20;120;120" dur="3s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0" dur="3s" begin="2s" repeatCount="indefinite"/>
     </circle>
 
     <!-- Navigation arrow -->

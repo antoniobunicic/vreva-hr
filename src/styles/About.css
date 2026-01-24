@@ -46,6 +46,7 @@
 .stat-item:hover {
   border-color: var(--color-vreva-yellow);
   transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(220, 51, 83, 0.15);
 }
 
 .stat-number {

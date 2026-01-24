@@ -6,7 +6,7 @@ function ProjectCard({ projectKey, projectImage, clientLogo }) {
 
   const isAngler = projectKey === 'angler';
   const isMultiImage = Array.isArray(projectImage);
-  const isMonochromeSvg = projectKey === 'timetable';
+  const isMonochromeSvg = projectKey === 'timetable' || projectKey === 'thesis';
 
   return (
     <div className={`project-card ${!projectImage ? 'no-image' : ''} ${isAngler ? 'angler-multi-image' : ''}`}>

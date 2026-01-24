@@ -24,7 +24,7 @@
     "title": "Proces",
     "steps": {
       "discovery": {
-        "phase": "Otkrivanje",
+        "phase": "Analiza",
         "description": "Razumijevanje vaših ciljeva, ograničenja i tehnološkog okruženja"
       },
       "planning": {
