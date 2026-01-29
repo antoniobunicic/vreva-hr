@@ -88,8 +88,11 @@
 }
 
 .project-client-logo img {
-  height: 48px;
+  max-height: 48px;
+  max-width: 204px;
   width: auto;
+  height: auto;
+  object-fit: contain;
   filter: brightness(0) saturate(100%);
 }
 
