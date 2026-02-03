@@ -36,5 +36,143 @@
         "Optimizacija poslovnih procesa"
       ]
     }
+  },
+  "dropdown": {
+    "webdev": "Izrada web stranica",
+    "fullstack": "Razvoj softvera",
+    "leadership": "IT savjetovanje"
+  },
+  "detail": {
+    "webdev": {
+      "hero": "Izrada web stranica",
+      "subtitle": "Profesionalne web stranice brzo i pristupačno",
+      "intro": "Izrađujemo moderne, responzivne web stranice koje pomažu malim tvrtkama uspostaviti snažnu online prisutnost. Od jednostranih landing stranica do višestranih korporativnih web stranica, isporučujemo kvalitetna rješenja po konkurentnim cijenama.",
+      "sections": [
+        {
+          "title": "Što isporučujemo",
+          "items": [
+            "Prilagođeno dizajnirane responzivne web stranice za svaki uređaj",
+            "Landing stranice optimizirane za konverzije",
+            "Korporativne i portfolio web stranice",
+            "Web trgovine spremne za prodaju",
+            "Blogovi i stranice vođene sadržajem"
+          ]
+        },
+        {
+          "title": "Naš tehnološki stack",
+          "items": [
+            "React & Next.js za dinamična, brza iskustva",
+            "Moderan CSS s responsive-first dizajnom",
+            "SEO optimizacija ugrađena od početka",
+            "Performanse optimizirane za Core Web Vitals",
+            "CMS integracija po potrebi"
+          ]
+        },
+        {
+          "title": "Zašto raditi s nama",
+          "items": [
+            "Transparentne cijene bez skrivenih troškova",
+            "Brza izrada bez kompromisa u kvaliteti",
+            "Stalno održavanje i podrška",
+            "Direktna komunikacija kroz cijeli proces",
+            "Moderni standardi dizajna i najbolje prakse"
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Spremni za izradu web stranice?",
+        "description": "Razgovarajmo o vašem projektu i pronađimo savršeno rješenje za vaše poslovanje.",
+        "button": "Kontaktirajte nas"
+      }
+    },
+    "fullstack": {
+      "hero": "Razvoj softvera",
+      "subtitle": "Kompletna rješenja od baze podataka do korisničkog sučelja",
+      "intro": "Isporučujemo kompletna softverska rješenja koristeći moderne tehnologije. Bilo da vam treba robustan backend sustav, interaktivni frontend ili full-stack aplikacija, upravljamo svakim slojem stacka s iskustvom.",
+      "sections": [
+        {
+          "title": "Backend razvoj",
+          "items": [
+            "Java & Kotlin sa Spring Boot-om",
+            "Event-driven arhitektura s Apache Kafkom",
+            "RESTful API dizajn i implementacija",
+            "Mikroservisi i modularna arhitektura",
+            "Dizajn, optimizacija i migracija baza podataka"
+          ]
+        },
+        {
+          "title": "Frontend razvoj",
+          "items": [
+            "React s TypeScriptom za type-safe sučelja",
+            "Responzivni dizajn za sve veličine ekrana",
+            "Upravljanje stanjem i dohvaćanje podataka",
+            "Biblioteke komponenti i sustavi dizajna",
+            "Optimizacija performansi i pristupačnost"
+          ]
+        },
+        {
+          "title": "DevOps & Kvaliteta",
+          "items": [
+            "Postavljanje i upravljanje CI/CD pipelineom",
+            "Automatizirano testiranje na svakoj razini",
+            "Produkcijsko postavljanje i nadzor",
+            "Pregled koda i osiguranje kvalitete",
+            "Dokumentacija i prijenos znanja"
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Imate softverski projekt na umu?",
+        "description": "Razgovarajmo o vašim zahtjevima i kako možemo izgraditi pravo rješenje.",
+        "button": "Kontaktirajte nas"
+      }
+    },
+    "leadership": {
+      "hero": "IT savjetovanje",
+      "subtitle": "Strateško vodstvo za vaš digitalni put",
+      "intro": "Pomažemo tvrtkama upravljati kompleksnostima digitalne transformacije. Od analize postojećih sustava do planiranja strategija modernizacije, pružamo praktične uvide koji donose stvarne rezultate.",
+      "sections": [
+        {
+          "title": "Analiza sustava",
+          "items": [
+            "Revizija postojećeg tehnološkog stacka i infrastrukture",
+            "Identifikacija uskih grla i neučinkovitosti",
+            "Procjena sigurnosti i preporuke",
+            "Evaluacija performansi i putovi optimizacije",
+            "Analiza tehničkog duga"
+          ]
+        },
+        {
+          "title": "Strateško planiranje",
+          "items": [
+            "Razvoj tehnološkog plana",
+            "Odabir alata i platformi",
+            "Planiranje digitalne transformacije",
+            "Strategija migracije zastarjelih sustava",
+            "Analiza izrade vs. kupnje"
+          ]
+        },
+        {
+          "title": "Optimizacija poslovanja",
+          "items": [
+            "Mogućnosti automatizacije radnih tokova",
+            "Optimizacija procesa za razvojne timove",
+            "Analiza troškova i koristi tehnoloških investicija",
+            "Evaluacija i odabir dobavljača",
+            "Preporuke za obuku i usavršavanje tima"
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Trebate stručno vodstvo?",
+        "description": "Analizirajmo vaš trenutni sustav i pronađimo mogućnosti za poboljšanje.",
+        "button": "Kontaktirajte nas"
+      }
+    }
+  },
+  "overview": {
+    "title": "Naše usluge",
+    "subtitle": "Od izrade web stranica do strateškog savjetovanja, pružamo stručnost koja vam je potrebna za uspjeh u digitalnom krajoliku.",
+    "learnMore": "Saznaj više"
   }
 }

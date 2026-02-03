@@ -9,6 +9,7 @@
     "ariaToggleMenu": "Toggle menu"
   },
   "footer": {
-    "copyright": "© 2026 Vreva. All rights reserved."
-  }
+    "copyright": "\u00a9 2026 Vreva. All rights reserved."
+  },
+  "backToHome": "Back to Home"
 }

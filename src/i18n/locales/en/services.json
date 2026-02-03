@@ -15,7 +15,7 @@
       ]
     },
     "fullstack": {
-      "title": "Full-Stack Development",
+      "title": "Software Development",
       "description": "End-to-end development from database to UI with modern technologies",
       "capabilities": [
         "Backend: Spring Boot, Kafka, REST APIs",
@@ -36,5 +36,143 @@
         "Business process optimization"
       ]
     }
+  },
+  "dropdown": {
+    "webdev": "Web Development",
+    "fullstack": "Software Development",
+    "leadership": "IT Consulting"
+  },
+  "detail": {
+    "webdev": {
+      "hero": "Web Development",
+      "subtitle": "Professional websites, fast and affordable",
+      "intro": "We build modern, responsive websites that help small businesses establish a strong online presence. From single-page landing sites to multi-page corporate websites, we deliver quality solutions at competitive prices.",
+      "sections": [
+        {
+          "title": "What We Deliver",
+          "items": [
+            "Custom-designed responsive websites that look great on every device",
+            "Landing pages optimized for conversions",
+            "Corporate and portfolio websites",
+            "E-commerce-ready storefronts",
+            "Blog and content-driven sites"
+          ]
+        },
+        {
+          "title": "Our Technology Stack",
+          "items": [
+            "React & Next.js for dynamic, fast-loading experiences",
+            "Modern CSS with responsive-first design",
+            "SEO optimization built in from the start",
+            "Performance-tuned for Core Web Vitals",
+            "CMS integration when needed"
+          ]
+        },
+        {
+          "title": "Why Work With Us",
+          "items": [
+            "Transparent pricing with no hidden costs",
+            "Fast turnaround without compromising quality",
+            "Ongoing maintenance and support",
+            "Direct communication throughout the process",
+            "Modern design standards and best practices"
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Ready to build your website?",
+        "description": "Let's discuss your project and find the perfect solution for your business.",
+        "button": "Get in Touch"
+      }
+    },
+    "fullstack": {
+      "hero": "Software Development",
+      "subtitle": "End-to-end solutions from database to UI",
+      "intro": "We deliver complete software solutions using modern technologies. Whether you need a robust backend system, an interactive frontend, or a full-stack application, we handle every layer of the stack with expertise.",
+      "sections": [
+        {
+          "title": "Backend Development",
+          "items": [
+            "Java & Kotlin with Spring Boot",
+            "Event-driven architecture with Apache Kafka",
+            "RESTful API design and implementation",
+            "Microservices and modular architecture",
+            "Database design, optimization, and migration"
+          ]
+        },
+        {
+          "title": "Frontend Development",
+          "items": [
+            "React with TypeScript for type-safe UIs",
+            "Responsive design for all screen sizes",
+            "State management and data fetching",
+            "Component libraries and design systems",
+            "Performance optimization and accessibility"
+          ]
+        },
+        {
+          "title": "DevOps & Quality",
+          "items": [
+            "CI/CD pipeline setup and management",
+            "Automated testing at every level",
+            "Production deployment and monitoring",
+            "Code reviews and quality assurance",
+            "Documentation and knowledge transfer"
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Have a software project in mind?",
+        "description": "Let's talk about your requirements and how we can build the right solution.",
+        "button": "Get in Touch"
+      }
+    },
+    "leadership": {
+      "hero": "IT Consulting",
+      "subtitle": "Strategic guidance for your digital journey",
+      "intro": "We help businesses navigate the complexities of digital transformation. From analyzing existing systems to planning modernization strategies, we provide actionable insights that drive real results.",
+      "sections": [
+        {
+          "title": "Systems Analysis",
+          "items": [
+            "Audit of existing technology stack and infrastructure",
+            "Identification of bottlenecks and inefficiencies",
+            "Security assessment and recommendations",
+            "Performance evaluation and optimization paths",
+            "Technical debt analysis"
+          ]
+        },
+        {
+          "title": "Strategic Planning",
+          "items": [
+            "Technology roadmap development",
+            "Tool and platform selection",
+            "Digital transformation planning",
+            "Migration strategy for legacy systems",
+            "Build vs. buy analysis"
+          ]
+        },
+        {
+          "title": "Business Optimization",
+          "items": [
+            "Workflow automation opportunities",
+            "Process optimization for development teams",
+            "Cost-benefit analysis of technology investments",
+            "Vendor evaluation and selection",
+            "Training and team upskilling recommendations"
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Need expert guidance?",
+        "description": "Let's analyze your current setup and find opportunities for improvement.",
+        "button": "Get in Touch"
+      }
+    }
+  },
+  "overview": {
+    "title": "Our Services",
+    "subtitle": "From web development to strategic consulting, we provide the expertise you need to succeed in the digital landscape.",
+    "learnMore": "Learn More"
   }
 }

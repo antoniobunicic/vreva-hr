@@ -9,6 +9,7 @@
     "ariaToggleMenu": "Otvori izbornik"
   },
   "footer": {
-    "copyright": "© 2026 Vreva. Sva prava pridržana."
-  }
+    "copyright": "\u00a9 2026 Vreva. Sva prava pridrzana."
+  },
+  "backToHome": "Povratak na pocetnu"
 }
