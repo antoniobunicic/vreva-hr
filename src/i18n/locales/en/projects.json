@@ -3,6 +3,11 @@
     "title": "Projects"
   },
   "cards": {
+    "apartmani": {
+      "title": "Accommodation Website",
+      "description": "Modern website for accommodation in Cres. Features apartment overview, image gallery, location details, and contact information.",
+      "tags": ["React", "Tailwind CSS"]
+    },
     "flexportal": {
       "title": "Energy Grid Balancing Platform & Web Portal",
       "description": "Worked on a web portal built using TypeScript and React.js. Features include user and customer management, white-labeling, resource activation tracking, settings, and reporting.",

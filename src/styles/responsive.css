@@ -211,6 +211,10 @@
     font-size: 0.95rem;
   }
 
+  .project-scrollable-preview {
+    max-height: 350px;
+  }
+
   .about-stats {
     grid-template-columns: 1fr;
   }
@@ -325,4 +329,9 @@
     font-size: 0.7rem;
     padding: 0.4rem 0.8rem;
   }
+
+  .project-scrollable-preview {
+    max-height: 300px;
+  }
+
 }

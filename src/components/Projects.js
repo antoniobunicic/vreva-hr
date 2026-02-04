@@ -9,21 +9,27 @@ import timetableImg from '../assets/timetable-system.svg';
 import sensorNetworkImg from '../assets/sensor-network.svg';
 import bonfonImg from '../assets/bonfon.png';
 import smarthomeImg from '../assets/smarthome.png';
+import apartmaniImg from '../assets/apartmani-bunicic-full.png';
 import atronLogo from '../assets/atron.svg';
 import sympowerLogo from '../assets/sympower.svg';
 
 function Projects() {
   const { t } = useTranslation('projects');
 
-  const projectKeys = ['flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
+  const projectKeys = ['apartmani', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
 
   const projectImages = {
+    apartmani: apartmaniImg,
     flexportal: flexportalImg,
     timetable: timetableImg,
     angler: [anglerSS0, anglerSS1, anglerSS4],
     bonfon: bonfonImg,
     thesis: sensorNetworkImg,
     smarthome: smarthomeImg
+  };
+
+  const scrollablePreview = {
+    apartmani: true,
   };
 
   const clientLogos = {
@@ -42,6 +48,7 @@ function Projects() {
               projectKey={key}
               projectImage={projectImages[key]}
               clientLogo={clientLogos[key]}
+              scrollablePreview={scrollablePreview[key]}
             />
           ))}
         </div>

@@ -3,6 +3,11 @@
     "title": "Projekti"
   },
   "cards": {
+    "apartmani": {
+      "title": "Web stranica za apartmane",
+      "description": "Moderna web stranica za smještaj u Cresu. Uključuje pregled apartmana, galeriju slika, lokaciju i kontakt informacije.",
+      "tags": ["React", "Tailwind CSS"]
+    },
     "flexportal": {
       "title": "Platforma i web portal za balansiranje energetske mreže",
       "description": "Web portal razvijen koristeći TypeScript i React.js. Uključuje upravljanje korisnicima i klijentima, white-labeling, praćenje resursa, postavke i izvještavanje.",
