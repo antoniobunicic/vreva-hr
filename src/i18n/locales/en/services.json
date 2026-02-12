@@ -46,39 +46,90 @@
     "webdev": {
       "hero": "Web Development",
       "subtitle": "Professional websites, fast and affordable",
-      "intro": "We build modern, responsive websites that help small businesses establish a strong online presence. From single-page landing sites to multi-page corporate websites, we deliver quality solutions at competitive prices.",
-      "sections": [
+      "intro": "We build modern, responsive websites that help businesses establish a strong online presence. From single-page landing sites to multi-page corporate websites, we deliver quality solutions at competitive prices.",
+      "features": [
         {
-          "title": "What We Deliver",
-          "items": [
-            "Custom-designed responsive websites that look great on every device",
-            "Landing pages optimized for conversions",
-            "Corporate and portfolio websites",
-            "E-commerce-ready storefronts",
-            "Blog and content-driven sites"
-          ]
+          "icon": "custom",
+          "title": "Custom Solutions",
+          "description": "Every website is unique and tailored to your specific business needs."
         },
         {
-          "title": "Our Technology Stack",
-          "items": [
-            "React & Next.js for dynamic, fast-loading experiences",
-            "Modern CSS with responsive-first design",
-            "SEO optimization built in from the start",
-            "Performance-tuned for Core Web Vitals",
-            "CMS integration when needed"
-          ]
+          "icon": "responsive",
+          "title": "Modern, Responsive Design",
+          "description": "Websites that look great on all devices — from mobile phones to desktop computers."
         },
         {
-          "title": "Why Work With Us",
-          "items": [
-            "Transparent pricing with no hidden costs",
-            "Fast turnaround without compromising quality",
-            "Ongoing maintenance and support",
-            "Direct communication throughout the process",
-            "Modern design standards and best practices"
-          ]
+          "icon": "rocket",
+          "title": "Fast Turnaround",
+          "description": "From concept to live website in no time, without unnecessary delays."
+        },
+        {
+          "icon": "search",
+          "title": "SEO Optimization",
+          "description": "Built-in search engine optimization so your clients can find you easily."
+        },
+        {
+          "icon": "price",
+          "title": "Affordable Pricing",
+          "description": "Transparent pricing with no hidden costs. You know exactly what you're getting."
+        },
+        {
+          "icon": "support",
+          "title": "Maintenance & Support",
+          "description": "Ongoing support and updates after your website goes live."
         }
       ],
+      "pricing": {
+        "title": "Website Pricing",
+        "packages": [
+          {
+            "name": "Monthly Plan",
+            "price": "50 – 150",
+            "period": "/mo",
+            "note": "+ VAT",
+            "description": "No upfront cost, everything included",
+            "features": [
+              "Responsive website",
+              "Domain and hosting included",
+              "SSL certificate",
+              "Monthly maintenance and support",
+              "Content updates",
+              "Minimum 12 month commitment"
+            ]
+          },
+          {
+            "name": "Starter",
+            "price": "200 – 600",
+            "period": "",
+            "note": "+ VAT",
+            "description": "Single-page or presentation site up to 5 pages",
+            "features": [
+              "Responsive design",
+              "Up to 5 pages",
+              "Contact form",
+              "SEO optimization",
+              "Google Analytics integration",
+              "2 revision rounds"
+            ]
+          },
+          {
+            "name": "Business",
+            "price": "1,000 – 3,000",
+            "period": "",
+            "note": "+ VAT",
+            "description": "Multi-page business website up to 15 pages",
+            "features": [
+              "Everything in Starter",
+              "Up to 15 pages",
+              "Blog or gallery",
+              "CMS for content management",
+              "Social media integration",
+              "3 revision rounds",
+              "30 days post-launch support"
+            ]
+          }
+        ]
+      },
       "cta": {
         "title": "Ready to build your website?",
         "description": "Let's discuss your project and find the perfect solution for your business.",

@@ -28,6 +28,10 @@
 
 .contact-cta {
   margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .contact-info {

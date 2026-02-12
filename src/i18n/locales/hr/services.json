@@ -46,39 +46,90 @@
     "webdev": {
       "hero": "Izrada web stranica",
       "subtitle": "Profesionalne web stranice brzo i pristupačno",
-      "intro": "Izrađujemo moderne, responzivne web stranice koje pomažu malim tvrtkama uspostaviti snažnu online prisutnost. Od jednostranih landing stranica do višestranih korporativnih web stranica, isporučujemo kvalitetna rješenja po konkurentnim cijenama.",
-      "sections": [
+      "intro": "Izrađujemo moderne, responzivne web stranice koje pomažu tvrtkama uspostaviti snažnu online prisutnost. Od jednostranih landing stranica do višestranih korporativnih web stranica, isporučujemo kvalitetna rješenja po konkurentnim cijenama.",
+      "features": [
         {
-          "title": "Što isporučujemo",
-          "items": [
-            "Prilagođeno dizajnirane responzivne web stranice za svaki uređaj",
-            "Landing stranice optimizirane za konverzije",
-            "Korporativne i portfolio web stranice",
-            "Web trgovine spremne za prodaju",
-            "Blogovi i stranice vođene sadržajem"
-          ]
+          "icon": "custom",
+          "title": "Prilagođena rješenja",
+          "description": "Svaka web stranica je jedinstvena i prilagođena specifičnim potrebama vašeg poslovanja."
         },
         {
-          "title": "Naš tehnološki stack",
-          "items": [
-            "React & Next.js za dinamična, brza iskustva",
-            "Moderan CSS s responsive-first dizajnom",
-            "SEO optimizacija ugrađena od početka",
-            "Performanse optimizirane za Core Web Vitals",
-            "CMS integracija po potrebi"
-          ]
+          "icon": "responsive",
+          "title": "Moderna, responzivna sučelja",
+          "description": "Web stranice koje izgledaju izvrsno na svim uređajima — od mobitela do desktop računala."
         },
         {
-          "title": "Zašto raditi s nama",
-          "items": [
-            "Transparentne cijene bez skrivenih troškova",
-            "Brza izrada bez kompromisa u kvaliteti",
-            "Stalno održavanje i podrška",
-            "Direktna komunikacija kroz cijeli proces",
-            "Moderni standardi dizajna i najbolje prakse"
-          ]
+          "icon": "rocket",
+          "title": "Brza izrada i lansiranje",
+          "description": "Od ideje do live stranice u kratkom roku, bez nepotrebnog čekanja."
+        },
+        {
+          "icon": "search",
+          "title": "SEO optimizacija",
+          "description": "Ugrađena optimizacija za tražilice kako bi vas klijenti lakše pronašli."
+        },
+        {
+          "icon": "price",
+          "title": "Pristupačne cijene",
+          "description": "Transparentne cijene bez skrivenih troškova. Znate točno što dobivate."
+        },
+        {
+          "icon": "support",
+          "title": "Održavanje i podrška",
+          "description": "Kontinuirana podrška i ažuriranja nakon lansiranja stranice."
         }
       ],
+      "pricing": {
+        "title": "Cijena izrade web stranica",
+        "packages": [
+          {
+            "name": "Mjesečna pretplata",
+            "price": "50 – 150",
+            "period": "/mj",
+            "note": "+ PDV",
+            "description": "Bez početnog ulaganja, sve uključeno",
+            "features": [
+              "Responzivna web stranica",
+              "Domena i hosting uključeni",
+              "SSL certifikat",
+              "Mjesečno održavanje i podrška",
+              "Ažuriranje sadržaja",
+              "Minimalno trajanje 12 mjeseci"
+            ]
+          },
+          {
+            "name": "Osnovni paket",
+            "price": "200 – 600",
+            "period": "",
+            "note": "+ PDV",
+            "description": "Jednostrana ili prezentacijska stranica do 5 podstranica",
+            "features": [
+              "Responzivni dizajn",
+              "Do 5 podstranica",
+              "Kontakt forma",
+              "SEO optimizacija",
+              "Google Analytics integracija",
+              "2 runde revizija"
+            ]
+          },
+          {
+            "name": "Poslovni paket",
+            "price": "1.000 – 3.000",
+            "period": "",
+            "note": "+ PDV",
+            "description": "Višestrana poslovna web stranica do 15 podstranica",
+            "features": [
+              "Sve iz osnovnog paketa",
+              "Do 15 podstranica",
+              "Blog ili galerija",
+              "CMS za upravljanje sadržajem",
+              "Integracija društvenih mreža",
+              "3 runde revizija",
+              "30 dana podrške nakon lansiranja"
+            ]
+          }
+        ]
+      },
       "cta": {
         "title": "Spremni za izradu web stranice?",
         "description": "Razgovarajmo o vašem projektu i pronađimo savršeno rješenje za vaše poslovanje.",

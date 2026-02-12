@@ -1,7 +1,8 @@
 {
   "title": "Let's build something together",
   "intro": "Whether you're looking to modernize your stack, build a new product, or scale your team — we're here to help.",
-  "cta": "Start a Conversation",
+  "cta": "Send Email",
+  "whatsapp": "WhatsApp",
   "labels": {
     "email": "Email",
     "location": "Location",
