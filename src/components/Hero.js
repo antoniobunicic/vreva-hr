@@ -21,7 +21,16 @@ function Hero() {
                 <h1 className="hero-title">{t('title')}</h1>
                 <p className="hero-description">{t('description')}</p>
                 <div className="hero-cta">
-                    <a href="#contact" className="btn btn-primary">{t('cta.primary')}</a>
+                    <a
+                      href="#contact"
+                      className="btn btn-primary"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
+                      {t('cta.primary')}
+                    </a>
                     <Link to="/services" className="btn btn-secondary">{t('cta.secondary')}</Link>
                 </div>
                 <img src={dots} alt="Vreva logo" className="hero-dots"/>
