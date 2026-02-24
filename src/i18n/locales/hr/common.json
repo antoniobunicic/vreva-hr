@@ -9,7 +9,10 @@
     "ariaToggleMenu": "Otvori izbornik"
   },
   "footer": {
-    "copyright": "\u00a9 2026 Vreva. Sva prava pridrzana."
+    "tagline": "Digitalna prisutnost na višoj razini.",
+    "services": "Usluge",
+    "contact": "Kontakt",
+    "copyright": "© 2026 Vreva. Sva prava pridržana."
   },
-  "backToHome": "Povratak na pocetnu"
+  "backToHome": "Povratak na početnu"
 }

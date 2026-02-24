@@ -1,14 +1,17 @@
 {
   "title": "Izgradimo nešto zajedno",
   "intro": "Bilo da želite jednostavnu web stranicu, kompleksni digitalni proizvod ili proširenje svog tima — ovdje smo da pomognemo.",
-  "cta": "Pošalji e-mail",
-  "whatsapp": "WhatsApp",
-  "labels": {
+  "form": {
+    "name": "Ime",
     "email": "Email",
-    "location": "Lokacija",
-    "linkedin": "LinkedIn"
+    "message": "Poruka",
+    "submit": "Pošalji",
+    "success": "Hvala na poruci! Javit ćemo se uskoro.",
+    "error": "Nešto je pošlo po zlu. Pokušajte ponovno."
   },
-  "values": {
-    "location": "Zagreb, Hrvatska"
+  "or": "ili",
+  "buttons": {
+    "email": "Email",
+    "call": "Poziv"
   }
 }
