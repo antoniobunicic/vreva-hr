@@ -4,6 +4,37 @@
   background: var(--color-background1);
 }
 
+.projects-filter {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.projects-filter-btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.projects-filter-btn:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.projects-filter-btn.active {
+  background: var(--color-vreva-yellow);
+  border-color: var(--color-vreva-yellow);
+  color: black;
+}
+
 .projects-grid {
   display: flex;
   flex-direction: column;

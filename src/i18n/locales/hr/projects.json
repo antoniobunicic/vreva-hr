@@ -2,11 +2,22 @@
   "section": {
     "title": "Projekti"
   },
+  "categories": {
+    "featured": "Istaknuti projekti",
+    "web": "Web stranice",
+    "software": "Softverska rješenja",
+    "mobile": "Mobilne aplikacije"
+  },
   "cards": {
     "apartmani": {
       "title": "Web stranica za apartmane",
       "description": "Moderna web stranica za smještaj u Cresu. Uključuje pregled apartmana, galeriju slika, lokaciju i kontakt informacije.",
       "tags": ["React", "Tailwind CSS"]
+    },
+    "houselucy": {
+      "title": "Web stranica za smještaj",
+      "description": "Moderna web stranica za smještaj u Ražancu. Uključuje pregled kuće, galeriju slika, lokaciju i kontakt informacije.",
+      "tags": ["Astro", "Tailwind CSS"]
     },
     "flexportal": {
       "title": "Platforma i web portal za balansiranje energetske mreže",
