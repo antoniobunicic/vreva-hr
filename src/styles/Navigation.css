@@ -175,8 +175,9 @@
 .hamburger {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: space-between;
   width: 24px;
+  height: 18px;
 }
 
 .hamburger span {
@@ -189,7 +190,7 @@
 }
 
 .hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -197,7 +198,7 @@
 }
 
 .hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 [data-theme='light'] .hamburger span {
