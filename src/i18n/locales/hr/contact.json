@@ -4,6 +4,7 @@
   "form": {
     "name": "Ime",
     "email": "Email",
+    "phone": "Broj telefona",
     "message": "Poruka",
     "submit": "Pošalji",
     "success": "Hvala na poruci! Javit ćemo se uskoro.",

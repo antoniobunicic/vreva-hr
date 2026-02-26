@@ -4,6 +4,7 @@
   "form": {
     "name": "Name",
     "email": "Email",
+    "phone": "Phone number",
     "message": "Message",
     "submit": "Send",
     "success": "Thanks for your message! We'll get back to you soon.",

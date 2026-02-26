@@ -64,6 +64,11 @@ function Contact() {
             </div>
 
             <div className="form-group">
+              <label htmlFor="phone">{t('form.phone')}</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div className="form-group">
               <label htmlFor="message">{t('form.message')}</label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
