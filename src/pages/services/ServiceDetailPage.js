@@ -58,9 +58,10 @@ function ServiceDetailPage() {
 
   const sections = t(`detail.${key}.sections`, { ns: 'services', returnObjects: true, defaultValue: null });
   const features = t(`detail.${key}.features`, { ns: 'services', returnObjects: true, defaultValue: null });
+  const niches = t(`detail.${key}.niches`, { ns: 'services', returnObjects: true, defaultValue: null });
 
   return (
-    <section className="service-page">
+    <section className={`service-page service-page--${key}`}>
       <div className="container">
         <div className="service-page-header">
           <h1 className="service-page-title">{t(`detail.${key}.hero`, { ns: 'services' })}</h1>
@@ -81,6 +82,20 @@ function ServiceDetailPage() {
                   <p className="service-feature-description">{feature.description}</p>
                 </div>
               ))}
+            </div>
+          )}
+
+          {niches && niches.items && Array.isArray(niches.items) && (
+            <div className="service-niches">
+              <h2 className="service-niches-title">{niches.title}</h2>
+              <div className="service-niches-grid">
+                {niches.items.map((niche, i) => (
+                  <Link key={i} to={`/services/web-development/${niche.slug}`} className="service-niche-item">
+                    <h3 className="service-niche-heading">{niche.heading}</h3>
+                    <p className="service-niche-description">{niche.description}</p>
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
 

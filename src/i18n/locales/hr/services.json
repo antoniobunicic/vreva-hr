@@ -45,7 +45,7 @@
   "detail": {
     "webdev": {
       "hero": "Izrada web stranica",
-      "subtitle": "Profesionalne web stranice brzo i pristupačno",
+      "subtitle": "brzo i pristupačno",
       "intro": "Izrađujemo moderne, responzivne web stranice koje pomažu tvrtkama uspostaviti snažnu online prisutnost. Od jednostranih landing stranica do višestranih korporativnih web stranica, isporučujemo kvalitetna rješenja po konkurentnim cijenama.",
       "features": [
         {
@@ -129,6 +129,151 @@
             ]
           }
         ]
+      },
+      "niches": {
+        "title": "Web stranice za svaku industriju",
+        "items": [
+          {
+            "slug": "ugostiteljstvo",
+            "heading": "Izrada web stranica za ugostiteljske objekte",
+            "description": "Restorani, kafići, barovi — privucite goste modernom online prisutnošću s jelovnikom, galerijama i kontaktom."
+          },
+          {
+            "slug": "apartmani",
+            "heading": "Izrada web stranica za apartmane i smještaj",
+            "description": "Povećajte direktne rezervacije i smanjite ovisnost o booking platformama."
+          },
+          {
+            "slug": "obrtnici",
+            "heading": "Izrada web stranica za obrtnike",
+            "description": "Istaknite svoje usluge, referentne radove i kontakt informacije — bez nepotrebne složenosti."
+          },
+          {
+            "slug": "male-tvrtke",
+            "heading": "Izrada web stranica za male tvrtke",
+            "description": "Profesionalna online prisutnost koja gradi povjerenje kod novih klijenata."
+          },
+          {
+            "slug": "turizam",
+            "heading": "Izrada web stranica za turizam i turističke agencije",
+            "description": "Dosegnite više klijenata s atraktivnom stranicom koja prikazuje vaše destinacije i pakete."
+          },
+          {
+            "slug": "saloni",
+            "heading": "Izrada web stranica za salone i kozmetičare",
+            "description": "Online prezentacija usluga, galerija radova i mogućnost kontakta — sve na jednom mjestu."
+          }
+        ],
+        "pages": {
+          "ugostiteljstvo": {
+            "hero": "Izrada web stranica za ugostiteljske objekte",
+            "subtitle": "Privucite više gostiju i povećajte rezervacije",
+            "intro": "Vaš restoran, kafić ili bar zaslužuje online prisutnost koja odražava ugođaj i kvalitetu vašeg objekta. Moderna web stranica nije samo vizitka — ona je prodajni alat koji radi 24 sata na dan, 7 dana u tjednu. Gosti sve češće traže jelovnik, radno vrijeme i recenzije online prije dolaska — budite tamo gdje vas traže.",
+            "bullets": [
+              "Digitalni jelovnik s fotografijama jela i pića",
+              "Galerija prostora i ugođaja objekta",
+              "Radno vrijeme, lokacija i Google Maps integracija",
+              "Kontakt forma i direktna veza na rezervacije",
+              "Integracija recenzija (Google, TripAdvisor)",
+              "Brzo učitavanje na mobilnim uređajima"
+            ],
+            "cta": {
+              "title": "Pokrenimo vašu stranicu",
+              "description": "Ispričajte nam nešto o svom objektu i dogovorimo detalje.",
+              "button": "Kontaktirajte nas"
+            }
+          },
+          "apartmani": {
+            "hero": "Izrada web stranica za apartmane i smještaj",
+            "subtitle": "Više direktnih rezervacija, manje provizija",
+            "intro": "Svaka rezervacija putem Bookinga ili Airbnba košta vas između 15 i 20% provizije. Vlastita web stranica vam omogućuje da privučete goste direktno — i zadržite taj novac za sebe. Uz pravu SEO optimizaciju, gosti vas mogu pronaći na Googleu i rezervirati bez posrednika.",
+            "bullets": [
+              "Prezentacija apartmana s profesionalnim fotografijama",
+              "Prikaz slobodnih termina i cijena",
+              "Kontakt forma i WhatsApp integracija za brze upite",
+              "Višejezičnost (HR, EN, DE, IT...)",
+              "SEO optimizacija za lokalne pretrage",
+              "Google Maps i upute do smještaja"
+            ],
+            "cta": {
+              "title": "Smanjite provizije, povećajte zaradu",
+              "description": "Izradimo stranicu koja vam donosi direktne rezervacije.",
+              "button": "Kontaktirajte nas"
+            }
+          },
+          "obrtnici": {
+            "hero": "Izrada web stranica za obrtnike",
+            "subtitle": "Novi klijenti vas pronalaze online — budite tamo",
+            "intro": "Većina novih klijenata danas traži majstora, electricara, vodoinstalatera ili stolara na Googleu. Bez web stranice, propuštate te upite. Jednostavna, profesionalna stranica s vašim uslugama, kontaktom i referentnim radovima dovoljna je da se istaknete od konkurencije.",
+            "bullets": [
+              "Pregled usluga koje nudite",
+              "Galerija referentnih radova",
+              "Kontakt podaci i forma za upit",
+              "SEO optimizacija za lokalne pretrage (npr. 'vodoinstalater Zagreb')",
+              "Recenzije zadovoljnih klijenata",
+              "Brza izrada — online za tjedan dana"
+            ],
+            "cta": {
+              "title": "Dajmo vam online prisutnost",
+              "description": "Brza, pristupačna stranica prilagođena vašem obrtu.",
+              "button": "Kontaktirajte nas"
+            }
+          },
+          "male-tvrtke": {
+            "hero": "Izrada web stranica za male tvrtke",
+            "subtitle": "Profesionalna online prisutnost bez velikih troškova",
+            "intro": "Za malu tvrtku, web stranica je najjeftiniji i najefikasniji marketinški alat. Potencijalni klijenti provjeravaju vaš online profil prije nego što vas nazovu — profesionalna stranica gradi povjerenje i povećava vjerojatnost da odaberu baš vas.",
+            "bullets": [
+              "Prezentacija tvrtke, tima i usluga",
+              "Kontakt forma i mapa lokacije",
+              "SEO optimizacija za vašu branšu i lokaciju",
+              "Blog ili novosti za redovito ažuriranje",
+              "Integracija s društvenim mrežama",
+              "Google Analytics za praćenje posjeta"
+            ],
+            "cta": {
+              "title": "Izgradimo vaš online identitet",
+              "description": "Razgovarajmo o vašoj tvrtki i što želi postići stranicom.",
+              "button": "Kontaktirajte nas"
+            }
+          },
+          "turizam": {
+            "hero": "Izrada web stranica za turizam i turističke agencije",
+            "subtitle": "Dosegnite više putnika s atraktivnom online prisutnošću",
+            "intro": "Turisti planiraju putovanja online — i vaša agencija ili turistička ponuda mora biti vidljiva tamo gdje traže. Moderna web stranica s atraktivnim fotografijama, opisima destinacija i jasnim pozivom na akciju pretvara posjetitelje u klijente.",
+            "bullets": [
+              "Prikaz destinacija, tura i paketa",
+              "Galerija fotografija i videa",
+              "Obrazac za upit ili rezervaciju",
+              "Višejezičnost za strane turiste",
+              "SEO optimizacija za turističke pretrage",
+              "Integracija s Google kartama"
+            ],
+            "cta": {
+              "title": "Privucite više putnika",
+              "description": "Izradimo stranicu koja prikazuje ljepotu vaše ponude.",
+              "button": "Kontaktirajte nas"
+            }
+          },
+          "saloni": {
+            "hero": "Izrada web stranica za salone i kozmetičare",
+            "subtitle": "Prikažite svoje radove i privucite nove klijente",
+            "intro": "Klijenti biraju salon na temelju fotografija radova, recenzija i lokacije — a sve to traže online. Web stranica koja prikazuje vaše usluge i galeriju radova na profesionalan način donosi vam nove klijente bez skupog oglašavanja.",
+            "bullets": [
+              "Galerija radova (frizerstvo, nail art, make-up...)",
+              "Pregled usluga i cjenika",
+              "Online kontakt ili upit za rezervaciju termina",
+              "Lokacija i radno vrijeme",
+              "Integracija recenzija",
+              "Linkovi na Instagram i društvene mreže"
+            ],
+            "cta": {
+              "title": "Pokažite svoje radove svijetu",
+              "description": "Izradimo stranicu koja odražava vaš stil i privlači prave klijente.",
+              "button": "Kontaktirajte nas"
+            }
+          }
+        }
       },
       "cta": {
         "title": "Spremni za izradu web stranice?",

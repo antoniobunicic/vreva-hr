@@ -45,7 +45,7 @@
   "detail": {
     "webdev": {
       "hero": "Web Development",
-      "subtitle": "Professional websites, fast and affordable",
+      "subtitle": "fast and affordable",
       "intro": "We build modern, responsive websites that help businesses establish a strong online presence. From single-page landing sites to multi-page corporate websites, we deliver quality solutions at competitive prices.",
       "features": [
         {
@@ -129,6 +129,151 @@
             ]
           }
         ]
+      },
+      "niches": {
+        "title": "Websites for Every Industry",
+        "items": [
+          {
+            "slug": "ugostiteljstvo",
+            "heading": "Websites for Restaurants & Hospitality",
+            "description": "Restaurants, cafés, bars — attract guests with a modern online presence featuring menus, galleries, and contact info."
+          },
+          {
+            "slug": "apartmani",
+            "heading": "Websites for Apartments & Accommodation",
+            "description": "Increase direct bookings and reduce dependence on booking platforms."
+          },
+          {
+            "slug": "obrtnici",
+            "heading": "Websites for Tradespeople & Craftsmen",
+            "description": "Showcase your services, portfolio, and contact details — without unnecessary complexity."
+          },
+          {
+            "slug": "male-tvrtke",
+            "heading": "Websites for Small Businesses",
+            "description": "A professional online presence that builds trust with new clients."
+          },
+          {
+            "slug": "turizam",
+            "heading": "Websites for Tourism & Travel Agencies",
+            "description": "Reach more clients with an attractive site showcasing your destinations and packages."
+          },
+          {
+            "slug": "saloni",
+            "heading": "Websites for Salons & Beauty Professionals",
+            "description": "Present your services, portfolio gallery, and contact options — all in one place."
+          }
+        ],
+        "pages": {
+          "ugostiteljstvo": {
+            "hero": "Websites for Restaurants & Hospitality",
+            "subtitle": "Attract more guests and increase bookings",
+            "intro": "Your restaurant, café, or bar deserves an online presence that reflects the atmosphere and quality of your venue. A modern website isn't just a business card — it's a sales tool that works 24/7. Guests increasingly look up menus, opening hours, and reviews online before visiting — be there when they search.",
+            "bullets": [
+              "Digital menu with food and drink photos",
+              "Gallery of your venue and ambiance",
+              "Opening hours, location and Google Maps integration",
+              "Contact form and direct reservation link",
+              "Review integration (Google, TripAdvisor)",
+              "Fast loading on mobile devices"
+            ],
+            "cta": {
+              "title": "Let's launch your website",
+              "description": "Tell us about your venue and let's work out the details.",
+              "button": "Get in Touch"
+            }
+          },
+          "apartmani": {
+            "hero": "Websites for Apartments & Accommodation",
+            "subtitle": "More direct bookings, fewer commissions",
+            "intro": "Every booking through Booking.com or Airbnb costs you 15–20% in commission. Your own website lets you attract guests directly — and keep that money for yourself. With the right SEO optimization, guests can find you on Google and book without intermediaries.",
+            "bullets": [
+              "Apartment presentation with professional photos",
+              "Available dates and pricing display",
+              "Contact form and WhatsApp integration for quick inquiries",
+              "Multilingual support (HR, EN, DE, IT...)",
+              "SEO optimization for local searches",
+              "Google Maps and directions to your accommodation"
+            ],
+            "cta": {
+              "title": "Reduce commissions, increase earnings",
+              "description": "Let's build a website that brings you direct bookings.",
+              "button": "Get in Touch"
+            }
+          },
+          "obrtnici": {
+            "hero": "Websites for Tradespeople & Craftsmen",
+            "subtitle": "New clients find you online — be there",
+            "intro": "Most new clients today search for a plumber, electrician, carpenter, or painter on Google. Without a website, you're missing those inquiries. A simple, professional site with your services, contact details, and portfolio is enough to stand out from the competition.",
+            "bullets": [
+              "Overview of the services you offer",
+              "Gallery of completed projects",
+              "Contact details and inquiry form",
+              "SEO optimization for local searches (e.g. 'plumber Split')",
+              "Client testimonials and reviews",
+              "Fast turnaround — live within a week"
+            ],
+            "cta": {
+              "title": "Let's get you online",
+              "description": "A fast, affordable website tailored to your trade.",
+              "button": "Get in Touch"
+            }
+          },
+          "male-tvrtke": {
+            "hero": "Websites for Small Businesses",
+            "subtitle": "Professional online presence without big costs",
+            "intro": "For a small business, a website is the cheapest and most effective marketing tool available. Potential clients check your online profile before they call — a professional site builds trust and increases the chances they'll choose you.",
+            "bullets": [
+              "Company, team, and services presentation",
+              "Contact form and location map",
+              "SEO optimization for your industry and location",
+              "Blog or news section for regular updates",
+              "Social media integration",
+              "Google Analytics for tracking visits"
+            ],
+            "cta": {
+              "title": "Let's build your online identity",
+              "description": "Tell us about your business and what you want to achieve.",
+              "button": "Get in Touch"
+            }
+          },
+          "turizam": {
+            "hero": "Websites for Tourism & Travel Agencies",
+            "subtitle": "Reach more travelers with an attractive online presence",
+            "intro": "Tourists plan their trips online — and your agency or tourism offering needs to be visible where they search. A modern website with attractive photos, destination descriptions, and a clear call to action converts visitors into clients.",
+            "bullets": [
+              "Destinations, tours, and packages showcase",
+              "Photo and video gallery",
+              "Inquiry or reservation form",
+              "Multilingual support for international tourists",
+              "SEO optimization for travel searches",
+              "Google Maps integration"
+            ],
+            "cta": {
+              "title": "Attract more travelers",
+              "description": "Let's build a website that showcases the beauty of your offer.",
+              "button": "Get in Touch"
+            }
+          },
+          "saloni": {
+            "hero": "Websites for Salons & Beauty Professionals",
+            "subtitle": "Showcase your work and attract new clients",
+            "intro": "Clients choose a salon based on photos of work, reviews, and location — and they look for all of this online. A website that showcases your services and portfolio in a professional way brings you new clients without expensive advertising.",
+            "bullets": [
+              "Work gallery (hair, nail art, make-up...)",
+              "Services and price list overview",
+              "Online contact or appointment inquiry form",
+              "Location and opening hours",
+              "Review integration",
+              "Links to Instagram and social media"
+            ],
+            "cta": {
+              "title": "Show your work to the world",
+              "description": "Let's build a site that reflects your style and attracts the right clients.",
+              "button": "Get in Touch"
+            }
+          }
+        }
       },
       "cta": {
         "title": "Ready to build your website?",

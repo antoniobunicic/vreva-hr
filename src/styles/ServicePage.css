@@ -27,6 +27,13 @@
   margin: 0 auto;
 }
 
+.service-page--webdev .service-page-subtitle {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
 /* Service card as link */
 .service-card-link {
   text-decoration: none;
@@ -260,6 +267,113 @@
   left: 0;
   color: var(--color-vreva-yellow);
   font-weight: bold;
+}
+
+/* Niche Detail Page */
+.niche-breadcrumb {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.niche-breadcrumb a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.niche-breadcrumb a:hover {
+  color: var(--color-vreva-yellow);
+}
+
+.niche-bullets {
+  list-style: none;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 2rem;
+}
+
+.niche-bullets li {
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.niche-bullets li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--color-vreva-yellow);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .niche-bullets {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Niches Section */
+.service-niches {
+  margin-bottom: 4rem;
+}
+
+.service-niches-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.75rem;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.service-niches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.service-niche-item {
+  display: block;
+  text-decoration: none;
+  background: var(--color-background2);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: border-color 0.3s ease;
+}
+
+.service-niche-item:hover {
+  border-color: var(--color-vreva-yellow);
+}
+
+.service-niche-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.service-niche-description {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .service-niches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-niches-title {
+    font-size: 1.35rem;
+  }
 }
 
 /* CTA Section */
