@@ -1,5 +1,7 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import { Outlet, useLocation, useNavigate, Link } from 'react-router-dom';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -7,16 +9,16 @@ import logo from '../assets/logo.svg';
 import dotsLogo from '../assets/dots-logo.svg';
 
 const dropdownServices = [
-  { key: 'webdev', slug: 'web-development' },
-  { key: 'fullstack', slug: 'software-development' },
-  { key: 'leadership', slug: 'it-consulting' },
+  { key: 'webdev', href: '/usluge/izrada-web-stranica' },
+  { key: 'fullstack', href: '/usluge/razvoj-softvera' },
+  { key: 'leadership', href: '/usluge/it-savjetovanje' },
 ];
 
-function Layout() {
+function Layout({ children }) {
   const { t } = useTranslation(['common', 'services']);
-  const location = useLocation();
-  const navigate = useNavigate();
-  const isHomePage = location.pathname === '/';
+  const pathname = usePathname();
+  const router = useRouter();
+  const isHomePage = pathname === '/';
 
   const [activeSection, setActiveSection] = useState('');
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -36,12 +38,10 @@ function Layout() {
 
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
-  // Scroll to top on route change (not hash changes on homepage)
+  // Scroll to top on route change
   useEffect(() => {
-    if (!location.hash) {
-      window.scrollTo(0, 0);
-    }
-  }, [location.pathname, location.hash]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   // Track active section on homepage
   useEffect(() => {
@@ -79,7 +79,7 @@ function Layout() {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      navigate(`/#${sectionId}`);
+      router.push(`/#${sectionId}`);
     }
   };
 
@@ -97,8 +97,8 @@ function Layout() {
     <div className="App">
       <nav className="nav">
         <div className="nav-container">
-          <Link to="/" className="nav-logo">
-            <img src={logo} alt="Vreva" />
+          <Link href="/" className="nav-logo">
+            <img src={logo.src || logo} alt="Vreva" />
           </Link>
           <div className="nav-right">
             <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
@@ -116,7 +116,7 @@ function Layout() {
                       {dropdownServices.map((svc) => (
                         <li key={svc.key}>
                           <Link
-                            to={`/services/${svc.slug}`}
+                            href={svc.href}
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             {t(`dropdown.${svc.key}`, { ns: 'services' })}
@@ -142,15 +142,15 @@ function Layout() {
       </nav>
 
       <main>
-        <Outlet />
+        {children}
       </main>
 
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-main">
             <div className="footer-brand">
-              <Link to="/" className="footer-logo">
-                <img src={dotsLogo} alt="Vreva" />
+              <Link href="/" className="footer-logo">
+                <img src={dotsLogo.src || dotsLogo} alt="Vreva" />
               </Link>
               <p className="footer-tagline">{t('footer.tagline', { ns: 'common' })}</p>
             </div>
@@ -161,7 +161,7 @@ function Layout() {
                 <ul>
                   {dropdownServices.map((svc) => (
                     <li key={svc.key}>
-                      <Link to={`/services/${svc.slug}`}>
+                      <Link href={svc.href}>
                         {t(`dropdown.${svc.key}`, { ns: 'services' })}
                       </Link>
                     </li>

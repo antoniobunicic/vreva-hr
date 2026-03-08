@@ -1,11 +1,12 @@
+'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
 const slugMap = {
-  webdev: 'web-development',
-  fullstack: 'software-development',
-  leadership: 'it-consulting',
+  webdev: 'izrada-web-stranica',
+  fullstack: 'razvoj-softvera',
+  leadership: 'it-savjetovanje',
 };
 
 function Services() {
@@ -19,7 +20,7 @@ function Services() {
         <h2 className="section-title">{t('section.title')}</h2>
         <div className="services-grid">
           {serviceKeys.map((key) => (
-            <Link key={key} to={`/services/${slugMap[key]}`} className="service-card service-card-link">
+            <Link key={key} href={`/usluge/${slugMap[key]}`} className="service-card service-card-link">
               <h3 className="service-title">{t(`cards.${key}.title`)}</h3>
               <p className="service-description">{t(`cards.${key}.description`)}</p>
               <ul className="service-capabilities">

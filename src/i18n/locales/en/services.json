@@ -130,6 +130,8 @@
           }
         ]
       },
+      "whyUsTitle": "Why Choose Us?",
+      "whyUsText": "Unlike most agencies, we don't use WordPress or pre-made templates. Every website is developed as software — from scratch. That means no limits in design, structure, animations, or functionality. We can build exactly what the client envisions — without compromise.",
       "niches": {
         "title": "Websites for Every Industry",
         "items": [
@@ -162,6 +164,26 @@
             "slug": "saloni",
             "heading": "Websites for Salons & Beauty Professionals",
             "description": "Present your services, portfolio gallery, and contact options — all in one place."
+          },
+          {
+            "slug": "poliklinike",
+            "heading": "Websites for Clinics & Medical Practices",
+            "description": "Showcase your services, team, and contact details — patients find you more easily and get in touch."
+          },
+          {
+            "slug": "odvjetnicki-uredi",
+            "heading": "Websites for Law Firms & Attorneys",
+            "description": "A professional online presence that builds trust and attracts new clients."
+          },
+          {
+            "slug": "kulturne-ustanove",
+            "heading": "Websites for Cultural Institutions",
+            "description": "Museum, gallery, theatre, or association — highlight your programs, events, and invite your audience."
+          },
+          {
+            "slug": "prijevoz",
+            "heading": "Websites for Taxi, Rent-a-Car & Rent-a-Boat",
+            "description": "Attract more clients with a clear presentation of your fleet, pricing, and booking options."
           }
         ],
         "pages": {
@@ -272,6 +294,78 @@
               "description": "Let's build a site that reflects your style and attracts the right clients.",
               "button": "Get in Touch"
             }
+          },
+          "poliklinike": {
+            "hero": "Websites for Clinics & Medical Practices",
+            "subtitle": "Patients find you online — be there when they search",
+            "intro": "Whether you run a private clinic, a specialist practice, or a general practice, patients increasingly search for medical services online. A professional website with your services, team, and contact details builds trust and makes it easy for patients to reach you.",
+            "bullets": [
+              "Overview of medical services and specializations",
+              "Team presentation with credentials",
+              "Online appointment inquiry form",
+              "Location, working hours, and Google Maps integration",
+              "Patient information and FAQ section",
+              "SEO optimization for local medical searches"
+            ],
+            "cta": {
+              "title": "Make it easy for patients to find you",
+              "description": "Let's build a professional website for your practice.",
+              "button": "Get in Touch"
+            }
+          },
+          "odvjetnicki-uredi": {
+            "hero": "Websites for Law Firms & Attorneys",
+            "subtitle": "Build trust and attract new clients online",
+            "intro": "Clients looking for legal help want to know who they're working with before they call. A professional website that clearly presents your areas of practice, your team, and your approach gives potential clients the confidence to reach out.",
+            "bullets": [
+              "Areas of law and legal services overview",
+              "Attorney profiles and credentials",
+              "Contact form and consultation inquiry",
+              "Office location and working hours",
+              "Professional, trust-building design",
+              "SEO optimization for legal search queries"
+            ],
+            "cta": {
+              "title": "Establish your online presence",
+              "description": "Let's create a website that reflects your expertise and professionalism.",
+              "button": "Get in Touch"
+            }
+          },
+          "kulturne-ustanove": {
+            "hero": "Websites for Cultural Institutions",
+            "subtitle": "Connect your audience with your programs and events",
+            "intro": "Museums, galleries, theatres, and cultural associations need an online presence that communicates their identity and keeps their audience informed. A well-designed website helps you promote events, share news, and engage visitors — all in one place.",
+            "bullets": [
+              "Program and event calendar",
+              "Exhibition or show presentations",
+              "About the institution, history, and mission",
+              "Ticket information and contact details",
+              "Photo and video gallery",
+              "Social media integration and newsletter sign-up"
+            ],
+            "cta": {
+              "title": "Bring your audience closer",
+              "description": "Let's build a website that reflects your cultural identity.",
+              "button": "Get in Touch"
+            }
+          },
+          "prijevoz": {
+            "hero": "Websites for Taxi, Rent-a-Car & Rent-a-Boat",
+            "subtitle": "More bookings, direct — without third-party commissions",
+            "intro": "Whether you offer taxi services, car rentals, or boat rentals, clients want to quickly find your offer, pricing, and how to book. Your own website allows you to take direct bookings without paying commissions to third-party platforms, and improves your visibility in local searches.",
+            "bullets": [
+              "Fleet presentation with photos and specifications",
+              "Clear pricing and availability",
+              "Direct booking or inquiry form",
+              "WhatsApp and phone integration for instant contact",
+              "Service area and pickup locations",
+              "SEO optimization for local transport searches"
+            ],
+            "cta": {
+              "title": "Get more direct bookings",
+              "description": "Let's build a website that puts you in control of your reservations.",
+              "button": "Get in Touch"
+            }
           }
         }
       },
@@ -283,7 +377,7 @@
     },
     "fullstack": {
       "hero": "Software Development",
-      "subtitle": "End-to-end solutions from database to UI",
+      "subtitle": "from foundation to production",
       "intro": "We deliver complete software solutions using modern technologies. Whether you need a robust backend system, an interactive frontend, or a full-stack application, we handle every layer of the stack with expertise.",
       "sections": [
         {
@@ -325,7 +419,7 @@
     },
     "leadership": {
       "hero": "IT Consulting",
-      "subtitle": "Strategic guidance for your digital journey",
+      "subtitle": "less jargon, more results",
       "intro": "We help businesses navigate the complexities of digital transformation. From analyzing existing systems to planning modernization strategies, we provide actionable insights that drive real results.",
       "sections": [
         {

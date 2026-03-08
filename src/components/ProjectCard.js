@@ -1,3 +1,4 @@
+'use client';
 import React, { useRef, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -95,20 +96,20 @@ function ProjectCard({ projectKey, projectImage, clientLogo, scrollablePreview }
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
         >
-          <img src={projectImage} alt={t(`cards.${projectKey}.title`)} draggable="false" onLoad={handleImageLoad} />
+          <img src={projectImage.src || projectImage} alt={t(`cards.${projectKey}.title`)} draggable="false" onLoad={handleImageLoad} />
         </section>
       )}
 
       {projectImage && !isMultiImage && !scrollablePreview && (
         <div className={`project-image ${isMonochromeSvg ? 'project-image-mono' : ''}`}>
-          <img src={projectImage} alt={t(`cards.${projectKey}.title`)} />
+          <img src={projectImage.src || projectImage} alt={t(`cards.${projectKey}.title`)} />
         </div>
       )}
 
       {isMultiImage && (
         <div className="project-image angler-images">
           {projectImage.map((img, index) => (
-            <img key={index} src={img} alt={`${t(`cards.${projectKey}.title`)} ${index + 1}`} />
+            <img key={index} src={img.src || img} alt={`${t(`cards.${projectKey}.title`)} ${index + 1}`} />
           ))}
         </div>
       )}
@@ -117,7 +118,7 @@ function ProjectCard({ projectKey, projectImage, clientLogo, scrollablePreview }
           <h3 className="project-title">{t(`cards.${projectKey}.title`)}</h3>
           {clientLogo && (
           <div className="project-client-logo">
-            <img src={clientLogo} alt="Client logo" />
+            <img src={clientLogo.src || clientLogo} alt="Client logo" />
           </div>
         )}
           <p className="project-description">{t(`cards.${projectKey}.description`)}</p>

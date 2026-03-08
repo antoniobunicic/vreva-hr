@@ -6,38 +6,73 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vreva.hr/#services</loc>
+    <loc>https://vreva.hr/usluge/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vreva.hr/#projects</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vreva.hr/#contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vreva.hr/#/services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vreva.hr/#/services/web-development</loc>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://vreva.hr/#/services/software-development</loc>
+    <loc>https://vreva.hr/usluge/razvoj-softvera/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vreva.hr/#/services/it-consulting</loc>
+    <loc>https://vreva.hr/usluge/it-savjetovanje/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/ugostiteljstvo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/apartmani/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/obrtnici/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/male-tvrtke/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/turizam/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/saloni/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/poliklinike/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/odvjetnicki-uredi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/kulturne-ustanove/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/usluge/izrada-web-stranica/prijevoz/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

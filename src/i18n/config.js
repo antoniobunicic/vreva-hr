@@ -46,7 +46,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
+    ...(typeof window === 'undefined' ? { lng: 'hr' } : {}),
+    fallbackLng: 'hr',
     defaultNS: 'common',
     interpolation: {
       escapeValue: false // React already escapes
@@ -57,9 +58,11 @@ i18n
     }
   });
 
-// Update HTML lang attribute on language change
-i18n.on('languageChanged', (lng) => {
-  document.documentElement.setAttribute('lang', lng);
-});
+// Update HTML lang attribute on language change (browser only)
+if (typeof document !== 'undefined') {
+  i18n.on('languageChanged', (lng) => {
+    document.documentElement.setAttribute('lang', lng);
+  });
+}
 
 export default i18n;

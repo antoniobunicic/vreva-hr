@@ -1,12 +1,11 @@
 /* Service Pages */
 .service-page {
   min-height: calc(100vh - 80px);
-  padding: 6rem 0;
+  padding: 0 0 6rem;
 }
 
 .service-page-header {
-  text-align: center;
-  margin-bottom: 4rem;
+  text-align: left;
 }
 
 .service-page-title {
@@ -24,14 +23,76 @@
   font-size: 1.15rem;
   line-height: 1.6;
   max-width: 600px;
-  margin: 0 auto;
 }
 
-.service-page--webdev .service-page-subtitle {
+.service-page--webdev .service-page-subtitle,
+.service-page--fullstack .service-page-subtitle,
+.service-page--leadership .service-page-subtitle {
   color: var(--color-secondary);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.08em;
+}
+
+.service-page--webdev.niche-page .service-page-title {
+  text-transform: none;
+  letter-spacing: -0.02em;
+}
+
+/* Service Page Cover */
+.service-page-cover {
+  width: 100%;
+  padding: 3.5rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-background2);
+  border-left: 3px solid var(--color-vreva-yellow);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Left glow */
+.service-page-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 40% 120% at 0% 50%, rgba(255, 204, 51, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.service-page-cover::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 500px;
+  height: 450px;
+  background-image:
+    radial-gradient(circle, transparent 78px, rgba(255, 204, 51, 0.22) 78px, rgba(255, 204, 51, 0.22) 80px, transparent 80px),
+    radial-gradient(circle, transparent 78px, rgba(255, 204, 51, 0.13) 78px, rgba(255, 204, 51, 0.13) 80px, transparent 80px),
+    radial-gradient(circle, transparent 78px, rgba(255, 204, 51, 0.07) 78px, rgba(255, 204, 51, 0.07) 80px, transparent 80px);
+  background-size: 160px 160px, 160px 160px, 160px 160px;
+  background-position: -45px -15px, 57px 160px, 158px -15px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.service-page-cover .service-page-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .service-page-cover {
+    padding: 2.5rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .service-page-cover::after {
+    width: 280px;
+    opacity: 0.6;
+  }
 }
 
 /* Service card as link */
@@ -56,16 +117,13 @@
 
 /* Service Detail Content */
 .service-detail-content {
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .service-detail-intro {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   margin-bottom: 3rem;
-  text-align: center;
 }
 
 /* Feature cards grid */
@@ -111,7 +169,7 @@
 
 .service-feature-description {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   line-height: 1.6;
   margin: 0;
 }
@@ -145,7 +203,7 @@
 .service-detail-list li {
   padding: 0.6rem 0;
   padding-left: 1.5rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-size: 0.95rem;
   position: relative;
   border-bottom: 1px solid var(--color-border);
@@ -239,7 +297,7 @@
 
 .pricing-card-description {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   line-height: 1.5;
   margin-bottom: 1.75rem;
   padding-bottom: 1.75rem;
@@ -256,7 +314,7 @@
 .pricing-card-features li {
   padding: 0.5rem 0;
   padding-left: 1.5rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-size: 0.9rem;
   position: relative;
 }
@@ -269,21 +327,49 @@
   font-weight: bold;
 }
 
-/* Niche Detail Page */
-.niche-breadcrumb {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  margin-bottom: 1rem;
+/* Breadcrumb */
+.breadcrumb {
+  margin-bottom: 3rem;
 }
 
-.niche-breadcrumb a {
+.breadcrumb ol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+.breadcrumb li + li::before {
+  content: '›';
+  margin-right: 0.25rem;
+  color: var(--color-border);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.breadcrumb a {
   color: var(--color-text-muted);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.niche-breadcrumb a:hover {
+.breadcrumb a:hover {
   color: var(--color-vreva-yellow);
+}
+
+.breadcrumb li[aria-current="page"] {
+  color: var(--color-text);
+  font-weight: 500;
 }
 
 .niche-bullets {
@@ -296,7 +382,7 @@
 
 .niche-bullets li {
   padding: 0.75rem 0 0.75rem 1.5rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-size: 0.95rem;
   position: relative;
   border-bottom: 1px solid var(--color-border);
@@ -316,6 +402,19 @@
   }
 }
 
+/* Why Us */
+.service-why-us {
+  margin-bottom: 4rem;
+}
+
+.service-why-us .service-niches-title {
+  margin-bottom: 1rem;
+}
+
+.service-why-us .service-detail-intro {
+  margin-bottom: 0;
+}
+
 /* Niches Section */
 .service-niches {
   margin-bottom: 4rem;
@@ -325,7 +424,6 @@
   font-family: 'Unbounded', sans-serif;
   font-size: 1.75rem;
   color: var(--color-text);
-  text-align: center;
   margin-bottom: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -344,11 +442,45 @@
   border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 1.75rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-niche-more {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7c3aed;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.service-niche-item:hover .service-niche-more {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-niche-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-vreva-yellow);
+  margin-bottom: 1rem;
+}
+
+.service-niche-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .service-niche-item:hover {
   border-color: var(--color-vreva-yellow);
+  transform: translateY(-3px);
 }
 
 .service-niche-heading {
@@ -361,7 +493,7 @@
 
 .service-niche-description {
   font-size: 0.875rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   line-height: 1.6;
   margin: 0;
 }
@@ -394,7 +526,7 @@
 }
 
 .service-cta-description {
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 2rem;

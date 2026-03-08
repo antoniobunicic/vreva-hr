@@ -130,6 +130,8 @@
           }
         ]
       },
+      "whyUsTitle": "Zašto izabrati baš nas?",
+      "whyUsText": "Za razliku od većine agencija, ne koristimo WordPress ni gotove predloške. Svaku web stranicu razvijamo kao softver — od temelja. To znači da nemamo ograničenja u dizajnu, strukturi, animacijama ni funkcionalnostima. Možemo razviti točno ono što klijent naumi — bez kompromisa.",
       "niches": {
         "title": "Web stranice za svaku industriju",
         "items": [
@@ -162,6 +164,26 @@
             "slug": "saloni",
             "heading": "Izrada web stranica za salone i kozmetičare",
             "description": "Online prezentacija usluga, galerija radova i mogućnost kontakta — sve na jednom mjestu."
+          },
+          {
+            "slug": "poliklinike",
+            "heading": "Izrada web stranica za poliklinike i ordinacije",
+            "description": "Predstavite svoje usluge, tim i kontakt — pacijenti vas lakše pronalaze i stupaju u kontakt."
+          },
+          {
+            "slug": "odvjetnicki-uredi",
+            "heading": "Izrada web stranica za odvjetničke urede",
+            "description": "Profesionalna online prisutnost koja gradi povjerenje i privlači nove klijente."
+          },
+          {
+            "slug": "kulturne-ustanove",
+            "heading": "Izrada web stranica za kulturne ustanove",
+            "description": "Muzej, galerija, kazalište ili udruga — istaknite programe, događanja i pozovite publiku."
+          },
+          {
+            "slug": "prijevoz",
+            "heading": "Izrada web stranica za taxi, rent-a-car i rent-a-boat",
+            "description": "Privucite više klijenata s jasnom prezentacijom flote, cijena i načina rezervacije."
           }
         ],
         "pages": {
@@ -272,6 +294,78 @@
               "description": "Izradimo stranicu koja odražava vaš stil i privlači prave klijente.",
               "button": "Kontaktirajte nas"
             }
+          },
+          "poliklinike": {
+            "hero": "Izrada web stranica za poliklinike i ordinacije",
+            "subtitle": "Pacijenti vas lakše pronalaze i kontaktiraju",
+            "intro": "Pacijenti danas traže liječnika, stomatologa ili fizioterapeuta na Googleu. Jasna i profesionalna web stranica s informacijama o uslugama, timu i kontaktu smanjuje broj telefonskih upita i gradi povjerenje još prije prvog pregleda.",
+            "bullets": [
+              "Pregled medicinskih usluga i specijalizacija",
+              "Predstavljanje tima — liječnici i osoblje",
+              "Kontakt forma i podaci za naručivanje",
+              "Radno vrijeme, lokacija i parkiranje",
+              "SEO optimizacija za lokalne medicinske pretrage",
+              "Prilagođeno GDPR pravilima za zdravstvene ustanove"
+            ],
+            "cta": {
+              "title": "Povežite se s novim pacijentima",
+              "description": "Izradimo stranicu koja gradi povjerenje i olakšava naručivanje.",
+              "button": "Kontaktirajte nas"
+            }
+          },
+          "odvjetnicki-uredi": {
+            "hero": "Izrada web stranica za odvjetničke urede",
+            "subtitle": "Profesionalna prisutnost koja gradi povjerenje",
+            "intro": "Klijenti koji traže pravnu pomoć najprije provjeravaju online prisutnost odvjetnika. Profesionalna web stranica s jasnim prikazom područja prakse, tima i kontakta presudna je za stvaranje prvog dojma i privlačenje novih klijenata.",
+            "bullets": [
+              "Pregled pravnih područja i specijalizacija",
+              "Predstavljanje odvjetnika i tima",
+              "Kontakt forma za diskretne upite",
+              "Stranica o uredu i poslovnoj filozofiji",
+              "SEO optimizacija za pravne pretrage",
+              "Diskretan, profesionalan dizajn koji odražava struku"
+            ],
+            "cta": {
+              "title": "Izgradite povjerenje online",
+              "description": "Izradimo stranicu koja predstavlja vaš ured onako kako zaslužuje.",
+              "button": "Kontaktirajte nas"
+            }
+          },
+          "kulturne-ustanove": {
+            "hero": "Izrada web stranica za kulturne ustanove",
+            "subtitle": "Povežite publiku s vašim programom i događanjima",
+            "intro": "Muzej, galerija, kazalište, knjižnica ili kulturna udruga — vaša publika treba znati što nudite, kada i kako doći. Moderna web stranica s kalendarom događanja, informacijama o programu i jednostavnim kontaktom čini vašu ustanovu dostupnom svima.",
+            "bullets": [
+              "Kalendar događanja i izložbi",
+              "Prezentacija stalnog postava ili programa",
+              "Informacije o posjetima, ulaznicama i radnom vremenu",
+              "Galerija fotografija i videa",
+              "Kontakt i upute do lokacije",
+              "Višejezičnost za strane posjetitelje"
+            ],
+            "cta": {
+              "title": "Pozovite publiku u vaš prostor",
+              "description": "Izradimo stranicu koja komunicira vrijednost vašeg kulturnog programa.",
+              "button": "Kontaktirajte nas"
+            }
+          },
+          "prijevoz": {
+            "hero": "Izrada web stranica za taxi, rent-a-car i rent-a-boat",
+            "subtitle": "Više rezervacija, manje ovisnosti o platformama",
+            "intro": "Bilo da nudite taxi prijevoz, iznajmljivanje automobila ili brodova, klijenti žele brzo pronaći vašu ponudu, cijene i način rezervacije. Vlastita web stranica vam omogućuje direktne rezervacije bez provizija trećih platformi i bolju vidljivost na lokalnim pretragama.",
+            "bullets": [
+              "Prezentacija vozila ili plovila s fotografijama",
+              "Jasna struktura cijena i uvjeta",
+              "Kontakt forma ili direktna rezervacija",
+              "Ruta ili zona djelovanja s Google Maps integracijom",
+              "SEO za lokalne pretrage (npr. 'rent-a-car Split')",
+              "Višejezičnost za turiste"
+            ],
+            "cta": {
+              "title": "Pokrenite direktne rezervacije",
+              "description": "Izradimo stranicu koja vam donosi klijente bez provizija.",
+              "button": "Kontaktirajte nas"
+            }
           }
         }
       },
@@ -283,7 +377,7 @@
     },
     "fullstack": {
       "hero": "Razvoj softvera",
-      "subtitle": "Kompletna rješenja od baze podataka do korisničkog sučelja",
+      "subtitle": "od temelja do produkcije",
       "intro": "Isporučujemo kompletna softverska rješenja koristeći moderne tehnologije. Bilo da vam treba robustan backend sustav, interaktivni frontend ili full-stack aplikacija, upravljamo svakim slojem stacka s iskustvom.",
       "sections": [
         {
@@ -325,7 +419,7 @@
     },
     "leadership": {
       "hero": "IT savjetovanje",
-      "subtitle": "Strateško vodstvo za vaš digitalni put",
+      "subtitle": "manje žargona, više rezultata",
       "intro": "Pomažemo tvrtkama upravljati kompleksnostima digitalne transformacije. Od analize postojećih sustava do planiranja strategija modernizacije, pružamo praktične uvide koji donose stvarne rezultate.",
       "sections": [
         {
