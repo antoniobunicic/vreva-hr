@@ -83,6 +83,39 @@
   margin-bottom: 0;
 }
 
+/* Niche cover icon — replaces rings */
+.service-page-cover--niche::after {
+  display: none;
+}
+
+.niche-cover-icon {
+  position: absolute;
+  right: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 180px;
+  color: var(--color-vreva-yellow);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.niche-cover-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1;
+}
+
+@media (max-width: 768px) {
+  .niche-cover-icon {
+    width: 100px;
+    height: 100px;
+    right: 1.5rem;
+    opacity: 0.08;
+  }
+}
+
 @media (max-width: 768px) {
   .service-page-cover {
     padding: 2.5rem 0;
@@ -135,6 +168,8 @@
 }
 
 .service-feature-card {
+  display: block;
+  text-decoration: none;
   background: var(--color-background2);
   border: 1px solid var(--color-border);
   border-radius: 12px;
@@ -221,9 +256,46 @@
   font-weight: bold;
 }
 
+/* Feature sections (WebdevFeaturePage) */
+.feature-section {
+  margin-bottom: 3.5rem;
+}
+
+.feature-section-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.feature-section-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
 /* Pricing Section */
 .service-pricing {
   margin-bottom: 4rem;
+}
+
+/* Pricing teaser (on main webdev page) */
+.service-pricing--teaser {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--color-background2);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.service-pricing-teaser-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin: 0 auto 2rem;
 }
 
 .service-pricing-title {
@@ -537,7 +609,7 @@
 
 @media (max-width: 768px) {
   .service-page {
-    padding: 4rem 0;
+    padding: 0 0 4rem;
   }
 
   .service-page-title {

@@ -1,10 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import ContactForm from './ContactForm';
 
 function Contact() {
   const { t } = useTranslation('contact');
-  const [formStatus, setFormStatus] = useState(null);
 
   const reportConversion = () => {
     if (typeof window.gtag === 'function') {
@@ -13,30 +13,6 @@ function Contact() {
         'value': 1.0,
         'currency': 'HRK',
       });
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch('https://formspree.io/f/xaqdawwl', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' },
-      });
-
-      if (response.ok) {
-        setFormStatus('success');
-        reportConversion();
-        form.reset();
-      } else {
-        setFormStatus('error');
-      }
-    } catch (error) {
-      setFormStatus('error');
     }
   };
 
@@ -49,42 +25,7 @@ function Contact() {
             {t('intro')}
           </p>
 
-          <form
-            className="contact-form"
-            onSubmit={handleSubmit}
-          >
-
-            <div className="form-group">
-              <label htmlFor="name">{t('form.name')}</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">{t('form.email')}</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="phone">{t('form.phone')}</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">{t('form.message')}</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" className="btn btn-primary btn-large">
-              {t('form.submit')}
-            </button>
-
-            {formStatus === 'success' && (
-              <p className="form-success">{t('form.success')}</p>
-            )}
-            {formStatus === 'error' && (
-              <p className="form-error">{t('form.error')}</p>
-            )}
-          </form>
+          <ContactForm source="homepage" />
 
           <div className="contact-divider">
             <span>{t('or')}</span>

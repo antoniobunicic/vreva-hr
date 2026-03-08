@@ -2,6 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import nicheIcons from '../../utils/nicheIcons';
+import ContactForm from '../../components/ContactForm';
 
 function NicheDetailPage({ niche }) {
   const { t } = useTranslation('services');
@@ -11,6 +13,11 @@ function NicheDetailPage({ niche }) {
   return (
     <section className="service-page service-page--webdev niche-page">
       <div className="service-page-cover service-page-cover--niche">
+        {nicheIcons[niche] && (
+          <div className="niche-cover-icon" aria-hidden="true">
+            {nicheIcons[niche]}
+          </div>
+        )}
         <div className="container">
           <div className="service-page-header">
             <h1 className="service-page-title">{page.hero}</h1>
@@ -41,9 +48,7 @@ function NicheDetailPage({ niche }) {
           <div className="service-cta">
             <h2 className="service-cta-title">{page.cta.title}</h2>
             <p className="service-cta-description">{page.cta.description}</p>
-            <Link href="/#contact" className="btn btn-primary">
-              {page.cta.button}
-            </Link>
+            <ContactForm nameLabel={page.formNameLabel} source={niche} />
           </div>
         </div>
       </div>

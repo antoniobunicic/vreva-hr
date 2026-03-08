@@ -50,7 +50,7 @@
       "features": [
         {
           "icon": "custom",
-          "title": "Custom Solutions",
+          "title": "Custom-Built, No Templates",
           "description": "Every website is unique and tailored to your specific business needs."
         },
         {
@@ -130,6 +130,178 @@
           }
         ]
       },
+      "pricingTeaser": "Website pricing depends on project requirements — size, number of pages, desired features, and delivery timeline. Every project is unique and we tailor our pricing accordingly.",
+      "pricingLink": "See pricing",
+      "featurePages": {
+        "web-po-mjeri": {
+          "hero": "Custom-Built Websites",
+          "subtitle": "no templates, no limitations",
+          "intro": "When we say 'custom-built', we mean it literally — every website we create is written from scratch. No WordPress themes, no drag-and-drop builders, no compromises in design or functionality.",
+          "sections": [
+            {
+              "title": "Why templates aren't enough",
+              "body": "Wix, WordPress, and similar tools offer quick setup but come with invisible limitations. Templates are designed to be generic — to fit everyone, but perfect for no one. The result? Slower sites, difficult customizations, and an online presence indistinguishable from your competition. Every change beyond the template's scope becomes a battle with someone else's code."
+            },
+            {
+              "title": "What you get with custom development",
+              "bullets": [
+                "Design that reflects your brand and values",
+                "Faster loading — no bloated code or unnecessary scripts",
+                "Unlimited design and functionality possibilities",
+                "Easy to expand and add new pages over time",
+                "Better SEO rankings thanks to clean code",
+                "Full control over structure and content"
+              ]
+            },
+            {
+              "title": "Our process",
+              "body": "Every project starts with a conversation about your goals and vision. Then we design, code, and test — until the result is exactly what you imagined. No ready-made solutions, no shortcuts — just a website that works exactly as it should."
+            }
+          ],
+          "cta": {
+            "title": "Let's talk about your project",
+            "description": "Share your vision with us and we'll build it from the ground up.",
+            "button": "Request a Quote"
+          }
+        },
+        "responzivan-dizajn": {
+          "hero": "Responsive Design",
+          "subtitle": "perfect on every device",
+          "intro": "More than 70% of website visits come from mobile devices. A site that doesn't work flawlessly on mobile doesn't just frustrate visitors — it loses them for good.",
+          "sections": [
+            {
+              "title": "What is responsive design?",
+              "body": "Responsive design means that a website automatically adapts to the screen size — whether viewed on a phone, tablet, or desktop. It's not just a 'scaled down version' of the same page, but a thoughtfully rearranged layout that gives the user the optimal experience on any device."
+            },
+            {
+              "title": "Why it matters for your business",
+              "bullets": [
+                "Google ranks mobile-optimized sites higher in search results",
+                "Users who land on a poor mobile version leave within seconds",
+                "One website for all devices — no parallel maintenance",
+                "Faster loading on mobile networks",
+                "Higher conversion rate — more inquiries and purchases"
+              ]
+            },
+            {
+              "title": "Mobile-first approach",
+              "body": "Every website we build is designed mobile-first — we start with the smallest screen and scale up to desktop. This ensures the mobile experience is just as polished as on a large monitor."
+            }
+          ],
+          "cta": {
+            "title": "Your site on every device",
+            "description": "Let's build a website that looks and works great on all screens.",
+            "button": "Request a Quote"
+          }
+        },
+        "brza-izrada": {
+          "hero": "Fast Website Development",
+          "subtitle": "from idea to launch",
+          "intro": "We understand your business can't wait weeks. Our process is optimized for speed without sacrificing quality — from the first conversation to a live website in the shortest time possible.",
+          "sections": [
+            {
+              "title": "Estimated timelines",
+              "bullets": [
+                "Landing page (1 page): 5–7 business days",
+                "Presentation site (up to 5 pages): 1–2 weeks",
+                "Business website (up to 15 pages): 3–4 weeks",
+                "More complex projects: by agreement",
+                "Rush delivery available — contact us"
+              ]
+            },
+            {
+              "title": "How we stay fast",
+              "body": "We have a streamlined process that allows efficient development without unnecessary delays. After the initial conversation and agreement, we start immediately. We work transparently — you always know what phase the project is in and what comes next."
+            },
+            {
+              "title": "What we need from you",
+              "body": "To get started quickly, it helps to have your logo in digital format, preferred colors and style if you have them, and text and images for content. Don't worry if you're not sure — we guide you through the entire process and help with decisions."
+            }
+          ],
+          "cta": {
+            "title": "Let's start your project today",
+            "description": "The sooner we start, the sooner you're online.",
+            "button": "Get in Touch"
+          }
+        },
+        "seo-optimizacija": {
+          "hero": "SEO Optimization",
+          "subtitle": "be visible on Google, and ChatGPT too",
+          "intro": "A beautiful website isn't enough if no one can find it. SEO (Search Engine Optimization) is a set of techniques that improve your site's visibility in search engine results — without paid advertising.",
+          "sections": [
+            {
+              "title": "What is SEO and why does it matter?",
+              "body": "When someone searches for 'restaurant Split' or 'plumber Zagreb', Google shows the pages it considers most relevant. SEO is the work that gets your site to be one of them. Unlike paid advertising, SEO delivers long-term results — once you rank, traffic comes continuously without additional cost."
+            },
+            {
+              "title": "What we include in every website",
+              "bullets": [
+                "Optimized title tags and meta descriptions for every page",
+                "Structured data (Schema.org) for enhanced Google results",
+                "Clean, readable URL addresses",
+                "Fast page load times (speed is an SEO ranking factor)",
+                "Alt text on all images",
+                "Sitemap and robots.txt",
+                "Mobile-first optimization (Google mobile-first indexing)"
+              ]
+            },
+            {
+              "title": "Local SEO",
+              "body": "For local businesses, local SEO is especially important — optimization for searches like 'hairdresser Rijeka' or 'café Zagreb city center'. We ensure your site is optimized for local queries and appears on Google Maps for relevant searches."
+            },
+            {
+              "title": "SEO for AI search engines (GEO)",
+              "body": "Beyond Google, more and more users are asking ChatGPT, Claude, and similar AI tools for website and service recommendations directly. Optimization for AI search engines — known as GEO (Generative Engine Optimization) — is becoming just as important as traditional SEO. Structured data, clearly and authoritatively written content, and complete business information all increase the chances of your site being cited or recommended by AI tools — a new channel that most competitors are still ignoring."
+            }
+          ],
+          "cta": {
+            "title": "Rank higher on Google",
+            "description": "Let's build a website optimized for search engines from the ground up.",
+            "button": "Request a Quote"
+          }
+        },
+        "cijene": {
+          "hero": "Website Pricing",
+          "subtitle": "transparent, no hidden costs",
+          "intro": "Website pricing depends on project requirements — size, number of pages, desired features, and delivery timeline. Every project is unique, and we tailor pricing to each client's specific needs. Below are our standard packages — contact us for an exact quote.",
+          "cta": {
+            "title": "Request a Quote",
+            "description": "Describe what you need and we'll send you a tailored quote.",
+            "button": "Get in Touch"
+          }
+        },
+        "odrzavanje-i-podrska": {
+          "hero": "Maintenance & Support",
+          "subtitle": "we're here after launch too",
+          "intro": "Building a website isn't the end — it's just the beginning. A website needs regular maintenance, content updates, and prompt responses to technical issues. We're here for you even after launch.",
+          "sections": [
+            {
+              "title": "What maintenance includes",
+              "bullets": [
+                "Content updates — text, images, pricing, news",
+                "Security updates and data backups",
+                "Uptime and performance monitoring",
+                "Technical support via email or phone",
+                "Minor design changes and adjustments",
+                "Page load speed optimization"
+              ]
+            },
+            {
+              "title": "Collaboration models",
+              "body": "We offer flexible collaboration models — from one-time interventions to long-term partnerships with a fixed monthly fee. Together we choose the model that fits your needs and budget."
+            },
+            {
+              "title": "Why regular maintenance matters",
+              "body": "An outdated website, unavailable hosting, or a security vulnerability can seriously damage your business and online reputation. With regular maintenance, everything stays in perfect shape — you focus on your business, and we take care of your online presence."
+            }
+          ],
+          "cta": {
+            "title": "Let's stay in touch",
+            "description": "Let's work out a collaboration model that suits you best.",
+            "button": "Get in Touch"
+          }
+        }
+      },
       "whyUsTitle": "Why Choose Us?",
       "whyUsText": "Unlike most agencies, we don't use WordPress or pre-made templates. Every website is developed as software — from scratch. That means no limits in design, structure, animations, or functionality. We can build exactly what the client envisions — without compromise.",
       "niches": {
@@ -203,7 +375,8 @@
               "title": "Let's launch your website",
               "description": "Tell us about your venue and let's work out the details.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Restaurant / Venue Name"
           },
           "apartmani": {
             "hero": "Websites for Apartments & Accommodation",
@@ -221,7 +394,8 @@
               "title": "Reduce commissions, increase earnings",
               "description": "Let's build a website that brings you direct bookings.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Accommodation Name"
           },
           "obrtnici": {
             "hero": "Websites for Tradespeople & Craftsmen",
@@ -239,7 +413,8 @@
               "title": "Let's get you online",
               "description": "A fast, affordable website tailored to your trade.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Trade / Business Name"
           },
           "male-tvrtke": {
             "hero": "Websites for Small Businesses",
@@ -257,7 +432,8 @@
               "title": "Let's build your online identity",
               "description": "Tell us about your business and what you want to achieve.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Company Name"
           },
           "turizam": {
             "hero": "Websites for Tourism & Travel Agencies",
@@ -275,7 +451,8 @@
               "title": "Attract more travelers",
               "description": "Let's build a website that showcases the beauty of your offer.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Agency / Tour Name"
           },
           "saloni": {
             "hero": "Websites for Salons & Beauty Professionals",
@@ -293,7 +470,8 @@
               "title": "Show your work to the world",
               "description": "Let's build a site that reflects your style and attracts the right clients.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Salon Name"
           },
           "poliklinike": {
             "hero": "Websites for Clinics & Medical Practices",
@@ -311,7 +489,8 @@
               "title": "Make it easy for patients to find you",
               "description": "Let's build a professional website for your practice.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Clinic / Practice Name"
           },
           "odvjetnicki-uredi": {
             "hero": "Websites for Law Firms & Attorneys",
@@ -329,7 +508,8 @@
               "title": "Establish your online presence",
               "description": "Let's create a website that reflects your expertise and professionalism.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Law Firm Name"
           },
           "kulturne-ustanove": {
             "hero": "Websites for Cultural Institutions",
@@ -347,7 +527,8 @@
               "title": "Bring your audience closer",
               "description": "Let's build a website that reflects your cultural identity.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Institution Name"
           },
           "prijevoz": {
             "hero": "Websites for Taxi, Rent-a-Car & Rent-a-Boat",
@@ -365,7 +546,8 @@
               "title": "Get more direct bookings",
               "description": "Let's build a website that puts you in control of your reservations.",
               "button": "Get in Touch"
-            }
+            },
+            "formNameLabel": "Company / Service Name"
           }
         }
       },

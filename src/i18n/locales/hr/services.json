@@ -50,7 +50,7 @@
       "features": [
         {
           "icon": "custom",
-          "title": "Prilagođena rješenja",
+          "title": "Web po mjeri, bez predložaka",
           "description": "Svaka web stranica je jedinstvena i prilagođena specifičnim potrebama vašeg poslovanja."
         },
         {
@@ -130,6 +130,178 @@
           }
         ]
       },
+      "pricingTeaser": "Cijena web stranice ovisi o zahtjevima projekta — veličini, broju podstranica, željenim funkcionalnostima i roku isporuke. Svaki projekt je jedinstven, a cijene prilagođavamo konkretnim potrebama klijenta.",
+      "pricingLink": "Saznaj više o cijenama",
+      "featurePages": {
+        "web-po-mjeri": {
+          "hero": "Web stranica po mjeri",
+          "subtitle": "bez predložaka i ograničenja",
+          "intro": "Kada kažemo 'po mjeri', mislimo doslovno — svaka stranica koju izrađujemo napisana je od nule. Nema gotovih WordPress tema, nema drag-and-drop buildora, nema kompromisa u dizajnu ni funkcionalnostima.",
+          "sections": [
+            {
+              "title": "Zašto predlošci nisu dovoljni?",
+              "body": "Wix, WordPress i slični alati nude brzu izradu, ali i niz nevidljivih ograničenja. Predlošci su dizajnirani da budu generički — da pristaju svima, a savršeni nikome. Rezultat? Sporije stranice, teže prilagodbe i web prisutnost koja se ne razlikuje od konkurencije. Svaka izmjena izvan okvira predloška postaje borba s tuđim kodom."
+            },
+            {
+              "title": "Što dobivate s custom razvojem?",
+              "bullets": [
+                "Dizajn koji odražava vašu marku i vrijednosti",
+                "Brže učitavanje — nema nepotrebnog koda i skripti",
+                "Neograničene mogućnosti dizajna i funkcionalnosti",
+                "Lakše proširivanje i dodavanje novih stranica",
+                "Bolje SEO pozicije zahvaljujući čistom kodu",
+                "Puna kontrola nad strukturom i sadržajem"
+              ]
+            },
+            {
+              "title": "Naš proces",
+              "body": "Svaki projekt počinjemo razgovorom o vašim ciljevima i željama. Zatim dizajniramo, kodiramo i testiramo — sve dok rezultat ne bude upravo onakav kakvim ste ga zamislili. Nema gotovih rješenja, nema prečaca — samo web stranica koja radi točno onako kako treba."
+            }
+          ],
+          "cta": {
+            "title": "Razgovarajmo o vašem projektu",
+            "description": "Ispričajte nam svoju viziju i izgradit ćemo je od temelja.",
+            "button": "Zatražite ponudu"
+          }
+        },
+        "responzivan-dizajn": {
+          "hero": "Responzivan dizajn",
+          "subtitle": "savršen prikaz na svakom uređaju",
+          "intro": "Više od 70% posjeta web stranicama dolazi s mobilnih uređaja. Stranica koja ne radi besprijekorno na mobitelu ne samo da frustrira posjetitelje — gubi ih zauvijek.",
+          "sections": [
+            {
+              "title": "Što je responzivan dizajn?",
+              "body": "Responzivan dizajn znači da se web stranica automatski prilagođava veličini zaslona — bilo da ju gledate na mobitelu, tabletu ili desktop računalu. Nije to samo 'smanjena verzija' iste stranice, nego promišljeno slaganje elemenata koje korisniku uvijek pruža optimalno iskustvo."
+            },
+            {
+              "title": "Zašto je to presudno za vaše poslovanje?",
+              "bullets": [
+                "Google rangira mobilno optimizirane stranice bolje u rezultatima pretrage",
+                "Korisnici koji dođu na lošu mobilnu verziju odlaze za sekunde",
+                "Jedna stranica za sve uređaje — nema paralelnog održavanja",
+                "Brže učitavanje na mobilnim mrežama",
+                "Veća stopa konverzije — više upita i kupnji"
+              ]
+            },
+            {
+              "title": "Mobile-first pristup",
+              "body": "Sve web stranice koje izrađujemo dizajniramo mobile-first — počinjemo od najmanjeg zaslona i proširujemo prema desktop-u. Ovaj pristup osigurava da je iskustvo na mobitelu jednako kvalitetno kao na velikom monitoru."
+            }
+          ],
+          "cta": {
+            "title": "Vaša stranica na svakom uređaju",
+            "description": "Izradimo web stranicu koja izvrsno izgleda i radi na svim uređajima.",
+            "button": "Zatražite ponudu"
+          }
+        },
+        "brza-izrada": {
+          "hero": "Brza izrada web stranice",
+          "subtitle": "od ideje do objave",
+          "intro": "Razumijemo da vaše poslovanje ne može čekati tjednima. Naš proces je optimiziran za brzinu bez žrtvovanja kvalitete — od prvog razgovora do live stranice u što kraćem roku.",
+          "sections": [
+            {
+              "title": "Okvirni rokovi izrade",
+              "bullets": [
+                "Landing stranica (1 stranica): 5–7 radnih dana",
+                "Prezentacijska stranica (do 5 podstranica): 1–2 tjedna",
+                "Poslovna stranica (do 15 podstranica): 3–4 tjedna",
+                "Kompleksniji projekti: po dogovoru",
+                "Hitna izrada uz doplatak — javite nam se"
+              ]
+            },
+            {
+              "title": "Kako uspijevamo biti brzi?",
+              "body": "Imamo ustaljeni proces koji nam omogućuje učinkovitu izradu bez nepotrebnog čekanja. Nakon prvog razgovora i dogovora krenemo odmah. Radimo transparentno — u svakom trenutku znate u kojoj fazi je projekt i što slijedi."
+            },
+            {
+              "title": "Što je potrebno od vas?",
+              "body": "Za što brži start, korisno je pripremiti logotip u digitalnom obliku, željene boje i stil ako ih imate, te tekstove i slike za sadržaj. Ne brinite ako niste sigurni što vam treba — vodimo vas kroz cijeli proces i pomažemo s odlukama."
+            }
+          ],
+          "cta": {
+            "title": "Pokrenimo vaš projekt odmah",
+            "description": "Što prije krenemo, to prije ste online.",
+            "button": "Kontaktirajte nas"
+          }
+        },
+        "seo-optimizacija": {
+          "hero": "SEO optimizacija",
+          "subtitle": "budite vidljivi na Googleu, ali i ChatGPT-u",
+          "intro": "Lijepa web stranica nije dovoljna ako je nitko ne pronalazi. SEO (Search Engine Optimization) je skup tehnika kojima poboljšavamo vidljivost vaše stranice u rezultatima tražilica — bez plaćenog oglašavanja.",
+          "sections": [
+            {
+              "title": "Što je SEO i zašto je bitan?",
+              "body": "Kada netko pretražuje 'restoran Split' ili 'vodoinstalater Zagreb', Google mu prikazuje stranice koje smatra najrelevantnijima. SEO je rad na tome da vaša stranica bude jedna od njih. Za razliku od plaćenog oglašavanja, SEO donosi dugoročne rezultate — jednom kad se pozicionirate, promet dolazi kontinuirano bez dodatnih troškova."
+            },
+            {
+              "title": "Što uključujemo u svaku stranicu?",
+              "bullets": [
+                "Optimizirani naslovi i meta opisi za svaku podstranicu",
+                "Strukturirani podaci (Schema.org) za bolje prikaze u Googleu",
+                "Čiste, razumljive URL adrese",
+                "Brzo učitavanje stranice (brzina je SEO faktor)",
+                "Alt tekstovi na svim slikama",
+                "Sitemap i robots.txt",
+                "Prilagođenost za mobilne uređaje (Google mobile-first)"
+              ]
+            },
+            {
+              "title": "Lokalni SEO",
+              "body": "Za lokalna poduzeća posebno je bitan lokalni SEO — optimizacija za pretrage poput 'frizer Rijeka' ili 'kafić Zagreb centar'. Osiguravamo da vaša stranica bude optimizirana za lokalne upite i da se pojavljuje na Google kartama za relevantne pretrage."
+            },
+            {
+              "title": "SEO za AI tražilice (GEO)",
+              "body": "Osim Googlea, sve više korisnika pita ChatGPT, Claude i slične AI alate za preporuke stranica i usluga. Optimizacija za AI tražilice — tzv. GEO (Generative Engine Optimization) — postaje jednako važna kao klasični SEO. Strukturirani podaci, jasno i autoritativno napisan sadržaj te potpune informacije o poslovanju povećavaju šansu da vaša stranica bude citirana ili preporučena od strane AI alata — a to je novi kanal koji konkurencija još uvijek zanemaruje."
+            }
+          ],
+          "cta": {
+            "title": "Budite višlje na Googleu",
+            "description": "Izradimo stranicu optimiziranu za tražilice od samog temelja.",
+            "button": "Zatražite ponudu"
+          }
+        },
+        "cijene": {
+          "hero": "Cijena izrade web stranice",
+          "subtitle": "transparentno i bez skrivenih troškova",
+          "intro": "Cijena web stranice ovisi o zahtjevima projekta — veličini, broju podstranica, željenim funkcionalnostima i roku isporuke. Svaki projekt je jedinstven, a cijene prilagođavamo konkretnim potrebama klijenta. U nastavku su okvirni paketi — za točnu ponudu kontaktirajte nas.",
+          "cta": {
+            "title": "Zatražite ponudu",
+            "description": "Opišite nam što trebate i dobit ćete ponudu prilagođenu vašem projektu.",
+            "button": "Kontaktirajte nas"
+          }
+        },
+        "odrzavanje-i-podrska": {
+          "hero": "Održavanje i podrška",
+          "subtitle": "tu smo i nakon objave",
+          "intro": "Izrada web stranice nije kraj — to je tek početak. Web stranicu treba redovito održavati, ažurirati sadržaj i reagirati na tehničke probleme. Mi smo tu i nakon lansiranja.",
+          "sections": [
+            {
+              "title": "Što uključuje održavanje?",
+              "bullets": [
+                "Ažuriranje sadržaja — tekstovi, slike, cijene, novosti",
+                "Sigurnosne nadogradnje i backup podataka",
+                "Praćenje dostupnosti i performansi stranice",
+                "Tehnička podrška putem e-maila ili telefona",
+                "Sitne izmjene i prilagodbe dizajna",
+                "Optimizacija brzine učitavanja"
+              ]
+            },
+            {
+              "title": "Modeli suradnje",
+              "body": "Nudimo fleksibilne modele suradnje — od jednokratnih intervencija do dugoročnih partnerstava s fiksnom mjesečnom naknadom. Zajedno biramo model koji odgovara vašim potrebama i budžetu."
+            },
+            {
+              "title": "Zašto je redovno održavanje važno?",
+              "body": "Zastarjela web stranica, nedostupan hosting ili sigurnosni propust mogu ozbiljno naškoditi vašem poslovanju i online ugledu. S redovnim održavanjem sve ostaje besprijekorno — vi se možete fokusirati na posao, a mi brinemo za vašu online prisutnost."
+            }
+          ],
+          "cta": {
+            "title": "Ostanimo u kontaktu",
+            "description": "Dogovorimo model suradnje koji vam najviše odgovara.",
+            "button": "Kontaktirajte nas"
+          }
+        }
+      },
       "whyUsTitle": "Zašto izabrati baš nas?",
       "whyUsText": "Za razliku od većine agencija, ne koristimo WordPress ni gotove predloške. Svaku web stranicu razvijamo kao softver — od temelja. To znači da nemamo ograničenja u dizajnu, strukturi, animacijama ni funkcionalnostima. Možemo razviti točno ono što klijent naumi — bez kompromisa.",
       "niches": {
@@ -188,7 +360,7 @@
         ],
         "pages": {
           "ugostiteljstvo": {
-            "hero": "Izrada web stranica za ugostiteljske objekte",
+            "hero": "Izrada web stranica za ugostiteljstvo",
             "subtitle": "Privucite više gostiju i povećajte rezervacije",
             "intro": "Vaš restoran, kafić ili bar zaslužuje online prisutnost koja odražava ugođaj i kvalitetu vašeg objekta. Moderna web stranica nije samo vizitka — ona je prodajni alat koji radi 24 sata na dan, 7 dana u tjednu. Gosti sve češće traže jelovnik, radno vrijeme i recenzije online prije dolaska — budite tamo gdje vas traže.",
             "bullets": [
@@ -203,7 +375,8 @@
               "title": "Pokrenimo vašu stranicu",
               "description": "Ispričajte nam nešto o svom objektu i dogovorimo detalje.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv ugostiteljskog objekta"
           },
           "apartmani": {
             "hero": "Izrada web stranica za apartmane i smještaj",
@@ -221,7 +394,8 @@
               "title": "Smanjite provizije, povećajte zaradu",
               "description": "Izradimo stranicu koja vam donosi direktne rezervacije.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv smještajnog objekta"
           },
           "obrtnici": {
             "hero": "Izrada web stranica za obrtnike",
@@ -239,7 +413,8 @@
               "title": "Dajmo vam online prisutnost",
               "description": "Brza, pristupačna stranica prilagođena vašem obrtu.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv obrta"
           },
           "male-tvrtke": {
             "hero": "Izrada web stranica za male tvrtke",
@@ -257,7 +432,8 @@
               "title": "Izgradimo vaš online identitet",
               "description": "Razgovarajmo o vašoj tvrtki i što želi postići stranicom.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv tvrtke"
           },
           "turizam": {
             "hero": "Izrada web stranica za turizam i turističke agencije",
@@ -275,7 +451,8 @@
               "title": "Privucite više putnika",
               "description": "Izradimo stranicu koja prikazuje ljepotu vaše ponude.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv agencije / ponude"
           },
           "saloni": {
             "hero": "Izrada web stranica za salone i kozmetičare",
@@ -293,7 +470,8 @@
               "title": "Pokažite svoje radove svijetu",
               "description": "Izradimo stranicu koja odražava vaš stil i privlači prave klijente.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv salona"
           },
           "poliklinike": {
             "hero": "Izrada web stranica za poliklinike i ordinacije",
@@ -311,7 +489,8 @@
               "title": "Povežite se s novim pacijentima",
               "description": "Izradimo stranicu koja gradi povjerenje i olakšava naručivanje.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv ordinacije / poliklinike"
           },
           "odvjetnicki-uredi": {
             "hero": "Izrada web stranica za odvjetničke urede",
@@ -329,7 +508,8 @@
               "title": "Izgradite povjerenje online",
               "description": "Izradimo stranicu koja predstavlja vaš ured onako kako zaslužuje.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv odvjetničkog ureda"
           },
           "kulturne-ustanove": {
             "hero": "Izrada web stranica za kulturne ustanove",
@@ -347,7 +527,8 @@
               "title": "Pozovite publiku u vaš prostor",
               "description": "Izradimo stranicu koja komunicira vrijednost vašeg kulturnog programa.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv ustanove"
           },
           "prijevoz": {
             "hero": "Izrada web stranica za taxi, rent-a-car i rent-a-boat",
@@ -365,7 +546,8 @@
               "title": "Pokrenite direktne rezervacije",
               "description": "Izradimo stranicu koja vam donosi klijente bez provizija.",
               "button": "Kontaktirajte nas"
-            }
+            },
+            "formNameLabel": "Naziv tvrtke / usluge"
           }
         }
       },
