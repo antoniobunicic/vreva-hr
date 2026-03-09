@@ -1,11 +1,13 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import ContactForm from '../../components/ContactForm';
+import PricingModal from '../../components/PricingModal';
 
 function WebdevFeaturePage({ featureSlug }) {
   const { t } = useTranslation('services');
+  const [modalPackage, setModalPackage] = useState(null);
 
   const page = t(`detail.webdev.featurePages.${featureSlug}`, { returnObjects: true });
   const pricing = featureSlug === 'cijene'
@@ -13,6 +15,10 @@ function WebdevFeaturePage({ featureSlug }) {
     : null;
 
   return (
+    <>
+    {modalPackage && (
+      <PricingModal packageName={modalPackage} onClose={() => setModalPackage(null)} />
+    )}
     <section className="service-page service-page--webdev feature-page">
       <div className="service-page-cover">
         <div className="container">
@@ -51,7 +57,12 @@ function WebdevFeaturePage({ featureSlug }) {
           {pricing && pricing.packages && Array.isArray(pricing.packages) && (
             <div className="pricing-cards" style={{ marginBottom: '4rem' }}>
               {pricing.packages.map((pkg, i) => (
-                <div key={i} className="pricing-card">
+                <div key={i} className={`pricing-card${i === 1 ? ' pricing-card--featured' : ''}`}>
+                  {i === 1 && (
+                    <span className="pricing-card-badge">
+                      {t('detail.webdev.pricing.popularBadge', { ns: 'services' })}
+                    </span>
+                  )}
                   <p className="pricing-card-name">{pkg.name}</p>
                   <div className="pricing-card-price">
                     <span className="pricing-amount">{pkg.price}</span>
@@ -62,19 +73,34 @@ function WebdevFeaturePage({ featureSlug }) {
                   <ul className="pricing-card-features">
                     {pkg.features.map((f, j) => <li key={j}>{f}</li>)}
                   </ul>
+                  <button
+                    className="btn btn-primary pricing-card-cta"
+                    onClick={() => setModalPackage(pkg.name)}
+                  >
+                    {t('detail.webdev.pricing.requestQuote')}
+                  </button>
                 </div>
               ))}
             </div>
           )}
 
-          <div className="service-cta">
-            <h2 className="service-cta-title">{page.cta.title}</h2>
-            <p className="service-cta-description">{page.cta.description}</p>
-            <ContactForm source={`webdev-${featureSlug}`} />
-          </div>
+          {pricing && (
+            <p className="pricing-footnote">
+              {t('detail.webdev.pricing.footnote')}
+            </p>
+          )}
+
+          {!pricing && (
+            <div className="service-cta">
+              <h2 className="service-cta-title">{page.cta.title}</h2>
+              <p className="service-cta-description">{page.cta.description}</p>
+              <ContactForm source={`webdev-${featureSlug}`} />
+            </div>
+          )}
         </div>
       </div>
     </section>
+    </>
   );
 }
 

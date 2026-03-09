@@ -2,6 +2,7 @@
   "title": "Let's build something together",
   "intro": "Whether you're looking to modernize your stack, build a new product, or scale your team — we're here to help.",
   "freeBadge": "Consultation is free, no strings attached",
+  "packageField": "Selected website type",
   "form": {
     "name": "Name",
     "email": "Email",

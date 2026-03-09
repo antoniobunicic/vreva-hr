@@ -73,3 +73,15 @@
   height: 20px;
   fill: currentColor;
 }
+
+.inline-link {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.inline-link:hover {
+  opacity: 0.75;
+}

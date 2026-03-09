@@ -81,51 +81,57 @@
       ],
       "pricing": {
         "title": "Website Pricing",
+        "popularBadge": "Most Popular",
+        "requestQuote": "Request a Quote",
+        "footnote": "Website technical maintenance is charged at €100/year (or €10/month) and includes hosting, SSL certificate, regular system updates, and basic technical support. For more frequent content changes, additional maintenance can be arranged.",
         "packages": [
           {
-            "name": "Monthly Plan",
-            "price": "50 – 150",
-            "period": "/mo",
+            "name": "Basic Website",
+            "price": "250 – 350 €",
+            "period": "",
             "note": "+ VAT",
-            "description": "No upfront cost, everything included",
+            "description": "Landing page or simple presentation website",
             "features": [
-              "Responsive website",
-              "Domain and hosting included",
-              "SSL certificate",
-              "Monthly maintenance and support",
-              "Content updates",
-              "Minimum 12 month commitment"
+              "Design from scratch based on client's vision",
+              "1 page",
+              "Responsive design",
+              "Basic SEO optimization",
+              "Domain registration assistance",
+              "1 revision round"
             ]
           },
           {
-            "name": "Starter",
-            "price": "200 – 600",
+            "name": "Standard Website",
+            "price": "350 – 850 €",
             "period": "",
             "note": "+ VAT",
-            "description": "Single-page or presentation site up to 5 pages",
+            "description": "Custom-built site with more content and functionality",
             "features": [
+              "Design from scratch based on client's vision",
+              "Up to 5–10 pages",
               "Responsive design",
-              "Up to 5 pages",
-              "Contact form",
-              "SEO optimization",
-              "Google Analytics integration",
+              "Contact form and gallery",
+              "Standard SEO optimization",
+              "Multilingual support",
+              "Domain registration assistance",
               "2 revision rounds"
             ]
           },
           {
-            "name": "Business",
-            "price": "1,000 – 3,000",
+            "name": "Advanced Website",
+            "price": "850+ €",
             "period": "",
             "note": "+ VAT",
-            "description": "Multi-page business website up to 15 pages",
+            "description": "Complex business website with advanced functionality",
             "features": [
-              "Everything in Starter",
-              "Up to 15 pages",
-              "Blog or gallery",
-              "CMS for content management",
-              "Social media integration",
-              "3 revision rounds",
-              "30 days post-launch support"
+              "Design from scratch based on client's vision",
+              "Unlimited pages",
+              "CMS for self-managed content",
+              "Domain registration assistance",
+              "Blog, gallery, or product catalogue",
+              "Advanced animations and interactions",
+              "Third-party integrations",
+              "3 revision rounds"
             ]
           }
         ]

@@ -95,15 +95,18 @@ function ServiceDetailPage({ serviceKey }) {
             <div className="service-why-us">
               <h2 className="service-niches-title">{t(`detail.${key}.whyUsTitle`, { ns: 'services' })}</h2>
               <p className="service-detail-intro">{t(`detail.${key}.whyUsText`, { ns: 'services' })}</p>
+              <Link href="/usluge/izrada-web-stranica/web-po-mjeri" className="inline-link">
+                {t('detail.webdev.featurePages.web-po-mjeri.hero', { ns: 'services' })} →
+              </Link>
             </div>
           )}
 
-          {pricing && (
+          {pricing && typeof pricing === 'object' && (
             <div className="service-pricing service-pricing--teaser">
               <h2 className="service-pricing-title">{pricing.title}</h2>
               <p className="service-pricing-teaser-text">{t(`detail.${key}.pricingTeaser`, { ns: 'services' })}</p>
-              <Link href="/usluge/izrada-web-stranica/cijene" className="btn btn-secondary">
-                {t(`detail.${key}.pricingLink`, { ns: 'services' })}
+              <Link href="/usluge/izrada-web-stranica/cijene" className="inline-link">
+                {t(`detail.${key}.pricingLink`, { ns: 'services' })} →
               </Link>
             </div>
           )}

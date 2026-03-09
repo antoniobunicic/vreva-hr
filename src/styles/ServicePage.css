@@ -282,20 +282,17 @@
 }
 
 /* Pricing teaser (on main webdev page) */
-.service-pricing--teaser {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: var(--color-background2);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
+.service-pricing--teaser .service-pricing-title {
+  text-align: left;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
 }
 
 .service-pricing-teaser-text {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.8;
-  color: var(--color-text-muted);
-  max-width: 560px;
-  margin: 0 auto 2rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
 }
 
 .service-pricing-title {
@@ -329,6 +326,33 @@
 .pricing-card:hover {
   transform: translateY(-4px);
   border-color: var(--color-vreva-yellow);
+}
+
+.pricing-card--featured {
+  border-color: var(--color-vreva-yellow);
+  border-width: 2px;
+  background: rgba(255, 204, 51, 0.06);
+  transform: translateY(-6px);
+  position: relative;
+  box-shadow: 0 8px 32px rgba(255, 204, 51, 0.12);
+}
+
+.pricing-card--featured:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(255, 204, 51, 0.18);
+}
+
+.pricing-card-badge {
+  display: inline-block;
+  background: var(--color-vreva-yellow);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 99px;
+  margin-bottom: 1rem;
 }
 
 .pricing-card-name {
@@ -397,6 +421,20 @@
   left: 0;
   color: var(--color-vreva-yellow);
   font-weight: bold;
+}
+
+.pricing-card-cta {
+  margin-top: 1.75rem;
+  font-size: 0.875rem;
+  padding: 0.7rem 1.5rem;
+}
+
+.pricing-footnote {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 /* Breadcrumb */
@@ -484,7 +522,7 @@
 }
 
 .service-why-us .service-detail-intro {
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
 }
 
 /* Niches Section */

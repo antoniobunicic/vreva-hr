@@ -2,6 +2,7 @@
   "title": "Izgradimo nešto zajedno",
   "intro": "Bilo da želite jednostavnu web stranicu, kompleksni digitalni proizvod ili proširenje svog tima — ovdje smo da pomognemo.",
   "freeBadge": "Konzultacije su besplatne i bez obveza",
+  "packageField": "Odabrana vrsta web stranice",
   "form": {
     "name": "Ime",
     "email": "Email",

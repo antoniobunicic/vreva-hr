@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-function ContactForm({ nameLabel, source }) {
+function ContactForm({ nameLabel, source, packageName }) {
   const { t } = useTranslation('contact');
   const [formStatus, setFormStatus] = useState(null);
 
@@ -43,6 +43,20 @@ function ContactForm({ nameLabel, source }) {
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       {source && <input type="hidden" name="_source" value={source} />}
+
+      {packageName && (
+        <div className="form-group">
+          <label htmlFor={`package-${source}`}>{t('packageField')}</label>
+          <input
+            type="text"
+            id={`package-${source}`}
+            name="package_type"
+            value={packageName}
+            readOnly
+            className="form-input--readonly"
+          />
+        </div>
+      )}
 
       <div className="contact-free-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -81,51 +81,57 @@
       ],
       "pricing": {
         "title": "Cijena izrade web stranica",
+        "popularBadge": "Najpopularnije",
+        "requestQuote": "Zatraži ponudu",
+        "footnote": "Tehničko održavanje web stranice naplaćuje se 100 € godišnje (ili 10 € mjesečno) i uključuje hosting, SSL certifikat, redovita ažuriranja sustava i osnovnu tehničku podršku. Za potrebe češćih izmjena sadržaja moguće je dogovoriti dodatno održavanje.",
         "packages": [
           {
-            "name": "Mjesečna pretplata",
-            "price": "50 – 150",
-            "period": "/mj",
+            "name": "Osnovna web stranica",
+            "price": "250 – 350 €",
+            "period": "",
             "note": "+ PDV",
-            "description": "Bez početnog ulaganja, sve uključeno",
+            "description": "Landing stranica ili jednostavna prezentacijska stranica",
             "features": [
-              "Responzivna web stranica",
-              "Domena i hosting uključeni",
-              "SSL certifikat",
-              "Mjesečno održavanje i podrška",
-              "Ažuriranje sadržaja",
-              "Minimalno trajanje 12 mjeseci"
+              "Dizajn iz nule po željama klijenta",
+              "1 stranica",
+              "Responzivni dizajn",
+              "Osnovna SEO optimizacija",
+              "Pomoć s registracijom domene",
+              "1 runda revizija"
             ]
           },
           {
-            "name": "Osnovni paket",
-            "price": "200 – 600",
+            "name": "Standardna web stranica",
+            "price": "350 – 850 €",
             "period": "",
             "note": "+ PDV",
-            "description": "Jednostrana ili prezentacijska stranica do 5 podstranica",
+            "description": "Stranica po mjeri s više sadržaja i funkcionalnosti",
             "features": [
+              "Dizajn iz nule po željama klijenta",
+              "Do 5–10 podstranica",
               "Responzivni dizajn",
-              "Do 5 podstranica",
-              "Kontakt forma",
-              "SEO optimizacija",
-              "Google Analytics integracija",
+              "Kontakt forma i galerija",
+              "Standardna SEO optimizacija",
+              "Višejezičnost",
+              "Pomoć s registracijom domene",
               "2 runde revizija"
             ]
           },
           {
-            "name": "Poslovni paket",
-            "price": "1.000 – 3.000",
+            "name": "Napredna web stranica",
+            "price": "850+ €",
             "period": "",
             "note": "+ PDV",
-            "description": "Višestrana poslovna web stranica do 15 podstranica",
+            "description": "Kompleksna poslovna stranica s naprednim funkcionalnostima",
             "features": [
-              "Sve iz osnovnog paketa",
-              "Do 15 podstranica",
-              "Blog ili galerija",
-              "CMS za upravljanje sadržajem",
-              "Integracija društvenih mreža",
-              "3 runde revizija",
-              "30 dana podrške nakon lansiranja"
+              "Dizajn iz nule po željama klijenta",
+              "Neograničen broj podstranica",
+              "CMS za samostalno upravljanje sadržajem",
+              "Pomoć s registracijom domene",
+              "Blog, galerija ili katalog proizvoda",
+              "Napredne animacije i interakcije",
+              "Integracije s vanjskim sustavima",
+              "3 runde revizija"
             ]
           }
         ]
