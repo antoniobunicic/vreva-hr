@@ -100,34 +100,36 @@ function Layout({ children }) {
           <Link href="/" className="nav-logo">
             <img src={logo.src || logo} alt="Vreva" />
           </Link>
-          <div className="nav-right">
-            <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-              {navItems.map((item) => (
-                <li key={item.id} className={item.hasDropdown ? 'nav-item-dropdown' : ''}>
-                  <button
-                    className={activeSection === item.id ? 'active' : ''}
-                    onClick={() => handleNavClick(item.id)}
-                  >
-                    {item.label}
-                    {item.hasDropdown && <span className="nav-dropdown-arrow">&#9662;</span>}
-                  </button>
-                  {item.hasDropdown && (
-                    <ul className="nav-dropdown">
-                      {dropdownServices.map((svc) => (
-                        <li key={svc.key}>
-                          <Link
-                            href={svc.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            {t(`dropdown.${svc.key}`, { ns: 'services' })}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
+
+          <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+            {navItems.map((item) => (
+              <li key={item.id} className={item.hasDropdown ? 'nav-item-dropdown' : ''}>
+                <button
+                  className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge'))) ? 'active' : ''}
+                  onClick={() => handleNavClick(item.id)}
+                >
+                  {item.label}
+                  {item.hasDropdown && <span className="nav-dropdown-arrow">&#9662;</span>}
+                </button>
+                {item.hasDropdown && (
+                  <ul className="nav-dropdown">
+                    {dropdownServices.map((svc) => (
+                      <li key={svc.key}>
+                        <Link
+                          href={svc.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {t(`dropdown.${svc.key}`, { ns: 'services' })}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <div className="nav-actions">
             <LanguageSwitcher />
             <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleTheme} />
             <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label={t('nav.ariaToggleMenu', { ns: 'common' })}>

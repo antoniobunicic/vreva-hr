@@ -139,11 +139,15 @@
   }
 
   .footer-links {
-    justify-content: center;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .footer-column {
     text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
   }
 }

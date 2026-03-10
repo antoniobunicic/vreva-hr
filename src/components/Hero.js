@@ -32,7 +32,7 @@ function Hero() {
                     >
                       {t('cta.primary')}
                     </a>
-                    <Link href="/usluge" className="btn btn-secondary">{t('cta.secondary')}</Link>
+                    <Link href="/usluge" className="btn btn-secondary hero-cta-secondary">{t('cta.secondary')}</Link>
                 </div>
                 <img src={dots.src || dots} alt="Vreva logo" className="hero-dots"/>
             </div>

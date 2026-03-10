@@ -81,9 +81,9 @@
 
 .hero-service {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.1em;
-  color: var(--color-text-muted);
+  color: #7c3aed;
   text-transform: uppercase;
   text-decoration: none;
   transition: color 0.2s ease;

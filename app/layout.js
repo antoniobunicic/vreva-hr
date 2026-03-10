@@ -10,6 +10,23 @@ export const metadata = {
   },
   description: 'Pristupačna i povoljna izrada web stranica i softverskih rješenja. Razvoj modernih web aplikacija uz najnovije tehnologije i AI.',
   metadataBase: new URL('https://vreva.hr'),
+  openGraph: {
+    type: 'website',
+    locale: 'hr_HR',
+    siteName: 'Vreva',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Vreva - Izrada web stranica',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function RootLayout({ children }) {
