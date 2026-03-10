@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ProjectCard from './ProjectCard';
 import flexportalImg from '../assets/flexportal.png';
@@ -31,6 +31,23 @@ const projectCategories = {
 function Projects() {
   const { t } = useTranslation('projects');
   const [activeCategory, setActiveCategory] = useState('featured');
+  const filterRef = useRef(null);
+  const indicatorRef = useRef(null);
+
+  const moveIndicator = (btn) => {
+    const container = filterRef.current;
+    const indicator = indicatorRef.current;
+    if (!container || !indicator || !btn) return;
+    indicator.style.width = `${btn.offsetWidth}px`;
+    indicator.style.transform = `translateX(${btn.offsetLeft}px)`;
+  };
+
+  useEffect(() => {
+    const container = filterRef.current;
+    if (!container) return;
+    const activeBtn = container.querySelector('.projects-filter-pill.active');
+    if (activeBtn) moveIndicator(activeBtn);
+  }, []);
 
   const projectKeys = ['apartmani', 'houselucy', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
 
@@ -63,26 +80,31 @@ function Projects() {
     <section id="projects" className="projects">
       <div className="container">
         <h2 className="section-title">{t('section.title')}</h2>
-        <div className="projects-filter">
+        <div className="projects-filter" ref={filterRef}>
+          <div className="projects-filter-indicator" ref={indicatorRef} />
           {categories.map((category) => (
             <button
               key={category}
-              className={`projects-filter-btn ${activeCategory === category ? 'active' : ''}`}
-              onClick={() => setActiveCategory(category)}
+              className={`projects-filter-pill ${activeCategory === category ? 'active' : ''}`}
+              onClick={(e) => { moveIndicator(e.currentTarget); setActiveCategory(category); }}
             >
               {t(`categories.${category}`)}
             </button>
           ))}
         </div>
         <div className="projects-grid">
-          {filteredProjects.map((key) => (
-            <ProjectCard
+          {projectKeys.map((key) => (
+            <div
               key={key}
-              projectKey={key}
-              projectImage={projectImages[key]}
-              clientLogo={clientLogos[key]}
-              scrollablePreview={scrollablePreview[key]}
-            />
+              className={`project-wrapper${filteredProjects.includes(key) ? '' : ' hidden'}`}
+            >
+              <ProjectCard
+                projectKey={key}
+                projectImage={projectImages[key]}
+                clientLogo={clientLogos[key]}
+                scrollablePreview={scrollablePreview[key]}
+              />
+            </div>
           ))}
         </div>
       </div>

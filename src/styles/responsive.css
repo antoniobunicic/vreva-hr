@@ -175,6 +175,20 @@
     grid-template-columns: 1fr;
   }
 
+  .projects-filter {
+    padding: 0.25rem;
+  }
+
+  .projects-filter-pill {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .projects-filter-indicator {
+    top: 0.25rem;
+    height: calc(100% - 0.5rem);
+  }
+
   .projects-grid {
     gap: 4rem;
   }

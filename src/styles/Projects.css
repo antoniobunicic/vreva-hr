@@ -7,31 +7,48 @@
 .projects-filter {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  gap: 0;
   margin-top: 2rem;
+  background: var(--color-background2);
+  padding: 0.3rem;
+  border-radius: 999px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
-.projects-filter-btn {
+.projects-filter-indicator {
+  position: absolute;
+  top: 0.3rem;
+  left: 0;
+  height: calc(100% - 0.6rem);
+  background: var(--color-vreva-yellow);
+  border-radius: 999px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.projects-filter-pill {
   background: transparent;
-  border: 1px solid var(--color-border);
+  border: none;
   color: var(--color-text-muted);
-  padding: 0.6rem 1.25rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  transition: var(--transition);
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
-.projects-filter-btn:hover {
-  border-color: var(--color-text);
+.projects-filter-pill:hover {
   color: var(--color-text);
 }
 
-.projects-filter-btn.active {
-  background: var(--color-vreva-yellow);
-  border-color: var(--color-vreva-yellow);
+.projects-filter-pill.active {
   color: black;
 }
 
@@ -42,19 +59,19 @@
   margin-top: 4rem;
 }
 
-.project-card {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
+.project-wrapper {
   position: relative;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   padding-bottom: 6rem;
 }
 
-.project-card:not(:last-child)::after {
+.project-wrapper.hidden {
+  display: none;
+}
+
+.project-wrapper:not(.hidden) ~ .project-wrapper:not(.hidden)::before {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: -3rem;
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
@@ -62,8 +79,16 @@
   background: linear-gradient(90deg, transparent, var(--color-border) 20%, var(--color-border) 80%, transparent);
 }
 
-.project-card:last-child {
+.project-wrapper:not(.hidden):last-of-type {
   padding-bottom: 0;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover {

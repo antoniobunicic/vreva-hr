@@ -3,10 +3,10 @@
     "title": "Projekti"
   },
   "categories": {
-    "featured": "Istaknuti projekti",
-    "web": "Web stranice",
-    "software": "Softverska rješenja",
-    "mobile": "Mobilne aplikacije"
+    "featured": "Istaknuto",
+    "web": "Web",
+    "software": "Softver",
+    "mobile": "Aplikacije"
   },
   "cards": {
     "apartmani": {
