@@ -1,5 +1,6 @@
 {
-  "title": "Recept za dobar web",
+  "titleStart": "Recept za dobar",
+  "rotatingWords": ["web", "kod"],
   "description": "Od landing stranica do kompleksnih softverskih rješenja.",
   "services": {
     "web": "IZRADA WEB STRANICA",

@@ -1,5 +1,6 @@
 {
-  "title": "Let us cook",
+  "titleStart": "Let us",
+  "rotatingWords": ["cook", "code"],
   "description": "From landing pages to complex software solutions.",
   "services": {
     "web": "WEB DEVELOPMENT",

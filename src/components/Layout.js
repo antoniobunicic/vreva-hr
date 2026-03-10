@@ -88,7 +88,7 @@ function Layout({ children }) {
   const navItems = [
     { id: 'about', label: t('nav.about', { ns: 'common' }) },
     { id: 'projects', label: t('nav.projects', { ns: 'common' }) },
-    { id: 'services', label: t('nav.services', { ns: 'common' }), hasDropdown: true },
+    { id: 'services', label: t('nav.services', { ns: 'common' }), hasDropdown: true, href: '/usluge' },
     { id: 'approach', label: t('nav.approach', { ns: 'common' }) },
     { id: 'contact', label: t('nav.contact', { ns: 'common' }) },
   ];
@@ -104,13 +104,24 @@ function Layout({ children }) {
           <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
             {navItems.map((item) => (
               <li key={item.id} className={item.hasDropdown ? 'nav-item-dropdown' : ''}>
-                <button
-                  className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge'))) ? 'active' : ''}
-                  onClick={() => handleNavClick(item.id)}
-                >
-                  {item.label}
-                  {item.hasDropdown && <span className="nav-dropdown-arrow">&#9662;</span>}
-                </button>
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge'))) ? 'active' : ''}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                    {item.hasDropdown && <span className="nav-dropdown-arrow">&#9662;</span>}
+                  </Link>
+                ) : (
+                  <button
+                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge'))) ? 'active' : ''}
+                    onClick={() => handleNavClick(item.id)}
+                  >
+                    {item.label}
+                    {item.hasDropdown && <span className="nav-dropdown-arrow">&#9662;</span>}
+                  </button>
+                )}
                 {item.hasDropdown && (
                   <ul className="nav-dropdown">
                     {dropdownServices.map((svc) => (

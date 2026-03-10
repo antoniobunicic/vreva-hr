@@ -1,12 +1,12 @@
 /* Buttons */
 .btn {
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.9rem 2.2rem;
+  border-radius: 100px;
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition);
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.95rem;
   letter-spacing: 0.02em;
   border: 2px solid transparent;
 }
@@ -21,7 +21,7 @@
   background: var(--color-vreva-yellow-dark);
   border-color: var(--color-vreva-yellow-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(220, 51, 83, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 204, 51, 0.3);
 }
 
 .btn-secondary {

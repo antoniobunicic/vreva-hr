@@ -37,9 +37,11 @@
   list-style: none;
   gap: 0.25rem;
   justify-self: center;
+  align-items: center;
 }
 
-.nav-menu button {
+.nav-menu button,
+.nav-menu > li > a {
   background: none;
   border: none;
   color: var(--color-text-muted);
@@ -50,14 +52,20 @@
   border-radius: 6px;
   font-weight: 600;
   letter-spacing: 0.02em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
-.nav-menu button:hover {
+.nav-menu button:hover,
+.nav-menu > li > a:hover {
   color: #FAFAF9;
   background: rgba(255, 255, 255, 0.05);
 }
 
-.nav-menu button.active {
+.nav-menu button.active,
+.nav-menu > li > a.active {
   color: var(--color-vreva-yellow);
   background: rgba(255, 204, 51, 0.1);
 }
