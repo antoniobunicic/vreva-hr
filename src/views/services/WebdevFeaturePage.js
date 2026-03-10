@@ -8,6 +8,7 @@ import PricingModal from '../../components/PricingModal';
 function WebdevFeaturePage({ featureSlug }) {
   const { t } = useTranslation('services');
   const [modalPackage, setModalPackage] = useState(null);
+  const [selectedCard, setSelectedCard] = useState(1);
 
   const page = t(`detail.webdev.featurePages.${featureSlug}`, { returnObjects: true });
   const pricing = featureSlug === 'cijene'
@@ -57,7 +58,7 @@ function WebdevFeaturePage({ featureSlug }) {
           {pricing && pricing.packages && Array.isArray(pricing.packages) && (
             <div className="pricing-cards" style={{ marginBottom: '4rem' }}>
               {pricing.packages.map((pkg, i) => (
-                <div key={i} className={`pricing-card${i === 1 ? ' pricing-card--featured' : ''}`}>
+                <div key={i} className={`pricing-card${i === selectedCard ? ' pricing-card--featured' : ''}`} onClick={() => setSelectedCard(i)}>
                   {i === 1 && (
                     <span className="pricing-card-badge">
                       {t('detail.webdev.pricing.popularBadge', { ns: 'services' })}

@@ -14,6 +14,8 @@ const FRAG = `
   uniform float u_time;
   uniform vec2  u_resolution;
   uniform vec2  u_mouse;
+  uniform float u_bang;      /* 0..1, decays after click */
+  uniform vec2  u_bangPos;   /* click position in uv space */
 
   /* ── noise helpers ───────────────────────────────────────── */
   float hash(vec2 p) {
@@ -78,10 +80,18 @@ const FRAG = `
     c2 += vec2(fbm(c2 + t * 0.25), fbm(c2 + vec2(5.0) + t * 0.25)) * 0.10;
     c3 += vec2(fbm(c3 + t * 0.35), fbm(c3 + vec2(7.0) + t * 0.35)) * 0.08;
 
-    /* radii pulse gently */
-    float r1 = 0.38 + sin(t * 0.9) * 0.06;
-    float r2 = 0.32 + sin(t * 0.7 + 1.0) * 0.05;
-    float r3 = 0.28 + sin(t * 1.1 + 2.0) * 0.04;
+    /* bang: push blobs away from click + inflate */
+    float bang = u_bang * u_bang; /* ease out */
+    vec2 bangUV = u_bangPos;
+    c1 += normalize(c1 - bangUV) * bang * 0.35;
+    c2 += normalize(c2 - bangUV) * bang * 0.35;
+    c3 += normalize(c3 - bangUV) * bang * 0.35;
+
+    /* radii pulse gently + inflate on bang */
+    float inflate = bang * 0.25;
+    float r1 = 0.38 + sin(t * 0.9) * 0.06 + inflate;
+    float r2 = 0.32 + sin(t * 0.7 + 1.0) * 0.05 + inflate;
+    float r3 = 0.28 + sin(t * 1.1 + 2.0) * 0.04 + inflate;
 
     float b1 = blob(uv, c1, r1);
     float b2 = blob(uv, c2, r2);
@@ -110,8 +120,8 @@ const FRAG = `
     vec2 vig = gl_FragCoord.xy / u_resolution * 2.0 - 1.0;
     col *= 1.0 - dot(vig, vig) * 0.35;
 
-    /* global brightness */
-    col *= 0.75;
+    /* global brightness + flash on bang */
+    col *= 0.75 + bang * 0.6;
 
     gl_FragColor = vec4(clamp(col, 0.0, 1.0), 1.0);
   }
@@ -153,15 +163,19 @@ export default function HeroCanvas() {
     gl.enableVertexAttribArray(posLoc);
     gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
 
-    const uTime  = gl.getUniformLocation(prog, 'u_time');
-    const uRes   = gl.getUniformLocation(prog, 'u_resolution');
-    const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+    const uTime    = gl.getUniformLocation(prog, 'u_time');
+    const uRes     = gl.getUniformLocation(prog, 'u_resolution');
+    const uMouse   = gl.getUniformLocation(prog, 'u_mouse');
+    const uBang    = gl.getUniformLocation(prog, 'u_bang');
+    const uBangPos = gl.getUniformLocation(prog, 'u_bangPos');
 
     let rafId;
     let time = 0;
     let lastTs = null;
     const mouse = { x: 0, y: 0 };
     const smoothMouse = { x: 0, y: 0 };
+    let bang = 0;
+    const bangPos = { x: 0, y: 0 };
 
     function resize() {
       canvas.width  = canvas.offsetWidth;
@@ -177,6 +191,15 @@ export default function HeroCanvas() {
     }
     window.addEventListener('mousemove', onMouseMove);
 
+    function onClick(e) {
+      const rect = canvas.getBoundingClientRect();
+      const minDim = Math.min(canvas.width, canvas.height);
+      bangPos.x = (e.clientX - rect.left - canvas.width * 0.5) / minDim;
+      bangPos.y = (canvas.height * 0.5 - (e.clientY - rect.top)) / minDim;
+      bang = 1.0;
+    }
+    canvas.addEventListener('click', onClick);
+
     function render(ts) {
       if (lastTs === null) lastTs = ts;
       const dt = Math.min((ts - lastTs) / 1000, 0.05);
@@ -188,9 +211,14 @@ export default function HeroCanvas() {
       smoothMouse.x += (mouse.x - smoothMouse.x) * lerpFactor;
       smoothMouse.y += (mouse.y - smoothMouse.y) * lerpFactor;
 
-      gl.uniform1f(uTime,  time);
-      gl.uniform2f(uRes,   canvas.width, canvas.height);
-      gl.uniform2f(uMouse, smoothMouse.x, smoothMouse.y);
+      /* decay bang */
+      bang = Math.max(0, bang - dt * 1.5);
+
+      gl.uniform1f(uTime,    time);
+      gl.uniform2f(uRes,     canvas.width, canvas.height);
+      gl.uniform2f(uMouse,   smoothMouse.x, smoothMouse.y);
+      gl.uniform1f(uBang,    bang);
+      gl.uniform2f(uBangPos, bangPos.x, bangPos.y);
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
       rafId = requestAnimationFrame(render);
@@ -201,6 +229,7 @@ export default function HeroCanvas() {
       cancelAnimationFrame(rafId);
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', onMouseMove);
+      canvas.removeEventListener('click', onClick);
     };
   }, []);
 

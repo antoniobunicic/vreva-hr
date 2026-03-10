@@ -85,9 +85,6 @@ function Hero() {
         </div>
       </div>
 
-      <div className="hero-scroll-hint" aria-hidden="true">
-        <span />
-      </div>
     </section>
   );
 }

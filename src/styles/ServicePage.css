@@ -28,7 +28,7 @@
 .service-page--webdev .service-page-subtitle,
 .service-page--fullstack .service-page-subtitle,
 .service-page--leadership .service-page-subtitle {
-  color: var(--color-secondary);
+  color: var(--color-vreva-yellow);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -44,37 +44,9 @@
   width: 100%;
   padding: 3.5rem 0;
   margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
   position: relative;
   overflow: hidden;
-  background: var(--color-background2);
-  border-left: 3px solid var(--color-vreva-yellow);
-  border-bottom: 1px solid var(--color-border);
-}
-
-/* Left glow */
-.service-page-cover::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 40% 120% at 0% 50%, rgba(255, 204, 51, 0.07) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.service-page-cover::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 500px;
-  height: 450px;
-  background-image:
-    radial-gradient(circle, transparent 78px, rgba(255, 204, 51, 0.22) 78px, rgba(255, 204, 51, 0.22) 80px, transparent 80px),
-    radial-gradient(circle, transparent 78px, rgba(255, 204, 51, 0.13) 78px, rgba(255, 204, 51, 0.13) 80px, transparent 80px),
-    radial-gradient(circle, transparent 78px, rgba(255, 204, 51, 0.07) 78px, rgba(255, 204, 51, 0.07) 80px, transparent 80px);
-  background-size: 160px 160px, 160px 160px, 160px 160px;
-  background-position: -45px -15px, 57px 160px, 158px -15px;
-  background-repeat: no-repeat;
-  pointer-events: none;
 }
 
 .service-page-cover .service-page-header {
@@ -83,22 +55,18 @@
   margin-bottom: 0;
 }
 
-/* Niche cover icon — replaces rings */
-.service-page-cover--niche::after {
-  display: none;
-}
-
 .niche-cover-icon {
   position: absolute;
-  right: 4rem;
+  right: 25%;
   top: 50%;
   transform: translateY(-50%);
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 240px;
   color: var(--color-vreva-yellow);
-  opacity: 0.12;
+  opacity: 0.15;
   pointer-events: none;
   z-index: 0;
+  filter: blur(3px);
 }
 
 .niche-cover-icon svg {
@@ -118,13 +86,8 @@
 
 @media (max-width: 768px) {
   .service-page-cover {
-    padding: 2.5rem 0;
+    padding: 3rem 0;
     margin-bottom: 2rem;
-  }
-
-  .service-page-cover::after {
-    width: 280px;
-    opacity: 0.6;
   }
 }
 
@@ -321,20 +284,50 @@
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.pricing-card {
+  position: relative;
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 13px;
+  padding: 1px;
+  background: linear-gradient(135deg, #ffcc33, #7c3aed);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .pricing-card:hover {
   transform: translateY(-4px);
-  border-color: var(--color-vreva-yellow);
+  border-color: transparent;
+}
+
+.pricing-card:hover::before {
+  opacity: 1;
 }
 
 .pricing-card--featured {
-  border-color: var(--color-vreva-yellow);
+  border-color: transparent;
   border-width: 2px;
   background: rgba(255, 204, 51, 0.06);
   transform: translateY(-6px);
   position: relative;
   box-shadow: 0 8px 32px rgba(255, 204, 51, 0.12);
+}
+
+.pricing-card--featured::before {
+  opacity: 1;
+  padding: 2px;
 }
 
 .pricing-card--featured:hover {

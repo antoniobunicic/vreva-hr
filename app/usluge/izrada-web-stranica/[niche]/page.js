@@ -50,8 +50,8 @@ export function generateStaticParams() {
   return validSlugs.map((niche) => ({ niche }));
 }
 
-export function generateMetadata({ params }) {
-  const { niche } = params;
+export async function generateMetadata({ params }) {
+  const { niche } = await params;
   if (!validSlugs.includes(niche)) {
     return {};
   }
@@ -65,8 +65,8 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function NichePage({ params }) {
-  const { niche } = params;
+export default async function NichePage({ params }) {
+  const { niche } = await params;
   if (!validSlugs.includes(niche)) {
     notFound();
   }

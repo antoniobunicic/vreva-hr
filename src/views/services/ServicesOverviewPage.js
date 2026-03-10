@@ -25,6 +25,13 @@ function ServicesOverviewPage() {
       </div>
 
       <div className="container">
+        <nav aria-label="breadcrumb" className="breadcrumb">
+          <ol>
+            <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
+            <li aria-current="page">{t('overview.title')}</li>
+          </ol>
+        </nav>
+
         <div className="services-grid">
           {serviceKeys.map((key) => (
             <Link
