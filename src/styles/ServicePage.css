@@ -357,6 +357,10 @@
   letter-spacing: 0.03em;
 }
 
+.pricing-card-name-sub {
+  font-weight: 450;
+}
+
 .pricing-card-price {
   display: flex;
   align-items: baseline;

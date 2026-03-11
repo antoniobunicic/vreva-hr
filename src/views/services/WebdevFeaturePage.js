@@ -64,7 +64,11 @@ function WebdevFeaturePage({ featureSlug }) {
                       {t('detail.webdev.pricing.popularBadge', { ns: 'services' })}
                     </span>
                   )}
-                  <p className="pricing-card-name">{pkg.name}</p>
+                  <p className="pricing-card-name">
+                    {pkg.name.split('\n').map((line, k) => (
+                      <span key={k} className={k > 0 ? 'pricing-card-name-sub' : undefined}>{k > 0 && <br />}{line}</span>
+                    ))}
+                  </p>
                   <div className="pricing-card-price">
                     <span className="pricing-amount">{pkg.price}</span>
                     {pkg.period && <span className="pricing-period">{pkg.period}</span>}

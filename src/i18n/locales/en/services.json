@@ -86,7 +86,7 @@
         "footnote": "Website technical maintenance is charged at €100/year (or €10/month) and includes hosting, SSL certificate, regular system updates, and basic technical support. For more frequent content changes, additional maintenance can be arranged.",
         "packages": [
           {
-            "name": "Basic Website",
+            "name": "Basic\nCustom Website",
             "price": "250 – 350 €",
             "period": "",
             "note": "+ VAT",
@@ -101,7 +101,7 @@
             ]
           },
           {
-            "name": "Standard Website",
+            "name": "Standard\nCustom Website",
             "price": "350 – 850 €",
             "period": "",
             "note": "+ VAT",
@@ -118,7 +118,7 @@
             ]
           },
           {
-            "name": "Advanced Website",
+            "name": "Advanced\nCustom Website",
             "price": "850+ €",
             "period": "",
             "note": "+ VAT",

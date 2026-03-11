@@ -86,7 +86,7 @@
         "footnote": "Tehničko održavanje web stranice naplaćuje se 100 € godišnje (ili 10 € mjesečno) i uključuje hosting, SSL certifikat, redovita ažuriranja sustava i osnovnu tehničku podršku. Za potrebe češćih izmjena sadržaja moguće je dogovoriti dodatno održavanje.",
         "packages": [
           {
-            "name": "Osnovna web stranica",
+            "name": "Osnovna\nweb stranica po mjeri",
             "price": "250 – 350 €",
             "period": "",
             "note": "+ PDV",
@@ -101,7 +101,7 @@
             ]
           },
           {
-            "name": "Standardna web stranica",
+            "name": "Standardna\nweb stranica po mjeri",
             "price": "350 – 850 €",
             "period": "",
             "note": "+ PDV",
@@ -118,7 +118,7 @@
             ]
           },
           {
-            "name": "Napredna web stranica",
+            "name": "Napredna\nweb stranica po mjeri",
             "price": "850+ €",
             "period": "",
             "note": "+ PDV",
