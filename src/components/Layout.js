@@ -14,6 +14,10 @@ const dropdownServices = [
   { key: 'leadership', href: '/usluge/it-savjetovanje' },
 ];
 
+const dropdownAbout = [
+  { labelKey: 'approach', href: '/o-nama/pristup' },
+];
+
 function Layout({ children }) {
   const { t } = useTranslation(['common', 'services']);
   const pathname = usePathname();
@@ -51,7 +55,7 @@ function Layout({ children }) {
     }
 
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'projects', 'services', 'approach', 'contact'];
+      const sections = ['hero', 'projects', 'services', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -86,10 +90,9 @@ function Layout({ children }) {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const navItems = [
-    { id: 'about', label: t('nav.about', { ns: 'common' }) },
+    { id: 'about', label: t('nav.about', { ns: 'common' }), hasDropdown: 'about', href: '/o-nama' },
     { id: 'projects', label: t('nav.projects', { ns: 'common' }) },
     { id: 'services', label: t('nav.services', { ns: 'common' }), hasDropdown: true, href: '/usluge' },
-    { id: 'approach', label: t('nav.approach', { ns: 'common' }) },
     { id: 'contact', label: t('nav.contact', { ns: 'common' }) },
   ];
 
@@ -107,7 +110,7 @@ function Layout({ children }) {
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge'))) ? 'active' : ''}
+                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama'))) ? 'active' : ''}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -115,14 +118,27 @@ function Layout({ children }) {
                   </Link>
                 ) : (
                   <button
-                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge'))) ? 'active' : ''}
+                    className={activeSection === item.id ? 'active' : ''}
                     onClick={() => handleNavClick(item.id)}
                   >
                     {item.label}
-                    {item.hasDropdown && <span className="nav-dropdown-arrow">&#9662;</span>}
                   </button>
                 )}
-                {item.hasDropdown && (
+                {item.hasDropdown === 'about' && (
+                  <ul className="nav-dropdown">
+                    {dropdownAbout.map((item) => (
+                      <li key={item.labelKey}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {t(`nav.${item.labelKey}`, { ns: 'common' })}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {item.hasDropdown === true && (
                   <ul className="nav-dropdown">
                     {dropdownServices.map((svc) => (
                       <li key={svc.key}>

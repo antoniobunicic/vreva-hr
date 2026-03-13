@@ -1,10 +1,8 @@
 'use client';
 import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
-import About from '../components/About';
 import Projects from '../components/Projects';
 import Services from '../components/Services';
-import Approach from '../components/Approach';
 import Contact from '../components/Contact';
 
 function HomePageContent() {
@@ -30,10 +28,8 @@ function HomePageContent() {
   return (
     <>
       <Hero />
-      <About />
-      <Projects />
       <Services />
-      <Approach />
+      <Projects />
       <Contact />
     </>
   );

@@ -27,7 +27,8 @@
 
 .service-page--webdev .service-page-subtitle,
 .service-page--fullstack .service-page-subtitle,
-.service-page--leadership .service-page-subtitle {
+.service-page--leadership .service-page-subtitle,
+.service-page--about .service-page-subtitle {
   color: var(--color-vreva-yellow);
   text-transform: uppercase;
   font-weight: 700;

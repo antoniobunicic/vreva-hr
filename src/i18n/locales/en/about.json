@@ -2,18 +2,22 @@
   "section": {
     "title": "Who We Are"
   },
+  "subtitle": "digital, built for you",
   "content": {
-    "lead": "Vreva is a small, experienced software team. We write serious code and build digital products that make sense.",
-    "paragraph1": "We help companies strengthen their online presence, develop new products, and untangle existing systems. We work remotely, with clients around the world."
+    "lead": "Vreva is a digital agency specialising in building modern websites, web applications and digital solutions for businesses.",
+    "paragraph1": "Unlike most agencies, we don't use WordPress or off-the-shelf templates — we develop every website as software, from the ground up. This gives us complete freedom in design, structure, animations and functionality, with no technical limitations. We help clients build a web presence that is visually unique, fast, Google-optimised (SEO) and responsive across all devices. Behind Vreva is years of international software development experience and excellent reviews from satisfied clients."
+  },
+  "cta": {
+    "services": "View our services"
   },
   "stats": {
     "experience": {
-      "number": "10+",
-      "label": "Years Experience"
+      "number": "Expert",
+      "label": "10+ Years Experience"
     },
     "location": {
-      "number": "Remote",
-      "label": "Based in Zagreb"
+      "number": "Custom",
+      "label": "Built from scratch"
     },
     "reach": {
       "number": "Global",

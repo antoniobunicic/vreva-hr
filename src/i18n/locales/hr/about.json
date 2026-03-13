@@ -2,18 +2,22 @@
   "section": {
     "title": "O nama"
   },
+  "subtitle": "digitalno po mjeri",
   "content": {
-    "lead": "Vreva je mali, iskusni software tim. Radimo ozbiljan kod i digitalne proizvode koji imaju smisla.",
-    "paragraph1": "Pomažemo tvrtkama ojačati online prisutnost, razvijati nove proizvode i raščistiti postojeće sustave. Radimo remote, s klijentima diljem svijeta."
+    "lead": "Vreva je digitalna agencija specijalizirana za izradu modernih web stranica, web aplikacija i digitalnih rješenja za tvrtke.",
+    "paragraph1": "Za razliku od većine agencija, ne koristimo WordPress ni gotove predloške – svaku web stranicu razvijamo kao softver, od temelja. To nam omogućuje potpunu slobodu u dizajnu, strukturi, animacijama i funkcionalnostima, bez tehničkih ograničenja. Klijentima pomažemo razviti web koji je vizualno unikatan, brz, optimiziran za Google (SEO) i prilagođen svim uređajima. Iza Vreve stoji dugogodišnje internacionalno iskustvo u razvoju softvera i izvrsne recenzije zadovoljnih klijenata."
+  },
+  "cta": {
+    "services": "Pogledajte naše usluge"
   },
   "stats": {
     "experience": {
-      "number": "10+",
-      "label": "godina iskustva"
+      "number": "Expert",
+      "label": "10+ godina iskustva"
     },
     "location": {
-      "number": "Remote",
-      "label": "Sa sjedištem u Zagrebu"
+      "number": "Custom",
+      "label": "Razvoj po mjeri"
     },
     "reach": {
       "number": "Global",

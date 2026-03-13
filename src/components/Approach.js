@@ -1,21 +1,33 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
 function Approach() {
-  const { t } = useTranslation('approach');
+  const { t } = useTranslation(['approach', 'common']);
 
   const principleKeys = ['collaborative', 'detailOriented', 'pragmatic'];
   const processKeys = ['discovery', 'planning', 'development', 'delivery'];
 
   return (
-    <section id="approach" className="approach">
-      <div className="container">
-        <h2 className="section-title">{t('section.title')}</h2>
-
-        <div className="approach-intro">
-          <p>{t('intro')}</p>
+    <section id="approach" className="service-page">
+      <div className="service-page-cover">
+        <div className="container">
+          <div className="service-page-header">
+            <h1 className="service-page-title">{t('section.title', { ns: 'approach' })}</h1>
+            <p className="service-page-subtitle">{t('intro', { ns: 'approach' })}</p>
+          </div>
         </div>
+      </div>
+
+      <div className="container">
+        <nav aria-label="breadcrumb" className="breadcrumb">
+          <ol>
+            <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
+            <li><Link href="/o-nama">{t('nav.about', { ns: 'common' })}</Link></li>
+            <li aria-current="page">{t('section.title', { ns: 'approach' })}</li>
+          </ol>
+        </nav>
 
         <h3 className="subsection-title">{t('principles.title')}</h3>
         <div className="principles-grid">
