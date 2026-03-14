@@ -19,7 +19,6 @@ function LanguageSwitcher() {
       >
         EN
       </button>
-      <span className="language-separator">|</span>
       <button
         className={`language-btn ${currentLanguage === 'hr' ? 'active' : ''}`}
         onClick={() => changeLanguage('hr')}

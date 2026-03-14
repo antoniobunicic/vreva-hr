@@ -91,8 +91,8 @@ function Layout({ children }) {
 
   const navItems = [
     { id: 'about', label: t('nav.about', { ns: 'common' }), hasDropdown: 'about', href: '/o-nama' },
-    { id: 'projects', label: t('nav.projects', { ns: 'common' }) },
     { id: 'services', label: t('nav.services', { ns: 'common' }), hasDropdown: true, href: '/usluge' },
+    { id: 'projects', label: t('nav.projects', { ns: 'common' }) },
     { id: 'contact', label: t('nav.contact', { ns: 'common' }) },
   ];
 
