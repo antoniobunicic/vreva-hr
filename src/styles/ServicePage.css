@@ -180,6 +180,14 @@
   margin-bottom: 4rem;
 }
 
+.service-detail-sections .feature-section {
+  margin-bottom: 0;
+}
+
+.service-detail-sections .niche-bullets {
+  margin-bottom: 0;
+}
+
 .service-detail-section {
   background: var(--color-background2);
   padding: 2.5rem;

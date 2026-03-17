@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -27,6 +27,7 @@ function Layout({ children }) {
   const [activeSection, setActiveSection] = useState('');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -41,6 +42,16 @@ function Layout({ children }) {
   }, [isDarkMode]);
 
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   // Scroll to top on route change
   useEffect(() => {
@@ -98,7 +109,7 @@ function Layout({ children }) {
 
   return (
     <div className="App">
-      <nav className="nav">
+      <nav className="nav" ref={navRef}>
         <div className="nav-container">
           <Link href="/" className="nav-logo">
             <img src={logo.src || logo} alt="Vreva" />

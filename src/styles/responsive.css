@@ -40,7 +40,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--color-background1);
+    background: #0a0a0a;
     flex-direction: column;
     width: 100%;
     max-height: 0;
@@ -51,12 +51,13 @@
 
   .nav-menu.open {
     max-height: 500px;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #2a2a2a;
   }
 
   .nav-menu li {
+    display: block;
     width: 100%;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #2a2a2a;
   }
 
   .nav-menu li:last-child {
@@ -100,7 +101,7 @@
   }
 
   .nav-dropdown li {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #2a2a2a;
   }
 
   .nav-dropdown li:last-child {

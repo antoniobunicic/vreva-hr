@@ -243,7 +243,7 @@
               "title": "Što uključujemo u svaku stranicu?",
               "bullets": [
                 "Optimizirani naslovi i meta opisi za svaku podstranicu",
-                "Strukturirani podaci (Schema.org) za bolje prikaze u Googleu",
+                "Strukturirani podaci za bolje prikaze u Googleu",
                 "Čiste, razumljive URL adrese",
                 "Brzo učitavanje stranice (brzina je SEO faktor)",
                 "Alt tekstovi na svim slikama",
@@ -284,12 +284,10 @@
             {
               "title": "Što uključuje održavanje?",
               "bullets": [
-                "Ažuriranje sadržaja — tekstovi, slike, cijene, novosti",
                 "Sigurnosne nadogradnje i backup podataka",
                 "Praćenje dostupnosti i performansi stranice",
                 "Tehnička podrška putem e-maila ili telefona",
-                "Sitne izmjene i prilagodbe dizajna",
-                "Optimizacija brzine učitavanja"
+                "Sitne izmjene i prilagodbe dizajna"
               ]
             },
             {
@@ -565,43 +563,52 @@
     },
     "fullstack": {
       "hero": "Razvoj softvera",
-      "subtitle": "od temelja do produkcije",
-      "intro": "Isporučujemo kompletna softverska rješenja koristeći moderne tehnologije. Bilo da vam treba robustan backend sustav, interaktivni frontend ili full-stack aplikacija, upravljamo svakim slojem stacka s iskustvom.",
+      "subtitle": "digitalizacija i automatizacija poslovanja",
+      "intro": "Pomažemo tvrtkama preći s analognih procesa na digitalna rješenja — od automatizacije internih tokova rada do izgradnje kompleksnih poslovnih aplikacija. Razvijamo softver koji rješava stvarne probleme i donosi mjerljive rezultate.",
       "sections": [
         {
-          "title": "Backend razvoj",
-          "items": [
-            "Java & Kotlin sa Spring Boot-om",
-            "Event-driven arhitektura s Apache Kafkom",
-            "RESTful API dizajn i implementacija",
-            "Mikroservisi i modularna arhitektura",
-            "Dizajn, optimizacija i migracija baza podataka"
+          "title": "Digitalna transformacija",
+          "body": "Digitalna transformacija nije samo nabava novih alata — to je promjena načina na koji vaša tvrtka radi. Pomažemo vam identificirati gdje digitalizacija može donijeti najveću vrijednost: smanjenje ručnog rada, brži procesi, manje pogrešaka i bolji uvid u poslovanje u stvarnom vremenu. Rezultat je tvrtka koja je brža, efikasnija i spremnija za rast."
+        },
+        {
+          "title": "Automatizacija poslovnih procesa",
+          "body": "Ponavljajući ručni zadaci troše dragocjeno vrijeme vaših zaposlenika. Automatizacijom tih procesa oslobađate resurse za posao koji stvarno stvara vrijednost.",
+          "bullets": [
+            "Automatsko generiranje dokumenata, ugovora i izvještaja",
+            "Integracija između različitih alata i sustava (ERP, CRM, računovodstvo...)",
+            "Automatizacija e-mail komunikacije i notifikacija",
+            "Digitalni obrasci i tokovi odobrenja umjesto papirnatih procesa",
+            "Automatizirani uvoz, obrada i sinkronizacija podataka"
           ]
         },
         {
-          "title": "Frontend razvoj",
-          "items": [
-            "React s TypeScriptom za type-safe sučelja",
-            "Responzivni dizajn za sve veličine ekrana",
-            "Upravljanje stanjem i dohvaćanje podataka",
-            "Biblioteke komponenti i sustavi dizajna",
-            "Optimizacija performansi i pristupačnost"
+          "title": "Što možemo razviti za vas?",
+          "bullets": [
+            "Interne poslovne aplikacije — portali, dashboardi, alati za timove",
+            "Web aplikacije i SaaS platforme",
+            "Integracije i API veze između postojećih sustava",
+            "Baze podataka i sustavi za upravljanje podacima",
+            "Backend sustavi, mikroservisi i event-driven arhitekture"
           ]
         },
         {
-          "title": "DevOps & Kvaliteta",
-          "items": [
-            "Postavljanje i upravljanje CI/CD pipelineom",
-            "Automatizirano testiranje na svakoj razini",
-            "Produkcijsko postavljanje i nadzor",
-            "Pregled koda i osiguranje kvalitete",
-            "Dokumentacija i prijenos znanja"
+          "title": "Kako radimo?",
+          "body": "Svaki projekt počinjemo razumijevanjem vašeg poslovanja — ne koda. Analiziramo vaše procese, identificiramo ključne probleme i predlažemo rješenja koja odgovaraju vašoj veličini i budžetu. Radimo iterativno, u bliskoj suradnji s vama, kako bismo osigurali da rezultat stvarno odgovara potrebama."
+        },
+        {
+          "title": "Tehnologije",
+          "bullets": [
+            "Backend: Java, Kotlin, Spring Boot, Node.js",
+            "Frontend: React, TypeScript, Next.js",
+            "Baze podataka: PostgreSQL, MySQL, MongoDB",
+            "Integracije: REST API, GraphQL, Apache Kafka",
+            "Infrastruktura: Docker, CI/CD, cloud deployment"
           ]
         }
       ],
       "cta": {
-        "title": "Imate softverski projekt na umu?",
-        "description": "Razgovarajmo o vašim zahtjevima i kako možemo izgraditi pravo rješenje.",
+        "title": "Imate projekt na umu?",
+        "description": "Opišite nam vaš problem ili ideju — zajedno ćemo pronaći najjednostavnije i najefikasnije rješenje.",
         "button": "Kontaktirajte nas"
       }
     },

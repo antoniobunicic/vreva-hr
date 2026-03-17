@@ -118,13 +118,16 @@ function ServiceDetailPage({ serviceKey }) {
           {sections && Array.isArray(sections) && (
             <div className="service-detail-sections">
               {sections.map((section, i) => (
-                <div key={i} className="service-detail-section">
-                  <h2 className="service-detail-section-title">{section.title}</h2>
-                  <ul className="service-detail-list">
-                    {section.items.map((item, j) => (
-                      <li key={j}>{item}</li>
-                    ))}
-                  </ul>
+                <div key={i} className="feature-section">
+                  <h2 className="feature-section-title">{section.title}</h2>
+                  {section.body && <p className="feature-section-body">{section.body}</p>}
+                  {(section.bullets || section.items) && (
+                    <ul className="niche-bullets">
+                      {(section.bullets || section.items).map((item, j) => (
+                        <li key={j}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>

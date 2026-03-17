@@ -1,8 +1,8 @@
 import ServiceDetailPage from '../../../src/views/services/ServiceDetailPage';
 
 export const metadata = {
-  title: 'Razvoj softvera — Full-stack rješenja po mjeri',
-  description: 'Full-stack razvoj softvera od baze podataka do korisničkog sučelja. Backend, frontend, API integracije i produkcijsko postavljanje.',
+  title: 'Razvoj softvera — Digitalizacija i automatizacija poslovanja',
+  description: 'Razvijamo softverska rješenja za digitalizaciju i automatizaciju poslovnih procesa. Web aplikacije, integracije sustava i interne poslovne alate.',
   alternates: {
     canonical: 'https://vreva.hr/usluge/razvoj-softvera/',
   },

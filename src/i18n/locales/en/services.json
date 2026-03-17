@@ -243,7 +243,7 @@
               "title": "What we include in every website",
               "bullets": [
                 "Optimized title tags and meta descriptions for every page",
-                "Structured data (Schema.org) for enhanced Google results",
+                "Structured data for enhanced Google results",
                 "Clean, readable URL addresses",
                 "Fast page load times (speed is an SEO ranking factor)",
                 "Alt text on all images",
@@ -284,12 +284,10 @@
             {
               "title": "What maintenance includes",
               "bullets": [
-                "Content updates — text, images, pricing, news",
                 "Security updates and data backups",
                 "Uptime and performance monitoring",
                 "Technical support via email or phone",
-                "Minor design changes and adjustments",
-                "Page load speed optimization"
+                "Minor design changes and adjustments"
               ]
             },
             {
@@ -565,43 +563,52 @@
     },
     "fullstack": {
       "hero": "Software Development",
-      "subtitle": "from foundation to production",
-      "intro": "We deliver complete software solutions using modern technologies. Whether you need a robust backend system, an interactive frontend, or a full-stack application, we handle every layer of the stack with expertise.",
+      "subtitle": "digitisation and business automation",
+      "intro": "We help businesses move from manual processes to digital solutions — from automating internal workflows to building complex business applications. We develop software that solves real problems and delivers measurable results.",
       "sections": [
         {
-          "title": "Backend Development",
-          "items": [
-            "Java & Kotlin with Spring Boot",
-            "Event-driven architecture with Apache Kafka",
-            "RESTful API design and implementation",
-            "Microservices and modular architecture",
-            "Database design, optimization, and migration"
+          "title": "Digital Transformation",
+          "body": "Digital transformation isn't just about buying new tools — it's about changing the way your business operates. We help you identify where digitalisation can deliver the most value: less manual work, faster processes, fewer errors, and better real-time visibility into your business. The result is a company that is faster, more efficient, and ready to grow."
+        },
+        {
+          "title": "Business Process Automation",
+          "body": "Repetitive manual tasks consume your employees' valuable time. By automating these processes, you free up resources for work that truly creates value.",
+          "bullets": [
+            "Automatic generation of documents, contracts, and reports",
+            "Integration between different tools and systems (ERP, CRM, accounting...)",
+            "Automation of email communication and notifications",
+            "Digital forms and approval workflows instead of paper-based processes",
+            "Automated data import, processing, and synchronisation"
           ]
         },
         {
-          "title": "Frontend Development",
-          "items": [
-            "React with TypeScript for type-safe UIs",
-            "Responsive design for all screen sizes",
-            "State management and data fetching",
-            "Component libraries and design systems",
-            "Performance optimization and accessibility"
+          "title": "What We Can Build for You",
+          "bullets": [
+            "Internal business applications — portals, dashboards, team tools",
+            "Web applications and SaaS platforms",
+            "Integrations and API connections between existing systems",
+            "Databases and data management systems",
+            "Backend systems, microservices, and event-driven architectures"
           ]
         },
         {
-          "title": "DevOps & Quality",
-          "items": [
-            "CI/CD pipeline setup and management",
-            "Automated testing at every level",
-            "Production deployment and monitoring",
-            "Code reviews and quality assurance",
-            "Documentation and knowledge transfer"
+          "title": "How We Work",
+          "body": "Every project starts with understanding your business — not the code. We analyse your processes, identify key problems, and propose solutions that fit your size and budget. We work iteratively, in close collaboration with you, to ensure the result truly meets your needs."
+        },
+        {
+          "title": "Technologies",
+          "bullets": [
+            "Backend: Java, Kotlin, Spring Boot, Node.js",
+            "Frontend: React, TypeScript, Next.js",
+            "Databases: PostgreSQL, MySQL, MongoDB",
+            "Integrations: REST API, GraphQL, Apache Kafka",
+            "Infrastructure: Docker, CI/CD, cloud deployment"
           ]
         }
       ],
       "cta": {
-        "title": "Have a software project in mind?",
-        "description": "Let's talk about your requirements and how we can build the right solution.",
+        "title": "Have a project in mind?",
+        "description": "Describe your problem or idea — together we'll find the simplest and most effective solution.",
         "button": "Get in Touch"
       }
     },
