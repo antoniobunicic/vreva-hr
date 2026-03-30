@@ -8,15 +8,23 @@
     "software": "Softver",
     "mobile": "Aplikacije"
   },
+  "nicheSection": {
+    "title": "Nedavni projekti"
+  },
   "cards": {
     "apartmani": {
-      "title": "Web stranica za apartmane",
-      "description": "Moderna web stranica za smještaj u Cresu. Uključuje pregled apartmana, galeriju slika, lokaciju i kontakt informacije.",
+      "title": "Web stranica za apartmane na Cresu",
+      "description": "Stranica za apartmane s pogledom na more u Cresu. Dizajn u mediteranskim tonovima s prikazom apartmana, interaktivnom galerijom i integriranom Google Maps lokacijom.",
       "tags": ["React", "Tailwind CSS"]
     },
     "houselucy": {
-      "title": "Web stranica za smještaj",
-      "description": "Moderna web stranica za smještaj u Ražancu. Uključuje pregled kuće, galeriju slika, lokaciju i kontakt informacije.",
+      "title": "Web stranica za kuću za odmor",
+      "description": "Stranica za kuću za odmor u Ražancu s drone fotografijom koja prikazuje kuću i obližnju uvalu. Dizajn inspiriran dalmatinskim ambijentom s galerijom interijera i okoline.",
+      "tags": ["Astro", "Tailwind CSS"]
+    },
+    "otooles": {
+      "title": "Web stranica za pansion na Plitvicama",
+      "description": "Stranica za obiteljski pansion u blizini Plitvičkih jezera. Prezentacija smještaja i okolne prirode s detaljima o sobama, domaćoj kuhinji i blizini nacionalnog parka.",
       "tags": ["Astro", "Tailwind CSS"]
     },
     "flexportal": {

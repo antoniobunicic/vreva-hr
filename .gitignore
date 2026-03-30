@@ -27,7 +27,7 @@ yarn-error.log*
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/inspectionProfiles/Project_Default.xml
-/.claude/settings.local.json
+/.claude/
 /.idea/vcs.xml
 /.idea/vreva-hr.iml
 /.idea/copilot.data.migration.agent.xml

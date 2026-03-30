@@ -213,8 +213,8 @@ html[data-theme="dark"] .project-client-logo img {
 }
 
 .project-scrollable-preview img {
-  width: 110%;
-  margin-left: -5%;
+  width: 100%;
+  margin-left: 0;
   height: auto;
   display: block;
   border-radius: 0;
@@ -240,6 +240,55 @@ html[data-theme="dark"] .project-client-logo img {
 
 .project-card.angler-multi-image .angler-images img:hover {
   transform: scale(1.05);
+}
+
+/* Niche projects section */
+.niche-projects {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.niche-projects-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 3rem;
+}
+
+.niche-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.niche-projects-grid .project-card {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.niche-projects-grid .project-image {
+  flex: none;
+  width: 100%;
+}
+
+.niche-projects-grid .project-scrollable-preview {
+  max-height: 320px;
+}
+
+
+.niche-projects-grid .project-card:hover {
+  transform: none;
+}
+
+.niche-projects-grid .project-card:hover .project-image,
+.niche-projects-grid .project-card:hover .project-content {
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .niche-projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Monochrome SVG illustrations - invert in light mode */

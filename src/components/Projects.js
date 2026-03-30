@@ -2,24 +2,26 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ProjectCard from './ProjectCard';
-import flexportalImg from '../assets/flexportal.png';
-import anglerSS0 from '../assets/SS0.jpg';
-import anglerSS1 from '../assets/SS1.jpg';
-import anglerSS4 from '../assets/SS4.jpg';
-import timetableImg from '../assets/timetable-system.svg';
-import sensorNetworkImg from '../assets/sensor-network.svg';
-import bonfonImg from '../assets/bonfon.png';
-import smarthomeImg from '../assets/smarthome.png';
-import apartmaniImg from '../assets/apartmani-bunicic-full.png';
-import houseLucyImg from '../assets/house-lucy-razanac-full.png';
-import atronLogo from '../assets/atron.svg';
-import sympowerLogo from '../assets/sympower.svg';
+import flexportalImg from '../assets/projects/flexportal/flexportal.png';
+import anglerSS0 from '../assets/projects/angler/SS0.jpg';
+import anglerSS1 from '../assets/projects/angler/SS1.jpg';
+import anglerSS4 from '../assets/projects/angler/SS4.jpg';
+import timetableImg from '../assets/projects/atron/timetable-system.svg';
+import sensorNetworkImg from '../assets/projects/iot/sensor-network.svg';
+import bonfonImg from '../assets/projects/bonfon/bonfon.png';
+import smarthomeImg from '../assets/projects/iot/smarthome.png';
+import apartmaniImg from '../assets/projects/accommodation/apartmani-bunicic-full.png';
+import houseLucyImg from '../assets/projects/accommodation/house-lucy-razanac-full.png';
+import otoolesImg from '../assets/projects/accommodation/otooles-full.png';
+import atronLogo from '../assets/projects/atron/atron.svg';
+import sympowerLogo from '../assets/projects/flexportal/sympower.svg';
 
 const categories = ['featured', 'web', 'software', 'mobile'];
 
 const projectCategories = {
   apartmani: ['featured', 'web'],
   houselucy: ['featured', 'web'],
+  otooles: ['featured', 'web'],
   flexportal: ['featured', 'web', 'software'],
   timetable: ['featured', 'software'],
   angler: ['featured', 'mobile'],
@@ -49,7 +51,7 @@ function Projects() {
     if (activeBtn) moveIndicator(activeBtn);
   }, []);
 
-  const projectKeys = ['apartmani', 'houselucy', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
+  const projectKeys = ['apartmani', 'houselucy', 'otooles', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
 
   const filteredProjects = activeCategory === 'all'
     ? projectKeys
@@ -58,6 +60,7 @@ function Projects() {
   const projectImages = {
     apartmani: apartmaniImg,
     houselucy: houseLucyImg,
+    otooles: otoolesImg,
     flexportal: flexportalImg,
     timetable: timetableImg,
     angler: [anglerSS0, anglerSS1, anglerSS4],
@@ -69,6 +72,7 @@ function Projects() {
   const scrollablePreview = {
     apartmani: true,
     houselucy: true,
+    otooles: true,
   };
 
   const clientLogos = {

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import nicheIcons from '../../utils/nicheIcons';
 import ContactForm from '../../components/ContactForm';
+import NicheProjects from '../../components/NicheProjects';
 
 function NicheDetailPage({ niche }) {
   const { t } = useTranslation('services');
@@ -44,6 +45,8 @@ function NicheDetailPage({ niche }) {
               <li key={i}>{bullet}</li>
             ))}
           </ul>
+
+          <NicheProjects niche={niche} />
 
           <div className="service-cta">
             <h2 className="service-cta-title">{page.cta.title}</h2>
