@@ -19,6 +19,7 @@ import sympowerLogo from '../assets/projects/flexportal/sympower.svg';
 const categories = ['featured', 'web', 'software', 'mobile'];
 
 const projectCategories = {
+  patrickboy: ['featured', 'web'],
   apartmani: ['featured', 'web'],
   houselucy: ['featured', 'web'],
   otooles: ['featured', 'web'],
@@ -29,6 +30,8 @@ const projectCategories = {
   thesis: ['software'],
   smarthome: ['mobile', 'software'],
 };
+
+const patrickBoyVideo = '/projects/patrick-boy-transferi/hero-patrick-boy.mp4';
 
 function Projects() {
   const { t } = useTranslation('projects');
@@ -51,7 +54,7 @@ function Projects() {
     if (activeBtn) moveIndicator(activeBtn);
   }, []);
 
-  const projectKeys = ['apartmani', 'houselucy', 'otooles', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
+  const projectKeys = ['patrickboy', 'apartmani', 'houselucy', 'otooles', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
 
   const filteredProjects = activeCategory === 'all'
     ? projectKeys
@@ -105,6 +108,7 @@ function Projects() {
               <ProjectCard
                 projectKey={key}
                 projectImage={projectImages[key]}
+                projectVideo={key === 'patrickboy' ? patrickBoyVideo : undefined}
                 clientLogo={clientLogos[key]}
                 scrollablePreview={scrollablePreview[key]}
               />

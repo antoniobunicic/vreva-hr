@@ -39,7 +39,7 @@
 
 /* ─── Title ──────────────────────────────────────────────── */
 .hero-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 5.5rem;
   line-height: 1.05;
   font-weight: 800;

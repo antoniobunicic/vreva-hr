@@ -65,7 +65,7 @@
 }
 
 .stat-number {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: var(--color-text);

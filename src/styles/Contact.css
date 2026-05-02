@@ -11,7 +11,7 @@
 }
 
 .contact-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 4.5rem;
   font-weight: 900;
   margin-bottom: 2rem;
@@ -258,7 +258,7 @@
 }
 
 .modal-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.02em;

@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -112,7 +113,7 @@ function Layout({ children }) {
       <nav className="nav" ref={navRef}>
         <div className="nav-container">
           <Link href="/" className="nav-logo">
-            <img src={logo.src || logo} alt="Vreva" />
+            <Image src={logo} alt="Vreva" priority />
           </Link>
 
           <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
@@ -190,7 +191,7 @@ function Layout({ children }) {
           <div className="footer-main">
             <div className="footer-brand">
               <Link href="/" className="footer-logo">
-                <img src={dotsLogo.src || dotsLogo} alt="Vreva" />
+                <Image src={dotsLogo} alt="Vreva" />
               </Link>
               <p className="footer-tagline">{t('footer.tagline', { ns: 'common' })}</p>
             </div>

@@ -1,8 +1,9 @@
 'use client';
 import React, { useRef, useCallback, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
-function ProjectCard({ projectKey, projectImage, clientLogo, scrollablePreview }) {
+function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrollablePreview }) {
   const { t } = useTranslation('projects');
   const browserContentRef = useRef(null);
   const dragState = useRef({ isDragging: false, startY: 0, startScroll: 0 });
@@ -84,7 +85,13 @@ function ProjectCard({ projectKey, projectImage, clientLogo, scrollablePreview }
   const isMonochromeSvg = projectKey === 'timetable' || projectKey === 'thesis';
 
   return (
-    <div className={`project-card ${!projectImage ? 'no-image' : ''} ${isAngler ? 'angler-multi-image' : ''}`}>
+    <div className={`project-card ${!projectImage && !projectVideo ? 'no-image' : ''} ${isAngler ? 'angler-multi-image' : ''}`}>
+      {projectVideo && (
+        <div className="project-image project-video">
+          <video src={projectVideo} autoPlay loop muted playsInline preload="metadata" />
+        </div>
+      )}
+
       {scrollablePreview && projectImage && (
         // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
         <section
@@ -96,20 +103,20 @@ function ProjectCard({ projectKey, projectImage, clientLogo, scrollablePreview }
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
         >
-          <img src={projectImage.src || projectImage} alt={t(`cards.${projectKey}.title`)} draggable="false" onLoad={handleImageLoad} />
+          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} draggable="false" onLoad={handleImageLoad} sizes="(max-width: 768px) 100vw, 50vw" />
         </section>
       )}
 
       {projectImage && !isMultiImage && !scrollablePreview && (
         <div className={`project-image ${isMonochromeSvg ? 'project-image-mono' : ''}`}>
-          <img src={projectImage.src || projectImage} alt={t(`cards.${projectKey}.title`)} />
+          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} sizes="(max-width: 768px) 100vw, 50vw" />
         </div>
       )}
 
       {isMultiImage && (
         <div className="project-image angler-images">
           {projectImage.map((img, index) => (
-            <img key={index} src={img.src || img} alt={`${t(`cards.${projectKey}.title`)} ${index + 1}`} />
+            <Image key={index} src={img} alt={`${t(`cards.${projectKey}.title`)} ${index + 1}`} sizes="(max-width: 768px) 33vw, 200px" />
           ))}
         </div>
       )}
@@ -118,7 +125,7 @@ function ProjectCard({ projectKey, projectImage, clientLogo, scrollablePreview }
           <h3 className="project-title">{t(`cards.${projectKey}.title`)}</h3>
           {clientLogo && (
           <div className="project-client-logo">
-            <img src={clientLogo.src || clientLogo} alt="Client logo" />
+            <Image src={clientLogo} alt="Client logo" />
           </div>
         )}
           <p className="project-description">{t(`cards.${projectKey}.description`)}</p>

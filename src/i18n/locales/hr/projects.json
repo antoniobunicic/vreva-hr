@@ -12,6 +12,11 @@
     "title": "Nedavni projekti"
   },
   "cards": {
+    "patrickboy": {
+      "title": "Web stranica za taxi prijevoz",
+      "description": "Web stranica za tvrtku za privatni taxi prijevoz i transfere. Prikaz usluga i destinacija s jednostavnim pozivom na rezervaciju vožnje.",
+      "tags": ["Astro", "Tailwind CSS"]
+    },
     "apartmani": {
       "title": "Web stranica za apartmane na Cresu",
       "description": "Stranica za apartmane s pogledom na more u Cresu. Dizajn u mediteranskim tonovima s prikazom apartmana, interaktivnom galerijom i integriranom Google Maps lokacijom.",

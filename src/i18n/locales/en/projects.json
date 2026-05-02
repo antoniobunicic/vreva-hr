@@ -12,6 +12,11 @@
     "title": "Recent Projects"
   },
   "cards": {
+    "patrickboy": {
+      "title": "Taxi Transfer Website",
+      "description": "Website for a private taxi and transfer company. Showcases services and destinations with a clear call to book a ride.",
+      "tags": ["Astro", "Tailwind CSS"]
+    },
     "apartmani": {
       "title": "Seaside Apartments Website — Cres",
       "description": "Website for sea-view apartments on the island of Cres. Mediterranean-toned design featuring apartment layouts, an interactive gallery, and integrated Google Maps location.",

@@ -8,12 +8,17 @@ import otoolesImg from '../assets/projects/accommodation/otooles-full.png';
 
 const nicheProjectKeys = {
   apartmani: ['apartmani', 'houselucy', 'otooles'],
+  prijevoz: ['patrickboy'],
 };
 
 const projectImages = {
   apartmani: apartmaniImg,
   houselucy: houseLucyImg,
   otooles: otoolesImg,
+};
+
+const projectVideos = {
+  patrickboy: '/projects/patrick-boy-transferi/hero-patrick-boy.mp4',
 };
 
 const scrollablePreview = {
@@ -37,6 +42,7 @@ function NicheProjects({ niche }) {
             key={key}
             projectKey={key}
             projectImage={projectImages[key]}
+            projectVideo={projectVideos[key]}
             scrollablePreview={scrollablePreview[key]}
           />
         ))}

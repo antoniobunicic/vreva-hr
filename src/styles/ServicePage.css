@@ -9,7 +9,7 @@
 }
 
 .service-page-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 3.5rem;
   color: var(--color-text);
   margin-bottom: 1rem;
@@ -234,7 +234,7 @@
 }
 
 .feature-section-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-text);
@@ -268,7 +268,7 @@
 }
 
 .service-pricing-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 2rem;
   color: var(--color-text);
   text-align: center;
@@ -378,7 +378,7 @@
 }
 
 .pricing-amount {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-vreva-yellow);
@@ -537,7 +537,7 @@
 }
 
 .service-niches-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 1.75rem;
   color: var(--color-text);
   margin-bottom: 2rem;
@@ -634,7 +634,7 @@
 }
 
 .service-cta-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: var(--font-unbounded), sans-serif;
   font-size: 2rem;
   color: var(--color-text);
   margin-bottom: 1rem;

@@ -1,12 +1,12 @@
 <svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="800" height="800" fill="#0a0a0a"/>
+  <rect width="800" height="800" fill="#FFFBF2"/>
 
   <!-- Vreva logo centered -->
   <g transform="translate(130, 330)">
     <defs>
       <style>
-        .cls-1 { fill: #fff; }
+        .cls-1 { fill: #242424; }
         .cls-2 { fill: #fc3; }
       </style>
     </defs>

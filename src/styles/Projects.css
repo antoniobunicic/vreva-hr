@@ -123,6 +123,13 @@
   border-radius: 12px;
 }
 
+.project-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
 .project-content {
   flex: 1;
   display: flex;
