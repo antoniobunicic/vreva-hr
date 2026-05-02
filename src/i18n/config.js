@@ -46,7 +46,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    ...(typeof window === 'undefined' ? { lng: 'hr' } : {}),
+    lng: 'hr',
     fallbackLng: 'hr',
     defaultNS: 'common',
     interpolation: {

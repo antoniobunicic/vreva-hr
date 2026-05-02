@@ -1,8 +1,10 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useTranslation } from 'react-i18next';
-import HeroCanvas from './HeroCanvas';
+
+const HeroCanvas = dynamic(() => import('./HeroCanvas'), { ssr: false });
 
 const CHARS = 'abcdefghijklmnopqrstuvwxyz';
 
