@@ -1,6 +1,6 @@
 /* Service Pages */
 .service-page {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 120px);
   padding: 0 0 6rem;
 }
 
@@ -9,13 +9,13 @@
 }
 
 .service-page-title {
-  font-family: var(--font-unbounded), sans-serif;
-  font-size: 3.5rem;
+  font-family: var(--font-heading);
+  font-size: 6.5rem;
   color: var(--color-text);
   margin-bottom: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
 }
 
 .service-page-subtitle {
@@ -134,24 +134,33 @@
 .service-feature-card {
   display: block;
   text-decoration: none;
-  background: var(--color-background2);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
+  background: var(--color-background1);
+  border: none;
+  border-radius: 6px;
   padding: 2rem;
   text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='dark'] .service-feature-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 .service-feature-card:hover {
   transform: translateY(-4px);
-  border-color: var(--color-vreva-yellow);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='dark'] .service-feature-card:hover {
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 
 .service-feature-icon {
   width: 48px;
   height: 48px;
   margin: 0 auto 1.25rem;
-  color: var(--color-vreva-yellow);
+  color: var(--color-vreva-yellow-dark);
 }
 
 .service-feature-icon svg {
@@ -234,7 +243,7 @@
 }
 
 .feature-section-title {
-  font-family: var(--font-unbounded), sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-text);
@@ -268,7 +277,7 @@
 }
 
 .service-pricing-title {
-  font-family: var(--font-unbounded), sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: var(--color-text);
   text-align: center;
@@ -307,9 +316,11 @@
   border-radius: 13px;
   padding: 1px;
   background: linear-gradient(135deg, #ffcc33, #7c3aed);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-image: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff);
+  -webkit-mask-clip: content, border;
   -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+  mask-clip: content-box, border-box;
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -378,7 +389,7 @@
 }
 
 .pricing-amount {
-  font-family: var(--font-unbounded), sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-vreva-yellow);
@@ -537,7 +548,7 @@
 }
 
 .service-niches-title {
-  font-family: var(--font-unbounded), sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.75rem;
   color: var(--color-text);
   margin-bottom: 2rem;
@@ -554,13 +565,18 @@
 .service-niche-item {
   display: block;
   text-decoration: none;
-  background: var(--color-background2);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
+  background: var(--color-background1);
+  border: none;
+  border-radius: 6px;
   padding: 1.75rem;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+}
+
+[data-theme='dark'] .service-niche-item {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 .service-niche-more {
@@ -585,7 +601,7 @@
 .service-niche-icon {
   width: 2.5rem;
   height: 2.5rem;
-  color: var(--color-vreva-yellow);
+  color: var(--color-vreva-yellow-dark);
   margin-bottom: 1rem;
 }
 
@@ -595,8 +611,12 @@
 }
 
 .service-niche-item:hover {
-  border-color: var(--color-vreva-yellow);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='dark'] .service-niche-item:hover {
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 
 .service-niche-heading {
@@ -634,7 +654,7 @@
 }
 
 .service-cta-title {
-  font-family: var(--font-unbounded), sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: var(--color-text);
   margin-bottom: 1rem;
@@ -657,7 +677,7 @@
   }
 
   .service-page-title {
-    font-size: 2.25rem;
+    font-size: 3.5rem;
   }
 
   .service-page-subtitle {
@@ -695,7 +715,7 @@
 
 @media (max-width: 480px) {
   .service-page-title {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
   }
 
   .service-detail-intro {

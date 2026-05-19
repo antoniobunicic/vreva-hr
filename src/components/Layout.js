@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 import logo from '../assets/logo.svg';
+import logoDark from '../assets/logo-dark.svg';
 import dotsLogo from '../assets/dots-logo.svg';
 
 const dropdownServices = [
@@ -15,9 +16,6 @@ const dropdownServices = [
   { key: 'leadership', href: '/usluge/it-savjetovanje' },
 ];
 
-const dropdownAbout = [
-  { labelKey: 'approach', href: '/o-nama/pristup' },
-];
 
 function Layout({ children }) {
   const { t } = useTranslation(['common', 'services']);
@@ -25,9 +23,10 @@ function Layout({ children }) {
   const router = useRouter();
   const isHomePage = pathname === '/';
 
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState(pathname === '/' ? 'hero' : '');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -58,6 +57,54 @@ function Layout({ children }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  // Reveal on scroll
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const selectors = '.section-title, .bento-item, .service-card, .contact-title, .contact-intro, .contact-form, .contact-divider, .contact-alt';
+    const targets = Array.from(document.querySelectorAll(selectors))
+      .filter((el) => !el.closest('.featured-projects, .hero'));
+    targets.forEach((el) => {
+      el.classList.add('reveal-on-scroll');
+      const siblings = Array.from(el.parentElement?.children || []).filter((s) =>
+        targets.includes(s)
+      );
+      const idx = siblings.indexOf(el);
+      if (idx > 0) {
+        el.style.setProperty('--reveal-delay', `${Math.min(idx * 0.1, 0.4)}s`);
+      }
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: '0px 0px -10% 0px' }
+    );
+
+    targets.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  // Track scroll to toggle the floating dots logo once the nav has scrolled past
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 80);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Lock body scroll while mobile menu is open
+  useEffect(() => {
+    const original = document.body.style.overflow;
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : original;
+    return () => { document.body.style.overflow = original; };
+  }, [isMobileMenuOpen]);
 
   // Track active section on homepage
   useEffect(() => {
@@ -102,18 +149,36 @@ function Layout({ children }) {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const navItems = [
-    { id: 'about', label: t('nav.about', { ns: 'common' }), hasDropdown: 'about', href: '/o-nama' },
+    { id: 'about', label: t('nav.about', { ns: 'common' }), href: '/o-nama' },
     { id: 'services', label: t('nav.services', { ns: 'common' }), hasDropdown: true, href: '/usluge' },
-    { id: 'projects', label: t('nav.projects', { ns: 'common' }) },
+    { id: 'projects', label: t('nav.projects', { ns: 'common' }), href: '/projekti' },
     { id: 'contact', label: t('nav.contact', { ns: 'common' }) },
   ];
 
   return (
-    <div className="App">
+    <div className={`App${isHomePage ? ' is-home' : ''}`}>
+      <Link
+        href="/"
+        className={`nav-floating-logo${isScrolled && !isMobileMenuOpen ? ' visible' : ''}`}
+        aria-label="Vreva"
+        onClick={(e) => {
+          if (isHomePage) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 142.03 129.9" aria-hidden="true">
+          <circle cx="15.76" cy="15.76" r="15.76" fill="currentColor" />
+          <circle cx="61.06" cy="94.03" r="15.87" fill="currentColor" />
+          <circle cx="106.15" cy="15.76" r="15.88" fill="currentColor" />
+        </svg>
+      </Link>
       <nav className="nav" ref={navRef}>
         <div className="nav-container">
           <Link href="/" className="nav-logo">
-            <Image src={logo} alt="Vreva" priority />
+            <Image src={logo} alt="Vreva" priority className="nav-logo-default" />
+            <Image src={logoDark} alt="Vreva" priority className="nav-logo-onlight" />
           </Link>
 
           <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
@@ -122,7 +187,7 @@ function Layout({ children }) {
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama'))) ? 'active' : ''}
+                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama')) || (item.id === 'projects' && pathname.startsWith('/projekti'))) ? 'active' : ''}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -135,20 +200,6 @@ function Layout({ children }) {
                   >
                     {item.label}
                   </button>
-                )}
-                {item.hasDropdown === 'about' && (
-                  <ul className="nav-dropdown">
-                    {dropdownAbout.map((item) => (
-                      <li key={item.labelKey}>
-                        <Link
-                          href={item.href}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {t(`nav.${item.labelKey}`, { ns: 'common' })}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
                 )}
                 {item.hasDropdown === true && (
                   <ul className="nav-dropdown">
@@ -182,7 +233,7 @@ function Layout({ children }) {
         </div>
       </nav>
 
-      <main>
+      <main key={pathname} className="page-transition">
         {children}
       </main>
 

@@ -65,7 +65,7 @@
 }
 
 .stat-number {
-  font-family: var(--font-unbounded), sans-serif;
+  font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 700;
   color: var(--color-text);
@@ -79,4 +79,23 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 500;
+}
+
+/* Principles variant — left-aligned, smaller titles, body-style descriptions */
+.about-stats--principles .stat-item {
+  text-align: left;
+}
+
+.about-stats--principles .stat-number {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-stats--principles .stat-label {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+  line-height: 1.6;
 }

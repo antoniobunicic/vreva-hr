@@ -25,7 +25,6 @@ function WebdevFeaturePage({ featureSlug }) {
         <div className="container">
           <div className="service-page-header">
             <h1 className="service-page-title">{page.hero}</h1>
-            <p className="service-page-subtitle">{page.subtitle}</p>
           </div>
         </div>
       </div>

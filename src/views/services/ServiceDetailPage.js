@@ -46,7 +46,6 @@ function ServiceDetailPage({ serviceKey }) {
         <div className="container">
           <div className="service-page-header">
             <h1 className="service-page-title">{t(`detail.${key}.hero`, { ns: 'services' })}</h1>
-            <p className="service-page-subtitle">{t(`detail.${key}.subtitle`, { ns: 'services' })}</p>
           </div>
         </div>
       </div>

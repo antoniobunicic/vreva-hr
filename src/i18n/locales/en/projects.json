@@ -11,6 +11,26 @@
   "nicheSection": {
     "title": "Recent Projects"
   },
+  "featured": {
+    "title": "Featured Projects",
+    "viewAll": "See all projects",
+    "accommodation": {
+      "title": "Websites for accommodation",
+      "description": "Tailor-made sites for apartments, villas, and holiday homes. Mediterranean design, fast galleries, and a clear path to booking — built for guests who decide in seconds."
+    },
+    "taxi": {
+      "title": "Business websites",
+      "description": "Professional online presence for small and medium businesses, tradespeople and service providers. A clear overview of what you do, your team and contact — everything that builds trust and turns visitors into clients."
+    },
+    "software": {
+      "title": "Custom software",
+      "description": "Business platforms and internal systems — from a web portal for energy grid balancing to a public-transport timetable management system."
+    },
+    "mobile": {
+      "title": "Mobile apps",
+      "description": "Android apps for demanding domains — from speech therapy for children to computer vision for solving geometry problems."
+    }
+  },
   "cards": {
     "patrickboy": {
       "title": "Taxi Transfer Website",
@@ -21,6 +41,11 @@
       "title": "Seaside Apartments Website — Cres",
       "description": "Website for sea-view apartments on the island of Cres. Mediterranean-toned design featuring apartment layouts, an interactive gallery, and integrated Google Maps location.",
       "tags": ["React", "Tailwind CSS"]
+    },
+    "vilaistra": {
+      "title": "Luxury Villa Website — Istria",
+      "description": "Website for a luxury villa in the heart of Istria. Cinematic hero video, interior showcase, surrounding attractions, and integrated direct booking. Site is still under development.",
+      "tags": ["React", "Tailwind CSS", "In development"]
     },
     "houselucy": {
       "title": "Holiday House Website",

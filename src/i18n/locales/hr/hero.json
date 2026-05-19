@@ -1,14 +1,13 @@
 {
-  "titleStart": "Recept za dobar",
-  "rotatingWords": ["web", "kod", "SEO"],
-  "description": "Od landing stranica do kompleksnih softverskih rješenja.",
+  "title": "Umjetnost dolazi u mnogo oblika.",
+  "description": "Naša je digitalna.",
   "services": {
     "web": "IZRADA WEB STRANICA",
     "software": "SOFTVERSKA RJEŠENJA",
     "consulting": "SAVJETOVANJE"
   },
   "cta": {
-    "primary": "Zatraži ponudu",
-    "secondary": "Naše usluge"
+    "primary": "Pričajmo",
+    "secondary": "Što sve radimo"
   }
 }

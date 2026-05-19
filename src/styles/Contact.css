@@ -11,12 +11,13 @@
 }
 
 .contact-title {
-  font-family: var(--font-unbounded), sans-serif;
+  font-family: var(--font-heading);
   font-size: 4.5rem;
-  font-weight: 900;
+  font-weight: 500;
   margin-bottom: 2rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   line-height: 1.1;
+  font-synthesis: none;
 }
 
 .contact-intro {
@@ -24,6 +25,14 @@
   color: var(--color-text-muted);
   margin-bottom: 3rem;
   line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .contact-intro {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
 }
 
 .contact-info {
@@ -258,7 +267,7 @@
 }
 
 .modal-title {
-  font-family: var(--font-unbounded), sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.02em;

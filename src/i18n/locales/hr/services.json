@@ -5,7 +5,7 @@
   "cards": {
     "webdev": {
       "title": "Izrada web stranica",
-      "description": "Profesionalne web stranice brzo i pristupačno. Idealno za male poduzetnike i tvrtke koje žele snažnu online prisutnost.",
+      "description": "Profesionalne web stranice brzo i pristupačno.",
       "capabilities": [
         "Moderna, responzivna sučelja",
         "Brza izrada i lansiranje",
@@ -16,7 +16,7 @@
     },
     "fullstack": {
       "title": "Razvoj softvera",
-      "description": "Full-stack razvoj od baze podataka do korisničkog sučelja s modernim tehnologijama",
+      "description": "Full-stack razvoj s modernim tehnologijama.",
       "capabilities": [
         "Backend: Java, Kotlin, Spring Boot, Kafka, REST API",
         "Frontend: React, TypeScript, responzivna sučelja",
@@ -35,6 +35,26 @@
         "Planiranje digitalne transformacije",
         "Optimizacija poslovnih procesa"
       ]
+    },
+    "design": {
+      "title": "Grafički dizajn i priprema",
+      "description": "Vizualni materijali za digitalno i tisak — od plakata do oglasa."
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "Logotip, vizualni identitet i sve što čini brand prepoznatljivim."
+    },
+    "seo": {
+      "title": "SEO optimizacija",
+      "description": "Da vas Google nađe prvog — i ChatGPT preporuči."
+    },
+    "ads": {
+      "title": "Oglašavanje",
+      "description": "Google Ads, Meta\ni pametno targetiranje kampanja."
+    },
+    "marketing": {
+      "title": "PR i marketing",
+      "description": "Strategije, sadržaj i kampanje koje dovode klijente."
     }
   },
   "dropdown": {
@@ -45,7 +65,7 @@
   "detail": {
     "webdev": {
       "hero": "Izrada web stranica",
-      "subtitle": "brzo i pristupačno",
+      "subtitle": "",
       "intro": "Izrađujemo moderne, responzivne web stranice koje pomažu tvrtkama uspostaviti snažnu online prisutnost. Od jednostranih landing stranica do višestranih korporativnih web stranica, isporučujemo kvalitetna rješenja po konkurentnim cijenama.",
       "features": [
         {
@@ -658,6 +678,7 @@
   "overview": {
     "title": "Naše usluge",
     "subtitle": "Od izrade web stranica do strateškog savjetovanja, pružamo stručnost koja vam je potrebna za uspjeh u digitalnom krajoliku.",
-    "learnMore": "Saznaj više"
+    "learnMore": "Saznaj više",
+    "contactCta": "Javi se"
   }
 }

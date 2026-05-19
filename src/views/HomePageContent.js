@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
-import Projects from '../components/Projects';
+import FeaturedProjects from '../components/FeaturedProjects';
 import Services from '../components/Services';
 import Contact from '../components/Contact';
 
@@ -29,7 +29,7 @@ function HomePageContent() {
     <>
       <Hero />
       <Services />
-      <Projects />
+      <FeaturedProjects />
       <Contact />
     </>
   );

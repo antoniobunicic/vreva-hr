@@ -122,20 +122,38 @@ function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrol
       )}
 
       <div className="project-content">
-          <h3 className="project-title">{t(`cards.${projectKey}.title`)}</h3>
-          {clientLogo && (
-          <div className="project-client-logo">
-            <Image src={clientLogo} alt="Client logo" />
-          </div>
-        )}
-          <p className="project-description">{t(`cards.${projectKey}.description`)}</p>
-        {t(`cards.${projectKey}.tags`, { returnObjects: true }).length > 0 && (
-          <div className="project-tags">
-            {t(`cards.${projectKey}.tags`, { returnObjects: true }).map((tag, index) => (
-              <span key={index} className="project-tag">{tag}</span>
-            ))}
-          </div>
-        )}
+          {(() => {
+            const allTags = t(`cards.${projectKey}.tags`, { returnObjects: true });
+            const wipLabels = ['U izradi', 'In development'];
+            const wipTag = allTags.find((tag) => wipLabels.includes(tag));
+            const otherTags = allTags.filter((tag) => !wipLabels.includes(tag));
+            return (
+              <>
+                <h3 className="project-title">
+                  {t(`cards.${projectKey}.title`)}
+                  {wipTag && (
+                    <span className="project-wip-badge">
+                      <span className="project-wip-dot" aria-hidden="true" />
+                      {wipTag}
+                    </span>
+                  )}
+                </h3>
+                {clientLogo && (
+                  <div className="project-client-logo">
+                    <Image src={clientLogo} alt="Client logo" />
+                  </div>
+                )}
+                <p className="project-description">{t(`cards.${projectKey}.description`)}</p>
+                {otherTags.length > 0 && (
+                  <div className="project-tags">
+                    {otherTags.map((tag, index) => (
+                      <span key={index} className="project-tag">{tag}</span>
+                    ))}
+                  </div>
+                )}
+              </>
+            );
+          })()}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@
   "cards": {
     "webdev": {
       "title": "Web Development",
-      "description": "Professional websites, fast and affordable. Perfect for small businesses looking for a strong online presence.",
+      "description": "Professional websites, fast and affordable.",
       "capabilities": [
         "Modern, responsive design",
         "Fast turnaround",
@@ -16,7 +16,7 @@
     },
     "fullstack": {
       "title": "Software Development",
-      "description": "End-to-end development from database to UI with modern technologies",
+      "description": "Full-stack development with modern technologies.",
       "capabilities": [
         "Backend: Spring Boot, Kafka, REST APIs",
         "Frontend: React, TypeScript, responsive UIs",
@@ -35,6 +35,26 @@
         "Digital transformation planning",
         "Business process optimization"
       ]
+    },
+    "design": {
+      "title": "Graphic design & prepress",
+      "description": "Visual materials for digital and print — from posters to ads."
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "Logo, visual identity and everything that makes a brand recognisable."
+    },
+    "seo": {
+      "title": "SEO optimization",
+      "description": "So Google finds you first — and ChatGPT recommends you."
+    },
+    "ads": {
+      "title": "Advertising",
+      "description": "Google Ads, Meta\nand smart campaign targeting."
+    },
+    "marketing": {
+      "title": "PR & marketing",
+      "description": "Strategy, content and campaigns that bring in clients."
     }
   },
   "dropdown": {
@@ -45,7 +65,7 @@
   "detail": {
     "webdev": {
       "hero": "Web Development",
-      "subtitle": "fast and affordable",
+      "subtitle": "",
       "intro": "We build modern, responsive websites that help businesses establish a strong online presence. From single-page landing sites to multi-page corporate websites, we deliver quality solutions at competitive prices.",
       "features": [
         {
@@ -658,6 +678,7 @@
   "overview": {
     "title": "Our Services",
     "subtitle": "From web development to strategic consulting, we provide the expertise you need to succeed in the digital landscape.",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "contactCta": "Get in touch"
   }
 }

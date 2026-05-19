@@ -11,6 +11,26 @@
   "nicheSection": {
     "title": "Nedavni projekti"
   },
+  "featured": {
+    "title": "Istaknuti projekti",
+    "viewAll": "Pogledaj sve projekte",
+    "accommodation": {
+      "title": "Web stranice za smještaj",
+      "description": "Stranice po mjeri za apartmane, vile i kuće za odmor. Mediteranski dizajn, brze galerije i jasan poziv na rezervaciju — sve usmjereno prema gostima koji odlučuju u nekoliko sekundi."
+    },
+    "taxi": {
+      "title": "Poslovne web stranice",
+      "description": "Profesionalna online prisutnost za male i srednje tvrtke, obrtnike i pružatelje usluga. Jasan prikaz djelatnosti, tima i kontakta — sve što gradi povjerenje i pretvara posjetitelje u klijente."
+    },
+    "software": {
+      "title": "Softver po mjeri",
+      "description": "Razvoj poslovnih platformi i internih sustava. Od web portala za balansiranje energetske mreže do sustava za upravljanje voznim redovima u javnom prijevozu."
+    },
+    "mobile": {
+      "title": "Mobilne aplikacije",
+      "description": "Android aplikacije za zahtjevne domene — od logopedske terapije za djecu do računalnog vida za rješavanje geometrijskih zadataka."
+    }
+  },
   "cards": {
     "patrickboy": {
       "title": "Web stranica za taxi prijevoz",
@@ -21,6 +41,11 @@
       "title": "Web stranica za apartmane na Cresu",
       "description": "Stranica za apartmane s pogledom na more u Cresu. Dizajn u mediteranskim tonovima s prikazom apartmana, interaktivnom galerijom i integriranom Google Maps lokacijom.",
       "tags": ["React", "Tailwind CSS"]
+    },
+    "vilaistra": {
+      "title": "Web stranica za vilu u Istri",
+      "description": "Stranica za luksuznu vilu u srcu Istre. Cinematski hero video, prikaz interijera i okolnih atrakcija, te integrirane direktne rezervacije. Stranica je još u izradi.",
+      "tags": ["React", "Tailwind CSS", "U izradi"]
     },
     "houselucy": {
       "title": "Web stranica za kuću za odmor",

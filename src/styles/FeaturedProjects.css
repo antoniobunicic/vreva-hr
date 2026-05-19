@@ -1,0 +1,541 @@
+.featured-projects {
+  padding: 8rem 0;
+  background: var(--color-background1);
+}
+
+/* ─── Subsections — scroll-driven sticky cycler ──────────────── */
+.featured-subsections-wrapper {
+  position: relative;
+}
+
+.featured-subsections-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.featured-subsections {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 6rem 4rem;
+  row-gap: 2rem;
+  box-sizing: border-box;
+}
+
+.App.is-home .featured-subsections {
+  max-width: none;
+  padding: 5rem 6rem 4rem;
+}
+
+/* Text row — full-width, above visuals */
+.featured-subsections-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: start;
+  min-height: 140px;
+}
+
+.featured-subsection-pane {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featured-subsection-pane.active {
+  pointer-events: auto;
+}
+
+.featured-subsection-title,
+.featured-subsection-description {
+  opacity: 0;
+  transform: translateY(14px) scale(0.97);
+  filter: blur(6px);
+  /* exit (going out) — fast, no delay */
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
+  will-change: opacity, transform, filter;
+}
+
+.featured-subsection-pane.active .featured-subsection-title,
+.featured-subsection-pane.active .featured-subsection-description {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  /* entrance — slight delay so exit can clear, then ease in */
+  transition: opacity 0.35s ease 0.15s, transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.15s, filter 0.3s ease 0.15s;
+}
+
+.featured-subsection-pane.active .featured-subsection-description {
+  transition: opacity 0.35s ease 0.22s, transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.22s, filter 0.3s ease 0.22s;
+}
+
+.featured-subsection-title {
+  font-family: var(--font-heading);
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--color-text);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.featured-subsection-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 60ch;
+}
+
+.featured-subsections-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.featured-subsections-header .featured-subsections-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.featured-subsections-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 0.75rem;
+  z-index: 3;
+}
+
+.featured-subsections-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, height 0.3s ease;
+}
+
+.featured-subsections-dot:hover {
+  background: var(--color-text-muted);
+}
+
+.featured-subsections-dot.active {
+  background: var(--color-vreva-yellow);
+  height: 28px;
+  border-radius: 999px;
+}
+
+/* Right visual column — fills cell, content bottom-aligned */
+.featured-subsections-visuals {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.featured-subsection-visual-pane {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.featured-subsection-visual-pane.active {
+  pointer-events: auto;
+}
+
+.featured-subsection-grid .project-card {
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+  filter: blur(8px);
+  /* exit — fast */
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
+  will-change: opacity, transform, filter;
+}
+
+.featured-subsection-visual-pane.active .project-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  /* entrance — delayed after exit + staggered per card */
+  transition: opacity 0.4s ease 0.18s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.18s, filter 0.35s ease 0.18s;
+}
+
+.featured-subsection-visual-pane.active .project-card:nth-child(2) {
+  transition: opacity 0.4s ease 0.24s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.24s, filter 0.35s ease 0.24s;
+}
+
+.featured-subsection-visual-pane.active .project-card:nth-child(3) {
+  transition: opacity 0.4s ease 0.3s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, filter 0.35s ease 0.3s;
+}
+
+.featured-subsection-grid {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.featured-subsection-grid[data-count="1"] {
+  grid-template-columns: 1fr;
+}
+
+.featured-subsection-grid[data-count="2"] {
+  grid-template-columns: 1fr 1fr;
+}
+
+.featured-subsection-grid[data-count="3"] {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.featured-subsection-grid[data-count="4"] {
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Accommodation: horizontal peeking carousel — extends edge-to-edge */
+.featured-subsection-visual-pane--accommodation .featured-subsection-grid {
+  display: flex;
+  grid-template-columns: none;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1.25rem;
+  padding: 0.5rem 30vw;
+  scroll-padding: 0 30vw;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.featured-subsection-visual-pane--accommodation {
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.accommodation-nav {
+  display: flex;
+  gap: 0.5rem;
+  z-index: 4;
+  align-self: flex-end;
+  margin-right: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.featured-subsection-visual-pane--accommodation.active .accommodation-nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.accommodation-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-background1);
+  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.accommodation-nav-btn:hover {
+  background: var(--color-vreva-yellow);
+  border-color: var(--color-vreva-yellow);
+  color: #0a0a0a;
+  transform: scale(1.05);
+}
+
+.accommodation-nav-btn svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.featured-subsection-visual-pane--accommodation .featured-subsection-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-subsection-visual-pane--accommodation .featured-subsection-grid > * {
+  flex: 0 0 40vw;
+  scroll-snap-align: center;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .featured-subsection-visual-pane--accommodation .featured-subsection-grid {
+    padding: 0.5rem 10vw;
+    scroll-padding: 0 10vw;
+  }
+  .featured-subsection-visual-pane--accommodation .featured-subsection-grid > * {
+    flex: 0 0 80vw;
+  }
+}
+
+/* Compact ProjectCard for the subsection grid */
+.featured-subsection-grid .project-card {
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: stretch;
+}
+
+.featured-subsection-grid .project-card:hover {
+  transform: none;
+}
+
+.featured-subsection-grid .project-card:hover .project-image,
+.featured-subsection-grid .project-card:hover .project-content {
+  transform: none;
+}
+
+.featured-subsection-grid .project-image {
+  width: 100%;
+  flex: none;
+  aspect-ratio: 1.45 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background2);
+  position: relative;
+}
+
+.featured-subsection-grid[data-count="1"] .project-image {
+  aspect-ratio: 1.9 / 1;
+}
+
+.featured-subsection-visual-pane--accommodation .featured-subsection-grid .project-image {
+  aspect-ratio: 16 / 9;
+}
+
+.featured-subsection-visual-pane--taxi .featured-subsection-grid {
+  max-width: 45%;
+  margin: 0 auto;
+}
+
+.featured-subsection-visual-pane--software .featured-subsection-grid,
+.featured-subsection-visual-pane--mobile .featured-subsection-grid {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .featured-subsection-visual-pane--taxi .featured-subsection-grid,
+  .featured-subsection-visual-pane--software .featured-subsection-grid,
+  .featured-subsection-visual-pane--mobile .featured-subsection-grid {
+    max-width: 100%;
+  }
+}
+
+.featured-subsection-visual-pane--software .featured-subsection-grid .project-image,
+.featured-subsection-visual-pane--mobile .featured-subsection-grid .project-image {
+  border: none;
+  background: transparent;
+}
+
+.featured-subsection-grid .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0;
+  display: block;
+}
+
+.featured-subsection-grid .project-video {
+  border-radius: 6px;
+}
+
+.featured-subsection-grid .project-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0;
+}
+
+/* Mobile-portrait & SVG illustration — contain instead of crop */
+.featured-subsection-grid .project-image-mono img,
+.featured-subsection-visual-pane--mobile .project-image:not(.angler-images) img {
+  object-fit: contain;
+  padding: 1rem;
+}
+
+[data-theme='light'] .featured-subsection-grid .project-image-mono img {
+  filter: invert(1);
+}
+
+.featured-subsection-visual-pane--mobile .angler-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
+.featured-subsection-visual-pane--mobile .angler-images img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.featured-subsection-grid .project-tags,
+.featured-subsection-grid .project-client-logo {
+  display: none;
+}
+
+.featured-subsection-grid .project-content {
+  gap: 0.5rem;
+}
+
+.featured-subsection-grid .project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--color-text);
+}
+
+.featured-subsection-grid .project-description {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ─── CTA ─────────────────────────────────────────────────────── */
+.featured-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.featured-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-vreva-yellow);
+  background: var(--color-vreva-yellow);
+  transition: var(--transition);
+}
+
+.featured-cta-link:hover {
+  background: var(--color-vreva-yellow-dark);
+  border-color: var(--color-vreva-yellow-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 204, 51, 0.35);
+}
+
+.featured-cta-link:hover span {
+  transform: translateX(4px);
+}
+
+.featured-cta-link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .featured-subsections {
+    gap: 3rem;
+  }
+
+  .featured-subsection-title {
+    font-size: 2.9rem;
+  }
+
+  .featured-subsection-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-projects {
+    padding: 5rem 0;
+  }
+
+  .featured-projects > .container > .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .featured-subsections {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 1.5rem;
+    padding: 4rem 1.5rem 3rem;
+    align-content: start;
+  }
+
+  .App.is-home .featured-subsections {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .featured-subsections-text {
+    min-height: 160px;
+    position: relative;
+  }
+
+  .featured-subsection-title {
+    font-size: 2.1rem;
+  }
+
+  .featured-subsection-description {
+    font-size: 1.05rem;
+  }
+
+  .featured-subsections-visuals {
+    height: 100%;
+    min-height: 48vh;
+  }
+
+  .featured-subsection-grid .project-title {
+    font-size: 1rem;
+  }
+
+  .featured-subsection-grid .project-description {
+    display: none;
+  }
+
+  .featured-subsections-dots {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    justify-content: center;
+  }
+
+  .featured-subsection-grid[data-count="3"] {
+    grid-template-columns: 1fr 1fr;
+  }
+}

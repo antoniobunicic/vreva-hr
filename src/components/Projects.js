@@ -20,6 +20,7 @@ const categories = ['featured', 'web', 'software', 'mobile'];
 
 const projectCategories = {
   patrickboy: ['featured', 'web'],
+  vilaistra: ['featured', 'web'],
   apartmani: ['featured', 'web'],
   houselucy: ['featured', 'web'],
   otooles: ['featured', 'web'],
@@ -32,6 +33,7 @@ const projectCategories = {
 };
 
 const patrickBoyVideo = '/projects/patrick-boy-transferi/hero-patrick-boy.mp4';
+const vilaIstraVideo = '/projects/vila-istra/hero-vila-istra.mp4';
 
 function Projects() {
   const { t } = useTranslation('projects');
@@ -54,7 +56,7 @@ function Projects() {
     if (activeBtn) moveIndicator(activeBtn);
   }, []);
 
-  const projectKeys = ['patrickboy', 'apartmani', 'houselucy', 'otooles', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
+  const projectKeys = ['vilaistra', 'patrickboy', 'apartmani', 'houselucy', 'otooles', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
 
   const filteredProjects = activeCategory === 'all'
     ? projectKeys
@@ -108,7 +110,7 @@ function Projects() {
               <ProjectCard
                 projectKey={key}
                 projectImage={projectImages[key]}
-                projectVideo={key === 'patrickboy' ? patrickBoyVideo : undefined}
+                projectVideo={key === 'patrickboy' ? patrickBoyVideo : key === 'vilaistra' ? vilaIstraVideo : undefined}
                 clientLogo={clientLogos[key]}
                 scrollablePreview={scrollablePreview[key]}
               />

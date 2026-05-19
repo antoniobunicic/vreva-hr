@@ -16,13 +16,13 @@
 }
 
 .subsection-title {
+  font-family: var(--font-heading);
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-text);
   margin: 5rem 0 3rem;
-  text-align: center;
+  text-align: left;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
 }
 
 .principles-grid {
@@ -61,7 +61,7 @@
 
 .process-timeline {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .process-step {

@@ -53,58 +53,27 @@
 }
 
 .projects-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
   margin-top: 4rem;
 }
 
 .project-wrapper {
   position: relative;
-  padding-bottom: 6rem;
 }
 
 .project-wrapper.hidden {
   display: none;
 }
 
-.project-wrapper:not(.hidden) ~ .project-wrapper:not(.hidden)::before {
-  content: '';
-  position: absolute;
-  top: -3rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-border) 20%, var(--color-border) 80%, transparent);
-}
-
-.project-wrapper:not(.hidden):last-of-type {
-  padding-bottom: 0;
-}
-
 .project-card {
   display: flex;
-  align-items: center;
-  gap: 4rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card:hover {
-  transform: scale(1.02);
-}
-
-.project-card:hover .project-image {
-  transform: translateX(-10px);
-}
-
-.project-card:hover .project-content {
-  transform: translateX(10px);
-}
-
-.project-card.no-image {
-  justify-content: center;
 }
 
 .project-card.no-image .project-content {
@@ -112,7 +81,8 @@
 }
 
 .project-image {
-  flex: 0 0 50%;
+  flex: none;
+  width: 100%;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -191,6 +161,58 @@ html[data-theme="dark"] .project-client-logo img {
   letter-spacing: 0.05em;
 }
 
+.project-wip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.75rem;
+  vertical-align: middle;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(255, 204, 51, 0.18);
+  color: var(--color-vreva-yellow-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+[data-theme='dark'] .project-wip-badge {
+  background: rgba(255, 204, 51, 0.15);
+  color: var(--color-vreva-yellow);
+}
+
+.project-wip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.project-wip-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.5;
+  animation: project-wip-pulse 1.6s ease-out infinite;
+}
+
+@keyframes project-wip-pulse {
+  0%   { transform: scale(1);   opacity: 0.5; }
+  100% { transform: scale(2.5); opacity: 0;   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-wip-dot::after {
+    animation: none;
+  }
+}
+
 /* Scrollable preview */
 .project-scrollable-preview {
   max-height: 420px;
@@ -241,7 +263,7 @@ html[data-theme="dark"] .project-client-logo img {
 .project-card.angler-multi-image .angler-images img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: transform 0.3s ease;
 }
 
