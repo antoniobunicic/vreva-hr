@@ -36,9 +36,18 @@
   box-sizing: content-box;
   z-index: 0;
   pointer-events: none;
+  perspective: 1600px;
 }
 
-/* Wrapper handles the zoom-out / zoom-in transition */
+/*
+ * Conveyor motion: each mockup waits off-screen to the RIGHT, slides in to
+ * CENTER while it's active (its showcase moment), then glides out to the LEFT
+ * behind the hero text and fades away.
+ *
+ * The default (waiting) state has NO transition, so when an item snaps from the
+ * left exit back to the right lane it jumps instantly instead of flying across.
+ * Only .active and .prev animate.
+ */
 .hero-mockup-wrap {
   position: absolute;
   top: 0;
@@ -49,14 +58,36 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transform: scale(0.6);
-  transition: opacity 0.28s ease, transform 0.32s cubic-bezier(0.2, 0.85, 0.2, 1);
-  will-change: opacity, transform;
+  transform: translateX(150%) rotateY(-22deg) scale(0.82);
+  filter: blur(6px);
+  transition: none;
+  will-change: opacity, transform, filter;
 }
 
+/* Active — centered showcase, flat, sharp and full size */
 .hero-mockup-wrap.active {
   opacity: 1;
-  transform: scale(1);
+  transform: translateX(0) rotateY(0deg) scale(1);
+  filter: blur(0);
+  transition: opacity 0.7s ease,
+              transform 1s cubic-bezier(0.22, 0.75, 0.2, 1),
+              filter 0.8s ease;
+}
+
+/* Prev — the one that just showed, gliding out left behind the text, blurring away */
+.hero-mockup-wrap.prev {
+  opacity: 0;
+  transform: translateX(-165%) rotateY(22deg) scale(0.82);
+  filter: blur(10px);
+  transition: opacity 0.9s ease,
+              transform 1s cubic-bezier(0.4, 0, 0.6, 1),
+              filter 0.9s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mockup-wrap.active {
+    transition: opacity 0.3s ease;
+  }
 }
 
 /* Browser — golden ratio */
