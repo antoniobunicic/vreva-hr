@@ -87,5 +87,76 @@
       "description": "IoT okruženja s pripadajućim Android aplikacijama za kontrolu pametnih kućnih uređaja i praćenje senzora u stvarnom vremenu s intuitivnom vizualizacijom podataka.",
       "tags": ["Android", "Java", "IoT"]
     }
+  },
+  "detail": {
+    "labels": {
+      "back": "Svi projekti",
+      "challenge": "Izazov",
+      "solution": "Rješenje",
+      "outcome": "Rezultat",
+      "tech": "Tehnologije",
+      "gallery": "Galerija",
+      "visit": "Posjeti stranicu",
+      "ctaTitle": "Imaš projekt na umu?",
+      "ctaDescription": "Javi nam se i dogovorimo kako ga možemo ostvariti.",
+      "ctaButton": "Kontaktiraj nas"
+    },
+    "items": {
+      "patrickboy": {
+        "challenge": "Tvrtki za privatni prijevoz i transfere trebala je online prisutnost koja odmah gradi povjerenje i olakšava rezervaciju vožnje — bez kompliciranih formi i suvišnih koraka.",
+        "solution": "Izradili smo brzu, statičku stranicu u Astru s jasnim prikazom usluga i popularnih destinacija. Naglasak je na direktnom pozivu na akciju i trenutnom kontaktu, pa gost u par klikova dođe do rezervacije.",
+        "outcome": "Lagana stranica koja se učitava gotovo trenutno, dobro rangira na Googleu i pretvara posjetitelje u upite za vožnju."
+      },
+      "vilaistra": {
+        "challenge": "Luksuznoj vili u Istri trebala je stranica koja prenosi ekskluzivan doživljaj i potiče direktne rezervacije, bez posrednika i provizija.",
+        "solution": "Gradimo cinematsku stranicu s hero videom, prikazom interijera i okolnih atrakcija te integriranim sustavom direktnih rezervacija.",
+        "outcome": "Stranica je u završnoj fazi izrade — cilj je premium dojam koji opravdava višu cijenu noćenja i smanjuje ovisnost o platformama."
+      },
+      "apartmani": {
+        "challenge": "Apartmanima s pogledom na more trebala je stranica koja u nekoliko sekundi uvjeri gosta i vodi ga do upita za rezervaciju.",
+        "solution": "Dizajn u mediteranskim tonovima s interaktivnom galerijom, prikazom svakog apartmana i integriranom Google Maps lokacijom, sve optimizirano za mobitel.",
+        "outcome": "Brza, pregledna stranica koja gostima olakšava odluku, a vlasniku donosi direktne rezervacije bez provizija."
+      },
+      "houselucy": {
+        "challenge": "Kući za odmor u Ražancu trebala je prezentacija koja dočarava dalmatinski ambijent i blizinu mora.",
+        "solution": "Iskoristili smo drone fotografiju kuće i obližnje uvale te izgradili stranicu u Astru s galerijom interijera i okoline.",
+        "outcome": "Vizualno bogata, brza stranica koja gostima prodaje doživljaj odmora prije nego što upišu upit."
+      },
+      "otooles": {
+        "challenge": "Obiteljskom pansionu kraj Plitvica trebala je stranica koja ističe blizinu nacionalnog parka i domaću ponudu.",
+        "solution": "Napravili smo pregledan prikaz soba, domaće kuhinje i okolne prirode uz jasne informacije za goste koji planiraju posjet parku.",
+        "outcome": "Stranica koja gostima daje sve odgovore na jednom mjestu i potiče direktan kontakt s pansionom."
+      },
+      "flexportal": {
+        "challenge": "Sympoweru je trebao web portal za balansiranje energetske mreže — kompleksan sustav s više tipova korisnika, klijenata i resursa.",
+        "solution": "Razvili smo platformu u TypeScriptu i React.js s upravljanjem korisnicima i klijentima, white-labelingom, praćenjem resursa, postavkama i izvještavanjem; backend u Kotlinu na AWS-u.",
+        "outcome": "Skalabilan portal koji operaterima daje kontrolu nad resursima energetske mreže u stvarnom vremenu."
+      },
+      "timetable": {
+        "challenge": "Atronu je trebao sustav za import i upravljanje voznim redovima javnog prijevoza prema standardima VDV 452 i NeTEx.",
+        "solution": "Izgradili smo mikroservisnu arhitekturu (Java, Kafka, PostgreSQL, Kubernetes) za planiranje ruta, obilaznica i najava, uz naprednu kontrolu semafora na križanjima.",
+        "outcome": "Pouzdan sustav koji obrađuje velike količine podataka o prijevozu i podržava zahtjevne operativne scenarije."
+      },
+      "angler": {
+        "challenge": "Rješavanje geometrijskih zadataka rukom je sporo i podložno greškama — trebalo je to ubrzati snimkom pametnog telefona.",
+        "solution": "Razvili smo Android aplikaciju koja računalnim vidom (OpenCV) prepoznaje geometrijski zadatak sa slike i izračunava rješenje.",
+        "outcome": "Aplikacija je osvojila App Start Contest i pokazala kako računalni vid može riješiti svakodnevni obrazovni problem."
+      },
+      "bonfon": {
+        "challenge": "Logopedskoj terapiji djece nedostajao je digitalni alat za praćenje i vježbanje artikulacije, prilagođen tabletima.",
+        "solution": "Izradili smo Android aplikaciju s nizom vježbi za korekciju poremećaja artikulacije i praćenje napretka djeteta.",
+        "outcome": "Rad o razvoju aplikacije nagrađen je Rektorovom nagradom, a alat pomaže terapeutima i roditeljima u radu s djecom."
+      },
+      "thesis": {
+        "challenge": "Obrada kompleksnih zahtjeva u senzorskim mrežama je distribuirana i resursno ograničena — trebao je učinkovit mehanizam raspodjele.",
+        "solution": "Predložili smo mehanizam inspiriran fog computingom i aukcijskim algoritmima za distribuiranu obradu zahtjeva.",
+        "outcome": "Analiza pokazuje kako pametna raspodjela zadataka smanjuje opterećenje i kašnjenje u senzorskim mrežama."
+      },
+      "smarthome": {
+        "challenge": "Pametnim kućnim uređajima trebalo je jednostavno, vizualno sučelje za kontrolu i praćenje senzora u stvarnom vremenu.",
+        "solution": "Postavili smo IoT okruženja s Android aplikacijama za upravljanje uređajima i intuitivnu vizualizaciju podataka sa senzora.",
+        "outcome": "Korisnici dobivaju kontrolu nad domom i uvid u podatke senzora kroz jednostavnu, preglednu aplikaciju."
+      }
+    }
   }
 }

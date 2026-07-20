@@ -1,0 +1,242 @@
+/* ─── Project detail page ─────────────────────────────────── */
+.project-detail {
+  padding-bottom: 6rem;
+}
+
+/* Clickable card wrapper — keeps card visuals, adds affordance */
+.project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
+  transition: transform 0.25s ease;
+}
+.project-card-link:hover {
+  transform: translateY(-4px);
+}
+.project-card-link:focus-visible {
+  outline: 2px solid var(--color-accent, #a97cf0);
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
+/* ─── Cover ───────────────────────────────────────────────── */
+.project-detail-cover {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0 3.5rem;
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(106, 44, 205, 0.22), transparent 60%),
+    linear-gradient(180deg, var(--color-background2, #14121c), var(--color-background1, #0d0b12));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-detail-cover--video .container {
+  position: relative;
+  z-index: 1;
+}
+
+.project-detail-cover-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.project-detail-cover--video::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 11, 18, 0.35), rgba(13, 11, 18, 0.85));
+  z-index: 0;
+}
+
+.project-detail-breadcrumb {
+  margin-bottom: 1.75rem;
+}
+
+.project-detail-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent, #a97cf0);
+  margin-bottom: 0.75rem;
+}
+
+.project-detail-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  max-width: 20ch;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-detail-lead {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.6;
+  max-width: 60ch;
+  color: var(--color-text-muted, rgba(255, 255, 255, 0.75));
+  margin: 0 0 1.75rem;
+}
+
+.project-detail-cover-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-detail-client-logo img {
+  height: 26px;
+  width: auto;
+  opacity: 0.8;
+}
+
+/* ─── Body ────────────────────────────────────────────────── */
+.project-detail-body {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 3rem;
+  padding: 3.5rem 0 1rem;
+  align-items: start;
+}
+
+.project-detail-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.project-detail-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin: 0 0 0.6rem;
+}
+
+.project-detail-section-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted, rgba(255, 255, 255, 0.75));
+  margin: 0;
+  max-width: 62ch;
+}
+
+.project-detail-tech {
+  position: sticky;
+  top: 6rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: var(--color-surface, rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-detail-tech .project-tags {
+  margin-top: 0.75rem;
+}
+
+/* ─── Gallery ─────────────────────────────────────────────── */
+.project-detail-gallery-wrap {
+  padding: 2.5rem 0;
+}
+
+.project-detail-gallery {
+  margin-top: 1.25rem;
+}
+
+.project-detail-gallery--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-detail-shot {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.project-detail-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Tall full-page screenshots — scrollable frame so they don't dominate */
+.project-detail-gallery--tall .project-detail-shot {
+  max-width: 720px;
+  max-height: 70vh;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
+/* Monochrome SVG diagrams sit on a neutral padded surface */
+.project-detail-gallery--mono .project-detail-shot {
+  background: var(--color-surface, rgba(255, 255, 255, 0.04));
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+.project-detail-gallery--mono .project-detail-shot img {
+  max-width: 640px;
+}
+[data-theme='light'] .project-detail-gallery--mono .project-detail-shot img {
+  filter: invert(1);
+}
+
+/* ─── CTA ─────────────────────────────────────────────────── */
+.project-detail-cta {
+  margin-top: 2rem;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(106, 44, 205, 0.18), transparent 60%),
+    var(--color-surface, rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-detail-cta-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  margin: 0 0 0.5rem;
+}
+
+.project-detail-cta-text {
+  color: var(--color-text-muted, rgba(255, 255, 255, 0.75));
+  margin: 0 0 1.75rem;
+}
+
+.project-detail-cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .project-detail-cover {
+    padding: 6.5rem 0 2.5rem;
+  }
+  .project-detail-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .project-detail-tech {
+    position: static;
+  }
+}

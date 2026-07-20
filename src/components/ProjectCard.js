@@ -1,7 +1,9 @@
 'use client';
 import React, { useRef, useCallback, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import { slugByKey } from '../data/projects';
 
 function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrollablePreview }) {
   const { t } = useTranslation('projects');
@@ -83,8 +85,9 @@ function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrol
   const isAngler = projectKey === 'angler';
   const isMultiImage = Array.isArray(projectImage);
   const isMonochromeSvg = projectKey === 'timetable' || projectKey === 'thesis';
+  const slug = slugByKey[projectKey];
 
-  return (
+  const inner = (
     <div className={`project-card ${!projectImage && !projectVideo ? 'no-image' : ''} ${isAngler ? 'angler-multi-image' : ''}`}>
       {projectVideo && (
         <div className="project-image project-video">
@@ -156,6 +159,18 @@ function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrol
           })()}
       </div>
     </div>
+  );
+
+  if (!slug) return inner;
+
+  return (
+    <Link
+      href={`/projekti/${slug}/`}
+      className="project-card-link"
+      aria-label={t(`cards.${projectKey}.title`)}
+    >
+      {inner}
+    </Link>
   );
 }
 

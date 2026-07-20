@@ -87,5 +87,76 @@
       "description": "IoT environments with accompanying Android apps for smart home device control and real-time sensor monitoring with intuitive data visualization.",
       "tags": ["Android", "Java", "IoT"]
     }
+  },
+  "detail": {
+    "labels": {
+      "back": "All projects",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "outcome": "Outcome",
+      "tech": "Technologies",
+      "gallery": "Gallery",
+      "visit": "Visit website",
+      "ctaTitle": "Have a project in mind?",
+      "ctaDescription": "Get in touch and let's figure out how to make it happen.",
+      "ctaButton": "Contact us"
+    },
+    "items": {
+      "patrickboy": {
+        "challenge": "A private transfer company needed an online presence that instantly builds trust and makes booking a ride effortless — no complex forms or extra steps.",
+        "solution": "We built a fast static site in Astro with a clear overview of services and popular destinations, focused on a direct call to action and instant contact, so a guest reaches a booking in a couple of clicks.",
+        "outcome": "A lightweight site that loads almost instantly, ranks well on Google and turns visitors into ride enquiries."
+      },
+      "vilaistra": {
+        "challenge": "A luxury villa in Istria needed a site that conveys an exclusive experience and drives direct bookings, without intermediaries or commissions.",
+        "solution": "We're building a cinematic site with a hero video, interior showcase and nearby attractions, plus an integrated direct booking system.",
+        "outcome": "The site is in its final stage — the goal is a premium feel that justifies a higher nightly rate and reduces reliance on platforms."
+      },
+      "apartmani": {
+        "challenge": "Seaview apartments needed a site that convinces a guest within seconds and guides them toward a booking enquiry.",
+        "solution": "A Mediterranean-toned design with an interactive gallery, a view of each apartment and integrated Google Maps, all optimised for mobile.",
+        "outcome": "A fast, clear site that makes the decision easy for guests and brings the owner direct, commission-free bookings."
+      },
+      "houselucy": {
+        "challenge": "A holiday house in Ražanac needed a presentation that captures the Dalmatian atmosphere and its closeness to the sea.",
+        "solution": "We used drone photography of the house and the nearby cove and built the site in Astro with a gallery of the interior and surroundings.",
+        "outcome": "A visually rich, fast site that sells the holiday experience before the guest even sends an enquiry."
+      },
+      "otooles": {
+        "challenge": "A family guesthouse near Plitvice needed a site highlighting its proximity to the national park and its homemade offering.",
+        "solution": "We created a clear overview of the rooms, home cooking and surrounding nature, with all the info guests planning a park visit need.",
+        "outcome": "A site that answers every guest question in one place and encourages direct contact with the guesthouse."
+      },
+      "flexportal": {
+        "challenge": "Sympower needed a web portal for balancing the energy grid — a complex system with multiple user types, clients and resources.",
+        "solution": "We developed a platform in TypeScript and React.js with user and client management, white-labeling, resource monitoring, settings and reporting; backend in Kotlin on AWS.",
+        "outcome": "A scalable portal that gives operators real-time control over energy grid resources."
+      },
+      "timetable": {
+        "challenge": "Atron needed a system to import and manage public transport timetables to the VDV 452 and NeTEx standards.",
+        "solution": "We built a microservice architecture (Java, Kafka, PostgreSQL, Kubernetes) for planning routes, diversions and announcements, with advanced traffic-light control at intersections.",
+        "outcome": "A reliable system that processes large volumes of transport data and supports demanding operational scenarios."
+      },
+      "angler": {
+        "challenge": "Solving geometry problems by hand is slow and error-prone — it needed to be sped up with a smartphone scan.",
+        "solution": "We developed an Android app that uses computer vision (OpenCV) to recognise a geometry problem from an image and compute the solution.",
+        "outcome": "The app won the App Start Contest and showed how computer vision can solve an everyday educational problem."
+      },
+      "bonfon": {
+        "challenge": "Children's speech therapy lacked a digital tool for tracking and practising articulation, tailored for tablets.",
+        "solution": "We built an Android app with a range of exercises for correcting articulation disorders and tracking a child's progress.",
+        "outcome": "The paper on the app's development received the Rector's Award, and the tool helps therapists and parents in their work with children."
+      },
+      "thesis": {
+        "challenge": "Processing complex queries in sensor networks is distributed and resource-constrained — it needed an efficient allocation mechanism.",
+        "solution": "We proposed a mechanism inspired by fog computing and auction algorithms for distributed query processing.",
+        "outcome": "The analysis shows how smart task allocation reduces load and latency in sensor networks."
+      },
+      "smarthome": {
+        "challenge": "Smart home devices needed a simple, visual interface for control and real-time sensor monitoring.",
+        "solution": "We set up IoT environments with Android apps for controlling devices and intuitively visualising sensor data.",
+        "outcome": "Users gain control over their home and insight into sensor data through a simple, clear app."
+      }
+    }
   }
 }
