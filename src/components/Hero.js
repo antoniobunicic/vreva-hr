@@ -12,12 +12,14 @@ import flexportalImg from '../assets/projects/flexportal/flexportal-hero.webp';
 import sensorNetworkImg from '../assets/projects/iot/sensor-network.svg';
 
 const showcase = [
+  // Lightweight SVG first (priority) so the heavier screenshots can load
+  // in the background before they cycle into view.
+  { type: 'plain', image: sensorNetworkImg, alt: 'Sensor Network', mono: true },
   { type: 'browser', image: apartmaniImg, alt: 'Apartmani Bunicic' },
   { type: 'plain', image: krunaImg, alt: 'Kruna' },
   { type: 'phone', image: otoolesImg, alt: "O'Tooles" },
   { type: 'plain', image: timetableImg, alt: 'Atron Timetable', mono: true },
   { type: 'browser', image: houseLucyImg, alt: 'House Lucy Ražanac' },
-  { type: 'plain', image: sensorNetworkImg, alt: 'Sensor Network', mono: true },
   { type: 'plain', image: flexportalImg, alt: 'Sympower FlexPortal' },
 ];
 

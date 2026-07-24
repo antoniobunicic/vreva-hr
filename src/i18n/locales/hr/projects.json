@@ -37,6 +37,11 @@
       "description": "Web stranica za tvrtku za privatni taxi prijevoz i transfere. Prikaz usluga i destinacija s jednostavnim pozivom na rezervaciju vožnje.",
       "tags": ["Astro", "Tailwind CSS"]
     },
+    "chicoffee": {
+      "title": "Webshop za CHI Specialty Coffee",
+      "description": "Custom web stranica i webshop za pržionicu specialty kave. Prikaz priče brenda i asortimana zrna uz online kupovinu s košaricom, plaćanjem i dostavom.",
+      "tags": ["Next.js", "Tailwind CSS", "Webshop"]
+    },
     "apartmani": {
       "title": "Web stranica za apartmane na Cresu",
       "description": "Stranica za apartmane s pogledom na more u Cresu. Dizajn u mediteranskim tonovima s prikazom apartmana, interaktivnom galerijom i integriranom Google Maps lokacijom.",
@@ -112,6 +117,11 @@
         "solution": "Gradimo cinematsku stranicu s hero videom, prikazom interijera i okolnih atrakcija te integriranim sustavom direktnih rezervacija.",
         "outcome": "Stranica je u završnoj fazi izrade — cilj je premium dojam koji opravdava višu cijenu noćenja i smanjuje ovisnost o platformama."
       },
+      "chicoffee": {
+        "challenge": "Pržionici specialty kave trebala je stranica koja prenosi priču i kvalitetu brenda, ali i webshop koji posjetitelje pretvara u kupce.",
+        "solution": "Izradili smo custom web stranicu s prikazom priče brenda i asortimana zrna te integrirani webshop s košaricom, sigurnim plaćanjem i upravljanjem narudžbama.",
+        "outcome": "Brza stranica koja gradi brend i omogućuje direktnu online prodaju kave, bez provizija posrednika."
+      },
       "apartmani": {
         "challenge": "Apartmanima s pogledom na more trebala je stranica koja u nekoliko sekundi uvjeri gosta i vodi ga do upita za rezervaciju.",
         "solution": "Dizajn u mediteranskim tonovima s interaktivnom galerijom, prikazom svakog apartmana i integriranom Google Maps lokacijom, sve optimizirano za mobitel.",
@@ -128,13 +138,13 @@
         "outcome": "Stranica koja gostima daje sve odgovore na jednom mjestu i potiče direktan kontakt s pansionom."
       },
       "flexportal": {
-        "challenge": "Sympoweru je trebao web portal za balansiranje energetske mreže — kompleksan sustav s više tipova korisnika, klijenata i resursa.",
-        "solution": "Razvili smo platformu u TypeScriptu i React.js s upravljanjem korisnicima i klijentima, white-labelingom, praćenjem resursa, postavkama i izvještavanjem; backend u Kotlinu na AWS-u.",
+        "challenge": "Sympower je razvijao vlastitu platformu za balansiranje energetske mreže — kompleksan sustav s više tipova korisnika, klijenata i resursa.",
+        "solution": "Sudjelovali smo u razvoju web portala u TypeScriptu i React.js — upravljanje korisnicima i klijentima, white-labeling, praćenje resursa, postavke i izvještavanje, uz backend u Kotlinu na AWS-u.",
         "outcome": "Skalabilan portal koji operaterima daje kontrolu nad resursima energetske mreže u stvarnom vremenu."
       },
       "timetable": {
-        "challenge": "Atronu je trebao sustav za import i upravljanje voznim redovima javnog prijevoza prema standardima VDV 452 i NeTEx.",
-        "solution": "Izgradili smo mikroservisnu arhitekturu (Java, Kafka, PostgreSQL, Kubernetes) za planiranje ruta, obilaznica i najava, uz naprednu kontrolu semafora na križanjima.",
+        "challenge": "Atron je razvijao vlastiti sustav za import i upravljanje voznim redovima javnog prijevoza prema standardima VDV 452 i NeTEx.",
+        "solution": "Sudjelovali smo u razvoju mikroservisne arhitekture (Java, Kafka, PostgreSQL, Kubernetes) za planiranje ruta, obilaznica i najava, uz naprednu kontrolu semafora na križanjima.",
         "outcome": "Pouzdan sustav koji obrađuje velike količine podataka o prijevozu i podržava zahtjevne operativne scenarije."
       },
       "angler": {

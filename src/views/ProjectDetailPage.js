@@ -1,9 +1,70 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { getProjectByKey } from '../data/projects';
+
+function Showcase({ project, title }) {
+  const [active, setActive] = useState(0);
+  const hasImages = project.gallery.length > 0;
+  const activeImg = hasImages ? project.gallery[active] : null;
+
+  const media = project.video ? (
+    <video
+      className="project-showcase-media"
+      src={project.video}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      aria-hidden="true"
+    />
+  ) : activeImg ? (
+    <Image
+      className="project-showcase-media"
+      src={activeImg}
+      alt={title}
+      sizes="(max-width: 900px) 90vw, 520px"
+      priority
+    />
+  ) : null;
+
+  const frameClass = `project-showcase project-showcase--${project.display}${
+    project.mono ? ' is-mono' : ''
+  }`;
+
+  return (
+    <div className="project-showcase-wrap">
+      <div className={frameClass}>
+        {project.display === 'browser' && (
+          <div className="project-showcase-chrome">
+            <span /><span /><span />
+          </div>
+        )}
+        <div className="project-showcase-screen">{media}</div>
+      </div>
+
+      {project.gallery.length > 1 && (
+        <div className="project-showcase-thumbs" role="tablist" aria-label={title}>
+          {project.gallery.map((img, i) => (
+            <button
+              key={i}
+              type="button"
+              role="tab"
+              aria-selected={active === i}
+              className={`project-showcase-thumb${active === i ? ' active' : ''}`}
+              onClick={() => setActive(i)}
+            >
+              <Image src={img} alt={`${title} ${i + 1}`} sizes="80px" />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 function ProjectDetailPage({ projectKey }) {
   const { t } = useTranslation('projects');
@@ -24,20 +85,8 @@ function ProjectDetailPage({ projectKey }) {
 
   return (
     <article className="project-detail">
-      <header className={`project-detail-cover${project.video ? ' project-detail-cover--video' : ''}`}>
-        {project.video && (
-          <video
-            className="project-detail-cover-video"
-            src={project.video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            aria-hidden="true"
-          />
-        )}
-        <div className="container">
+      <div className="container">
+        <header className="project-detail-head">
           <nav aria-label="breadcrumb" className="breadcrumb project-detail-breadcrumb">
             <ol>
               <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
@@ -46,7 +95,6 @@ function ProjectDetailPage({ projectKey }) {
             </ol>
           </nav>
 
-          <span className="project-detail-eyebrow">{t(`categories.${project.category}`)}</span>
           <h1 className="project-detail-title">
             {title}
             {isWip && (
@@ -57,62 +105,46 @@ function ProjectDetailPage({ projectKey }) {
             )}
           </h1>
           <p className="project-detail-lead">{description}</p>
+        </header>
 
-          <div className="project-detail-cover-actions">
-            {project.liveUrl && (
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                {l('visit')} <span aria-hidden="true">&rarr;</span>
-              </a>
-            )}
-            {project.logo && (
-              <span className="project-detail-client-logo">
-                <Image src={project.logo} alt="" />
-              </span>
-            )}
-          </div>
-        </div>
-      </header>
-
-      <div className="container">
         <div className="project-detail-body">
-          <div className="project-detail-sections">
+          <div className="project-detail-timeline">
             {sections.map((s) => (
-              <section key={s} className="project-detail-section">
-                <h2 className="project-detail-section-title">{l(s)}</h2>
-                <p className="project-detail-section-text">{d(s)}</p>
+              <section key={s} className="project-detail-step">
+                <h2 className="project-detail-step-title">{l(s)}</h2>
+                <p className="project-detail-step-text">{d(s)}</p>
               </section>
             ))}
           </div>
 
-          <aside className="project-detail-tech">
-            <h2 className="project-detail-section-title">{l('tech')}</h2>
-            <div className="project-tags">
-              {tags.map((tag, i) => (
-                <span key={i} className="project-tag">{tag}</span>
-              ))}
+          <aside className="project-detail-aside">
+            <Showcase project={project} title={title} />
+
+            <div className="project-detail-tech">
+              <h2 className="project-detail-tech-title">{l('tech')}</h2>
+              <div className="project-tags">
+                {tags.map((tag, i) => (
+                  <span key={i} className="project-tag">{tag}</span>
+                ))}
+              </div>
+              {project.logo && (
+                <div className="project-detail-client">
+                  <Image src={project.logo} alt="" />
+                </div>
+              )}
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary project-detail-visit"
+                >
+                  {l('visit')} <span aria-hidden="true">&rarr;</span>
+                </a>
+              )}
             </div>
           </aside>
         </div>
-
-        {project.gallery.length > 0 && (
-          <section className="project-detail-gallery-wrap">
-            <h2 className="project-detail-section-title">{l('gallery')}</h2>
-            <div
-              className={
-                'project-detail-gallery' +
-                (project.tall ? ' project-detail-gallery--tall' : '') +
-                (project.mono ? ' project-detail-gallery--mono' : '') +
-                (project.gallery.length > 1 ? ' project-detail-gallery--grid' : '')
-              }
-            >
-              {project.gallery.map((img, i) => (
-                <figure key={i} className="project-detail-shot">
-                  <Image src={img} alt={`${title} ${i + 1}`} sizes="(max-width: 768px) 100vw, 800px" />
-                </figure>
-              ))}
-            </div>
-          </section>
-        )}
 
         <section className="project-detail-cta">
           <h2 className="project-detail-cta-title">{l('ctaTitle')}</h2>

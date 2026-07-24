@@ -14,11 +14,13 @@ import bonfonImg from '../assets/projects/bonfon/bonfon.png';
 import anglerSS0 from '../assets/projects/angler/SS0.jpg';
 import anglerSS1 from '../assets/projects/angler/SS1.jpg';
 import anglerSS4 from '../assets/projects/angler/SS4.jpg';
+import chicoffeeImg from '../assets/projects/chicoffee/chicoffee.png';
 
 const patrickBoyVideo = '/projects/patrick-boy-transferi/hero-patrick-boy.mp4';
 const vilaIstraVideo = '/projects/vila-istra/hero-vila-istra.mp4';
 
 const projectImages = {
+  chicoffee: chicoffeeImg,
   apartmani: apartmaniImg,
   houselucy: houseLucyImg,
   otooles: otoolesImg,
@@ -40,7 +42,7 @@ const clientLogos = {
 
 const sections = [
   { key: 'accommodation', projects: ['vilaistra', 'apartmani', 'houselucy', 'otooles'] },
-  { key: 'taxi', projects: ['patrickboy'] },
+  { key: 'taxi', projects: ['chicoffee', 'patrickboy'] },
   { key: 'software', projects: ['flexportal', 'timetable'] },
   { key: 'mobile', projects: ['bonfon', 'angler'] },
 ];

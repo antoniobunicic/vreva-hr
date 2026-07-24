@@ -220,7 +220,7 @@
   font-family: var(--font-heading);
   font-size: 7.5rem;
   line-height: 1.02;
-  font-weight: 500;
+  font-weight: var(--font-heading-weight);
   letter-spacing: -0.025em;
   color: var(--color-text);
   margin-bottom: 1.5rem;
@@ -255,11 +255,29 @@
 
 
 .btn.hero-btn {
-  box-shadow: 0 0 24px rgba(255, 204, 51, 0.25);
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #0a0a0a;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.22);
 }
 
 .btn.hero-btn:hover {
-  box-shadow: 0 0 40px rgba(255, 204, 51, 0.4);
+  background: #f2f2f2;
+  border-color: #f2f2f2;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.38);
+}
+
+[data-theme='light'] .btn.hero-btn {
+  background: #0a0a0a;
+  border-color: #0a0a0a;
+  color: #ffffff;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme='light'] .btn.hero-btn:hover {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.28);
 }
 
 .btn.hero-btn-glass {

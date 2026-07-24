@@ -1,7 +1,7 @@
 {
   "title": "Izgradimo nešto zajedno",
   "intro": "Bilo da želite jednostavnu web stranicu, kompleksni digitalni proizvod ili proširenje svog tima — ovdje smo da pomognemo.",
-  "freeBadge": "Konzultacije su besplatne i bez obveza",
+  "freeBadge": "Konzultacije su besplatne i bez obveza. Javit ćemo se u roku od 24 sata.",
   "packageField": "Odabrana vrsta web stranice",
   "form": {
     "name": "Ime",
@@ -16,5 +16,16 @@
   "buttons": {
     "email": "Email",
     "call": "Poziv"
+  },
+  "page": {
+    "eyebrow": "Kontakt",
+    "heading": "Popričajmo o vašem projektu",
+    "subheading": "Bilo da imate gotov brief ili tek ideju u nastajanju — javite nam se i zajedno ćemo pronaći najbolji put.",
+    "infoTitle": "Direktan kontakt",
+    "locationLabel": "Lokacija",
+    "location": "Zagreb, Hrvatska",
+    "whatsappValue": "Pošaljite poruku",
+    "followLabel": "Pratite nas",
+    "formTitle": "Pošaljite upit"
   }
 }

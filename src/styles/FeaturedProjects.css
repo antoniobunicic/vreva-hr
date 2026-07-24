@@ -81,7 +81,7 @@
 }
 
 .featured-subsection-title {
-  font-family: var(--font-heading);
+  font-family: var(--font-sans);
   font-size: 3.75rem;
   font-weight: 500;
   line-height: 1.05;
@@ -330,11 +330,7 @@
   aspect-ratio: 16 / 9;
 }
 
-.featured-subsection-visual-pane--taxi .featured-subsection-grid {
-  max-width: 45%;
-  margin: 0 auto;
-}
-
+.featured-subsection-visual-pane--taxi .featured-subsection-grid,
 .featured-subsection-visual-pane--software .featured-subsection-grid,
 .featured-subsection-visual-pane--mobile .featured-subsection-grid {
   max-width: 75%;
@@ -440,7 +436,7 @@
   align-items: center;
   gap: 0.6rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #0a0a0a;
   text-decoration: none;
   padding: 0.9rem 2rem;

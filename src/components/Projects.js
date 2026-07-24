@@ -13,6 +13,7 @@ import smarthomeImg from '../assets/projects/iot/smarthome.png';
 import apartmaniImg from '../assets/projects/accommodation/apartmani-bunicic-full.png';
 import houseLucyImg from '../assets/projects/accommodation/house-lucy-razanac-full.png';
 import otoolesImg from '../assets/projects/accommodation/otooles-full.png';
+import chicoffeeImg from '../assets/projects/chicoffee/chicoffee.png';
 import atronLogo from '../assets/projects/atron/atron.svg';
 import sympowerLogo from '../assets/projects/flexportal/sympower.svg';
 
@@ -20,6 +21,7 @@ const categories = ['featured', 'web', 'software', 'mobile'];
 
 const projectCategories = {
   patrickboy: ['featured', 'web'],
+  chicoffee: ['featured', 'web'],
   vilaistra: ['featured', 'web'],
   apartmani: ['featured', 'web'],
   houselucy: ['featured', 'web'],
@@ -56,13 +58,14 @@ function Projects() {
     if (activeBtn) moveIndicator(activeBtn);
   }, []);
 
-  const projectKeys = ['vilaistra', 'patrickboy', 'apartmani', 'houselucy', 'otooles', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
+  const projectKeys = ['chicoffee', 'vilaistra', 'patrickboy', 'apartmani', 'houselucy', 'otooles', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
 
   const filteredProjects = activeCategory === 'all'
     ? projectKeys
     : projectKeys.filter(key => projectCategories[key]?.includes(activeCategory));
 
   const projectImages = {
+    chicoffee: chicoffeeImg,
     apartmani: apartmaniImg,
     houselucy: houseLucyImg,
     otooles: otoolesImg,

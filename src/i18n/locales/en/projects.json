@@ -37,6 +37,11 @@
       "description": "Website for a private taxi and transfer company. Showcases services and destinations with a clear call to book a ride.",
       "tags": ["Astro", "Tailwind CSS"]
     },
+    "chicoffee": {
+      "title": "Webshop for CHI Specialty Coffee",
+      "description": "Custom website and webshop for a specialty coffee roaster. Showcases the brand story and range of beans alongside online shopping with cart, checkout and delivery.",
+      "tags": ["Next.js", "Tailwind CSS", "Webshop"]
+    },
     "apartmani": {
       "title": "Seaside Apartments Website — Cres",
       "description": "Website for sea-view apartments on the island of Cres. Mediterranean-toned design featuring apartment layouts, an interactive gallery, and integrated Google Maps location.",
@@ -112,6 +117,11 @@
         "solution": "We're building a cinematic site with a hero video, interior showcase and nearby attractions, plus an integrated direct booking system.",
         "outcome": "The site is in its final stage — the goal is a premium feel that justifies a higher nightly rate and reduces reliance on platforms."
       },
+      "chicoffee": {
+        "challenge": "A specialty coffee roaster needed a site that conveys its brand story and quality, plus a webshop that turns visitors into customers.",
+        "solution": "We built a custom website presenting the brand story and range of beans, with an integrated webshop featuring a cart, secure checkout and order management.",
+        "outcome": "A fast site that builds the brand and enables direct online coffee sales, free of intermediary commissions."
+      },
       "apartmani": {
         "challenge": "Seaview apartments needed a site that convinces a guest within seconds and guides them toward a booking enquiry.",
         "solution": "A Mediterranean-toned design with an interactive gallery, a view of each apartment and integrated Google Maps, all optimised for mobile.",
@@ -128,13 +138,13 @@
         "outcome": "A site that answers every guest question in one place and encourages direct contact with the guesthouse."
       },
       "flexportal": {
-        "challenge": "Sympower needed a web portal for balancing the energy grid — a complex system with multiple user types, clients and resources.",
-        "solution": "We developed a platform in TypeScript and React.js with user and client management, white-labeling, resource monitoring, settings and reporting; backend in Kotlin on AWS.",
+        "challenge": "Sympower was building its own platform for balancing the energy grid — a complex system with multiple user types, clients and resources.",
+        "solution": "We contributed to the development of the web portal in TypeScript and React.js — user and client management, white-labeling, resource monitoring, settings and reporting, with a Kotlin backend on AWS.",
         "outcome": "A scalable portal that gives operators real-time control over energy grid resources."
       },
       "timetable": {
-        "challenge": "Atron needed a system to import and manage public transport timetables to the VDV 452 and NeTEx standards.",
-        "solution": "We built a microservice architecture (Java, Kafka, PostgreSQL, Kubernetes) for planning routes, diversions and announcements, with advanced traffic-light control at intersections.",
+        "challenge": "Atron was building its own system to import and manage public transport timetables to the VDV 452 and NeTEx standards.",
+        "solution": "We contributed to the development of the microservice architecture (Java, Kafka, PostgreSQL, Kubernetes) for planning routes, diversions and announcements, with advanced traffic-light control at intersections.",
         "outcome": "A reliable system that processes large volumes of transport data and supports demanding operational scenarios."
       },
       "angler": {

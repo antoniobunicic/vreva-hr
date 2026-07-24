@@ -1,73 +1,56 @@
 /* Navigation */
+/* Docked by default: sits at the top of the document and scrolls away with the
+   content. It only becomes a fixed reveal-on-scroll bar once .nav--pinned is set. */
+/* The frosted-glass fill lives on ::before, not on .nav itself. If .nav carried
+   backdrop-filter it would become a backdrop root and the dropdown (its
+   descendant) could no longer blur the page content behind it. */
 .nav {
-  position: relative;
-  background: rgb(10, 10, 10);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  z-index: 10;
-}
-
-[data-theme='light'] .nav {
-  background: var(--color-background1);
-  border-bottom-color: rgba(0, 0, 0, 0.08);
-}
-
-.App.is-home .nav {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   background: transparent;
-  border-bottom-color: transparent;
-}
-
-[data-theme='light'] .App.is-home .nav {
-  background: transparent;
-  border-bottom-color: transparent;
-}
-
-.nav-floating-logo {
-  position: fixed;
-  top: 0;
-  right: 6rem;
+  border-bottom: none;
   z-index: 1000;
-  width: 60px;
-  height: 92px;
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-12px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-  color: #000;
+  transition: transform 0.35s ease;
 }
 
-[data-theme='light'] .nav-floating-logo {
-  color: #000;
-}
-
-.nav-floating-logo::before {
+.nav::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--color-vreva-yellow);
-  clip-path: path('M 0 0 L 60 0 L 60 66 Q 60 72 55 75 L 34 87 Q 30 90 26 87 L 5 75 Q 0 72 0 66 Z');
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  backdrop-filter: saturate(180%) blur(16px);
+  transition: opacity 0.3s ease, background 0.3s ease;
 }
 
-.nav-floating-logo > svg {
-  position: relative;
-  display: block;
-  margin: 1.5rem auto 0;
+.nav--pinned {
+  position: fixed;
 }
 
-.nav-floating-logo.visible {
+.nav--hidden {
+  transform: translateY(-100%);
+}
+
+[data-theme='dark'] .nav::before {
+  background: rgba(10, 10, 10, 0.82);
+}
+
+/* Offset in-flow content on inner pages, since the nav is out of flow */
+.App:not(.is-home) main {
+  padding-top: var(--nav-height, 110px);
+}
+
+/* On the homepage the nav floats transparently over the hero while docked
+   (no fill, no blur), and turns into the frosted bar once it pins. */
+.App.is-home .nav::before {
+  opacity: 0;
+}
+
+.App.is-home .nav--pinned::before {
   opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.nav-floating-logo svg {
-  width: 32px;
-  height: auto;
-  display: block;
 }
 
 .nav-container {
@@ -117,6 +100,13 @@
   align-items: center;
 }
 
+/* Language switcher lives in the top bar on desktop; only appears inside the
+   mobile menu overlay (shown via the responsive rules below). Selector matches
+   the specificity of `.nav-menu > li` so this reliably wins on desktop. */
+.nav-menu > li.nav-menu-lang {
+  display: none;
+}
+
 .nav-menu button {
   font: inherit;
   margin: 0;
@@ -130,14 +120,14 @@
   border: none;
   color: #a0a0a0;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   padding: 0.7rem 1.25rem;
   cursor: pointer;
   transition: var(--transition);
   border-radius: 100px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -153,8 +143,8 @@
 
 .nav-menu button.active,
 .nav-menu > li > a.active {
-  color: var(--color-vreva-yellow);
-  background: rgba(255, 204, 51, 0.1);
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme='light'] .nav-menu button,
@@ -170,8 +160,8 @@
 
 [data-theme='light'] .nav-menu button.active,
 [data-theme='light'] .nav-menu > li > a.active {
-  color: var(--color-vreva-yellow-dark);
-  background: rgba(255, 204, 51, 0.18);
+  color: var(--color-text);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 /* Theme Toggle */
@@ -352,6 +342,17 @@
   position: relative;
 }
 
+/* Transparent bridge across the gap so hovering from the trigger to the
+   dropdown doesn't drop the :hover state. */
+.nav-item-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
 .nav-dropdown-arrow {
   font-size: 0.65rem;
   margin-left: 0.25rem;
@@ -365,16 +366,17 @@
 
 .nav-dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 10px);
   left: 50%;
-  transform: translateX(-50%);
   list-style: none;
-  background: rgb(20, 20, 20);
-  border: 1px solid #2a2a2a;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  backdrop-filter: saturate(180%) blur(16px);
   padding: 0.5rem 0;
   min-width: 220px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
   transform: translateX(-50%) translateY(8px);
@@ -397,8 +399,9 @@
   padding: 0.65rem 1.25rem;
   color: #a0a0a0;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   transition: var(--transition);
   white-space: nowrap;
 }
@@ -408,10 +411,8 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-[data-theme='light'] .nav-dropdown {
-  background: var(--color-background1);
-  border-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+[data-theme='dark'] .nav-dropdown {
+  background: rgba(10, 10, 10, 0.82);
 }
 
 [data-theme='light'] .nav-dropdown a {

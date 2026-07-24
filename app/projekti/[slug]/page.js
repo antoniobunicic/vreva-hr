@@ -12,6 +12,10 @@ const projectMetadata = {
     title: 'Web stranica za taxi prijevoz i transfere',
     description: 'Brza web stranica za tvrtku za privatni taxi prijevoz i transfere. Jasan prikaz usluga i destinacija s pozivom na rezervaciju vožnje.',
   },
+  chicoffee: {
+    title: 'Webshop za CHI Specialty Coffee',
+    description: 'Custom web stranica i webshop za pržionicu specialty kave — prikaz brenda, asortiman zrna i online kupovina s košaricom i plaćanjem.',
+  },
   apartmani: {
     title: 'Web stranica za apartmane na Cresu',
     description: 'Web stranica za apartmane s pogledom na more u Cresu — mediteranski dizajn, galerija i direktne rezervacije bez provizija.',

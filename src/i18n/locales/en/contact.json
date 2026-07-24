@@ -1,7 +1,7 @@
 {
   "title": "Let's build something together",
   "intro": "Whether you're looking to modernize your stack, build a new product, or scale your team — we're here to help.",
-  "freeBadge": "Consultation is free, no strings attached",
+  "freeBadge": "Consultation is free, no strings attached. We'll get back to you within 24 hours.",
   "packageField": "Selected website type",
   "form": {
     "name": "Name",
@@ -16,5 +16,16 @@
   "buttons": {
     "email": "Email",
     "call": "Call"
+  },
+  "page": {
+    "eyebrow": "Contact",
+    "heading": "Let's talk about your project",
+    "subheading": "Whether you have a finished brief or just an idea taking shape — reach out and we'll figure out the best path together.",
+    "infoTitle": "Direct contact",
+    "locationLabel": "Location",
+    "location": "Zagreb, Croatia",
+    "whatsappValue": "Send a message",
+    "followLabel": "Follow us",
+    "formTitle": "Send an inquiry"
   }
 }

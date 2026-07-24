@@ -26,7 +26,8 @@ function Layout({ children }) {
   const [activeSection, setActiveSection] = useState(pathname === '/' ? 'hero' : '');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [navHidden, setNavHidden] = useState(false);
+  const [navPinned, setNavPinned] = useState(false);
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -61,7 +62,7 @@ function Layout({ children }) {
   // Reveal on scroll
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const selectors = '.section-title, .bento-item, .service-card, .contact-title, .contact-intro, .contact-form, .contact-divider, .contact-alt';
+    const selectors = '.section-title, .services-line, .service-card, .contact-title, .contact-intro, .contact-form, .contact-divider, .contact-alt';
     const targets = Array.from(document.querySelectorAll(selectors))
       .filter((el) => !el.closest('.featured-projects, .hero'));
     targets.forEach((el) => {
@@ -91,9 +92,43 @@ function Layout({ children }) {
     return () => observer.disconnect();
   }, [pathname]);
 
-  // Track scroll to toggle the floating dots logo once the nav has scrolled past
+  // Expose the nav height as a CSS variable so fixed-nav pages can offset content
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 80);
+    const setHeight = () => {
+      if (navRef.current) {
+        document.documentElement.style.setProperty('--nav-height', `${navRef.current.offsetHeight}px`);
+      }
+    };
+    setHeight();
+    window.addEventListener('resize', setHeight);
+    return () => window.removeEventListener('resize', setHeight);
+  }, []);
+
+  // Near the top the nav is docked and scrolls away with the content. Once past
+  // the first viewport it becomes a pinned bar that hides on scroll-down and
+  // reveals on scroll-up. Hysteresis avoids flicker around the boundary.
+  useEffect(() => {
+    let lastY = window.scrollY;
+    let pinned = false;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const navH = navRef.current?.offsetHeight || 110;
+
+      if (!pinned && y > window.innerHeight) {
+        pinned = true;
+      } else if (pinned && y < navH) {
+        pinned = false;
+      }
+      setNavPinned(pinned);
+
+      if (pinned) {
+        if (y > lastY + 4) setNavHidden(true);
+        else if (y < lastY - 4) setNavHidden(false);
+      } else {
+        setNavHidden(false);
+      }
+      lastY = y;
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -152,29 +187,15 @@ function Layout({ children }) {
     { id: 'about', label: t('nav.about', { ns: 'common' }), href: '/o-nama' },
     { id: 'services', label: t('nav.services', { ns: 'common' }), hasDropdown: true, href: '/usluge' },
     { id: 'projects', label: t('nav.projects', { ns: 'common' }), href: '/projekti' },
-    { id: 'contact', label: t('nav.contact', { ns: 'common' }) },
+    { id: 'contact', label: t('nav.contact', { ns: 'common' }), href: '/kontakt' },
   ];
 
   return (
     <div className={`App${isHomePage ? ' is-home' : ''}`}>
-      <Link
-        href="/"
-        className={`nav-floating-logo${isScrolled && !isMobileMenuOpen ? ' visible' : ''}`}
-        aria-label="Vreva"
-        onClick={(e) => {
-          if (isHomePage) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-        }}
+      <nav
+        className={`nav${navPinned ? ' nav--pinned' : ''}${navHidden && !isMobileMenuOpen ? ' nav--hidden' : ''}`}
+        ref={navRef}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 142.03 129.9" aria-hidden="true">
-          <circle cx="15.76" cy="15.76" r="15.76" fill="currentColor" />
-          <circle cx="61.06" cy="94.03" r="15.87" fill="currentColor" />
-          <circle cx="106.15" cy="15.76" r="15.88" fill="currentColor" />
-        </svg>
-      </Link>
-      <nav className="nav" ref={navRef}>
         <div className="nav-container">
           <Link href="/" className="nav-logo">
             <Image src={logo} alt="Vreva" priority className="nav-logo-default" />
@@ -187,7 +208,7 @@ function Layout({ children }) {
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama')) || (item.id === 'projects' && pathname.startsWith('/projekti'))) ? 'active' : ''}
+                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama')) || (item.id === 'projects' && pathname.startsWith('/projekti')) || (item.id === 'contact' && pathname.startsWith('/kontakt'))) ? 'active' : ''}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -217,6 +238,9 @@ function Layout({ children }) {
                 )}
               </li>
             ))}
+            <li className="nav-menu-lang">
+              <LanguageSwitcher />
+            </li>
           </ul>
 
           <div className="nav-actions">
@@ -265,7 +289,7 @@ function Layout({ children }) {
                 <h4>{t('footer.contact', { ns: 'common' })}</h4>
                 <ul>
                   <li>
-                    <a href="mailto:antonio.bunicic@gmail.com">antonio.bunicic@gmail.com</a>
+                    <a href="mailto:info@vreva.hr">info@vreva.hr</a>
                   </li>
                   <li>
                     <a href="tel:+385991921567">+385 99 192 1567</a>
