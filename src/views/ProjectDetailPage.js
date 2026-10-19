@@ -1,73 +1,87 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import { getProjectByKey } from '../data/projects';
+import { projects, getProjectByKey } from '../data/projects';
 
+// Large project visual: the video, or the first gallery image, in the same
+// framed 16:10 box as the /projekti cards. Illustrations and app shots sit
+// unframed and are fitted rather than cropped.
 function Showcase({ project, title }) {
-  const [active, setActive] = useState(0);
-  const hasImages = project.gallery.length > 0;
-  const activeImg = hasImages ? project.gallery[active] : null;
+  const first = project.gallery[0];
+  const isIllustration = project.display !== 'browser';
 
   const media = project.video ? (
-    <video
-      className="project-showcase-media"
-      src={project.video}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      aria-hidden="true"
-    />
-  ) : activeImg ? (
-    <Image
-      className="project-showcase-media"
-      src={activeImg}
-      alt={title}
-      sizes="(max-width: 900px) 90vw, 520px"
-      priority
-    />
+    <video src={project.video} autoPlay loop muted playsInline preload="metadata" aria-hidden="true" />
+  ) : first ? (
+    <Image src={first} alt={title} sizes="(max-width: 1024px) 100vw, 1300px" priority />
   ) : null;
 
-  const frameClass = `project-showcase project-showcase--${project.display}${
-    project.mono ? ' is-mono' : ''
-  }`;
+  if (!media) return null;
 
   return (
-    <div className="project-showcase-wrap">
-      <div className={frameClass}>
-        {project.display === 'browser' && (
-          <div className="project-showcase-chrome">
-            <span /><span /><span />
-          </div>
-        )}
-        <div className="project-showcase-screen">{media}</div>
+    <section className="container pd-showcase-section" aria-label={title}>
+      <div className={`pd-showcase${isIllustration ? ' pd-showcase--illustration' : ''}${project.mono ? ' is-mono' : ''}`}>
+        {media}
       </div>
+    </section>
+  );
+}
 
-      {project.gallery.length > 1 && (
-        <div className="project-showcase-thumbs" role="tablist" aria-label={title}>
-          {project.gallery.map((img, i) => (
-            <button
-              key={i}
-              type="button"
-              role="tab"
-              aria-selected={active === i}
-              className={`project-showcase-thumb${active === i ? ' active' : ''}`}
-              onClick={() => setActive(i)}
-            >
-              <Image src={img} alt={`${title} ${i + 1}`} sizes="80px" />
-            </button>
-          ))}
-        </div>
+// Every other image, shown whole at its own aspect ratio. Portrait shots
+// (app screens) line up three or four across; landscape shots (websites)
+// sit two across. Adding images to a project's gallery is all it takes.
+function Gallery({ project, title, label, includeFirst }) {
+  const images = project.video || includeFirst ? project.gallery : project.gallery.slice(1);
+  if (images.length === 0) return null;
+
+  const allPortrait = images.every((img) => img.height > img.width);
+  const framed = project.display === 'browser';
+
+  return (
+    <section className="container pd-gallery-section" aria-label={label}>
+      <div
+        className={`pd-gallery${allPortrait ? ' pd-gallery--portrait' : ''}${framed ? ' pd-gallery--framed' : ''}`}
+        style={allPortrait ? { '--pd-cols': Math.min(images.length, 4) } : undefined}
+      >
+        {images.map((img, i) => (
+          <figure key={i} className="pd-gallery-item">
+            <Image
+              src={img}
+              alt={`${title} ${i + 1}`}
+              sizes={allPortrait ? '(max-width: 768px) 50vw, 25vw' : '(max-width: 768px) 100vw, 50vw'}
+            />
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// Small preview of the next project: its video or first image, framed like
+// the cards for websites, unframed and fitted for illustrations / app shots.
+function NextThumb({ project }) {
+  const first = project.gallery[0];
+  if (!project.video && !first) return <span className="pd-next-thumb pd-next-thumb--empty" aria-hidden="true" />;
+  const illustration = project.display !== 'browser';
+
+  return (
+    <span
+      className={`pd-next-thumb${illustration ? ' pd-next-thumb--illustration' : ''}${project.mono ? ' is-mono' : ''}`}
+      aria-hidden="true"
+    >
+      {project.video ? (
+        <video src={project.video} autoPlay loop muted playsInline preload="metadata" />
+      ) : (
+        <Image src={first} alt="" sizes="200px" />
       )}
-    </div>
+    </span>
   );
 }
 
 function ProjectDetailPage({ projectKey }) {
-  const { t } = useTranslation('projects');
+  const { t } = useTranslation(['projects', 'common']);
   const project = getProjectByKey(projectKey);
   if (!project) return null;
 
@@ -79,82 +93,98 @@ function ProjectDetailPage({ projectKey }) {
   const allTags = t(`cards.${projectKey}.tags`, { returnObjects: true });
   const wipLabels = ['U izradi', 'In development'];
   const tags = Array.isArray(allTags) ? allTags.filter((tag) => !wipLabels.includes(tag)) : [];
-  const isWip = Array.isArray(allTags) && allTags.some((tag) => wipLabels.includes(tag));
+  const wipTag = Array.isArray(allTags) ? allTags.find((tag) => wipLabels.includes(tag)) : null;
 
-  const sections = ['challenge', 'solution', 'outcome'];
+  // A set of portrait app screens reads best side by side, so skip the big
+  // single visual and show them all in the gallery row.
+  const portraitSet = !project.video && project.gallery.length > 1
+    && project.gallery.every((img) => img.height > img.width);
+
+  // Next project in /projekti order, wrapping around at the end
+  const index = projects.findIndex((p) => p.key === projectKey);
+  const next = projects[(index + 1) % projects.length];
 
   return (
-    <article className="project-detail">
-      <div className="container">
-        <header className="project-detail-head">
-          <nav aria-label="breadcrumb" className="breadcrumb project-detail-breadcrumb">
-            <ol>
-              <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
-              <li><Link href="/projekti">{t('section.title')}</Link></li>
-              <li aria-current="page">{title}</li>
-            </ol>
-          </nav>
+    <article className="sl sl--project">
+      <header className="sl-hero container pd-hero">
+        <nav aria-label="breadcrumb" className="breadcrumb">
+          <ol>
+            <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
+            <li><Link href="/projekti">{t('section.title')}</Link></li>
+            <li aria-current="page">{title}</li>
+          </ol>
+        </nav>
+        {wipTag && (
+          <p className="pd-meta">
+            <span className="pd-wip">{wipTag}</span>
+          </p>
+        )}
+        <h1 className="sl-title sl-title--long">{title}</h1>
+        <p className="sl-lead sl-lead--long">{description}</p>
 
-          <h1 className="project-detail-title">
-            {title}
-            {isWip && (
-              <span className="project-wip-badge">
-                <span className="project-wip-dot" aria-hidden="true" />
-                {wipLabels[0]}
-              </span>
-            )}
-          </h1>
-          <p className="project-detail-lead">{description}</p>
-        </header>
-
-        <div className="project-detail-body">
-          <div className="project-detail-timeline">
-            {sections.map((s) => (
-              <section key={s} className="project-detail-step">
-                <h2 className="project-detail-step-title">{l(s)}</h2>
-                <p className="project-detail-step-text">{d(s)}</p>
-              </section>
-            ))}
-          </div>
-
-          <aside className="project-detail-aside">
-            <Showcase project={project} title={title} />
-
-            <div className="project-detail-tech">
-              <h2 className="project-detail-tech-title">{l('tech')}</h2>
-              <div className="project-tags">
-                {tags.map((tag, i) => (
-                  <span key={i} className="project-tag">{tag}</span>
-                ))}
-              </div>
-              {project.logo && (
-                <div className="project-detail-client">
-                  <Image src={project.logo} alt="" />
-                </div>
-              )}
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-ink project-detail-visit"
-                >
-                  {l('visit')} <span aria-hidden="true">&rarr;</span>
-                </a>
-              )}
+        {/* Key facts at a glance: client (logo), type of work, technologies */}
+        <dl className={`pd-facts${project.logo ? '' : ' pd-facts--no-client'}`}>
+          {project.logo && (
+            <div className="pd-fact">
+              <dt>{l('client')}</dt>
+              <dd className="pd-fact-client">
+                <Image src={project.logo} alt="" />
+              </dd>
             </div>
-          </aside>
-        </div>
-
-        <section className="project-detail-cta">
-          <h2 className="project-detail-cta-title">{l('ctaTitle')}</h2>
-          <p className="project-detail-cta-text">{l('ctaDescription')}</p>
-          <div className="project-detail-cta-actions">
-            <Link href="/#contact" className="btn btn-primary">{l('ctaButton')}</Link>
-            <Link href="/projekti" className="btn btn-secondary">{l('back')}</Link>
+          )}
+          <div className="pd-fact">
+            <dt>{l('type')}</dt>
+            <dd>{t(`categories.${project.category}`)}</dd>
           </div>
+          {tags.length > 0 && (
+            <div className="pd-fact">
+              <dt>{l('tech')}</dt>
+              <dd>{tags.join(' · ')}</dd>
+            </div>
+          )}
+        </dl>
+        {project.liveUrl && (
+          <div className="sl-hero-actions">
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ink">
+              {l('visit')} <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        )}
+      </header>
+
+      {!portraitSet && <Showcase project={project} title={title} />}
+      <Gallery project={project} title={title} label={l('gallery')} includeFirst={portraitSet} />
+
+      {['challenge', 'solution', 'outcome'].map((key) => (
+        <section key={key} className="sl-section container">
+          <h2 className="sl-section-title">{l(key)}</h2>
+          <p className="sl-body pd-body">{d(key)}</p>
         </section>
-      </div>
+      ))}
+
+      {next && next.key !== projectKey && (
+        <section className="container pd-next-section">
+          <Link href={`/projekti/${next.slug}/`} className="pd-next">
+            <span className="pd-next-label">{l('next')}</span>
+            <NextThumb project={next} />
+            <span className="pd-next-title">{t(`cards.${next.key}.title`)}</span>
+            <span className="pd-next-arrow" aria-hidden="true">&rarr;</span>
+          </Link>
+        </section>
+      )}
+
+      <section className="sl-cta container">
+        <div className="sl-cta-inner">
+          <div className="sl-cta-text">
+            <h2 className="sl-cta-title">{l('ctaTitle')}</h2>
+            <p className="sl-cta-description">{l('ctaDescription')}</p>
+          </div>
+          <div className="sl-cta-actions">
+            <Link href="/projekti" className="btn btn-secondary">{l('back')}</Link>
+            <Link href="/#contact" className="btn btn-primary">{l('ctaButton')}</Link>
+          </div>
+        </div>
+      </section>
     </article>
   );
 }

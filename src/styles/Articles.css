@@ -279,7 +279,8 @@
   top: 1.55em;
   width: 8px;
   height: 3px;
-  background: var(--color-accent);
+  /* lime in dark theme, deep olive in light so it reads on the pale background */
+  background: var(--color-accent-text);
 }
 
 /* Table */
@@ -395,61 +396,6 @@
   border-bottom-color: var(--color-accent);
 }
 
-/* ---------- Closing CTA with the contact form ---------- */
-
-.ad-cta {
-  padding-bottom: 8rem;
-}
-
-.ad-cta-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-text);
-}
-
-.article-cta-points {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0 0;
-  border-top: 1px solid var(--color-border);
-}
-
-.article-cta-points li {
-  position: relative;
-  padding: 0.75rem 0 0.75rem 1.75rem;
-  border-bottom: 1px solid var(--color-border);
-  font-size: 1rem;
-  line-height: 1.55;
-  color: var(--color-text);
-}
-
-.article-cta-points li::before {
-  content: '';
-  position: absolute;
-  left: 0.2rem;
-  top: 1.45em;
-  width: 8px;
-  height: 3px;
-  background: var(--color-accent);
-}
-
-.ad-cta-form .contact-form {
-  max-width: none;
-  margin: 0;
-}
-
-.ad-cta-form .contact-form .btn {
-  align-self: flex-start;
-}
-
-.ad-cta-form .contact-free-badge,
-.ad-cta-form .form-success,
-.ad-cta-form .form-error {
-  text-align: left;
-}
-
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1024px) {
@@ -462,15 +408,10 @@
     position: static;
   }
 
-  .ad-cta-inner {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
 }
 
 @media (max-width: 768px) {
-  .al-section,
-  .ad-cta {
+  .al-section {
     padding-bottom: 5rem;
   }
 

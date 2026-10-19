@@ -2,25 +2,22 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import ContactForm from '../../components/ContactForm';
+import ContactBlock from '../../components/ContactBlock';
 import NicheProjects from '../../components/NicheProjects';
 
+// Industry landing pages (apartmani, ugostiteljstvo, …): hero → why your own
+// site → what's included → related projects → other industries → contact.
 function NicheDetailPage({ niche }) {
-  const { t } = useTranslation('services');
+  const { t } = useTranslation(['services', 'common']);
 
   const page = t(`detail.webdev.niches.pages.${niche}`, { returnObjects: true });
+  const labels = t('detail.webdev.labels', { returnObjects: true });
+  const niches = t('detail.webdev.niches', { returnObjects: true });
+  const otherNiches = niches.items.filter((item) => item.slug !== niche);
 
   return (
-    <section className="service-page service-page--webdev niche-page">
-      <div className="service-page-cover service-page-cover--niche">
-        <div className="container">
-          <div className="service-page-header">
-            <h1 className="service-page-title">{page.hero}</h1>
-          </div>
-        </div>
-      </div>
-
-      <div className="container">
+    <article className="sl sl--niche">
+      <header className="sl-hero container">
         <nav aria-label="breadcrumb" className="breadcrumb">
           <ol>
             <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
@@ -29,26 +26,45 @@ function NicheDetailPage({ niche }) {
             <li aria-current="page">{page.hero}</li>
           </ol>
         </nav>
+        <h1 className="sl-title sl-title--long">{page.hero}</h1>
+        {page.subtitle && <p className="sl-lead">{page.subtitle}</p>}
+      </header>
 
-        <div className="service-detail-content">
-          <p className="service-detail-intro">{page.intro}</p>
+      <section className="sl-section container" aria-labelledby="niche-why">
+        <h2 id="niche-why" className="sl-section-title">{labels.why}</h2>
+        <p className="sl-statement">{page.intro}</p>
+      </section>
 
-          <ul className="niche-bullets">
-            {page.bullets.map((bullet, i) => (
-              <li key={i}>{bullet}</li>
-            ))}
-          </ul>
+      <section className="sl-section container" aria-labelledby="niche-features">
+        <h2 id="niche-features" className="sl-section-title">{labels.features}</h2>
+        <ul className="sl-list sl-list--2col">
+          {page.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+        </ul>
+      </section>
 
-          <NicheProjects niche={niche} />
+      <NicheProjects niche={niche} title={labels.projects} />
 
-          <div className="service-cta">
-            <h2 className="service-cta-title">{page.cta.title}</h2>
-            <p className="service-cta-description">{page.cta.description}</p>
-            <ContactForm nameLabel={page.formNameLabel} source={niche} />
-          </div>
-        </div>
-      </div>
-    </section>
+      <section className="sl-section container" aria-labelledby="niche-more">
+        <h2 id="niche-more" className="sl-section-title">{niches.title}</h2>
+        <ul className="sl-links">
+          {otherNiches.map((item) => (
+            <li key={item.slug}>
+              <Link href={`/usluge/izrada-web-stranica/${item.slug}/`}>
+                <span>{item.heading}</span>
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <ContactBlock
+        title={page.cta.title}
+        description={page.cta.description}
+        source={niche}
+        nameLabel={page.formNameLabel}
+      />
+    </article>
   );
 }
 

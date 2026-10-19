@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import ContactForm from '../components/ContactForm';
+import ContactBlock from '../components/ContactBlock';
 import { getArticleByKey } from '../data/articles';
 import { formatArticleDate } from '../utils/formatDate';
 import ArticleCover from '../components/ArticleCover';
@@ -121,25 +121,16 @@ function ArticleDetailPage({ articleKey }) {
         </div>
       </div>
 
-      <section className="container ad-cta">
-        <div className="ad-cta-inner">
-          <div className="ad-cta-text">
-            <h2 className="sl-cta-title">{cta.title}</h2>
-            <p className="sl-cta-description">{cta.description}</p>
-            {Array.isArray(cta.points) && (
-              <ul className="article-cta-points">
-                {cta.points.map((point, i) => <li key={i}>{point}</li>)}
-              </ul>
-            )}
-            <Link href="/usluge/izrada-web-stranica/apartmani" className="sl-text-link">
-              {cta.secondary}
-            </Link>
-          </div>
-          <div className="ad-cta-form">
-            <ContactForm source={`aktualno-${article.slug}`} />
-          </div>
-        </div>
-      </section>
+      <ContactBlock title={cta.title} description={cta.description} source={`aktualno-${article.slug}`}>
+        {Array.isArray(cta.points) && (
+          <ul className="sl-list sl-contact-points">
+            {cta.points.map((point, i) => <li key={i}>{point}</li>)}
+          </ul>
+        )}
+        <Link href="/usluge/izrada-web-stranica/apartmani" className="sl-text-link">
+          {cta.secondary}
+        </Link>
+      </ContactBlock>
     </article>
   );
 }

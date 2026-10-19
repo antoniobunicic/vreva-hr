@@ -6,14 +6,15 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <section className="service-page">
-      <div className="container" style={{ textAlign: 'center', padding: '4rem 1rem' }}>
-        <h1>404 — Stranica nije pronađena</h1>
-        <p>Stranica koju tražite ne postoji.</p>
-        <Link href="/" className="btn btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
-          Povratak na početnu
-        </Link>
-      </div>
-    </section>
+    <article className="sl sl--404">
+      <header className="sl-hero container">
+        <h1 className="sl-title">404</h1>
+        <p className="sl-lead">Stranica koju tražite ne postoji ili je premještena.</p>
+        <div className="sl-hero-actions">
+          <Link href="/" className="btn btn-ink">Povratak na početnu</Link>
+          <Link href="/usluge" className="btn btn-secondary">Pogledajte usluge</Link>
+        </div>
+      </header>
+    </article>
   );
 }

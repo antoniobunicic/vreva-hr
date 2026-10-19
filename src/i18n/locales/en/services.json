@@ -146,6 +146,13 @@
           "href": "/usluge/izrada-web-stranica/cijene/"
         }
       },
+      "labels": {
+        "more": "More on web development",
+        "why": "Why your own website",
+        "features": "What you get",
+        "projects": "Our work",
+        "contact": "Get in touch"
+      },
       "pricing": {
         "title": "Website Pricing",
         "popularBadge": "Most Popular",

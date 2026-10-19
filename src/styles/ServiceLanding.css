@@ -414,6 +414,213 @@
   color: var(--color-text-muted);
 }
 
+/* ─── Long-form content blocks (web dev topic + industry pages) ─── */
+
+/* Lead that is a short paragraph rather than one line */
+.sl-lead--long {
+  max-width: 48ch;
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+/* Long page titles ("Izrada web stranica za apartmane i smještaj") */
+.sl-title--long {
+  font-size: clamp(2.75rem, 5.5vw, 5rem);
+  line-height: 1;
+  max-width: 18ch;
+}
+
+.sl-body {
+  max-width: 60ch;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.sl-body + .sl-list {
+  margin-top: 2rem;
+}
+
+/* Hairline list with a short lime dash per item */
+.sl-list {
+  list-style: none;
+  max-width: 60ch;
+  border-top: 1px solid var(--color-border);
+}
+
+.sl-list li {
+  position: relative;
+  padding: 0.95rem 0 0.95rem 1.75rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.sl-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.2rem;
+  top: calc(0.95rem + 0.7em);
+  width: 8px;
+  height: 3px;
+  /* lime in dark theme, deep olive in light so it reads on the pale background */
+  background: var(--color-accent-text);
+}
+
+.sl-list--2col {
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+}
+
+/* ─── Pricing packages (/cijene) ─────────────────────────── */
+.sp-section {
+  padding-bottom: 7rem;
+}
+
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.sp-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-text);
+}
+
+.sp-card--featured {
+  border-top: 4px solid var(--color-accent);
+  padding-top: calc(1.5rem - 3px);
+}
+
+.sp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  min-height: 3.5rem;
+}
+
+.sp-name {
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.sp-name-sub {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text-muted);
+}
+
+.sp-badge {
+  flex-shrink: 0;
+  padding: 0.3rem 0.6rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sp-price {
+  margin-top: 2rem;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.sp-note {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text-muted);
+}
+
+.sp-description {
+  margin-top: 1rem;
+  min-height: 3em;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.sp-features {
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.sp-features li {
+  font-size: 0.98rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.sp-features li::before {
+  top: calc(0.75rem + 0.7em);
+}
+
+/* Pushed to the bottom so the three buttons line up */
+.sp-cta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.sp-footnote {
+  margin-top: 4rem;
+  max-width: 70ch;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* ─── Closing contact block with the form (ContactBlock) ─── */
+.sl-contact {
+  padding-bottom: 8rem;
+}
+
+.sl-contact-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-text);
+}
+
+.sl-contact-points {
+  margin: 2rem 0;
+}
+
+.sl-contact-form .contact-form {
+  max-width: none;
+  margin: 0;
+}
+
+.sl-contact-form .contact-form .btn {
+  align-self: flex-start;
+}
+
+.sl-contact-form .contact-free-badge,
+.sl-contact-form .form-success,
+.sl-contact-form .form-error {
+  text-align: left;
+}
+
 /* ─── Services overview (/usluge) ─────────────────────────── */
 .so-section {
   padding-bottom: 8rem;
@@ -553,6 +760,22 @@
     font-size: 3rem;
   }
 
+  .sp-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    max-width: 34rem;
+  }
+
+  .sp-head,
+  .sp-description {
+    min-height: 0;
+  }
+
+  .sl-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
   .so-row {
     grid-template-columns: 3rem minmax(0, 1fr) 2rem;
     grid-template-areas:
@@ -648,6 +871,27 @@
 
   .about-facts {
     grid-template-columns: 1fr;
+  }
+
+  .sl-list--2col {
+    grid-template-columns: 1fr;
+  }
+
+  .sl-lead--long {
+    font-size: 1.15rem;
+  }
+
+  .sl-body {
+    font-size: 1.05rem;
+  }
+
+  .sp-section,
+  .sl-contact {
+    padding-bottom: 5rem;
+  }
+
+  .sp-price {
+    font-size: 2.25rem;
   }
 
   .about-principles li {

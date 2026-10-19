@@ -301,10 +301,6 @@
     font-size: 2.5rem;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 3rem;

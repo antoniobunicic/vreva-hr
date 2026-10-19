@@ -182,11 +182,8 @@ section {
 .contact-divider span,
 .contact-channel-label,
 .footer-column h4,
-.project-detail-eyebrow,
-.project-detail-tech-title,
 .project-tag,
 .project-wip-badge,
-.pricing-card-badge,
 .services-learn-more {
   font-family: var(--font-mono);
   font-weight: 500;

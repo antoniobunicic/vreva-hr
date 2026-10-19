@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import ProjectCard from './ProjectCard';
 import apartmaniImg from '../assets/projects/accommodation/apartmani-bunicic-full.png';
 import houseLucyImg from '../assets/projects/accommodation/house-lucy-razanac-full.png';
@@ -21,33 +20,26 @@ const projectVideos = {
   patrickboy: '/projects/patrick-boy-transferi/hero-patrick-boy.mp4',
 };
 
-const scrollablePreview = {
-  apartmani: true,
-  houselucy: true,
-  otooles: true,
-};
-
-function NicheProjects({ niche }) {
-  const { t } = useTranslation('projects');
+// Related projects on an industry page, in the same card style as /projekti.
+function NicheProjects({ niche, title }) {
   const keys = nicheProjectKeys[niche];
-
   if (!keys || keys.length === 0) return null;
 
   return (
-    <div className="niche-projects">
-      <h2 className="niche-projects-title">{t('nicheSection.title')}</h2>
-      <div className="niche-projects-grid">
+    <section className="sl-section container" aria-label={title}>
+      <h2 className="sl-section-title">{title}</h2>
+      <div className="pl-grid">
         {keys.map((key) => (
-          <ProjectCard
-            key={key}
-            projectKey={key}
-            projectImage={projectImages[key]}
-            projectVideo={projectVideos[key]}
-            scrollablePreview={scrollablePreview[key]}
-          />
+          <div key={key} className="project-wrapper">
+            <ProjectCard
+              projectKey={key}
+              projectImage={projectImages[key]}
+              projectVideo={projectVideos[key]}
+            />
+          </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

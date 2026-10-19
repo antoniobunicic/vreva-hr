@@ -62,7 +62,7 @@ function Layout({ children }) {
   // Reveal on scroll
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const selectors = '.section-title, .services-line, .service-card, .contact-title, .contact-intro, .contact-form, .contact-divider, .contact-alt';
+    const selectors = '.section-title, .services-line, .contact-title, .contact-intro, .contact-form, .contact-divider, .contact-alt';
     const targets = Array.from(document.querySelectorAll(selectors))
       .filter((el) => !el.closest('.featured-projects, .hero'));
     targets.forEach((el) => {

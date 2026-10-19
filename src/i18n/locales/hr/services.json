@@ -146,6 +146,13 @@
           "href": "/usluge/izrada-web-stranica/cijene/"
         }
       },
+      "labels": {
+        "more": "Više o izradi web stranica",
+        "why": "Zašto vlastita stranica",
+        "features": "Što dobivate",
+        "projects": "Naši projekti",
+        "contact": "Javite nam se"
+      },
       "pricing": {
         "title": "Cijena izrade web stranica",
         "popularBadge": "Najpopularnije",

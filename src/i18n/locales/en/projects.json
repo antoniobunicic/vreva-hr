@@ -101,11 +101,14 @@
       "solution": "Solution",
       "outcome": "Outcome",
       "tech": "Technologies",
+      "client": "Client",
+      "type": "Type",
       "gallery": "Gallery",
       "visit": "Visit website",
       "ctaTitle": "Have a project in mind?",
       "ctaDescription": "Get in touch and let's figure out how to make it happen.",
-      "ctaButton": "Contact us"
+      "ctaButton": "Contact us",
+      "next": "Next project"
     },
     "items": {
       "patrickboy": {

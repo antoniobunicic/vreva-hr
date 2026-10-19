@@ -101,11 +101,14 @@
       "solution": "Rješenje",
       "outcome": "Rezultat",
       "tech": "Tehnologije",
+      "client": "Klijent",
+      "type": "Vrsta",
       "gallery": "Galerija",
       "visit": "Posjeti stranicu",
-      "ctaTitle": "Imaš projekt na umu?",
-      "ctaDescription": "Javi nam se i dogovorimo kako ga možemo ostvariti.",
-      "ctaButton": "Kontaktiraj nas"
+      "ctaTitle": "Imate projekt na umu?",
+      "ctaDescription": "Javite nam se i dogovorimo kako ga možemo ostvariti.",
+      "ctaButton": "Kontaktirajte nas",
+      "next": "Sljedeći projekt"
     },
     "items": {
       "patrickboy": {

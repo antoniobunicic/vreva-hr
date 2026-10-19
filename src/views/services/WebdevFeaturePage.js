@@ -2,108 +2,111 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import ContactForm from '../../components/ContactForm';
+import ContactBlock from '../../components/ContactBlock';
 import PricingModal from '../../components/PricingModal';
 
+// Web development topic pages (web po mjeri, responzivan dizajn, cijene, …).
+// Same building blocks as the service pages: hero → titled sections on the
+// 1fr / 2fr grid → (pricing packages) → links to the other topics → contact.
 function WebdevFeaturePage({ featureSlug }) {
-  const { t } = useTranslation('services');
+  const { t } = useTranslation(['services', 'common']);
   const [modalPackage, setModalPackage] = useState(null);
-  const [selectedCard, setSelectedCard] = useState(1);
 
   const page = t(`detail.webdev.featurePages.${featureSlug}`, { returnObjects: true });
-  const pricing = featureSlug === 'cijene'
-    ? t('detail.webdev.pricing', { returnObjects: true })
-    : null;
+  const labels = t('detail.webdev.labels', { returnObjects: true });
+  const topics = t('detail.webdev.offer.items', { returnObjects: true });
+  const pricing = featureSlug === 'cijene' ? t('detail.webdev.pricing', { returnObjects: true }) : null;
+  const otherTopics = topics.filter((item) => !item.href.includes(`/${featureSlug}/`));
 
   return (
     <>
-    {modalPackage && (
-      <PricingModal packageName={modalPackage} onClose={() => setModalPackage(null)} />
-    )}
-    <section className="service-page service-page--webdev feature-page">
-      <div className="service-page-cover">
-        <div className="container">
-          <div className="service-page-header">
-            <h1 className="service-page-title">{page.hero}</h1>
-          </div>
-        </div>
-      </div>
+      {modalPackage && (
+        <PricingModal packageName={modalPackage} onClose={() => setModalPackage(null)} />
+      )}
+      <article className="sl sl--feature">
+        <header className="sl-hero container">
+          <nav aria-label="breadcrumb" className="breadcrumb">
+            <ol>
+              <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
+              <li><Link href="/usluge">{t('nav.services', { ns: 'common' })}</Link></li>
+              <li><Link href="/usluge/izrada-web-stranica">{t('detail.webdev.hero')}</Link></li>
+              <li aria-current="page">{page.hero}</li>
+            </ol>
+          </nav>
+          <h1 className="sl-title">{page.hero}</h1>
+          <p className="sl-lead sl-lead--long">{page.intro}</p>
+        </header>
 
-      <div className="container">
-        <nav aria-label="breadcrumb" className="breadcrumb">
-          <ol>
-            <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
-            <li><Link href="/usluge">{t('nav.services', { ns: 'common' })}</Link></li>
-            <li><Link href="/usluge/izrada-web-stranica">{t('detail.webdev.hero')}</Link></li>
-            <li aria-current="page">{page.hero}</li>
-          </ol>
-        </nav>
-
-        <div className="service-detail-content">
-          <p className="service-detail-intro">{page.intro}</p>
-
-          {page.sections && Array.isArray(page.sections) && page.sections.map((section, i) => (
-            <div key={i} className="feature-section">
-              <h2 className="feature-section-title">{section.title}</h2>
-              {section.body && <p className="feature-section-body">{section.body}</p>}
-              {section.bullets && Array.isArray(section.bullets) && (
-                <ul className="niche-bullets">
-                  {section.bullets.map((b, j) => <li key={j}>{b}</li>)}
+        {Array.isArray(page.sections) && page.sections.map((section) => (
+          <section key={section.title} className="sl-section container">
+            <h2 className="sl-section-title">{section.title}</h2>
+            <div>
+              {section.body && <p className="sl-body">{section.body}</p>}
+              {Array.isArray(section.bullets) && (
+                <ul className="sl-list">
+                  {section.bullets.map((b) => <li key={b}>{b}</li>)}
                 </ul>
               )}
             </div>
-          ))}
+          </section>
+        ))}
 
-          {pricing && pricing.packages && Array.isArray(pricing.packages) && (
-            <div className="pricing-cards" style={{ marginBottom: '4rem' }}>
-              {pricing.packages.map((pkg, i) => (
-                <div key={i} className={`pricing-card${i === selectedCard ? ' pricing-card--featured' : ''}`} onClick={() => setSelectedCard(i)}>
-                  {i === 1 && (
-                    <span className="pricing-card-badge">
-                      {t('detail.webdev.pricing.popularBadge', { ns: 'services' })}
-                    </span>
-                  )}
-                  <p className="pricing-card-name">
-                    {pkg.name.split('\n').map((line, k) => (
-                      <span key={k} className={k > 0 ? 'pricing-card-name-sub' : undefined}>{k > 0 && <br />}{line}</span>
-                    ))}
-                  </p>
-                  <div className="pricing-card-price">
-                    <span className="pricing-amount">{pkg.price}</span>
-                    {pkg.period && <span className="pricing-period">{pkg.period}</span>}
+        {pricing && Array.isArray(pricing.packages) && (
+          <section className="container sp-section" aria-label={pricing.title}>
+            <div className="sp-grid">
+              {pricing.packages.map((pkg, i) => {
+                const [name, ...rest] = pkg.name.split('\n');
+                return (
+                  <div key={pkg.name} className={`sp-card${i === 1 ? ' sp-card--featured' : ''}`}>
+                    <div className="sp-head">
+                      <p className="sp-name">
+                        {name}
+                        {rest.length > 0 && <span className="sp-name-sub">{rest.join(' ')}</span>}
+                      </p>
+                      {i === 1 && <span className="sp-badge">{pricing.popularBadge}</span>}
+                    </div>
+                    <p className="sp-price">
+                      {pkg.price} <span className="sp-note">{pkg.note}</span>
+                    </p>
+                    <p className="sp-description">{pkg.description}</p>
+                    <ul className="sl-list sp-features">
+                      {pkg.features.map((f) => <li key={f}>{f}</li>)}
+                    </ul>
+                    <button
+                      type="button"
+                      className={`btn ${i === 1 ? 'btn-primary' : 'btn-ink'} sp-cta`}
+                      onClick={() => setModalPackage(pkg.name.replace(/\n/g, ' '))}
+                    >
+                      {pricing.requestQuote}
+                    </button>
                   </div>
-                  <p className="pricing-note">{pkg.note}</p>
-                  <p className="pricing-card-description">{pkg.description}</p>
-                  <ul className="pricing-card-features">
-                    {pkg.features.map((f, j) => <li key={j}>{f}</li>)}
-                  </ul>
-                  <button
-                    className="btn btn-ink pricing-card-cta"
-                    onClick={() => setModalPackage(pkg.name)}
-                  >
-                    {t('detail.webdev.pricing.requestQuote')}
-                  </button>
-                </div>
-              ))}
+                );
+              })}
             </div>
-          )}
+            <p className="sp-footnote">{pricing.footnote}</p>
+          </section>
+        )}
 
-          {pricing && (
-            <p className="pricing-footnote">
-              {t('detail.webdev.pricing.footnote')}
-            </p>
-          )}
+        <section className="sl-section container" aria-labelledby="feature-more">
+          <h2 id="feature-more" className="sl-section-title">{labels.more}</h2>
+          <ul className="sl-links">
+            {otherTopics.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>
+                  <span>{item.title}</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-          {!pricing && (
-            <div className="service-cta">
-              <h2 className="service-cta-title">{page.cta.title}</h2>
-              <p className="service-cta-description">{page.cta.description}</p>
-              <ContactForm source={`webdev-${featureSlug}`} />
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+        <ContactBlock
+          title={page.cta.title}
+          description={page.cta.description}
+          source={`webdev-${featureSlug}`}
+        />
+      </article>
     </>
   );
 }
