@@ -14,8 +14,8 @@
   color: var(--color-text);
   margin-bottom: 1rem;
   font-weight: var(--font-heading-weight);
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  letter-spacing: var(--font-heading-tracking);
+  line-height: 0.95;
 }
 
 .service-page-subtitle {
@@ -25,11 +25,8 @@
   max-width: 600px;
 }
 
-.service-page--webdev .service-page-subtitle,
-.service-page--fullstack .service-page-subtitle,
-.service-page--leadership .service-page-subtitle,
-.service-page--about .service-page-subtitle {
-  color: var(--color-vreva-yellow);
+.service-page--webdev .service-page-subtitle {
+  color: var(--color-accent-text);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -63,7 +60,7 @@
   transform: translateY(-50%);
   width: 240px;
   height: 240px;
-  color: var(--color-vreva-yellow);
+  color: var(--color-accent-text);
   opacity: 0.15;
   pointer-events: none;
   z-index: 0;
@@ -102,7 +99,7 @@
 .service-learn-more {
   display: inline-block;
   margin-top: 1.5rem;
-  color: var(--color-vreva-yellow);
+  color: var(--color-accent-text);
   font-weight: 600;
   font-size: 0.95rem;
   transition: var(--transition);
@@ -160,7 +157,7 @@
   width: 48px;
   height: 48px;
   margin: 0 auto 1.25rem;
-  color: var(--color-vreva-yellow-dark);
+  color: var(--color-accent-text);
 }
 
 .service-feature-icon svg {
@@ -200,7 +197,7 @@
 .service-detail-section {
   background: var(--color-background2);
   padding: 2.5rem;
-  border-radius: 12px;
+  border-radius: 6px;
   border: 1px solid var(--color-border);
 }
 
@@ -233,7 +230,7 @@
   content: "\2192";
   position: absolute;
   left: 0;
-  color: var(--color-vreva-yellow);
+  color: var(--color-accent-text);
   font-weight: bold;
 }
 
@@ -248,7 +245,7 @@
   font-weight: var(--font-heading-weight);
   color: var(--color-text);
   margin-bottom: 1.25rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .feature-section-body {
@@ -283,7 +280,7 @@
   text-align: center;
   margin-bottom: 2.5rem;
   font-weight: var(--font-heading-weight);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .pricing-cards {
@@ -295,7 +292,7 @@
 .pricing-card {
   background: var(--color-background2);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -313,9 +310,9 @@
   content: '';
   position: absolute;
   inset: -1px;
-  border-radius: 13px;
+  border-radius: 7px;
   padding: 1px;
-  background: linear-gradient(135deg, #ffcc33, #7c3aed);
+  background: var(--color-accent);
   -webkit-mask-image: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff);
   -webkit-mask-clip: content, border;
   -webkit-mask-composite: xor;
@@ -339,10 +336,10 @@
 .pricing-card--featured {
   border-color: transparent;
   border-width: 2px;
-  background: rgba(255, 204, 51, 0.06);
+  background: rgba(var(--color-accent-rgb), 0.06);
   transform: translateY(-6px);
   position: relative;
-  box-shadow: 0 8px 32px rgba(255, 204, 51, 0.12);
+  box-shadow: 0 8px 32px rgba(var(--color-accent-rgb), 0.12);
 }
 
 .pricing-card--featured::before {
@@ -352,12 +349,12 @@
 
 .pricing-card--featured:hover {
   transform: translateY(-10px);
-  box-shadow: 0 16px 40px rgba(255, 204, 51, 0.18);
+  box-shadow: 0 16px 40px rgba(var(--color-accent-rgb), 0.18);
 }
 
 .pricing-card-badge {
   display: inline-block;
-  background: var(--color-vreva-yellow);
+  background: var(--color-accent);
   color: #000;
   font-size: 0.7rem;
   font-weight: 700;
@@ -392,7 +389,7 @@
   font-family: var(--font-heading);
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--color-vreva-yellow);
+  color: var(--color-accent-text);
   line-height: 1;
 }
 
@@ -436,7 +433,7 @@
   content: "\2713";
   position: absolute;
   left: 0;
-  color: var(--color-vreva-yellow);
+  color: var(--color-accent-text);
   font-weight: bold;
 }
 
@@ -491,7 +488,7 @@
 }
 
 .breadcrumb a:hover {
-  color: var(--color-vreva-yellow);
+  color: var(--color-accent-text);
 }
 
 .breadcrumb li[aria-current="page"] {
@@ -519,7 +516,7 @@
   content: "\2192";
   position: absolute;
   left: 0;
-  color: var(--color-vreva-yellow);
+  color: var(--color-accent-text);
   font-weight: bold;
 }
 
@@ -553,7 +550,7 @@
   color: var(--color-text);
   margin-bottom: 2rem;
   font-weight: var(--font-heading-weight);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .service-niches-grid {
@@ -585,7 +582,7 @@
   right: 1.25rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #7c3aed;
+  color: var(--color-accent-text);
   letter-spacing: 0.04em;
   opacity: 0;
   transform: translateY(-4px);
@@ -601,7 +598,7 @@
 .service-niche-icon {
   width: 2.5rem;
   height: 2.5rem;
-  color: var(--color-vreva-yellow-dark);
+  color: var(--color-accent-text);
   margin-bottom: 1rem;
 }
 
@@ -649,7 +646,7 @@
   text-align: center;
   padding: 4rem 2rem;
   background: var(--color-background2);
-  border-radius: 12px;
+  border-radius: 6px;
   border: 1px solid var(--color-border);
 }
 

@@ -3,14 +3,14 @@
 @import './Navigation.css';
 @import './Hero.css';
 @import './Buttons.css';
-@import './About.css';
 @import './Projects.css';
 @import './FeaturedProjects.css';
 @import './Services.css';
-@import './Approach.css';
 @import './Contact.css';
 @import './Footer.css';
 @import './ServicePage.css';
+@import './ServiceLanding.css';
 @import './ProjectDetail.css';
+@import './Articles.css';
 @import './ContactPage.css';
 @import './responsive.css';

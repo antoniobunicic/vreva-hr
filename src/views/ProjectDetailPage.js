@@ -137,7 +137,7 @@ function ProjectDetailPage({ projectKey }) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary project-detail-visit"
+                  className="btn btn-ink project-detail-visit"
                 >
                   {l('visit')} <span aria-hidden="true">&rarr;</span>
                 </a>

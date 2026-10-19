@@ -1,7 +1,7 @@
 import Projects from '../../src/components/Projects';
 
 export const metadata = {
-  title: 'Projekti — Vreva',
+  title: 'Projekti',
   description: 'Pregled projekata koje smo razvili — web stranice, softver po mjeri i mobilne aplikacije.',
   alternates: {
     canonical: 'https://vreva.hr/projekti/',

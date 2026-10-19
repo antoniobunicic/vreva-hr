@@ -1,27 +1,69 @@
 {
   "section": {
-    "title": "Who We Are"
+    "title": "About us"
   },
-  "subtitle": "digital, built for you",
-  "content": {
-    "lead": "Vreva is a digital agency specialising in building modern websites, web applications and digital solutions for businesses.",
-    "paragraph1": "Unlike most agencies, we don't use WordPress or off-the-shelf templates — we develop every website as software, from the ground up. This gives us complete freedom in design, structure, animations and functionality, with no technical limitations. We help clients build a web presence that is visually unique, fast, Google-optimised (SEO) and responsive across all devices. Behind Vreva is years of international software development experience and excellent reviews from satisfied clients."
+  "lead": "A small Zagreb team that builds websites, software and AI solutions from the ground up — no templates, no compromises.",
+  "statement": {
+    "title": "Who we are",
+    "text": "Vreva is a digital agency for modern websites, applications and AI solutions. Behind us are more than ten years of international software development experience.",
+    "more": "We don't use WordPress or ready-made templates. We build every site like software, so it's unique, fast, Google-optimised and works on every device."
+  },
+  "facts": [
+    {
+      "value": "10+",
+      "label": "years of software development experience"
+    },
+    {
+      "value": "100%",
+      "label": "custom-built, no templates"
+    },
+    {
+      "value": "Zagreb",
+      "label": "based here, with clients around the world"
+    }
+  ],
+  "principles": {
+    "title": "How we think",
+    "items": [
+      {
+        "title": "Collaboration",
+        "text": "We work with your team, not in isolation. Regular communication means we build what matters."
+      },
+      {
+        "title": "Detail",
+        "text": "Quality lives in the details — from design and code to documentation."
+      },
+      {
+        "title": "Pragmatism",
+        "text": "We pick technologies that solve real problems. Nothing unnecessary, no hype."
+      }
+    ]
+  },
+  "process": {
+    "title": "Process",
+    "steps": [
+      {
+        "title": "Discovery",
+        "text": "Your goals, constraints and existing systems."
+      },
+      {
+        "title": "Planning",
+        "text": "Architecture, milestones and success criteria."
+      },
+      {
+        "title": "Development",
+        "text": "Iterative, with regular reviews and demos."
+      },
+      {
+        "title": "Delivery",
+        "text": "Launch, documentation and knowledge transfer."
+      }
+    ]
   },
   "cta": {
-    "services": "View our services"
-  },
-  "stats": {
-    "experience": {
-      "number": "Expert",
-      "label": "10+ Years Experience"
-    },
-    "location": {
-      "number": "Custom",
-      "label": "Built from scratch"
-    },
-    "reach": {
-      "number": "Global",
-      "label": "International CLients"
-    }
+    "title": "Shall we build something together?",
+    "description": "Get in touch with an idea or a problem — we reply within 24 hours.",
+    "button": "Contact us",
+    "services": "See our services"
   }
 }

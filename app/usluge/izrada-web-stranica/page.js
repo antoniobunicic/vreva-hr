@@ -1,4 +1,4 @@
-import ServiceDetailPage from '../../../src/views/services/ServiceDetailPage';
+import ServiceLandingPage from '../../../src/views/services/ServiceLandingPage';
 
 export const metadata = {
   title: 'Izrada web stranica — brzo i pristupačno',
@@ -9,5 +9,5 @@ export const metadata = {
 };
 
 export default function IzradaWebStranicaPage() {
-  return <ServiceDetailPage serviceKey="webdev" />;
+  return <ServiceLandingPage serviceKey="webdev" />;
 }

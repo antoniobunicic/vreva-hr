@@ -18,9 +18,8 @@
     "call": "Call"
   },
   "page": {
-    "eyebrow": "Contact",
-    "heading": "Let's talk about your project",
-    "subheading": "Whether you have a finished brief or just an idea taking shape — reach out and we'll figure out the best path together.",
+    "title": "Contact",
+    "lead": "Let's talk about your project. Whether you have a finished brief or just an idea, get in touch and we'll find the best way forward together.",
     "infoTitle": "Direct contact",
     "locationLabel": "Location",
     "location": "Zagreb, Croatia",

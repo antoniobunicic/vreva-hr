@@ -37,6 +37,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://vreva.hr/usluge/ai-integracija/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://vreva.hr/usluge/it-savjetovanje/</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -137,5 +143,17 @@
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/aktualno/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vreva.hr/aktualno/airbnb-provizija-15-5-posto/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -47,145 +47,106 @@ const sections = [
   { key: 'mobile', projects: ['bonfon', 'angler'] },
 ];
 
+// Software and app projects use illustrations / transparent compositions —
+// they sit on the page without a frame (same rule as /projekti).
+const illustrationProjects = new Set(['flexportal', 'timetable', 'angler', 'bonfon']);
+
+// Editorial sticky layout: the left column (counter, category, description)
+// stays pinned while the projects scroll normally on the right. The active
+// category follows whichever group is crossing the middle of the viewport.
+// Below 1024px the sticky column is hidden and each group shows its own header.
 function FeaturedProjects() {
   const { t } = useTranslation('projects');
   const [active, setActive] = useState(0);
-  const wrapperRef = useRef(null);
-  const accommodationRef = useRef(null);
-
-  const scrollAccommodation = (dir) => {
-    const el = accommodationRef.current;
-    if (!el) return;
-    const firstCard = el.firstElementChild;
-    const step = firstCard ? firstCard.offsetWidth + 20 : window.innerWidth * 0.5;
-    el.scrollBy({ left: dir * step, behavior: 'smooth' });
-  };
+  const groupRefs = useRef([]);
 
   useEffect(() => {
-    const onScroll = () => {
-      const wrapper = wrapperRef.current;
-      if (!wrapper) return;
-      const rect = wrapper.getBoundingClientRect();
-      const totalScroll = wrapper.offsetHeight - window.innerHeight;
-      if (totalScroll <= 0) return;
-      const progress = Math.max(0, Math.min(1, -rect.top / totalScroll));
-      const idx = Math.min(sections.length - 1, Math.floor(progress * sections.length));
-      setActive(idx);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(Number(entry.target.dataset.index));
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px' }
+    );
+    groupRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
   }, []);
+
+  const goTo = (i) => groupRefs.current[i]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const pad = (n) => String(n).padStart(2, '0');
 
   return (
     <section id="projects" className="featured-projects">
       <div className="container">
         <h2 className="section-title">{t('featured.title')}</h2>
-      </div>
 
-      <div
-        ref={wrapperRef}
-        className="featured-subsections-wrapper"
-        style={{ height: `${sections.length * 100}vh` }}
-      >
-        <div className="featured-subsections-sticky">
-          <div className="featured-subsections">
-            <div className="featured-subsections-header">
-              <div className="featured-subsections-dots">
+        <div className="fp">
+          <aside className="fp-aside" aria-hidden="true">
+            <div className="fp-sticky">
+              <p className="fp-counter">
+                <span className="fp-counter-current">{pad(active + 1)}</span>
+                <span className="fp-counter-total">/ {pad(sections.length)}</span>
+              </p>
+              <div className="fp-bars">
                 {sections.map((s, i) => (
                   <button
                     key={s.key}
                     type="button"
-                    className={`featured-subsections-dot${active === i ? ' active' : ''}`}
-                    onClick={() => {
-                      const wrapper = wrapperRef.current;
-                      if (!wrapper) return;
-                      const rect = wrapper.getBoundingClientRect();
-                      const wrapperTop = rect.top + window.scrollY;
-                      const totalScroll = wrapper.offsetHeight - window.innerHeight;
-                      const target = wrapperTop + (totalScroll * i) / sections.length;
-                      window.scrollTo({ top: target, behavior: 'smooth' });
-                    }}
-                    aria-label={`Section ${i + 1}`}
+                    tabIndex={-1}
+                    className={`fp-bar${active === i ? ' active' : ''}`}
+                    onClick={() => goTo(i)}
                   />
                 ))}
               </div>
-              <div className="featured-subsections-text">
-                {sections.map((section, i) => (
-                  <div
-                    key={section.key}
-                    className={`featured-subsection-pane${active === i ? ' active' : ''}`}
-                    aria-hidden={active !== i}
-                  >
-                    <h3 className="featured-subsection-title">
-                      {t(`featured.${section.key}.title`)}
-                    </h3>
-                    <p className="featured-subsection-description">
-                      {t(`featured.${section.key}.description`)}
-                    </p>
+              <div className="fp-panes">
+                {sections.map((s, i) => (
+                  <div key={s.key} className={`fp-pane${active === i ? ' active' : ''}`}>
+                    <h3 className="fp-title">{t(`featured.${s.key}.title`)}</h3>
+                    <p className="fp-description">{t(`featured.${s.key}.description`)}</p>
                   </div>
                 ))}
               </div>
             </div>
+          </aside>
 
-            <div className="featured-subsections-visuals">
-              {sections.map((section, i) => (
-                <div
-                  key={section.key}
-                  className={`featured-subsection-visual-pane featured-subsection-visual-pane--${section.key}${active === i ? ' active' : ''}`}
-                  aria-hidden={active !== i}
-                >
-                  {section.key === 'accommodation' && (
-                    <div className="accommodation-nav">
-                      <button
-                        type="button"
-                        className="accommodation-nav-btn"
-                        onClick={() => scrollAccommodation(-1)}
-                        aria-label="Prethodni projekt"
-                      >
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </button>
-                      <button
-                        type="button"
-                        className="accommodation-nav-btn"
-                        onClick={() => scrollAccommodation(1)}
-                        aria-label="Sljedeći projekt"
-                      >
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </button>
-                    </div>
-                  )}
-                  <div
-                    className="featured-subsection-grid"
-                    data-count={section.projects.length}
-                    ref={section.key === 'accommodation' ? accommodationRef : null}
-                  >
-                    {section.projects.map((key) => (
+          <div className="fp-groups">
+            {sections.map((section, i) => (
+              <div
+                key={section.key}
+                ref={(el) => { groupRefs.current[i] = el; }}
+                data-index={i}
+                className="fp-group"
+              >
+                <header className="fp-group-head">
+                  <span className="fp-group-index">{pad(i + 1)}</span>
+                  <h3 className="fp-title">{t(`featured.${section.key}.title`)}</h3>
+                  <p className="fp-description">{t(`featured.${section.key}.description`)}</p>
+                </header>
+                <div className="pl-grid fp-grid">
+                  {section.projects.map((key) => (
+                    <div
+                      key={key}
+                      className={`project-wrapper${illustrationProjects.has(key) ? ' project-wrapper--illustration' : ''}`}
+                    >
                       <ProjectCard
-                        key={key}
                         projectKey={key}
                         projectImage={projectImages[key]}
                         projectVideo={projectVideos[key]}
                         clientLogo={clientLogos[key]}
                       />
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+            ))}
+
+            <div className="featured-cta">
+              <Link href="/projekti" className="featured-cta-link">
+                {t('featured.viewAll')} <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="featured-cta">
-          <Link href="/projekti" className="featured-cta-link">
-            {t('featured.viewAll')} <span aria-hidden="true">&rarr;</span>
-          </Link>
         </div>
       </div>
     </section>

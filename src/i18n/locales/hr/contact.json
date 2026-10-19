@@ -18,9 +18,8 @@
     "call": "Poziv"
   },
   "page": {
-    "eyebrow": "Kontakt",
-    "heading": "Popričajmo o vašem projektu",
-    "subheading": "Bilo da imate gotov brief ili tek ideju u nastajanju — javite nam se i zajedno ćemo pronaći najbolji put.",
+    "title": "Kontakt",
+    "lead": "Popričajmo o vašem projektu. Imate li gotov brief ili tek ideju, javite nam se i zajedno ćemo pronaći najbolji put.",
     "infoTitle": "Direktan kontakt",
     "locationLabel": "Lokacija",
     "location": "Zagreb, Hrvatska",

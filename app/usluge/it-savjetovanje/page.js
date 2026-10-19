@@ -1,4 +1,4 @@
-import ServiceDetailPage from '../../../src/views/services/ServiceDetailPage';
+import ServiceLandingPage from '../../../src/views/services/ServiceLandingPage';
 
 export const metadata = {
   title: 'IT savjetovanje — Digitalizacija i optimizacija poslovanja',
@@ -9,5 +9,5 @@ export const metadata = {
 };
 
 export default function ItSavjetovanjePage() {
-  return <ServiceDetailPage serviceKey="leadership" />;
+  return <ServiceLandingPage serviceKey="leadership" />;
 }

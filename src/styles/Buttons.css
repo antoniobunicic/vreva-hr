@@ -1,4 +1,7 @@
-/* Buttons */
+/* Buttons
+ * .btn-primary (lime)  — actions that lead to contact: Pričajmo, Kontaktirajte nas, Pošalji.
+ * .btn-ink (black)     — navigation: see all projects, visit site, services.
+ * .btn-secondary       — outline, quiet alternative. */
 .btn {
   padding: 0.9rem 2.2rem;
   border-radius: 100px;
@@ -13,16 +16,34 @@
 }
 
 .btn-primary {
-  background: var(--color-vreva-yellow);
-  color: black;
-  border-color: var(--color-vreva-yellow);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border-color: var(--color-accent);
 }
 
 .btn-primary:hover {
-  background: var(--color-vreva-yellow-dark);
-  border-color: var(--color-vreva-yellow-dark);
+  background: var(--color-accent-strong);
+  border-color: var(--color-accent-strong);
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(255, 204, 51, 0.3);
+}
+
+.btn-ink {
+  background: var(--color-text);
+  color: var(--color-background1);
+  border-color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-ink:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.btn-ink svg {
+  width: 20px;
+  height: 20px;
 }
 
 .btn-secondary {
@@ -76,7 +97,7 @@
 }
 
 .inline-link {
-  color: #7c3aed;
+  color: var(--color-accent-text);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;

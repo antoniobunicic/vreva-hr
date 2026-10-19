@@ -1,5 +1,6 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import ProjectCard from './ProjectCard';
 import flexportalImg from '../assets/projects/flexportal/flexportal.png';
@@ -34,35 +35,38 @@ const projectCategories = {
   smarthome: ['mobile', 'software'],
 };
 
+// Software and app projects show illustrations / transparent compositions
+// rather than website screenshots — they sit on the page without a frame.
+const illustrationProjects = new Set(['flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome']);
+
 const patrickBoyVideo = '/projects/patrick-boy-transferi/hero-patrick-boy.mp4';
 const vilaIstraVideo = '/projects/vila-istra/hero-vila-istra.mp4';
 
 function Projects() {
-  const { t } = useTranslation('projects');
+  const { t } = useTranslation(['projects', 'common']);
   const [activeCategory, setActiveCategory] = useState('featured');
   const filterRef = useRef(null);
   const indicatorRef = useRef(null);
 
-  const moveIndicator = (btn) => {
-    const container = filterRef.current;
-    const indicator = indicatorRef.current;
-    if (!container || !indicator || !btn) return;
-    indicator.style.width = `${btn.offsetWidth}px`;
-    indicator.style.transform = `translateX(${btn.offsetLeft}px)`;
-  };
-
-  useEffect(() => {
-    const container = filterRef.current;
-    if (!container) return;
-    const activeBtn = container.querySelector('.projects-filter-pill.active');
-    if (activeBtn) moveIndicator(activeBtn);
-  }, []);
+  // Slide the lime bar under the active tab; re-measure on resize.
+  useLayoutEffect(() => {
+    const place = () => {
+      const active = filterRef.current?.querySelector('.pl-filter-tab.active');
+      const bar = indicatorRef.current;
+      if (!active || !bar) return;
+      bar.style.width = `${active.offsetWidth}px`;
+      bar.style.transform = `translateX(${active.offsetLeft}px)`;
+    };
+    place();
+    document.fonts?.ready.then(place);
+    window.addEventListener('resize', place);
+    return () => window.removeEventListener('resize', place);
+  }, [activeCategory]);
 
   const projectKeys = ['chicoffee', 'vilaistra', 'patrickboy', 'apartmani', 'houselucy', 'otooles', 'flexportal', 'timetable', 'angler', 'bonfon', 'thesis', 'smarthome'];
 
-  const filteredProjects = activeCategory === 'all'
-    ? projectKeys
-    : projectKeys.filter(key => projectCategories[key]?.includes(activeCategory));
+  const inCategory = (category) => projectKeys.filter((key) => projectCategories[key]?.includes(category));
+  const filteredProjects = inCategory(activeCategory);
 
   const projectImages = {
     chicoffee: chicoffeeImg,
@@ -77,51 +81,59 @@ function Projects() {
     smarthome: smarthomeImg
   };
 
-  const scrollablePreview = {
-    apartmani: true,
-    houselucy: true,
-    otooles: true,
-  };
-
   const clientLogos = {
     flexportal: sympowerLogo,
     timetable: atronLogo,
   };
 
   return (
-    <section id="projects" className="projects">
-      <div className="container">
-        <h2 className="section-title">{t('section.title')}</h2>
-        <div className="projects-filter" ref={filterRef}>
-          <div className="projects-filter-indicator" ref={indicatorRef} />
+    <article id="projects" className="sl sl--projects">
+      <header className="sl-hero container">
+        <nav aria-label="breadcrumb" className="breadcrumb">
+          <ol>
+            <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
+            <li aria-current="page">{t('section.title')}</li>
+          </ol>
+        </nav>
+        <h1 className="sl-title">{t('section.title')}</h1>
+        <p className="sl-lead">{t('section.lead')}</p>
+      </header>
+
+      <section className="container pl-section">
+        <div className="pl-filter" role="tablist" aria-label={t('section.title')} ref={filterRef}>
+          <span className="pl-filter-indicator" ref={indicatorRef} aria-hidden="true" />
           {categories.map((category) => (
             <button
               key={category}
-              className={`projects-filter-pill ${activeCategory === category ? 'active' : ''}`}
-              onClick={(e) => { moveIndicator(e.currentTarget); setActiveCategory(category); }}
+              type="button"
+              role="tab"
+              aria-selected={activeCategory === category}
+              className={`pl-filter-tab${activeCategory === category ? ' active' : ''}`}
+              onClick={() => setActiveCategory(category)}
             >
               {t(`categories.${category}`)}
+              <span className="pl-filter-count">{inCategory(category).length}</span>
             </button>
           ))}
         </div>
-        <div className="projects-grid">
+
+        <div className="pl-grid">
           {projectKeys.map((key) => (
             <div
               key={key}
-              className={`project-wrapper${filteredProjects.includes(key) ? '' : ' hidden'}`}
+              className={`project-wrapper${illustrationProjects.has(key) ? ' project-wrapper--illustration' : ''}${filteredProjects.includes(key) ? '' : ' hidden'}`}
             >
               <ProjectCard
                 projectKey={key}
                 projectImage={projectImages[key]}
                 projectVideo={key === 'patrickboy' ? patrickBoyVideo : key === 'vilaistra' ? vilaIstraVideo : undefined}
                 clientLogo={clientLogos[key]}
-                scrollablePreview={scrollablePreview[key]}
               />
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </article>
   );
 }
 

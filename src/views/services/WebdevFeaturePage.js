@@ -78,7 +78,7 @@ function WebdevFeaturePage({ featureSlug }) {
                     {pkg.features.map((f, j) => <li key={j}>{f}</li>)}
                   </ul>
                   <button
-                    className="btn btn-primary pricing-card-cta"
+                    className="btn btn-ink pricing-card-cta"
                     onClick={() => setModalPackage(pkg.name)}
                   >
                     {t('detail.webdev.pricing.requestQuote')}

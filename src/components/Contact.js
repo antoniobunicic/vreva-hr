@@ -12,6 +12,9 @@ function Contact() {
         <header className="contact-head">
           <h2 className="contact-title">{t('title')}</h2>
           <p className="contact-intro">{t('intro')}</p>
+          <a href="mailto:info@vreva.hr" className="contact-bigmail">
+            info@vreva.hr<span aria-hidden="true">↗</span>
+          </a>
         </header>
 
         <ContactBody source="homepage" />

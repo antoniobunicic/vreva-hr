@@ -5,8 +5,11 @@
 }
 
 .contact-head {
-  max-width: 780px;
   margin: 0 0 4rem;
+}
+
+.contact-head .contact-title {
+  max-width: 14ch;
 }
 
 .contact-title {
@@ -14,8 +17,8 @@
   font-size: 4.5rem;
   font-weight: var(--font-heading-weight);
   margin-bottom: 2rem;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+  letter-spacing: var(--font-heading-tracking);
+  line-height: 0.98;
   font-synthesis: none;
 }
 
@@ -23,7 +26,38 @@
   font-size: 1.5rem;
   color: var(--color-text-muted);
   margin-bottom: 0;
-  line-height: 1.7;
+  line-height: 1.6;
+  max-width: 42ch;
+}
+
+.contact-bigmail {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.15em;
+  margin-top: 3rem;
+  font-size: clamp(2.75rem, 8.5vw, 9rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  color: var(--color-text);
+  text-decoration: none;
+  /* lime underline that thickens into a highlighter on hover */
+  background: linear-gradient(var(--color-accent), var(--color-accent)) 0 100% / 100% 0.12em no-repeat;
+  transition: background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-bigmail span {
+  font-size: 0.5em;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-bigmail:hover {
+  background-size: 100% 100%;
+  color: var(--color-on-accent);
+}
+
+.contact-bigmail:hover span {
+  transform: translate(0.1em, -0.1em);
 }
 
 @media (max-width: 768px) {
@@ -70,7 +104,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-vreva-yellow);
+  background: var(--color-accent);
   transition: var(--transition);
 }
 
@@ -79,7 +113,7 @@
 }
 
 .contact-item a:hover {
-  color: var(--color-vreva-yellow);
+  color: var(--color-accent-text);
 }
 
 .contact-item span {
@@ -223,7 +257,7 @@
 .modal-dialog {
   background: var(--color-background1);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2.5rem;
   max-width: 540px;
   width: 100%;

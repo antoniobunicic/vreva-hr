@@ -8,11 +8,11 @@ import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 import logo from '../assets/logo.svg';
 import logoDark from '../assets/logo-dark.svg';
-import dotsLogo from '../assets/dots-logo.svg';
 
 const dropdownServices = [
   { key: 'webdev', href: '/usluge/izrada-web-stranica' },
   { key: 'fullstack', href: '/usluge/razvoj-softvera' },
+  { key: 'ai', href: '/usluge/ai-integracija' },
   { key: 'leadership', href: '/usluge/it-savjetovanje' },
 ];
 
@@ -187,6 +187,7 @@ function Layout({ children }) {
     { id: 'about', label: t('nav.about', { ns: 'common' }), href: '/o-nama' },
     { id: 'services', label: t('nav.services', { ns: 'common' }), hasDropdown: true, href: '/usluge' },
     { id: 'projects', label: t('nav.projects', { ns: 'common' }), href: '/projekti' },
+    { id: 'news', label: t('nav.news', { ns: 'common' }), href: '/aktualno' },
     { id: 'contact', label: t('nav.contact', { ns: 'common' }), href: '/kontakt' },
   ];
 
@@ -196,6 +197,11 @@ function Layout({ children }) {
         className={`nav${navPinned ? ' nav--pinned' : ''}${navHidden && !isMobileMenuOpen ? ' nav--hidden' : ''}`}
         ref={navRef}
       >
+        {/* Progressive blur under the pinned bar: stacked layers whose blur
+            steps down 16 → 0.5px, each confined to its own band. */}
+        <div className="nav-fade" aria-hidden="true">
+          <span /><span /><span /><span /><span /><span />
+        </div>
         <div className="nav-container">
           <Link href="/" className="nav-logo">
             <Image src={logo} alt="Vreva" priority className="nav-logo-default" />
@@ -208,7 +214,7 @@ function Layout({ children }) {
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama')) || (item.id === 'projects' && pathname.startsWith('/projekti')) || (item.id === 'contact' && pathname.startsWith('/kontakt'))) ? 'active' : ''}
+                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama')) || (item.id === 'projects' && pathname.startsWith('/projekti')) || (item.id === 'news' && pathname.startsWith('/aktualno')) || (item.id === 'contact' && pathname.startsWith('/kontakt'))) ? 'active' : ''}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -265,9 +271,6 @@ function Layout({ children }) {
         <div className="footer-container">
           <div className="footer-main">
             <div className="footer-brand">
-              <Link href="/" className="footer-logo">
-                <Image src={dotsLogo} alt="Vreva" />
-              </Link>
               <p className="footer-tagline">{t('footer.tagline', { ns: 'common' })}</p>
             </div>
 
@@ -319,6 +322,11 @@ function Layout({ children }) {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="footer-wordmark" aria-hidden="true">
+            <Image src={logo} alt="" className="footer-wordmark-default" />
+            <Image src={logoDark} alt="" className="footer-wordmark-onlight" />
           </div>
 
           <div className="footer-bottom">

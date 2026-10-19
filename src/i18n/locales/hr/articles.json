@@ -1,0 +1,147 @@
+{
+  "list": {
+    "title": "Aktualno",
+    "subtitle": "Što se mijenja u svijetu weba, softvera i umjetne inteligencije — i što to znači za vaše poslovanje.",
+    "readMore": "Pročitaj članak",
+    "empty": "Uskoro objavljujemo prve članke."
+  },
+  "meta": {
+    "published": "Objavljeno",
+    "readTime": "{{count}} min čitanja",
+    "backToList": "Svi članci",
+    "share": "Podijeli"
+  },
+  "categories": {
+    "iznajmljivanje": "Iznajmljivanje",
+    "web": "Web",
+    "poslovanje": "Poslovanje"
+  },
+  "articles": {
+    "airbnbProvizija": {
+      "title": "Airbnb diže proviziju iznajmljivačima na 15,5 %: što se mijenja",
+      "excerpt": "Gost više ne plaća naknadu, a domaćin umjesto 3 % plaća 15,5 %. Bez promjene cijene, na noćenju od 100 eura ostajete bez 12,50 eura. Evo kako preračunati cijene.",
+      "readTime": 3,
+      "cover": "15,5 %",
+      "lead": "Airbnb više ne dijeli naknadu između domaćina i gosta. Do sada ste vi plaćali oko 3 %, a gost još 12 do 16 % na blagajni. Po novom cijelih 15,5 % plaća domaćin, a gost vidi jednu konačnu cijenu. U Hrvatskoj je novi model obavezan od 13. listopada 2026.",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "Što se mijenja"
+        },
+        {
+          "type": "p",
+          "text": "Naknada od 15,5 % obračunava se na cijenu noćenja i na vaše dodatne naknade, poput čišćenja, ali ne i na poreze. Gost u pretraživanju vidi cijenu koju će stvarno platiti, kao što je već navikao na Bookingu."
+        },
+        {
+          "type": "p",
+          "text": "Airbnb time dobiva jednostavniju i konkurentniju cijenu u pretraživanju. Trošak te jednostavnosti preuzima domaćin."
+        },
+        {
+          "type": "h2",
+          "text": "Koliko to košta"
+        },
+        {
+          "type": "p",
+          "text": "Ako cijenu ne dirate, na noćenju od 100 eura umjesto 97 eura dobivate 84,50 eura. To je oko 13 % manje po rezervaciji."
+        },
+        {
+          "type": "table",
+          "head": [
+            "",
+            "Prije",
+            "Sada, ista cijena",
+            "Sada, nova cijena"
+          ],
+          "rows": [
+            [
+              "Cijena noćenja",
+              "100,00 €",
+              "100,00 €",
+              "114,79 €"
+            ],
+            [
+              "Gost plaća ukupno",
+              "≈ 115,00 €",
+              "100,00 €",
+              "114,79 €"
+            ],
+            [
+              "Airbnb naknada domaćinu",
+              "3,00 €",
+              "15,50 €",
+              "17,79 €"
+            ],
+            [
+              "Vama ostaje",
+              "97,00 €",
+              "84,50 €",
+              "97,00 €"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Kako preračunati cijenu",
+          "text": "Da vam ostane isto kao prije, staru cijenu pomnožite s 1,148, odnosno podignite je za oko 15 %. Za noćenje od 100 eura nova cijena je 114,79 eura. Isto vrijedi i za naknadu za čišćenje."
+        },
+        {
+          "type": "p",
+          "text": "Gost pritom plaća gotovo isto kao i prije, oko 115 eura. Ukupna cijena se ne mijenja, samo je sada cijeli iznos u vašoj cijeni. Zato veća cijena ne bi trebala smanjiti broj upita, pogotovo ako je podigne i konkurencija."
+        },
+        {
+          "type": "h2",
+          "text": "Što napraviti"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Preračunajte cijene noćenja i čišćenja, umjesto da se oslonite samo na Airbnbov automatski prijedlog.",
+            "Uskladite cijene na Bookingu i vlastitoj stranici, inače Airbnb oglas odjednom izgleda skuplji.",
+            "Ako radite s agencijom ili upraviteljem, provjerite na koji iznos računaju svoju proviziju."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Direktne rezervacije vrijede više nego ikad"
+        },
+        {
+          "type": "p",
+          "text": "Svaka rezervacija preko vlastite stranice sada vam na noćenju od 100 eura donosi 15,50 eura više. Uz 120 noćenja godišnje to je oko 1.860 eura, što je otprilike cijena izrade dobre web stranice."
+        },
+        {
+          "type": "p",
+          "text": "Vlastita stranica ne mora zamijeniti Airbnb. Najbolje radi uz njega: gost vas nađe na platformi, a sljedeći put rezervira izravno, bez provizije i po vašim uvjetima."
+        }
+      ],
+      "cta": {
+        "title": "Želite primati rezervacije bez provizije?",
+        "description": "Izrađujemo web stranice za apartmane, vile i pansione — s galerijom, kalendarom dostupnosti i formom za upit ili direktnu rezervaciju. Javite nam se i procijenit ćemo koliko biste uštedjeli na vašem broju noćenja.",
+        "points": [
+          "0 % provizije na svaku direktnu rezervaciju",
+          "Prilagođeno mobitelu, brzo i optimizirano za Google",
+          "Višejezično — hrvatski, engleski, njemački, talijanski",
+          "Gotovo u roku od nekoliko tjedana"
+        ],
+        "secondary": "Pogledajte što nudimo za apartmane i iznajmljivače →"
+      },
+      "disclaimer": "Podaci u članku odgovaraju stanju na dan objave. Točne uvjete i datum prelaska za svoj oglas provjerite u Airbnb postavkama i u službenoj Airbnb dokumentaciji.",
+      "sources": {
+        "title": "Izvori",
+        "items": [
+          {
+            "label": "Airbnb — Naknade za uslugu (službena dokumentacija)",
+            "url": "https://www.airbnb.com/help/article/1857"
+          },
+          {
+            "label": "Lider — Airbnb mijenja pravila igre: proviziju od 15,5 posto plaćaju iznajmljivači",
+            "url": "https://lidermedia.hr/tvrtke-i-trzista/airbnb-mijenja-pravila-igre-proviziju-od-15-5-posto-placaju-iznajmljivaci/"
+          },
+          {
+            "label": "Smoobu — Airbnb Host-Only Fee: 2026 Update",
+            "url": "https://www.smoobu.com/en/blog/airbnb-host-only-fee-increase/"
+          }
+        ]
+      }
+    }
+  }
+}

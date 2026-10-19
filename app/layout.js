@@ -1,13 +1,13 @@
 import Script from 'next/script';
-import { Unbounded } from 'next/font/google';
+import { Geist_Mono } from 'next/font/google';
 import I18nProvider from '../src/components/I18nProvider';
 import Layout from '../src/components/Layout';
 import '../src/styles/index.css';
 
-const unbounded = Unbounded({
+const geistMono = Geist_Mono({
   subsets: ['latin', 'latin-ext'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-unbounded',
+  weight: ['400', '500'],
+  variable: '--font-geist-mono',
   display: 'swap',
 });
 
@@ -39,10 +39,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="hr" className={unbounded.variable} suppressHydrationWarning>
+    <html lang="hr" className={geistMono.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();` }} />
-        <link rel="stylesheet" href="https://use.typekit.net/fzp1ypr.css" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

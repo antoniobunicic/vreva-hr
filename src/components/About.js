@@ -3,86 +3,90 @@ import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
+// Uses the same building blocks as the service pages (sl-*) so the whole site
+// reads as one system. Copy lives in about.json.
 function About() {
-  const { t } = useTranslation(['about', 'approach', 'common']);
+  const { t } = useTranslation(['about', 'common']);
+  const get = (key) => t(key, { ns: 'about', returnObjects: true });
+  const pad = (i) => String(i + 1).padStart(2, '0');
 
-  const principleKeys = ['collaborative', 'detailOriented', 'pragmatic'];
-  const processKeys = ['discovery', 'planning', 'development', 'delivery'];
+  const title = t('section.title', { ns: 'about' });
+  const statement = get('statement');
+  const facts = get('facts');
+  const principles = get('principles');
+  const process = get('process');
+  const cta = get('cta');
 
   return (
-    <section id="about" className="service-page service-page--about">
-      <div className="service-page-cover">
-        <div className="container">
-          <div className="service-page-header">
-            <h1 className="service-page-title">{t('section.title', { ns: 'about' })}</h1>
-          </div>
-        </div>
-      </div>
-
-      <div className="container">
+    <article id="about" className="sl sl--about">
+      <header className="sl-hero container">
         <nav aria-label="breadcrumb" className="breadcrumb">
           <ol>
             <li><Link href="/">{t('nav.home', { ns: 'common' })}</Link></li>
-            <li aria-current="page">{t('section.title', { ns: 'about' })}</li>
+            <li aria-current="page">{title}</li>
           </ol>
         </nav>
+        <h1 className="sl-title">{title}</h1>
+        <p className="sl-lead">{t('lead', { ns: 'about' })}</p>
+      </header>
 
-        <div className="about-content">
-          <div className="about-text">
-            <p className="about-lead">
-              {t('content.lead', { ns: 'about' })}
-            </p>
-            <p>
-              {t('content.paragraph1', { ns: 'about' })}
-            </p>
-          </div>
-          <div className="about-stats">
-            <div className="stat-item">
-              <div className="stat-number">{t('stats.experience.number', { ns: 'about' })}</div>
-              <div className="stat-label">{t('stats.experience.label', { ns: 'about' })}</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">{t('stats.location.number', { ns: 'about' })}</div>
-              <div className="stat-label">{t('stats.location.label', { ns: 'about' })}</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">{t('stats.reach.number', { ns: 'about' })}</div>
-              <div className="stat-label">{t('stats.reach.label', { ns: 'about' })}</div>
-            </div>
-          </div>
+      <section className="sl-section container" aria-labelledby="about-who">
+        <h2 id="about-who" className="sl-section-title">{statement.title}</h2>
+        <div>
+          <p className="sl-statement">{statement.text}</p>
+          <p className="sl-statement-more">{statement.more}</p>
+          <ul className="about-facts">
+            {facts.map((fact) => (
+              <li key={fact.value}>
+                <span className="about-fact-value">{fact.value}</span>
+                <span className="about-fact-label">{fact.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
+      </section>
 
-        <h3 className="subsection-title">{t('process.title', { ns: 'approach' })}</h3>
-        <div className="process-timeline">
-          {processKeys.map((key, index) => (
-            <div key={key} className="process-step">
-              <div className="process-number">{index + 1}</div>
-              <div className="process-content">
-                <h4 className="process-phase">{t(`process.steps.${key}.phase`, { ns: 'approach' })}</h4>
-                <p className="process-description">{t(`process.steps.${key}.description`, { ns: 'approach' })}</p>
-              </div>
-            </div>
+      <section className="sl-section container" aria-labelledby="about-principles">
+        <h2 id="about-principles" className="sl-section-title">{principles.title}</h2>
+        <ol className="about-principles">
+          {principles.items.map((item, i) => (
+            <li key={item.title}>
+              <span className="sl-index">{pad(i)}</span>
+              <h3 className="about-principle-title">{item.title}</h3>
+              <p className="about-principle-text">{item.text}</p>
+            </li>
           ))}
-        </div>
+        </ol>
+      </section>
 
-        <h3 className="subsection-title">{t('principles.title', { ns: 'approach' })}</h3>
-        <div className="about-stats about-stats--principles">
-          {principleKeys.map((key) => (
-            <div key={key} className="stat-item">
-              <div className="stat-number">{t(`principles.items.${key}.title`, { ns: 'approach' })}</div>
-              <div className="stat-label">{t(`principles.items.${key}.description`, { ns: 'approach' })}</div>
-            </div>
-          ))}
+      <section className="sl-process" aria-labelledby="about-process">
+        <div className="container">
+          <h2 id="about-process" className="sl-section-title">{process.title}</h2>
+          <ol className="sl-steps">
+            {process.steps.map((step, i) => (
+              <li key={step.title} className="sl-step">
+                <span className="sl-step-number">{pad(i)}</span>
+                <h3 className="sl-step-title">{step.title}</h3>
+                <p className="sl-step-text">{step.text}</p>
+              </li>
+            ))}
+          </ol>
         </div>
+      </section>
 
-        <div className="about-cta">
-          <Link href="/usluge" className="btn btn-primary">
-            {t('cta.services', { ns: 'about' })}
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clipRule="evenodd" /></svg>
-          </Link>
+      <section className="sl-cta container">
+        <div className="sl-cta-inner">
+          <div className="sl-cta-text">
+            <h2 className="sl-cta-title">{cta.title}</h2>
+            <p className="sl-cta-description">{cta.description}</p>
+          </div>
+          <div className="sl-cta-actions">
+            <Link href="/usluge" className="btn btn-secondary">{cta.services}</Link>
+            <Link href="/#contact" className="btn btn-primary">{cta.button}</Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </article>
   );
 }
 

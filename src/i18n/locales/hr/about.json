@@ -2,26 +2,68 @@
   "section": {
     "title": "O nama"
   },
-  "subtitle": "digitalno po mjeri",
-  "content": {
-    "lead": "Vreva je digitalna agencija specijalizirana za izradu modernih web stranica, web aplikacija i digitalnih rješenja za tvrtke.",
-    "paragraph1": "Za razliku od većine agencija, ne koristimo WordPress ni gotove predloške – svaku web stranicu razvijamo kao softver, od temelja. To nam omogućuje potpunu slobodu u dizajnu, strukturi, animacijama i funkcionalnostima, bez tehničkih ograničenja. Klijentima pomažemo razviti web koji je vizualno unikatan, brz, optimiziran za Google (SEO) i prilagođen svim uređajima. Iza Vreve stoji dugogodišnje internacionalno iskustvo u razvoju softvera i izvrsne recenzije zadovoljnih klijenata."
+  "lead": "Mali tim iz Zagreba koji web stranice, softver i AI rješenja razvija od temelja — bez predložaka i bez kompromisa.",
+  "statement": {
+    "title": "Tko smo",
+    "text": "Vreva je digitalna agencija za moderne web stranice, aplikacije i AI rješenja. Iza nas je više od deset godina međunarodnog iskustva u razvoju softvera.",
+    "more": "Ne koristimo WordPress ni gotove predloške. Svaku stranicu razvijamo kao softver, pa je unikatna, brza, optimizirana za Google i prilagođena svim uređajima."
+  },
+  "facts": [
+    {
+      "value": "10+",
+      "label": "godina iskustva u razvoju softvera"
+    },
+    {
+      "value": "100%",
+      "label": "izrada po mjeri, bez predložaka"
+    },
+    {
+      "value": "Zagreb",
+      "label": "sjedište, s klijentima diljem svijeta"
+    }
+  ],
+  "principles": {
+    "title": "Kako razmišljamo",
+    "items": [
+      {
+        "title": "Suradnja",
+        "text": "Radimo s vašim timom, ne izolirano. Redovita komunikacija znači da gradimo ono što je važno."
+      },
+      {
+        "title": "Detalji",
+        "text": "Kvaliteta je u detaljima — od dizajna i koda do dokumentacije."
+      },
+      {
+        "title": "Pragmatičnost",
+        "text": "Biramo tehnologije koje rješavaju stvarne probleme. Bez nepotrebnog i bez hypea."
+      }
+    ]
+  },
+  "process": {
+    "title": "Proces",
+    "steps": [
+      {
+        "title": "Analiza",
+        "text": "Vaši ciljevi, ograničenja i postojeći sustavi."
+      },
+      {
+        "title": "Planiranje",
+        "text": "Arhitektura, ključne točke i kriteriji uspjeha."
+      },
+      {
+        "title": "Razvoj",
+        "text": "Iterativno, uz redovite preglede i demo verzije."
+      },
+      {
+        "title": "Isporuka",
+        "text": "Puštanje u rad, dokumentacija i prijenos znanja."
+      }
+    ]
   },
   "cta": {
-    "services": "Pogledajte naše usluge"
-  },
-  "stats": {
-    "experience": {
-      "number": "Expert",
-      "label": "10+ godina iskustva"
-    },
-    "location": {
-      "number": "Custom",
-      "label": "Razvoj po mjeri"
-    },
-    "reach": {
-      "number": "Global",
-      "label": "Međunarodni klijenti"
-    }
+    "title": "Radimo nešto zajedno?",
+    "description": "Javite nam se s idejom ili problemom — odgovaramo u roku od 24 sata.",
+    "button": "Kontaktirajte nas",
+    "services": "Pogledajte usluge"
   }
 }

@@ -1,0 +1,721 @@
+/* ─── Service landing pages (software, AI, consulting) ───────────
+ * Few words per block, big type, lots of air. Every block sits on the
+ * shared page grid (.container → --page-inset).
+ */
+
+/* Hero */
+.sl-hero {
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+
+.sl-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 6.5rem;
+  line-height: 0.95;
+  letter-spacing: var(--font-heading-tracking);
+  color: var(--color-text);
+  max-width: 12ch;
+}
+
+.sl-lead {
+  margin-top: 2.25rem;
+  max-width: 32ch;
+  font-size: 1.75rem;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--color-text);
+}
+
+.sl-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.75rem;
+}
+
+/* Two-column section: title left (sticky), content right */
+.sl-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+
+.sl-section-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 2.25rem;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--color-text);
+}
+
+.sl-section > .sl-section-title {
+  position: sticky;
+  top: 8rem;
+  align-self: start;
+}
+
+/* What we offer — 2×2 grid of short items on hairlines */
+.sl-offer {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4rem 3rem;
+}
+
+.sl-offer-item {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.sl-index {
+  display: block;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.sl-offer-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.sl-offer-text {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  max-width: 36ch;
+}
+
+/* Linked offer items (web development → feature subpages) */
+.sl-offer-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sl-offer-arrow {
+  display: inline-block;
+  margin-left: 0.4em;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+.sl-offer-link:hover .sl-offer-arrow {
+  transform: translateX(6px);
+  color: var(--color-text);
+}
+
+.sl-offer-item:has(.sl-offer-link) {
+  transition: border-color 0.3s ease;
+}
+
+.sl-offer-item:has(.sl-offer-link:hover) {
+  border-top-color: var(--color-text);
+}
+
+/* Why us — one large statement */
+.sl-statement {
+  max-width: 34ch;
+  font-size: 1.85rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+/* Inline text link with lime underline */
+.sl-text-link {
+  display: inline-flex;
+  gap: 0.4em;
+  margin-top: 2rem;
+  padding-bottom: 0.15em;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  background: linear-gradient(var(--color-accent), var(--color-accent)) 0 100% / 100% 3px no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.sl-text-link:hover {
+  background-size: 100% 100%;
+  color: var(--color-on-accent);
+}
+
+/* Pricing teaser — one big number */
+.sl-price {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-text);
+}
+
+.sl-price-note {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text-muted);
+}
+
+.sl-pricing-text {
+  margin-top: 1.5rem;
+  max-width: 44ch;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+/* Industries — two-column index of links on hairlines */
+.sl-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.sl-links li {
+  display: flex;
+}
+
+.sl-links a {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.05rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sl-links a span:last-child {
+  color: var(--color-text-muted);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+.sl-links a:hover {
+  padding-left: 0.5rem;
+}
+
+.sl-links a:hover span:last-child {
+  color: var(--color-text);
+  transform: translateX(4px);
+}
+
+/* How we work — full-bleed band with four numbered steps */
+.sl-process {
+  background: var(--color-background2);
+  padding: 7rem 0;
+  margin-bottom: 8rem;
+}
+
+.sl-process .sl-section-title {
+  margin-bottom: 4.5rem;
+}
+
+.sl-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.sl-step {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-text);
+}
+
+.sl-step-number {
+  display: block;
+  margin-bottom: 3.5rem;
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sl-step-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.sl-step-text {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  max-width: 28ch;
+}
+
+.sl-note {
+  display: inline-block;
+  margin-top: 4.5rem;
+  padding: 0.3em 0.6em;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 500;
+}
+
+/* Tools — quiet mono chips */
+.sl-stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-content: flex-start;
+}
+
+.sl-stack li {
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+
+/* Closing CTA */
+.sl-cta {
+  padding-bottom: 8rem;
+}
+
+.sl-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-text);
+}
+
+.sl-cta-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: var(--font-heading-tracking);
+  color: var(--color-text);
+  max-width: 16ch;
+}
+
+.sl-cta-description {
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  max-width: 44ch;
+}
+
+.sl-cta-button {
+  flex-shrink: 0;
+}
+
+/* Secondary paragraph under a statement */
+.sl-statement-more {
+  margin-top: 1.75rem;
+  max-width: 52ch;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* CTA with two buttons */
+.sl-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* ─── About: key facts ─────────────────────────────────────── */
+.about-facts {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.about-facts li {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-text);
+}
+
+.about-fact-value {
+  display: block;
+  font-size: 3.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-text);
+}
+
+.about-fact-label {
+  display: block;
+  margin-top: 0.75rem;
+  max-width: 22ch;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* ─── About: principles as stacked rows (index · title · text) ─
+ * Deliberately a different rhythm from the 3-up facts grid above. */
+.about-principles {
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-principles li {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 2rem;
+  align-items: baseline;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-principles .sl-index {
+  margin-bottom: 0;
+}
+
+.about-principle-title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: var(--color-text);
+}
+
+.about-principle-text {
+  max-width: 44ch;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+/* ─── Services overview (/usluge) ─────────────────────────── */
+.so-section {
+  padding-bottom: 8rem;
+}
+
+.so-list {
+  list-style: none;
+  border-top: 1px solid var(--color-text);
+}
+
+.so-row {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1.3fr) minmax(0, 1fr) 2.5rem;
+  gap: 3rem;
+  align-items: start;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+  position: relative;
+  isolation: isolate;
+  transition: padding 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* lime fill sweeping up on hover, same as the homepage list */
+.so-row::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.so-row:hover {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.so-row:hover::before {
+  transform: scaleY(1);
+}
+
+.so-row:hover .so-index,
+.so-row:hover .so-desc,
+.so-row:hover .so-caps li,
+.so-row:hover .so-arrow {
+  color: var(--color-on-accent);
+}
+
+.so-row:hover .so-title {
+  color: var(--color-on-accent);
+}
+
+.so-row:hover .so-caps li {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.so-index {
+  padding-top: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.so-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+}
+
+.so-desc {
+  margin-top: 1rem;
+  max-width: 40ch;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.so-caps {
+  list-style: none;
+  padding-top: 0.6rem;
+}
+
+.so-caps li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.so-caps li:last-child {
+  border-bottom: 0;
+}
+
+.so-arrow {
+  justify-self: end;
+  padding-top: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.so-row:hover .so-arrow {
+  transform: translateX(8px);
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .sl-title {
+    font-size: 4.75rem;
+  }
+
+  .sl-section {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .sl-section > .sl-section-title {
+    position: static;
+  }
+
+  .sl-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2rem;
+  }
+
+  .sl-cta-title {
+    font-size: 3rem;
+  }
+
+  .so-row {
+    grid-template-columns: 3rem minmax(0, 1fr) 2rem;
+    grid-template-areas:
+      "index head arrow"
+      ".     caps .";
+    gap: 1.5rem 2rem;
+  }
+
+  .so-index { grid-area: index; }
+  .so-head  { grid-area: head; }
+  .so-caps  { grid-area: caps; }
+  .so-arrow { grid-area: arrow; }
+}
+
+@media (max-width: 768px) {
+  .sl-hero {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+  }
+
+  .sl-title {
+    font-size: 3.25rem;
+  }
+
+  .sl-lead {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .sl-hero-actions .btn-secondary {
+    display: none;
+  }
+
+  .sl-section {
+    padding-bottom: 5rem;
+  }
+
+  .sl-section-title {
+    font-size: 1.85rem;
+  }
+
+  .sl-offer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .sl-statement {
+    font-size: 1.4rem;
+  }
+
+  .sl-price {
+    font-size: 3.5rem;
+  }
+
+  .sl-links {
+    grid-template-columns: 1fr;
+  }
+
+  .sl-index {
+    margin-bottom: 1.25rem;
+  }
+
+  .sl-process {
+    padding: 5rem 0;
+    margin-bottom: 5rem;
+  }
+
+  .sl-process .sl-section-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .sl-steps {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .sl-step-number {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sl-note {
+    margin-top: 3rem;
+  }
+
+  .sl-cta {
+    padding-bottom: 5rem;
+  }
+
+  .so-section {
+    padding-bottom: 5rem;
+  }
+
+  .about-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .about-principles li {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1.75rem 0;
+  }
+
+  .about-principles .sl-index {
+    margin-bottom: 0.5rem;
+  }
+
+  .about-principle-title {
+    font-size: 1.6rem;
+  }
+
+  .about-facts {
+    gap: 1.75rem;
+    margin-top: 3rem;
+  }
+
+  .about-fact-value {
+    font-size: 2.5rem;
+  }
+
+  .sl-statement-more {
+    font-size: 1rem;
+  }
+
+  .so-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "index arrow"
+      "head  head"
+      "caps  caps";
+    gap: 1rem;
+    padding: 2.25rem 0;
+  }
+
+  .so-row:hover {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .so-row::before {
+    display: none;
+  }
+
+  .so-row:hover .so-index,
+  .so-row:hover .so-title,
+  .so-row:hover .so-desc,
+  .so-row:hover .so-caps li,
+  .so-row:hover .so-arrow {
+    color: inherit;
+  }
+
+  .so-index,
+  .so-arrow {
+    padding-top: 0;
+  }
+
+  .sl-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .sl-cta-title {
+    font-size: 2.4rem;
+  }
+}

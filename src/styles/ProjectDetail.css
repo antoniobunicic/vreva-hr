@@ -17,7 +17,7 @@
 .project-card-link:focus-visible {
   outline: 2px solid var(--color-accent, #a97cf0);
   outline-offset: 4px;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 /* ─── Header ──────────────────────────────────────────────── */
@@ -126,7 +126,7 @@
   display: flex;
   flex-direction: column;
   aspect-ratio: 1.618 / 1;
-  border-radius: 12px;
+  border-radius: 6px;
   overflow: hidden;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -183,14 +183,14 @@
   margin: 0 auto;
   aspect-ratio: 9 / 19;
   background: #0a0a0a;
-  border-radius: 34px;
+  border-radius: 8px;
   padding: 8px;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.32);
 }
 .project-showcase--phone .project-showcase-screen {
   width: 100%;
   height: 100%;
-  border-radius: 26px;
+  border-radius: 8px;
   overflow: hidden;
   background: #fff;
   position: relative;
@@ -204,7 +204,7 @@
 
 /* Screen — landscape app screenshots & illustrations */
 .project-showcase--screen {
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   padding: 1.75rem;
   background: var(--color-surface, rgba(255, 255, 255, 0.04));
@@ -266,7 +266,7 @@
 /* ─── Tech card ───────────────────────────────────────────── */
 .project-detail-tech {
   padding: 1.5rem;
-  border-radius: 16px;
+  border-radius: 8px;
   background: var(--color-surface, rgba(255, 255, 255, 0.03));
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -308,7 +308,7 @@
 .project-detail-cta {
   margin-top: 4rem;
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 8px;
   text-align: center;
   background:
     radial-gradient(120% 140% at 50% 0%, rgba(106, 44, 205, 0.18), transparent 60%),

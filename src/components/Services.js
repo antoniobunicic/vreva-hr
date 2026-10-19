@@ -7,10 +7,9 @@ import { useTranslation } from 'react-i18next';
 const services = [
   { key: 'webdev',     href: '/usluge/izrada-web-stranica', cta: 'learnMore',  internal: true },
   { key: 'fullstack',  href: '/usluge/razvoj-softvera',     cta: 'learnMore',  internal: true },
+  { key: 'ai',         href: '/usluge/ai-integracija',      cta: 'learnMore',  internal: true },
   { key: 'leadership', href: '/usluge/it-savjetovanje',     cta: 'learnMore',  internal: true },
-  { key: 'branding',   href: '#contact',                    cta: 'contactCta', internal: false },
   { key: 'marketing',  href: '#contact',                    cta: 'contactCta', internal: false },
-  { key: 'ads',        href: '#contact',                    cta: 'contactCta', internal: false },
 ];
 
 function Services() {

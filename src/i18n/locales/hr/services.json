@@ -7,10 +7,9 @@
       "title": "Izrada web stranica",
       "description": "Profesionalne web stranice brzo i pristupačno.",
       "capabilities": [
-        "Moderna, responzivna sučelja",
-        "Brza izrada i lansiranje",
+        "Web po mjeri",
+        "Responzivan dizajn",
         "SEO optimizacija",
-        "Pristupačne cijene bez skrivenih troškova",
         "Održavanje i podrška"
       ]
     },
@@ -18,87 +17,135 @@
       "title": "Razvoj softvera",
       "description": "Full-stack razvoj s modernim tehnologijama.",
       "capabilities": [
-        "Backend: Java, Kotlin, Spring Boot, Kafka, REST API",
-        "Frontend: React, TypeScript, responzivna sučelja",
-        "Dizajn i optimizacija baza podataka",
-        "Dizajn API-ja & integracija",
-        "Testiranje & osiguranje kvalitete",
-        "Produkcijsko postavljanje & podrška"
+        "Poslovne aplikacije",
+        "Automatizacija procesa",
+        "Integracije sustava",
+        "Web aplikacije i SaaS"
+      ]
+    },
+    "ai": {
+      "title": "AI integracija u poslovanje",
+      "description": "AI chatbotovi, automatizacija procesa i umjetna inteligencija prilagođena vašem poslovanju.",
+      "capabilities": [
+        "AI chatbot za web stranicu",
+        "Automatizacija uz AI",
+        "AI asistent nad dokumentima",
+        "Analiza podataka"
       ]
     },
     "leadership": {
       "title": "IT savjetovanje",
       "description": "Strateško savjetovanje za digitalizaciju i optimizaciju poslovanja",
       "capabilities": [
-        "Analiza postojećih sustava",
-        "Odabir tehnologija i alata",
-        "Planiranje digitalne transformacije",
-        "Optimizacija poslovnih procesa"
+        "Analiza sustava",
+        "Tehnološka strategija",
+        "Digitalna transformacija",
+        "Optimizacija troškova"
       ]
     },
     "design": {
       "title": "Grafički dizajn i priprema",
       "description": "Vizualni materijali za digitalno i tisak — od plakata do oglasa."
     },
-    "branding": {
-      "title": "Branding",
-      "description": "Logotip, vizualni identitet i sve što čini brand prepoznatljivim."
-    },
     "seo": {
       "title": "SEO optimizacija",
       "description": "Da vas Google nađe prvog — i ChatGPT preporuči."
     },
-    "ads": {
-      "title": "Oglašavanje",
-      "description": "Google Ads, Meta\ni pametno targetiranje kampanja."
-    },
     "marketing": {
-      "title": "PR i marketing",
-      "description": "Strategije, sadržaj i kampanje koje dovode klijente."
+      "title": "Branding i digitalni marketing",
+      "description": "Vizualni identitet, sadržaj i oglašavanje na Googleu i društvenim mrežama koje dovodi klijente.",
+      "capabilities": [
+        "Logotip i vizualni identitet",
+        "Sadržaj za društvene mreže",
+        "Google i Meta oglašavanje",
+        "Marketinška strategija"
+      ]
     }
   },
   "dropdown": {
     "webdev": "Izrada web stranica",
     "fullstack": "Razvoj softvera",
+    "ai": "AI integracija",
     "leadership": "IT savjetovanje"
   },
   "detail": {
     "webdev": {
       "hero": "Izrada web stranica",
-      "subtitle": "",
-      "intro": "Izrađujemo moderne, responzivne web stranice koje pomažu tvrtkama uspostaviti snažnu online prisutnost. Od jednostranih landing stranica do višestranih korporativnih web stranica, isporučujemo kvalitetna rješenja po konkurentnim cijenama.",
-      "features": [
-        {
-          "icon": "custom",
-          "title": "Web po mjeri, bez predložaka",
-          "description": "Svaka web stranica je jedinstvena i prilagođena specifičnim potrebama vašeg poslovanja."
-        },
-        {
-          "icon": "responsive",
-          "title": "Moderna, responzivna sučelja",
-          "description": "Web stranice koje izgledaju izvrsno na svim uređajima — od mobitela do desktop računala."
-        },
-        {
-          "icon": "rocket",
-          "title": "Brza izrada i lansiranje",
-          "description": "Od ideje do live stranice u kratkom roku, bez nepotrebnog čekanja."
-        },
-        {
-          "icon": "search",
-          "title": "SEO optimizacija",
-          "description": "Ugrađena optimizacija za tražilice kako bi vas klijenti lakše pronašli."
-        },
-        {
-          "icon": "price",
-          "title": "Pristupačne cijene",
-          "description": "Transparentne cijene bez skrivenih troškova. Znate točno što dobivate."
-        },
-        {
-          "icon": "support",
-          "title": "Održavanje i podrška",
-          "description": "Kontinuirana podrška i ažuriranja nakon lansiranja stranice."
+      "lead": "Brze, moderne web stranice izrađene po mjeri — bez predložaka i bez WordPressa, po pristupačnoj cijeni.",
+      "offer": {
+        "title": "Što dobivate",
+        "items": [
+          {
+            "title": "Web po mjeri",
+            "text": "Jedinstven dizajn prilagođen vašem poslovanju, bez gotovih predložaka.",
+            "href": "/usluge/izrada-web-stranica/web-po-mjeri/"
+          },
+          {
+            "title": "Responzivan dizajn",
+            "text": "Stranica koja izgleda i radi izvrsno na mobitelu, tabletu i računalu.",
+            "href": "/usluge/izrada-web-stranica/responzivan-dizajn/"
+          },
+          {
+            "title": "Brza izrada",
+            "text": "Od ideje do objavljene stranice u kratkom roku, bez nepotrebnog čekanja.",
+            "href": "/usluge/izrada-web-stranica/brza-izrada/"
+          },
+          {
+            "title": "SEO optimizacija",
+            "text": "Tehnička optimizacija ugrađena od prvog dana da vas klijenti lakše pronađu.",
+            "href": "/usluge/izrada-web-stranica/seo-optimizacija/"
+          },
+          {
+            "title": "Transparentne cijene",
+            "text": "Jasni paketi bez skrivenih troškova — znate točno što dobivate.",
+            "href": "/usluge/izrada-web-stranica/cijene/"
+          },
+          {
+            "title": "Održavanje i podrška",
+            "text": "Hosting, SSL, ažuriranja i pomoć i nakon lansiranja.",
+            "href": "/usluge/izrada-web-stranica/odrzavanje-i-podrska/"
+          }
+        ]
+      },
+      "statement": {
+        "title": "Zašto mi",
+        "text": "Ne koristimo WordPress ni gotove predloške. Svaku stranicu razvijamo kao softver, od temelja — zato nemamo ograničenja u dizajnu, animacijama ni funkcionalnostima.",
+        "link": {
+          "label": "Više o izradi po mjeri",
+          "href": "/usluge/izrada-web-stranica/web-po-mjeri/"
         }
-      ],
+      },
+      "process": {
+        "title": "Kako radimo",
+        "steps": [
+          {
+            "title": "Razgovor",
+            "text": "Upoznajemo vaše poslovanje, ciljeve i publiku."
+          },
+          {
+            "title": "Dizajn",
+            "text": "Predlažemo izgled i strukturu prije prve linije koda."
+          },
+          {
+            "title": "Izrada",
+            "text": "Razvijamo brzu, responzivnu i SEO optimiziranu stranicu."
+          },
+          {
+            "title": "Lansiranje",
+            "text": "Objavljujemo, povezujemo domenu i ostajemo na raspolaganju."
+          }
+        ]
+      },
+      "pricingBlock": {
+        "title": "Cijena",
+        "from": "od 250 €",
+        "note": "+ PDV",
+        "text": "Cijena ovisi o broju podstranica, funkcionalnostima i roku isporuke. Prije početka dobivate jasnu ponudu.",
+        "link": {
+          "label": "Pogledaj pakete i cijene",
+          "href": "/usluge/izrada-web-stranica/cijene/"
+        }
+      },
       "pricing": {
         "title": "Cijena izrade web stranica",
         "popularBadge": "Najpopularnije",
@@ -156,8 +203,6 @@
           }
         ]
       },
-      "pricingTeaser": "Cijena web stranice ovisi o zahtjevima projekta — veličini, broju podstranica, željenim funkcionalnostima i roku isporuke. Svaki projekt je jedinstven, a cijene prilagođavamo konkretnim potrebama klijenta.",
-      "pricingLink": "Saznaj više o cijenama",
       "featurePages": {
         "web-po-mjeri": {
           "hero": "Web stranica po mjeri",
@@ -326,8 +371,6 @@
           }
         }
       },
-      "whyUsTitle": "Zašto izabrati baš nas?",
-      "whyUsText": "Za razliku od većine agencija, ne koristimo WordPress ni gotove predloške. Svaku web stranicu razvijamo kao softver — od temelja. To znači da nemamo ograničenja u dizajnu, strukturi, animacijama ni funkcionalnostima. Možemo razviti točno ono što klijent naumi — bez kompromisa.",
       "niches": {
         "title": "Web stranice za svaku industriju",
         "items": [
@@ -583,91 +626,180 @@
     },
     "fullstack": {
       "hero": "Razvoj softvera",
-      "subtitle": "digitalizacija i automatizacija poslovanja",
-      "intro": "Pomažemo tvrtkama preći s analognih procesa na digitalna rješenja — od automatizacije internih tokova rada do izgradnje kompleksnih poslovnih aplikacija. Razvijamo softver koji rješava stvarne probleme i donosi mjerljive rezultate.",
-      "sections": [
-        {
-          "title": "Digitalna transformacija",
-          "body": "Digitalna transformacija nije samo nabava novih alata — to je promjena načina na koji vaša tvrtka radi. Pomažemo vam identificirati gdje digitalizacija može donijeti najveću vrijednost: smanjenje ručnog rada, brži procesi, manje pogrešaka i bolji uvid u poslovanje u stvarnom vremenu. Rezultat je tvrtka koja je brža, efikasnija i spremnija za rast."
-        },
-        {
-          "title": "Automatizacija poslovnih procesa",
-          "body": "Ponavljajući ručni zadaci troše dragocjeno vrijeme vaših zaposlenika. Automatizacijom tih procesa oslobađate resurse za posao koji stvarno stvara vrijednost.",
-          "bullets": [
-            "Automatsko generiranje dokumenata, ugovora i izvještaja",
-            "Integracija između različitih alata i sustava (ERP, CRM, računovodstvo...)",
-            "Automatizacija e-mail komunikacije i notifikacija",
-            "Digitalni obrasci i tokovi odobrenja umjesto papirnatih procesa",
-            "Automatizirani uvoz, obrada i sinkronizacija podataka"
-          ]
-        },
-        {
-          "title": "Što možemo razviti za vas?",
-          "bullets": [
-            "Interne poslovne aplikacije — portali, dashboardi, alati za timove",
-            "Web aplikacije i SaaS platforme",
-            "Integracije i API veze između postojećih sustava",
-            "Baze podataka i sustavi za upravljanje podacima",
-            "Backend sustavi, mikroservisi i event-driven arhitekture"
-          ]
-        },
-        {
-          "title": "Kako radimo?",
-          "body": "Svaki projekt počinjemo razumijevanjem vašeg poslovanja — ne koda. Analiziramo vaše procese, identificiramo ključne probleme i predlažemo rješenja koja odgovaraju vašoj veličini i budžetu. Radimo iterativno, u bliskoj suradnji s vama, kako bismo osigurali da rezultat stvarno odgovara potrebama."
-        },
-        {
-          "title": "Tehnologije",
-          "bullets": [
-            "Backend: Java, Kotlin, Spring Boot, Node.js",
-            "Frontend: React, TypeScript, Next.js",
-            "Baze podataka: PostgreSQL, MySQL, MongoDB",
-            "Integracije: REST API, GraphQL, Apache Kafka",
-            "Infrastruktura: Docker, CI/CD, cloud deployment"
-          ]
-        }
-      ],
+      "lead": "Softver po mjeri koji automatizira vaše procese i rješava stvarne poslovne probleme — od prve ideje do produkcije.",
+      "offer": {
+        "title": "Što razvijamo",
+        "items": [
+          {
+            "title": "Poslovne aplikacije",
+            "text": "Interni portali, dashboardi i alati prilagođeni načinu na koji vaš tim stvarno radi."
+          },
+          {
+            "title": "Automatizacija procesa",
+            "text": "Dokumenti, izvještaji, obavijesti i odobrenja — bez ručnog rada i papira."
+          },
+          {
+            "title": "Integracije sustava",
+            "text": "Povezujemo ERP, CRM, računovodstvo i ostale alate da podaci teku sami."
+          },
+          {
+            "title": "Web aplikacije i SaaS",
+            "text": "Skalabilne platforme, od prvog prototipa do tisuća korisnika."
+          }
+        ]
+      },
+      "process": {
+        "title": "Kako radimo",
+        "steps": [
+          {
+            "title": "Razumijevanje",
+            "text": "Krećemo od vašeg poslovanja, ne od koda."
+          },
+          {
+            "title": "Prijedlog",
+            "text": "Rješenje koje odgovara vašoj veličini i budžetu."
+          },
+          {
+            "title": "Razvoj u iteracijama",
+            "text": "Kratki ciklusi i redovit uvid u napredak."
+          },
+          {
+            "title": "Isporuka i podrška",
+            "text": "Puštamo u rad, pratimo i nadograđujemo."
+          }
+        ]
+      },
+      "stack": {
+        "title": "Tehnologije",
+        "items": [
+          "Java",
+          "Kotlin",
+          "Spring Boot",
+          "Node.js",
+          "React",
+          "TypeScript",
+          "Next.js",
+          "PostgreSQL",
+          "MongoDB",
+          "Kafka",
+          "Docker",
+          "REST · GraphQL"
+        ]
+      },
       "cta": {
         "title": "Imate projekt na umu?",
         "description": "Opišite nam vaš problem ili ideju — zajedno ćemo pronaći najjednostavnije i najefikasnije rješenje.",
         "button": "Kontaktirajte nas"
       }
     },
+    "ai": {
+      "hero": "AI integracija u poslovanje",
+      "lead": "Umjetna inteligencija tamo gdje vam stvarno štedi vrijeme i novac — povezana s alatima koje već koristite.",
+      "offer": {
+        "title": "Što možemo uvesti",
+        "items": [
+          {
+            "title": "AI chatbot za web stranicu",
+            "text": "Odgovara kupcima i gostima 0–24, na više jezika, na temelju vaših cijena i uvjeta."
+          },
+          {
+            "title": "Automatizacija uz AI",
+            "text": "E-mailovi, računi, ugovori i izvještaji obrađeni automatski, bez prepisivanja."
+          },
+          {
+            "title": "AI asistent nad dokumentima",
+            "text": "Zaposlenici u sekundi dobivaju odgovore iz vaših procedura i baze znanja."
+          },
+          {
+            "title": "Analiza podataka",
+            "text": "Uvidi iz upita kupaca, recenzija i prodaje koje biste inače propustili."
+          }
+        ]
+      },
+      "process": {
+        "title": "Kako uvodimo AI",
+        "steps": [
+          {
+            "title": "Besplatna analiza",
+            "text": "Gdje AI ima smisla u vašem poslovanju, a gdje ne."
+          },
+          {
+            "title": "Pilot projekt",
+            "text": "Mali projekt s mjerljivim rezultatom prije većeg ulaganja."
+          },
+          {
+            "title": "Integracija",
+            "text": "AI povezan s web stranicom, e-mailom, CRM-om i internim alatima."
+          },
+          {
+            "title": "Obuka i podrška",
+            "text": "Tim zna koristiti alat, a mi pratimo i dorađujemo."
+          }
+        ]
+      },
+      "note": "Vaši podaci ostaju vaši — rješenja postavljamo u skladu s GDPR-om.",
+      "stack": {
+        "title": "Alati s kojima radimo",
+        "items": [
+          "ChatGPT",
+          "Claude",
+          "Gemini",
+          "Grok",
+          "n8n",
+          "Make"
+        ]
+      },
+      "cta": {
+        "title": "Gdje bi AI uštedio vrijeme vašem timu?",
+        "description": "Javite nam se za besplatnu analizu — predložit ćemo konkretna AI rješenja za vaše poslovanje.",
+        "button": "Kontaktirajte nas"
+      }
+    },
     "leadership": {
       "hero": "IT savjetovanje",
-      "subtitle": "manje žargona, više rezultata",
-      "intro": "Pomažemo tvrtkama upravljati kompleksnostima digitalne transformacije. Od analize postojećih sustava do planiranja strategija modernizacije, pružamo praktične uvide koji donose stvarne rezultate.",
-      "sections": [
-        {
-          "title": "Analiza sustava",
-          "items": [
-            "Revizija postojećeg tehnološkog stacka i infrastrukture",
-            "Identifikacija uskih grla i neučinkovitosti",
-            "Procjena sigurnosti i preporuke",
-            "Evaluacija performansi i putovi optimizacije",
-            "Analiza tehničkog duga"
-          ]
-        },
-        {
-          "title": "Strateško planiranje",
-          "items": [
-            "Razvoj tehnološkog plana",
-            "Odabir alata i platformi",
-            "Planiranje digitalne transformacije",
-            "Strategija migracije zastarjelih sustava",
-            "Analiza izrade vs. kupnje"
-          ]
-        },
-        {
-          "title": "Optimizacija poslovanja",
-          "items": [
-            "Mogućnosti automatizacije radnih tokova",
-            "Optimizacija procesa za razvojne timove",
-            "Analiza troškova i koristi tehnoloških investicija",
-            "Evaluacija i odabir dobavljača",
-            "Preporuke za obuku i usavršavanje tima"
-          ]
-        }
-      ],
+      "lead": "Pomažemo vam donijeti prave tehnološke odluke — manje žargona, više rezultata.",
+      "offer": {
+        "title": "S čim pomažemo",
+        "items": [
+          {
+            "title": "Analiza sustava",
+            "text": "Pregled alata, infrastrukture i sigurnosti uz jasan popis uskih grla."
+          },
+          {
+            "title": "Tehnološka strategija",
+            "text": "Plan razvoja, odabir platformi i odluka: razviti, kupiti ili prilagoditi."
+          },
+          {
+            "title": "Digitalna transformacija",
+            "text": "Postupni prijelaz sa zastarjelih sustava bez zastoja u poslovanju."
+          },
+          {
+            "title": "Optimizacija troškova",
+            "text": "Isplativost tehnoloških ulaganja, licenci i dobavljača."
+          }
+        ]
+      },
+      "process": {
+        "title": "Kako radimo",
+        "steps": [
+          {
+            "title": "Upoznavanje",
+            "text": "Razgovor o ciljevima, problemima i trenutnom stanju."
+          },
+          {
+            "title": "Analiza",
+            "text": "Pregled sustava, procesa i troškova."
+          },
+          {
+            "title": "Preporuke",
+            "text": "Konkretan plan s prioritetima, rokovima i procjenom troškova."
+          },
+          {
+            "title": "Provedba",
+            "text": "Po želji vodimo ili pratimo provedbu s vašim timom."
+          }
+        ]
+      },
       "cta": {
         "title": "Trebate stručno vodstvo?",
         "description": "Analizirajmo vaš trenutni sustav i pronađimo mogućnosti za poboljšanje.",
@@ -676,9 +808,14 @@
     }
   },
   "overview": {
-    "title": "Naše usluge",
-    "subtitle": "Od izrade web stranica do strateškog savjetovanja, pružamo stručnost koja vam je potrebna za uspjeh u digitalnom krajoliku.",
+    "title": "Usluge",
+    "subtitle": "Od web stranica i softvera do umjetne inteligencije i savjetovanja — sve što vašem poslovanju treba za digitalni rast.",
     "learnMore": "Saznaj više",
-    "contactCta": "Javi se"
+    "contactCta": "Javi se",
+    "cta": {
+      "title": "Niste sigurni što vam treba?",
+      "description": "Opišite nam problem ili ideju — predložit ćemo najjednostavnije rješenje.",
+      "button": "Kontaktirajte nas"
+    }
   }
 }

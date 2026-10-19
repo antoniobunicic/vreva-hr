@@ -1,7 +1,7 @@
 import ContactPage from '../../src/views/ContactPage';
 
 export const metadata = {
-  title: 'Kontakt — Vreva',
+  title: 'Kontakt',
   description: 'Javite nam se — izrada web stranica, razvoj softvera i IT savjetovanje. Email, telefon, WhatsApp ili pošaljite upit putem forme. Konzultacije su besplatne.',
   alternates: {
     canonical: 'https://vreva.hr/kontakt/',

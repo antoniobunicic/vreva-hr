@@ -8,8 +8,8 @@ import heroEN from './locales/en/hero.json';
 import aboutEN from './locales/en/about.json';
 import projectsEN from './locales/en/projects.json';
 import servicesEN from './locales/en/services.json';
-import approachEN from './locales/en/approach.json';
 import contactEN from './locales/en/contact.json';
+import articlesEN from './locales/en/articles.json';
 
 // Import Croatian translations
 import commonHR from './locales/hr/common.json';
@@ -17,8 +17,8 @@ import heroHR from './locales/hr/hero.json';
 import aboutHR from './locales/hr/about.json';
 import projectsHR from './locales/hr/projects.json';
 import servicesHR from './locales/hr/services.json';
-import approachHR from './locales/hr/approach.json';
 import contactHR from './locales/hr/contact.json';
+import articlesHR from './locales/hr/articles.json';
 
 const resources = {
   en: {
@@ -27,8 +27,8 @@ const resources = {
     about: aboutEN,
     projects: projectsEN,
     services: servicesEN,
-    approach: approachEN,
-    contact: contactEN
+    contact: contactEN,
+    articles: articlesEN
   },
   hr: {
     common: commonHR,
@@ -36,8 +36,8 @@ const resources = {
     about: aboutHR,
     projects: projectsHR,
     services: servicesHR,
-    approach: approachHR,
-    contact: contactHR
+    contact: contactHR,
+    articles: articlesHR
   }
 };
 

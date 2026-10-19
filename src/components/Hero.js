@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import apartmaniImg from '../assets/projects/accommodation/apartmani-bunicic-hero.webp';
@@ -90,21 +89,6 @@ function Hero() {
         })}
       </div>
 
-      <div className="hero-cta">
-        <a
-          href="#contact"
-          className="btn btn-primary hero-btn"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-        >
-          {t('cta.primary')}
-        </a>
-        <Link href="/usluge" className="btn hero-btn-glass">
-          {t('cta.secondary')}
-        </Link>
-      </div>
     </section>
   );
 }

@@ -7,10 +7,9 @@
       "title": "Web Development",
       "description": "Professional websites, fast and affordable.",
       "capabilities": [
-        "Modern, responsive design",
-        "Fast turnaround",
-        "SEO optimization",
-        "Affordable pricing, no hidden costs",
+        "Custom-built",
+        "Responsive design",
+        "SEO optimisation",
         "Maintenance & support"
       ]
     },
@@ -18,87 +17,135 @@
       "title": "Software Development",
       "description": "Full-stack development with modern technologies.",
       "capabilities": [
-        "Backend: Spring Boot, Kafka, REST APIs",
-        "Frontend: React, TypeScript, responsive UIs",
-        "Database design & optimization",
-        "API design & integration",
-        "Testing & quality assurance",
-        "Production deployment & support"
+        "Business applications",
+        "Process automation",
+        "System integrations",
+        "Web apps & SaaS"
+      ]
+    },
+    "ai": {
+      "title": "AI Integration for Business",
+      "description": "AI chatbots, process automation and artificial intelligence tailored to your business.",
+      "capabilities": [
+        "AI chatbot for your website",
+        "AI-powered automation",
+        "AI assistant for your documents",
+        "Data analysis"
       ]
     },
     "leadership": {
       "title": "IT Consulting",
       "description": "Strategic consulting for digitalization and business optimization",
       "capabilities": [
-        "Existing systems analysis",
-        "Technology & tools selection",
-        "Digital transformation planning",
-        "Business process optimization"
+        "Systems analysis",
+        "Technology strategy",
+        "Digital transformation",
+        "Cost optimisation"
       ]
     },
     "design": {
       "title": "Graphic design & prepress",
       "description": "Visual materials for digital and print — from posters to ads."
     },
-    "branding": {
-      "title": "Branding",
-      "description": "Logo, visual identity and everything that makes a brand recognisable."
-    },
     "seo": {
       "title": "SEO optimization",
       "description": "So Google finds you first — and ChatGPT recommends you."
     },
-    "ads": {
-      "title": "Advertising",
-      "description": "Google Ads, Meta\nand smart campaign targeting."
-    },
     "marketing": {
-      "title": "PR & marketing",
-      "description": "Strategy, content and campaigns that bring in clients."
+      "title": "Branding & Digital Marketing",
+      "description": "Visual identity, content and Google & social media advertising that brings in clients.",
+      "capabilities": [
+        "Logo & visual identity",
+        "Social media content",
+        "Google & Meta advertising",
+        "Marketing strategy"
+      ]
     }
   },
   "dropdown": {
     "webdev": "Web Development",
     "fullstack": "Software Development",
+    "ai": "AI Integration",
     "leadership": "IT Consulting"
   },
   "detail": {
     "webdev": {
       "hero": "Web Development",
-      "subtitle": "",
-      "intro": "We build modern, responsive websites that help businesses establish a strong online presence. From single-page landing sites to multi-page corporate websites, we deliver quality solutions at competitive prices.",
-      "features": [
-        {
-          "icon": "custom",
-          "title": "Custom-Built, No Templates",
-          "description": "Every website is unique and tailored to your specific business needs."
-        },
-        {
-          "icon": "responsive",
-          "title": "Modern, Responsive Design",
-          "description": "Websites that look great on all devices — from mobile phones to desktop computers."
-        },
-        {
-          "icon": "rocket",
-          "title": "Fast Turnaround",
-          "description": "From concept to live website in no time, without unnecessary delays."
-        },
-        {
-          "icon": "search",
-          "title": "SEO Optimization",
-          "description": "Built-in search engine optimization so your clients can find you easily."
-        },
-        {
-          "icon": "price",
-          "title": "Affordable Pricing",
-          "description": "Transparent pricing with no hidden costs. You know exactly what you're getting."
-        },
-        {
-          "icon": "support",
-          "title": "Maintenance & Support",
-          "description": "Ongoing support and updates after your website goes live."
+      "lead": "Fast, modern websites built to measure — no templates, no WordPress, at an affordable price.",
+      "offer": {
+        "title": "What you get",
+        "items": [
+          {
+            "title": "Custom-built",
+            "text": "A unique design shaped around your business, never an off-the-shelf template.",
+            "href": "/usluge/izrada-web-stranica/web-po-mjeri/"
+          },
+          {
+            "title": "Responsive design",
+            "text": "A site that looks and works great on phones, tablets and desktops.",
+            "href": "/usluge/izrada-web-stranica/responzivan-dizajn/"
+          },
+          {
+            "title": "Fast turnaround",
+            "text": "From idea to a live site in a short time, without unnecessary waiting.",
+            "href": "/usluge/izrada-web-stranica/brza-izrada/"
+          },
+          {
+            "title": "SEO optimisation",
+            "text": "Technical optimisation built in from day one so customers can find you.",
+            "href": "/usluge/izrada-web-stranica/seo-optimizacija/"
+          },
+          {
+            "title": "Transparent pricing",
+            "text": "Clear packages with no hidden costs — you know exactly what you get.",
+            "href": "/usluge/izrada-web-stranica/cijene/"
+          },
+          {
+            "title": "Maintenance & support",
+            "text": "Hosting, SSL, updates and help long after launch.",
+            "href": "/usluge/izrada-web-stranica/odrzavanje-i-podrska/"
+          }
+        ]
+      },
+      "statement": {
+        "title": "Why us",
+        "text": "We don't use WordPress or ready-made templates. We build every site like software, from the ground up — so there are no limits on design, animation or functionality.",
+        "link": {
+          "label": "More on custom builds",
+          "href": "/usluge/izrada-web-stranica/web-po-mjeri/"
         }
-      ],
+      },
+      "process": {
+        "title": "How we work",
+        "steps": [
+          {
+            "title": "Conversation",
+            "text": "We get to know your business, goals and audience."
+          },
+          {
+            "title": "Design",
+            "text": "We propose the look and structure before writing any code."
+          },
+          {
+            "title": "Build",
+            "text": "We develop a fast, responsive, SEO-optimised site."
+          },
+          {
+            "title": "Launch",
+            "text": "We publish, connect your domain and stay on hand."
+          }
+        ]
+      },
+      "pricingBlock": {
+        "title": "Pricing",
+        "from": "from €250",
+        "note": "+ VAT",
+        "text": "Price depends on the number of pages, features and timeline. You get a clear quote before we start.",
+        "link": {
+          "label": "See packages and pricing",
+          "href": "/usluge/izrada-web-stranica/cijene/"
+        }
+      },
       "pricing": {
         "title": "Website Pricing",
         "popularBadge": "Most Popular",
@@ -156,8 +203,6 @@
           }
         ]
       },
-      "pricingTeaser": "Website pricing depends on project requirements — size, number of pages, desired features, and delivery timeline. Every project is unique and we tailor our pricing accordingly.",
-      "pricingLink": "See pricing",
       "featurePages": {
         "web-po-mjeri": {
           "hero": "Custom-Built Websites",
@@ -326,8 +371,6 @@
           }
         }
       },
-      "whyUsTitle": "Why Choose Us?",
-      "whyUsText": "Unlike most agencies, we don't use WordPress or pre-made templates. Every website is developed as software — from scratch. That means no limits in design, structure, animations, or functionality. We can build exactly what the client envisions — without compromise.",
       "niches": {
         "title": "Websites for Every Industry",
         "items": [
@@ -583,91 +626,180 @@
     },
     "fullstack": {
       "hero": "Software Development",
-      "subtitle": "digitisation and business automation",
-      "intro": "We help businesses move from manual processes to digital solutions — from automating internal workflows to building complex business applications. We develop software that solves real problems and delivers measurable results.",
-      "sections": [
-        {
-          "title": "Digital Transformation",
-          "body": "Digital transformation isn't just about buying new tools — it's about changing the way your business operates. We help you identify where digitalisation can deliver the most value: less manual work, faster processes, fewer errors, and better real-time visibility into your business. The result is a company that is faster, more efficient, and ready to grow."
-        },
-        {
-          "title": "Business Process Automation",
-          "body": "Repetitive manual tasks consume your employees' valuable time. By automating these processes, you free up resources for work that truly creates value.",
-          "bullets": [
-            "Automatic generation of documents, contracts, and reports",
-            "Integration between different tools and systems (ERP, CRM, accounting...)",
-            "Automation of email communication and notifications",
-            "Digital forms and approval workflows instead of paper-based processes",
-            "Automated data import, processing, and synchronisation"
-          ]
-        },
-        {
-          "title": "What We Can Build for You",
-          "bullets": [
-            "Internal business applications — portals, dashboards, team tools",
-            "Web applications and SaaS platforms",
-            "Integrations and API connections between existing systems",
-            "Databases and data management systems",
-            "Backend systems, microservices, and event-driven architectures"
-          ]
-        },
-        {
-          "title": "How We Work",
-          "body": "Every project starts with understanding your business — not the code. We analyse your processes, identify key problems, and propose solutions that fit your size and budget. We work iteratively, in close collaboration with you, to ensure the result truly meets your needs."
-        },
-        {
-          "title": "Technologies",
-          "bullets": [
-            "Backend: Java, Kotlin, Spring Boot, Node.js",
-            "Frontend: React, TypeScript, Next.js",
-            "Databases: PostgreSQL, MySQL, MongoDB",
-            "Integrations: REST API, GraphQL, Apache Kafka",
-            "Infrastructure: Docker, CI/CD, cloud deployment"
-          ]
-        }
-      ],
+      "lead": "Custom software that automates your processes and solves real business problems — from first idea to production.",
+      "offer": {
+        "title": "What we build",
+        "items": [
+          {
+            "title": "Business applications",
+            "text": "Internal portals, dashboards and tools shaped around how your team actually works."
+          },
+          {
+            "title": "Process automation",
+            "text": "Documents, reports, notifications and approvals — without manual work or paper."
+          },
+          {
+            "title": "System integrations",
+            "text": "We connect ERP, CRM, accounting and other tools so data flows on its own."
+          },
+          {
+            "title": "Web apps & SaaS",
+            "text": "Scalable platforms, from the first prototype to thousands of users."
+          }
+        ]
+      },
+      "process": {
+        "title": "How we work",
+        "steps": [
+          {
+            "title": "Understanding",
+            "text": "We start with your business, not with code."
+          },
+          {
+            "title": "Proposal",
+            "text": "A solution that fits your size and budget."
+          },
+          {
+            "title": "Iterative development",
+            "text": "Short cycles and regular progress updates."
+          },
+          {
+            "title": "Launch & support",
+            "text": "We ship, monitor and keep improving."
+          }
+        ]
+      },
+      "stack": {
+        "title": "Technologies",
+        "items": [
+          "Java",
+          "Kotlin",
+          "Spring Boot",
+          "Node.js",
+          "React",
+          "TypeScript",
+          "Next.js",
+          "PostgreSQL",
+          "MongoDB",
+          "Kafka",
+          "Docker",
+          "REST · GraphQL"
+        ]
+      },
       "cta": {
         "title": "Have a project in mind?",
         "description": "Describe your problem or idea — together we'll find the simplest and most effective solution.",
         "button": "Get in Touch"
       }
     },
+    "ai": {
+      "hero": "AI Integration for Business",
+      "lead": "Artificial intelligence where it actually saves you time and money — connected to the tools you already use.",
+      "offer": {
+        "title": "What we can bring in",
+        "items": [
+          {
+            "title": "AI chatbot for your website",
+            "text": "Answers customers and guests 24/7, in multiple languages, based on your prices and terms."
+          },
+          {
+            "title": "AI-powered automation",
+            "text": "Emails, invoices, contracts and reports processed automatically, no retyping."
+          },
+          {
+            "title": "AI assistant for your documents",
+            "text": "Employees get answers from your procedures and knowledge base in seconds."
+          },
+          {
+            "title": "Data analysis",
+            "text": "Insights from customer enquiries, reviews and sales you'd otherwise miss."
+          }
+        ]
+      },
+      "process": {
+        "title": "How we bring in AI",
+        "steps": [
+          {
+            "title": "Free assessment",
+            "text": "Where AI makes sense in your business, and where it doesn't."
+          },
+          {
+            "title": "Pilot project",
+            "text": "A small project with a measurable result before any bigger investment."
+          },
+          {
+            "title": "Integration",
+            "text": "AI connected to your website, email, CRM and internal tools."
+          },
+          {
+            "title": "Training & support",
+            "text": "Your team knows how to use it, and we keep refining."
+          }
+        ]
+      },
+      "note": "Your data stays yours — we set up every solution in line with GDPR.",
+      "stack": {
+        "title": "Tools we work with",
+        "items": [
+          "ChatGPT",
+          "Claude",
+          "Gemini",
+          "Grok",
+          "n8n",
+          "Make"
+        ]
+      },
+      "cta": {
+        "title": "Where could AI save your team time?",
+        "description": "Get in touch for a free assessment — we'll suggest concrete AI solutions for your business.",
+        "button": "Contact us"
+      }
+    },
     "leadership": {
       "hero": "IT Consulting",
-      "subtitle": "less jargon, more results",
-      "intro": "We help businesses navigate the complexities of digital transformation. From analyzing existing systems to planning modernization strategies, we provide actionable insights that drive real results.",
-      "sections": [
-        {
-          "title": "Systems Analysis",
-          "items": [
-            "Audit of existing technology stack and infrastructure",
-            "Identification of bottlenecks and inefficiencies",
-            "Security assessment and recommendations",
-            "Performance evaluation and optimization paths",
-            "Technical debt analysis"
-          ]
-        },
-        {
-          "title": "Strategic Planning",
-          "items": [
-            "Technology roadmap development",
-            "Tool and platform selection",
-            "Digital transformation planning",
-            "Migration strategy for legacy systems",
-            "Build vs. buy analysis"
-          ]
-        },
-        {
-          "title": "Business Optimization",
-          "items": [
-            "Workflow automation opportunities",
-            "Process optimization for development teams",
-            "Cost-benefit analysis of technology investments",
-            "Vendor evaluation and selection",
-            "Training and team upskilling recommendations"
-          ]
-        }
-      ],
+      "lead": "We help you make the right technology decisions — less jargon, more results.",
+      "offer": {
+        "title": "Where we help",
+        "items": [
+          {
+            "title": "Systems analysis",
+            "text": "A review of tools, infrastructure and security with a clear list of bottlenecks."
+          },
+          {
+            "title": "Technology strategy",
+            "text": "A roadmap, platform choices and the call: build, buy or adapt."
+          },
+          {
+            "title": "Digital transformation",
+            "text": "A gradual move off legacy systems without disrupting the business."
+          },
+          {
+            "title": "Cost optimisation",
+            "text": "The real return on technology spend, licences and vendors."
+          }
+        ]
+      },
+      "process": {
+        "title": "How we work",
+        "steps": [
+          {
+            "title": "Discovery",
+            "text": "A conversation about goals, problems and where you are today."
+          },
+          {
+            "title": "Analysis",
+            "text": "A review of systems, processes and costs."
+          },
+          {
+            "title": "Recommendations",
+            "text": "A concrete plan with priorities, timelines and cost estimates."
+          },
+          {
+            "title": "Execution",
+            "text": "If you like, we lead or oversee the rollout with your team."
+          }
+        ]
+      },
       "cta": {
         "title": "Need expert guidance?",
         "description": "Let's analyze your current setup and find opportunities for improvement.",
@@ -676,9 +808,14 @@
     }
   },
   "overview": {
-    "title": "Our Services",
-    "subtitle": "From web development to strategic consulting, we provide the expertise you need to succeed in the digital landscape.",
-    "learnMore": "Learn More",
-    "contactCta": "Get in touch"
+    "title": "Services",
+    "subtitle": "From websites and software to artificial intelligence and consulting — everything your business needs to grow digitally.",
+    "learnMore": "Learn more",
+    "contactCta": "Get in touch",
+    "cta": {
+      "title": "Not sure what you need?",
+      "description": "Describe your problem or idea — we'll suggest the simplest solution.",
+      "button": "Contact us"
+    }
   }
 }

@@ -1,0 +1,147 @@
+{
+  "list": {
+    "title": "News",
+    "subtitle": "What's changing in websites, software and AI — and what it means for your business.",
+    "readMore": "Read the article",
+    "empty": "First articles coming soon."
+  },
+  "meta": {
+    "published": "Published",
+    "readTime": "{{count}} min read",
+    "backToList": "All articles",
+    "share": "Share"
+  },
+  "categories": {
+    "iznajmljivanje": "Short-term rentals",
+    "web": "Web",
+    "poslovanje": "Business"
+  },
+  "articles": {
+    "airbnbProvizija": {
+      "title": "Airbnb raises the host fee to 15.5%: what's changing",
+      "excerpt": "Guests no longer pay a service fee, and hosts now pay 15.5% instead of 3%. Without a price change, you lose €12.50 on every €100 night. Here's how to recalculate your prices.",
+      "readTime": 3,
+      "cover": "15.5%",
+      "lead": "Airbnb no longer splits its fee between host and guest. Until now you paid around 3% and the guest paid another 12 to 16% at checkout. Under the new model the host pays the full 15.5% and the guest sees one final price. In Croatia the new model is mandatory from 13 October 2026.",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "What's changing"
+        },
+        {
+          "type": "p",
+          "text": "The 15.5% fee is charged on the nightly rate and on your extra fees, such as cleaning, but not on taxes. Guests see the price they will actually pay right in search, just like on Booking.com."
+        },
+        {
+          "type": "p",
+          "text": "Airbnb gets a simpler, more competitive price in search. The host picks up the cost of that simplicity."
+        },
+        {
+          "type": "h2",
+          "text": "What it costs you"
+        },
+        {
+          "type": "p",
+          "text": "If you leave your price as it is, a €100 night now earns you €84.50 instead of €97. That's about 13% less per booking."
+        },
+        {
+          "type": "table",
+          "head": [
+            "",
+            "Before",
+            "Now, same price",
+            "Now, new price"
+          ],
+          "rows": [
+            [
+              "Nightly price",
+              "€100.00",
+              "€100.00",
+              "€114.79"
+            ],
+            [
+              "Guest pays in total",
+              "≈ €115.00",
+              "€100.00",
+              "€114.79"
+            ],
+            [
+              "Airbnb fee charged to host",
+              "€3.00",
+              "€15.50",
+              "€17.79"
+            ],
+            [
+              "You keep",
+              "€97.00",
+              "€84.50",
+              "€97.00"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "How to recalculate your price",
+          "text": "To keep earning the same as before, multiply your old price by 1.148, which is an increase of about 15%. A €100 night becomes €114.79. The same applies to your cleaning fee."
+        },
+        {
+          "type": "p",
+          "text": "The guest ends up paying almost exactly what they paid before, around €115. The total doesn't change; the whole amount is just in your price now. That's why a higher price shouldn't cost you enquiries, especially if your competitors raise theirs too."
+        },
+        {
+          "type": "h2",
+          "text": "What to do"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Recalculate your nightly and cleaning prices instead of relying only on Airbnb's automatic suggestion.",
+            "Align your prices on Booking.com and your own website, or your Airbnb listing will suddenly look more expensive.",
+            "If you work with an agency or property manager, check which amount they calculate their commission on."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Direct bookings are worth more than ever"
+        },
+        {
+          "type": "p",
+          "text": "Every booking through your own website now earns you €15.50 more on a €100 night. At 120 nights a year that's around €1,860, roughly what a good website costs to build."
+        },
+        {
+          "type": "p",
+          "text": "Your own site doesn't have to replace Airbnb. It works best alongside it: guests find you on the platform and book directly next time, with no commission and on your terms."
+        }
+      ],
+      "cta": {
+        "title": "Want bookings without the commission?",
+        "description": "We build websites for apartments, villas and guesthouses — with a gallery, an availability calendar and an enquiry or direct booking form. Get in touch and we will estimate what you would save at your occupancy.",
+        "points": [
+          "0% commission on every direct booking",
+          "Mobile-friendly, fast and optimised for Google",
+          "Multilingual — Croatian, English, German, Italian",
+          "Delivered within a few weeks"
+        ],
+        "secondary": "See what we offer for apartments and hosts →"
+      },
+      "disclaimer": "The information in this article reflects the state of things on the publication date. Check the exact terms and the migration date for your listing in your Airbnb settings and in Airbnb's official documentation.",
+      "sources": {
+        "title": "Sources",
+        "items": [
+          {
+            "label": "Airbnb — Service fees (official documentation)",
+            "url": "https://www.airbnb.com/help/article/1857"
+          },
+          {
+            "label": "Lider — Airbnb changes the rules: hosts pay the 15.5% commission",
+            "url": "https://lidermedia.hr/tvrtke-i-trzista/airbnb-mijenja-pravila-igre-proviziju-od-15-5-posto-placaju-iznajmljivaci/"
+          },
+          {
+            "label": "Smoobu — Airbnb Host-Only Fee: 2026 Update",
+            "url": "https://www.smoobu.com/en/blog/airbnb-host-only-fee-increase/"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="19"/>
+    </filter>
+    <style>
+      .dot { fill: #FFCC33; filter: url(#glow); }
+      .d1 { animation: float 3s ease-in-out infinite, pulse 1.5s ease-in-out infinite; transform-origin: 346.5px 372.5px; }
+      .d2 { animation: float 3s ease-in-out infinite 0.5s, pulse 1.5s ease-in-out infinite 0.3s; transform-origin: 540px 707.75px; }
+      .d3 { animation: float 3s ease-in-out infinite 1s, pulse 1.5s ease-in-out infinite 0.6s; transform-origin: 733.5px 372.5px; }
+      @keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -29px; } }
+      @keyframes pulse { 0%, 100% { opacity: 1; scale: 1; } 50% { opacity: 0.8; scale: 0.92; } }
+    </style>
+  </defs>
+  <rect width="1080" height="1080" fill="#0A0A0A"/>
+  <circle class="dot d1" cx="346.5" cy="372.5" r="76.5"/>
+  <circle class="dot d2" cx="540" cy="707.75" r="76.5"/>
+  <circle class="dot d3" cx="733.5" cy="372.5" r="76.5"/>
+</svg>

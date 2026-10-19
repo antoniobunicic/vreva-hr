@@ -36,30 +36,40 @@
 }
 
 :root {
-  --color-background1: #0a0a0a;
-  --color-background2: #151313;
-  --color-bone-light: #1c1a1a;
-  --color-vreva-yellow: #ffcc33;
-  --color-vreva-yellow-dark: #e6b800;
-  --color-secondary: #4c1d95;
-  --color-text: #e0e0e0;
-  --color-text-muted: #a0a0a0;
+  --color-background1: #0b0b0b;
+  --color-background2: #141414;
+  --color-bone-light: #1b1b1b;
+  /* Kisela limeta — fill colour (buttons, markers, highlights). Never use as text on light backgrounds. */
+  --color-accent: #D4FF3A;
+  --color-accent-strong: #B5E01F;   /* Limeta 600 — hover / pressed */
+  --color-accent-rgb: 212, 255, 58;
+  --color-accent-text: #D4FF3A;     /* accent used as text — swapped to a readable olive in light theme */
+  --color-on-accent: #0b0b0b;
+  --color-secondary: var(--color-text);
+  --color-text: #ececea;
+  --color-text-muted: #9a9a96;
   --color-border: #2a2a2a;
-  --max-width: 1400px;
+  --max-width: 1440px;
+  /* One page grid for every page: side gutter grows with the viewport, and on very wide
+     screens content is capped at --max-width and centred. Resolve % against the element. */
+  --page-gutter: clamp(1.5rem, 5vw, 6rem);
+  --page-inset: max(var(--page-gutter), calc((100% - var(--max-width)) / 2));
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-heading: "orpheus-pro", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
-  /* orpheus-pro is only loaded in weights 400 and 500 — keep heading weights within that range */
-  --font-heading-weight: 400;
+  --font-heading: var(--font-sans);
+  --font-heading-weight: 500;
+  --font-heading-tracking: -0.045em;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 [data-theme='light'] {
-  --color-background1: #F6F6F6FF;
-  --color-background2: #f3efe6;
-  --color-bone-light: #fffefb;
-  --color-text: #0a0a0a;
-  --color-text-muted: #3a3a3a;
-  --color-border: #e0e0e0;
+  --color-background1: #f4f4f0;
+  --color-background2: #eaeae4;
+  --color-bone-light: #ffffff;
+  --color-accent-text: #4a5d00;
+  --color-text: #0b0b0b;
+  --color-text-muted: #55554f;
+  --color-border: #d9d9d2;
 }
 
 html {
@@ -80,20 +90,8 @@ body {
 }
 
 .container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 3rem;
-}
-
-.App.is-home main .container {
-  max-width: none;
-  padding: 0 8.5rem;
-}
-
-@media (max-width: 768px) {
-  .App.is-home main .container {
-    padding: 0 1.5rem;
-  }
+  width: 100%;
+  padding: 0 var(--page-inset);
 }
 
 main {
@@ -118,12 +116,10 @@ main {
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-content,
-  .hero-showcase,
-  .hero-cta {
+  .hero-showcase {
     animation: reveal-fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
   .hero-showcase { animation-delay: 0.15s; }
-  .hero-cta      { animation-delay: 0.3s; }
 }
 
 .reveal-on-scroll {
@@ -158,6 +154,40 @@ section {
   margin-bottom: 4rem;
   text-align: left;
   font-weight: var(--font-heading-weight);
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  letter-spacing: var(--font-heading-tracking);
+  line-height: 0.95;
+}
+
+/* Editorial kicker — small mono label above titles, tags, meta */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* Mono meta labels — kickers, tags, indices, small captions */
+.services-line-index,
+.article-tag,
+.article-sources-title,
+.contact-label,
+.form-group label,
+.contact-divider span,
+.contact-channel-label,
+.footer-column h4,
+.project-detail-eyebrow,
+.project-detail-tech-title,
+.project-tag,
+.project-wip-badge,
+.pricing-card-badge,
+.services-learn-more {
+  font-family: var(--font-mono);
+  font-weight: 500;
 }

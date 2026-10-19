@@ -1,4 +1,4 @@
-import ServiceDetailPage from '../../../src/views/services/ServiceDetailPage';
+import ServiceLandingPage from '../../../src/views/services/ServiceLandingPage';
 
 export const metadata = {
   title: 'Razvoj softvera — Digitalizacija i automatizacija poslovanja',
@@ -9,5 +9,5 @@ export const metadata = {
 };
 
 export default function RazvojSoftveraPage() {
-  return <ServiceDetailPage serviceKey="fullstack" />;
+  return <ServiceLandingPage serviceKey="fullstack" />;
 }
