@@ -228,6 +228,9 @@
   color: var(--color-text);
   margin-bottom: 1.5rem;
   max-width: 14ch;
+  /* Room for carons above the tight line box during the entrance animation */
+  padding-top: 0.15em;
+  margin-top: -0.15em;
 }
 
 /* ─── Description ────────────────────────────────────────── */

@@ -54,6 +54,9 @@
      screens content is capped at --max-width and centred. Resolve % against the element. */
   --page-gutter: clamp(1.5rem, 5vw, 6rem);
   --page-inset: max(var(--page-gutter), calc((100% - var(--max-width)) / 2));
+  /* Sticky elements sit below the pinned nav and its progressive-blur strip,
+     otherwise the blur eats the top of headings (e.g. the caron on Š) */
+  --sticky-top: calc(var(--nav-height, 110px) + 4.5rem);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-heading: var(--font-sans);
@@ -156,6 +159,12 @@ section {
   font-weight: var(--font-heading-weight);
   letter-spacing: var(--font-heading-tracking);
   line-height: 0.95;
+  /* Tight line-height pushes Croatian carons (Š, Č, Ž) above the box. While
+     the reveal animation runs the heading is its own layer, clipped to that
+     box, so the caron vanished until the animation ended. Extend the box
+     upward without moving the text. */
+  padding-top: 0.15em;
+  margin-top: -0.15em;
 }
 
 /* Editorial kicker — small mono label above titles, tags, meta */

@@ -16,7 +16,7 @@
 
 .fp-aside {
   position: sticky;
-  top: 8rem;
+  top: var(--sticky-top);
   align-self: start;
 }
 
@@ -100,7 +100,7 @@
 
 /* Project groups */
 .fp-group {
-  scroll-margin-top: 8rem;
+  scroll-margin-top: var(--sticky-top);
 }
 
 .fp-group + .fp-group {

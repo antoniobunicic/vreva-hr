@@ -20,6 +20,9 @@
   letter-spacing: var(--font-heading-tracking);
   line-height: 0.98;
   font-synthesis: none;
+  /* Room for carons above the tight line box during the reveal animation */
+  padding-top: 0.15em;
+  margin-top: -0.15em;
 }
 
 .contact-intro {
