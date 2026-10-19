@@ -278,8 +278,15 @@
     padding-right: 0;
   }
 
-  .hero-mockup-wrap {
-    right: 0;
+  /* Softer shadow on small screens so it also clears the bottom of the hero */
+  .hero-mockup--browser,
+  .hero-mockup--phone {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  }
+
+  [data-theme='dark'] .hero-mockup--browser,
+  [data-theme='dark'] .hero-mockup--phone {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
   }
 
   .hero-mockup--phone {

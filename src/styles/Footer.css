@@ -115,9 +115,16 @@
   line-height: 0;
 }
 
+/* Quiet watermark: greyscale and low opacity, in both themes */
 .footer-wordmark img {
   width: 100%;
   height: auto;
+  filter: grayscale(1);
+  opacity: 0.16;
+}
+
+[data-theme='dark'] .footer-wordmark img {
+  opacity: 0.12;
 }
 
 .footer-wordmark .footer-wordmark-onlight,

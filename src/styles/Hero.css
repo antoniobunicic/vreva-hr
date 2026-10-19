@@ -47,12 +47,16 @@
  * left exit back to the right lane it jumps instantly instead of flying across.
  * Only .active and .prev animate.
  */
+/* The wrapper carries a filter (for the blur in/out), and a filtered element
+   is painted clipped to its own box — so it extends --mockup-bleed past the
+   showcase on every side and pads it back in. The mockup keeps exactly the
+   same size and position, but its drop shadow now has room and isn't cut off. */
 .hero-mockup-wrap {
+  --mockup-bleed: 110px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: calc(-1 * var(--mockup-bleed));
+  padding: var(--mockup-bleed);
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;

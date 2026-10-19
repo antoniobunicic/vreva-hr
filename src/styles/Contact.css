@@ -46,8 +46,12 @@
   transition: background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-bigmail span {
-  font-size: 0.5em;
+/* Inline SVG rather than the ↗ glyph — iOS renders that glyph as an emoji */
+.contact-bigmail-arrow {
+  width: 0.6em;
+  height: 0.6em;
+  flex-shrink: 0;
+  align-self: center;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -56,7 +60,7 @@
   color: var(--color-on-accent);
 }
 
-.contact-bigmail:hover span {
+.contact-bigmail:hover .contact-bigmail-arrow {
   transform: translate(0.1em, -0.1em);
 }
 
