@@ -430,6 +430,11 @@
             "slug": "prijevoz",
             "heading": "Websites for Taxi, Rent-a-Car & Rent-a-Boat",
             "description": "Attract more clients with a clear presentation of your fleet, pricing, and booking options."
+          },
+          {
+            "slug": "opcine-i-turisticke-zajednice",
+            "heading": "Websites for Municipalities & Tourist Boards",
+            "description": "Clear websites for local government and destinations: news, documents, events and visitor information in one place."
           }
         ],
         "pages": {
@@ -622,6 +627,25 @@
               "button": "Get in Touch"
             },
             "formNameLabel": "Company / Service Name"
+          },
+          "opcine-i-turisticke-zajednice": {
+            "hero": "Websites for Municipalities & Tourist Boards",
+            "subtitle": "Information for residents and visitors in one place",
+            "intro": "Residents come to the site for notices, documents and contacts; visitors look for accommodation, events and sights. We build clear, fast, multilingual websites for municipalities, towns and tourist boards that are easy to update and work on every device.",
+            "bullets": [
+              "News, notices and an events calendar",
+              "Documents, decisions and public tenders in one place",
+              "Visitor information: sights, beaches, accommodation and a map",
+              "Multilingual for international guests (HR, EN, DE, IT...)",
+              "Easy content editing, no technical knowledge needed",
+              "Accessible design for every user, including people with disabilities"
+            ],
+            "cta": {
+              "title": "A modern website for your municipality or destination",
+              "description": "Get in touch and we'll propose a solution that fits your needs and budget.",
+              "button": "Contact us"
+            },
+            "formNameLabel": "Municipality or Tourist Board Name"
           }
         }
       },

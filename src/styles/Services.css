@@ -1,10 +1,15 @@
 /* Services Section */
 .services {
-  background: #ffffff;
+  --services-bg: #ffffff;
+  /* No hard edge under the hero: start in the hero's colour and melt into the
+     section's own background over the first few rem */
+  background: linear-gradient(to bottom, var(--color-background1) 0, var(--services-bg) 9rem);
+  /* less top air than other sections so the title peeks out under the hero */
+  padding-top: 4.5rem;
 }
 
 [data-theme='dark'] .services {
-  background: #0a0a0a;
+  --services-bg: #0a0a0a;
 }
 
 /* ─── Editorial services list ─────────────────────────────── */
@@ -20,12 +25,26 @@
   align-items: center;
   gap: 2.5rem;
   padding: 2.75rem 0;
-  border-bottom: 1px solid var(--color-border);
+  /* Row divider drawn as a background so it can animate left → right
+     (Services.js sets data-drawn when the row scrolls into view) */
+  background: linear-gradient(var(--color-border), var(--color-border)) left bottom / 0% 1px no-repeat;
+  transition: padding 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              background-size 1.4s cubic-bezier(0.65, 0, 0.35, 1);
   text-decoration: none;
   color: var(--color-text);
   position: relative;
   isolation: isolate;
-  transition: padding 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-line[data-drawn] {
+  background-size: 100% 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-line {
+    background-size: 100% 1px;
+    transition: none;
+  }
 }
 
 .services-line::before {

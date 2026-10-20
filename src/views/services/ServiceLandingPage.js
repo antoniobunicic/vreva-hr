@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import IndustryLabel from '../../components/IndustryLabel';
 
 // Airy, scannable layout shared by every core service page:
 // hero with one-line lead → what we offer → (why us) → how we work → (pricing)
@@ -105,7 +106,7 @@ function ServiceLandingPage({ serviceKey }) {
             {d.niches.items.map((niche) => (
               <li key={niche.slug}>
                 <Link href={`/usluge/izrada-web-stranica/${niche.slug}/`}>
-                  <span>{niche.heading}</span>
+                  <IndustryLabel heading={niche.heading} />
                   <span aria-hidden="true">&rarr;</span>
                 </Link>
               </li>

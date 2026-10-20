@@ -4,9 +4,11 @@ import ProjectCard from './ProjectCard';
 import apartmaniImg from '../assets/projects/accommodation/apartmani-bunicic-full.png';
 import houseLucyImg from '../assets/projects/accommodation/house-lucy-razanac-full.png';
 import otoolesImg from '../assets/projects/accommodation/otooles-full.png';
+import chicoffeeImg from '../assets/projects/chicoffee/chicoffee.png';
 
 const nicheProjectKeys = {
   apartmani: ['apartmani', 'houselucy', 'otooles'],
+  ugostiteljstvo: ['chicoffee'],
   prijevoz: ['patrickboy'],
 };
 
@@ -14,6 +16,7 @@ const projectImages = {
   apartmani: apartmaniImg,
   houselucy: houseLucyImg,
   otooles: otoolesImg,
+  chicoffee: chicoffeeImg,
 };
 
 const projectVideos = {

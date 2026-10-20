@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import ContactBlock from '../../components/ContactBlock';
 import NicheProjects from '../../components/NicheProjects';
+import IndustryLabel from '../../components/IndustryLabel';
 
 // Industry landing pages (apartmani, ugostiteljstvo, …): hero → why your own
 // site → what's included → related projects → other industries → contact.
@@ -50,7 +51,7 @@ function NicheDetailPage({ niche }) {
           {otherNiches.map((item) => (
             <li key={item.slug}>
               <Link href={`/usluge/izrada-web-stranica/${item.slug}/`}>
-                <span>{item.heading}</span>
+                <IndustryLabel heading={item.heading} />
                 <span aria-hidden="true">&rarr;</span>
               </Link>
             </li>

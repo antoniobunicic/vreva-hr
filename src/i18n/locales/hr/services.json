@@ -430,6 +430,11 @@
             "slug": "prijevoz",
             "heading": "Izrada web stranica za taxi, rent-a-car i rent-a-boat",
             "description": "Privucite više klijenata s jasnom prezentacijom flote, cijena i načina rezervacije."
+          },
+          {
+            "slug": "opcine-i-turisticke-zajednice",
+            "heading": "Izrada web stranica za općine i turističke zajednice",
+            "description": "Pregledne stranice za lokalnu samoupravu i destinacije: vijesti, dokumenti, događanja i informacije za posjetitelje na jednom mjestu."
           }
         ],
         "pages": {
@@ -622,6 +627,25 @@
               "button": "Kontaktirajte nas"
             },
             "formNameLabel": "Naziv tvrtke / usluge"
+          },
+          "opcine-i-turisticke-zajednice": {
+            "hero": "Izrada web stranica za općine i turističke zajednice",
+            "subtitle": "Informacije za građane i posjetitelje na jednom mjestu",
+            "intro": "Građani na stranici traže obavijesti, dokumente i kontakte, a posjetitelji smještaj, događanja i znamenitosti. Izrađujemo pregledne, brze i višejezične stranice za općine, gradove i turističke zajednice, koje je lako uređivati i koje rade na svim uređajima.",
+            "bullets": [
+              "Vijesti, obavijesti i kalendar događanja",
+              "Dokumenti, odluke i javni natječaji na jednom mjestu",
+              "Informacije za posjetitelje: znamenitosti, plaže, smještaj i karta",
+              "Višejezičnost za strane goste (HR, EN, DE, IT...)",
+              "Jednostavno uređivanje sadržaja bez tehničkog znanja",
+              "Pristupačan dizajn za sve korisnike, uključujući osobe s invaliditetom"
+            ],
+            "cta": {
+              "title": "Moderna stranica za vašu općinu ili destinaciju",
+              "description": "Javite nam se i predložit ćemo rješenje prilagođeno vašim potrebama i proračunu.",
+              "button": "Kontaktirajte nas"
+            },
+            "formNameLabel": "Naziv općine ili turističke zajednice"
           }
         }
       },

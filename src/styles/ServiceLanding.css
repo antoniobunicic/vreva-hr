@@ -204,7 +204,7 @@
   transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sl-links a span:last-child {
+.sl-links a > span:last-child {
   color: var(--color-text-muted);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
 }
@@ -213,7 +213,7 @@
   padding-left: 0.5rem;
 }
 
-.sl-links a:hover span:last-child {
+.sl-links a:hover > span:last-child {
   color: var(--color-text);
   transform: translateX(4px);
 }
@@ -413,6 +413,26 @@
   line-height: 1.55;
   color: var(--color-text-muted);
 }
+
+/* Industry links: muted "Izrada web stranica za" + underlined industry */
+.industry-prefix {
+  color: var(--color-text-muted);
+}
+
+.industry-name {
+  color: var(--color-text);
+  padding-bottom: 0.1em;
+  /* underline: lime in dark theme, deep olive in light so it reads on the pale bg */
+  background: linear-gradient(var(--color-accent-text), var(--color-accent-text)) 0 100% / 100% 2px no-repeat;
+  transition: background-size 0.25s ease;
+}
+
+/* hover: lime highlighter behind the industry (dark text stays readable) */
+.sl-links a:hover .industry-name {
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-size: 100% 0.4em;
+}
+
 
 /* ─── Long-form content blocks (web dev topic + industry pages) ─── */
 

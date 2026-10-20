@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import apartmaniImg from '../assets/projects/accommodation/apartmani-bunicic-hero.webp';
 import krunaImg from '../assets/projects/kruna/kruna-hero.webp';
@@ -22,8 +23,15 @@ const showcase = [
   { type: 'plain', image: flexportalImg, alt: 'Sympower FlexPortal' },
 ];
 
+const heroServices = [
+  { key: 'webdev', href: '/usluge/izrada-web-stranica' },
+  { key: 'fullstack', href: '/usluge/razvoj-softvera' },
+  { key: 'ai', href: '/usluge/ai-integracija' },
+  { key: 'leadership', href: '/usluge/it-savjetovanje' },
+];
+
 function Hero() {
-  const { t } = useTranslation('hero');
+  const { t } = useTranslation(['hero', 'services']);
   const [active, setActive] = useState(0);
   const sectionRef = useRef(null);
 
@@ -89,6 +97,17 @@ function Hero() {
         })}
       </div>
 
+
+      {/* What we do, at a glance — four links along the bottom of the hero */}
+      <nav className="hero-services" aria-label={t('section.title', { ns: 'services' })}>
+        {heroServices.map((service, index) => (
+          <Link key={service.key} href={service.href} className="hero-service">
+            <span className="hero-service-index">{String(index + 1).padStart(2, '0')}</span>
+            <span className="hero-service-name">{t(`dropdown.${service.key}`, { ns: 'services' })}</span>
+            <span className="hero-service-arrow" aria-hidden="true">&rarr;</span>
+          </Link>
+        ))}
+      </nav>
     </section>
   );
 }

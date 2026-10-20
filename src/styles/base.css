@@ -167,6 +167,22 @@ section {
   margin-top: -0.15em;
 }
 
+/* Same caron fix for every other large heading with tight leading. Several of
+   these are sticky or sit in animated panes, and Chrome paints those on their
+   own layer clipped to the box — so Š/Č/Ž lost their caron. Extend the box
+   upward without moving the text. */
+.sl-title,
+.sl-section-title,
+.sl-cta-title,
+.fp-title,
+.so-title,
+.al-title,
+.pd-next-title,
+.about-principle-title {
+  padding-top: 0.15em;
+  margin-top: -0.15em;
+}
+
 /* Editorial kicker — small mono label above titles, tags, meta */
 .eyebrow {
   font-family: var(--font-mono);

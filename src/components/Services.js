@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
@@ -14,13 +14,35 @@ const services = [
 
 function Services() {
   const { t } = useTranslation('services');
+  const listRef = useRef(null);
+
+  // Each row's divider draws left → right when that row scrolls into view.
+  // Content is never hidden — the section peeks out under the hero and must
+  // read from the start; only the hairlines animate.
+  useEffect(() => {
+    const list = listRef.current;
+    if (!list) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.dataset.drawn = ''; // data attr: React won't reset it on re-render
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: '0px 0px -20% 0px' }
+    );
+    list.querySelectorAll('.services-line').forEach((row) => observer.observe(row));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="services" className="services">
       <div className="container">
         <h2 className="section-title">{t('section.title')}</h2>
 
-        <div className="services-list">
+        <div className="services-list" ref={listRef}>
           {services.map((service, i) => {
             const title = t(`cards.${service.key}.title`);
             const label = t(`overview.${service.cta}`);

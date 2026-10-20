@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import NicheDetailPage from '../../../../src/views/services/NicheDetailPage';
 
-const validSlugs = ['ugostiteljstvo', 'apartmani', 'obrtnici', 'male-tvrtke', 'turizam', 'saloni', 'poliklinike', 'odvjetnicki-uredi', 'kulturne-ustanove', 'prijevoz'];
+const validSlugs = ['ugostiteljstvo', 'apartmani', 'obrtnici', 'male-tvrtke', 'turizam', 'saloni', 'poliklinike', 'odvjetnicki-uredi', 'kulturne-ustanove', 'prijevoz', 'opcine-i-turisticke-zajednice'];
 
 const nicheMetadata = {
   ugostiteljstvo: {
@@ -43,6 +43,10 @@ const nicheMetadata = {
   prijevoz: {
     title: 'Web stranice za taxi, rent-a-car i rent-a-boat',
     description: 'Web stranica za prijevozničke usluge i iznajmljivanje vozila. Prikaz flote, cijena i direktne rezervacije.',
+  },
+  'opcine-i-turisticke-zajednice': {
+    title: 'Web stranice za općine i turističke zajednice',
+    description: 'Izrada web stranica za općine, gradove i turističke zajednice: vijesti, dokumenti, natječaji, događanja i informacije za posjetitelje, višejezično i jednostavno za uređivanje.',
   },
 };
 
