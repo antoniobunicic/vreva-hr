@@ -89,7 +89,7 @@ function Hero() {
                 </div>
               )}
               <div className="hero-mockup-screen">
-                <Image src={s.image} alt={s.alt} sizes="40vw" priority={i === 0} />
+                <Image src={s.image} alt={s.alt} sizes="(max-width: 768px) 85vw, 540px" priority={i === 0} />
               </div>
             </div>
           </div>

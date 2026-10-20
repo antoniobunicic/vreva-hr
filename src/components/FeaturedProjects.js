@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import ProjectCard from './ProjectCard';
+import ProjectCard, { COMPACT_CARD_SIZES } from './ProjectCard';
 import apartmaniImg from '../assets/projects/accommodation/apartmani-bunicic-full.png';
 import houseLucyImg from '../assets/projects/accommodation/house-lucy-razanac-full.png';
 import otoolesImg from '../assets/projects/accommodation/otooles-full.png';
@@ -134,6 +134,7 @@ function FeaturedProjects() {
                         projectImage={projectImages[key]}
                         projectVideo={projectVideos[key]}
                         clientLogo={clientLogos[key]}
+                        imageSizes={COMPACT_CARD_SIZES}
                       />
                     </div>
                   ))}

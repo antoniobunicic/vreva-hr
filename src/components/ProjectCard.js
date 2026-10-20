@@ -4,8 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { slugByKey } from '../data/projects';
+import LazyVideo from './LazyVideo';
 
-function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrollablePreview }) {
+// Default `sizes` fits the two-up grid on /projekti (cards top out at ~700px
+// inside the 1440px container); narrower placements pass their own.
+const DEFAULT_SIZES = '(max-width: 768px) 100vw, (min-width: 1440px) 700px, 48vw';
+// Two-up grid inside the 2fr column (homepage, industry pages): ~450px max
+export const COMPACT_CARD_SIZES = '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (min-width: 1440px) 450px, 31vw';
+
+function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrollablePreview, imageSizes = DEFAULT_SIZES }) {
   const { t } = useTranslation('projects');
   const browserContentRef = useRef(null);
   const dragState = useRef({ isDragging: false, startY: 0, startScroll: 0 });
@@ -91,7 +98,7 @@ function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrol
     <div className={`project-card ${!projectImage && !projectVideo ? 'no-image' : ''} ${isAngler ? 'angler-multi-image' : ''}`}>
       {projectVideo && (
         <div className="project-image project-video">
-          <video src={projectVideo} autoPlay loop muted playsInline preload="metadata" />
+          <LazyVideo src={projectVideo} />
         </div>
       )}
 
@@ -106,13 +113,13 @@ function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrol
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
         >
-          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} draggable="false" onLoad={handleImageLoad} sizes="(max-width: 768px) 100vw, 50vw" />
+          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} draggable="false" onLoad={handleImageLoad} sizes={imageSizes} />
         </section>
       )}
 
       {projectImage && !isMultiImage && !scrollablePreview && (
         <div className={`project-image ${isMonochromeSvg ? 'project-image-mono' : ''}`}>
-          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} sizes="(max-width: 768px) 100vw, 50vw" />
+          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} sizes={imageSizes} />
         </div>
       )}
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { projects, getProjectByKey } from '../data/projects';
+import LazyVideo from '../components/LazyVideo';
 
 // Large project visual: the video, or the first gallery image, in the same
 // framed 16:10 box as the /projekti cards. Illustrations and app shots sit
@@ -13,7 +14,7 @@ function Showcase({ project, title }) {
   const isIllustration = project.display !== 'browser';
 
   const media = project.video ? (
-    <video src={project.video} autoPlay loop muted playsInline preload="metadata" aria-hidden="true" />
+    <LazyVideo src={project.video} aria-hidden="true" />
   ) : first ? (
     <Image src={first} alt={title} sizes="(max-width: 1024px) 100vw, 1300px" priority />
   ) : null;
@@ -72,7 +73,7 @@ function NextThumb({ project }) {
       aria-hidden="true"
     >
       {project.video ? (
-        <video src={project.video} autoPlay loop muted playsInline preload="metadata" />
+        <LazyVideo src={project.video} />
       ) : (
         <Image src={first} alt="" sizes="200px" />
       )}

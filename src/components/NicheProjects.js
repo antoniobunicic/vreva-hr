@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import ProjectCard, { COMPACT_CARD_SIZES } from './ProjectCard';
 import apartmaniImg from '../assets/projects/accommodation/apartmani-bunicic-full.png';
 import houseLucyImg from '../assets/projects/accommodation/house-lucy-razanac-full.png';
 import otoolesImg from '../assets/projects/accommodation/otooles-full.png';
@@ -38,6 +38,7 @@ function NicheProjects({ niche, title }) {
               projectKey={key}
               projectImage={projectImages[key]}
               projectVideo={projectVideos[key]}
+              imageSizes={COMPACT_CARD_SIZES}
             />
           </div>
         ))}

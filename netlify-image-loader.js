@@ -1,5 +1,7 @@
 export default function netlifyImageLoader({ src, width, quality }) {
-  if (process.env.NODE_ENV === 'development') {
+  // SVGs are already resolution-independent: rasterising them through the
+  // image CDN only adds weight and rounds the aspect ratio. Serve as-is.
+  if (process.env.NODE_ENV === 'development' || src.endsWith('.svg')) {
     return src;
   }
   const params = new URLSearchParams({
