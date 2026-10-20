@@ -113,13 +113,13 @@ function ProjectCard({ projectKey, projectImage, projectVideo, clientLogo, scrol
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
         >
-          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} draggable="false" onLoad={handleImageLoad} sizes={imageSizes} />
+          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} draggable="false" onLoad={handleImageLoad} sizes={imageSizes} quality={65} />
         </section>
       )}
 
       {projectImage && !isMultiImage && !scrollablePreview && (
         <div className={`project-image ${isMonochromeSvg ? 'project-image-mono' : ''}`}>
-          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} sizes={imageSizes} />
+          <Image src={projectImage} alt={t(`cards.${projectKey}.title`)} sizes={imageSizes} quality={65} />
         </div>
       )}
 

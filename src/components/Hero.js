@@ -33,18 +33,46 @@ const heroServices = [
 function Hero() {
   const { t } = useTranslation(['hero', 'services']);
   const [active, setActive] = useState(0);
+  // Only the first mockup's image loads with the page (it's the LCP element);
+  // the rest are invisible until they rotate in, so they wait for page load.
+  const [restReady, setRestReady] = useState(false);
+  // Which mockup images have finished loading (the first ships with the page)
+  // or failed. Rotation only moves on to a loaded one, so a slow connection
+  // never shows an empty frame — it just lingers on the current mockup.
+  const loaded = useRef(new Set([0]));
+  const failed = useRef(new Set());
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    const ready = () => {
+      const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 200));
+      idle(() => setRestReady(true));
+    };
+    if (document.readyState === 'complete') ready();
+    else window.addEventListener('load', ready, { once: true });
+    return () => window.removeEventListener('load', ready);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !restReady) return;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced) return;
+
+    // Next mockup in order, skipping failed images; stay put if it's still loading
+    const nextIndex = (prev) => {
+      for (let step = 1; step < showcase.length; step += 1) {
+        const i = (prev + step) % showcase.length;
+        if (failed.current.has(i)) continue;
+        return loaded.current.has(i) ? i : prev;
+      }
+      return prev;
+    };
 
     let interval = null;
     const start = () => {
       if (interval) return;
       interval = setInterval(() => {
-        setActive((prev) => (prev + 1) % showcase.length);
+        setActive(nextIndex);
       }, 2600);
     };
     const stop = () => {
@@ -66,7 +94,7 @@ function Hero() {
       observer.disconnect();
       stop();
     };
-  }, []);
+  }, [restReady]);
 
   return (
     <section id="hero" className="hero" ref={sectionRef}>
@@ -89,7 +117,17 @@ function Hero() {
                 </div>
               )}
               <div className="hero-mockup-screen">
-                <Image src={s.image} alt={s.alt} sizes="(max-width: 768px) 85vw, 540px" priority={i === 0} />
+                {(i === 0 || restReady) && (
+                  <Image
+                    src={s.image}
+                    alt={s.alt}
+                    // the phone frame is far narrower than the showcase
+                    sizes={s.type === 'phone' ? '(max-width: 768px) 40vw, 260px' : '(max-width: 768px) 85vw, 540px'}
+                    priority={i === 0}
+                    onLoad={() => loaded.current.add(i)}
+                    onError={() => failed.current.add(i)}
+                  />
+                )}
               </div>
             </div>
           </div>

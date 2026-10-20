@@ -42,11 +42,10 @@ export default function RootLayout({ children }) {
     <html lang="hr" className={geistMono.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();` }} />
-        {/* The hero headline (the LCP element) and body text use these two
-            weights; preloading lets them start with the HTML instead of
-            waiting for the stylesheet to be parsed. */}
+        {/* The hero headline's weight; preloading lets it start with the HTML
+            instead of waiting for the stylesheet. Only one, so it doesn't
+            crowd out the LCP image. */}
         <link rel="preload" href="/fonts/helvetica-neue/HelveticaNeue-500.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/fonts/helvetica-neue/HelveticaNeue-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -74,9 +73,9 @@ export default function RootLayout({ children }) {
       <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17959648397"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

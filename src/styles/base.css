@@ -117,12 +117,21 @@ main {
   to   { opacity: 1; translate: 0 0; }
 }
 
+/* The first showcase image is the page's LCP element: an opacity-0 start (or
+   a delay) keeps it from counting as painted until the fade begins, so the
+   showcase only rises into place — visible from the first frame. */
+@keyframes reveal-rise {
+  from { translate: 0 60px; }
+  to   { translate: 0 0; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .hero-content,
-  .hero-showcase {
+  .hero-content {
     animation: reveal-fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
-  .hero-showcase { animation-delay: 0.15s; }
+  .hero-showcase {
+    animation: reveal-rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
 }
 
 .reveal-on-scroll {
