@@ -208,13 +208,14 @@
 }
 
 .form-success {
-  color: #22c55e;
+  /* success speaks in the brand's own accent (olive on light, lime on dark) */
+  color: var(--color-accent-text);
   font-weight: 500;
   margin-top: 1rem;
 }
 
 .form-error {
-  color: #ef4444;
+  color: var(--color-danger);
   font-weight: 500;
   margin-top: 1rem;
 }

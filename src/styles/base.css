@@ -36,9 +36,9 @@
 }
 
 :root {
-  --color-background1: #0b0b0b;
-  --color-background2: #141414;
-  --color-bone-light: #1b1b1b;
+  --color-background1: #0b0b09;
+  --color-background2: #141411;
+  --color-bone-light: #1b1b18;
   /* Kisela limeta — fill colour (buttons, markers, highlights). Never use as text on light backgrounds. */
   --color-accent: #D4FF3A;
   --color-accent-strong: #B5E01F;   /* Limeta 600 — hover / pressed */
@@ -48,7 +48,9 @@
   --color-secondary: var(--color-text);
   --color-text: #ececea;
   --color-text-muted: #9a9a96;
-  --color-border: #2a2a2a;
+  --color-border: #2a2a26;
+  /* Errors (form messages). Warm red, away from the lime; reads 5.8:1 light / 7.7:1 dark */
+  --color-danger: #ff7a5c;
   --max-width: 1440px;
   /* One page grid for every page: side gutter grows with the viewport, and on very wide
      screens content is capped at --max-width and centred. Resolve % against the element. */
@@ -73,6 +75,7 @@
   --color-text: #0b0b0b;
   --color-text-muted: #55554f;
   --color-border: #d9d9d2;
+  --color-danger: #b42a12;
 }
 
 html {
