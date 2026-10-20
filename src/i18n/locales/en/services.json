@@ -138,7 +138,8 @@
       },
       "pricingBlock": {
         "title": "Pricing",
-        "from": "from €250",
+        "from": "from €400",
+        "anchor": "from €400",
         "note": "+ VAT",
         "text": "Price depends on the number of pages, features and timeline. You get a clear quote before we start.",
         "link": {
@@ -157,32 +158,36 @@
         "title": "Website Pricing",
         "popularBadge": "Most Popular",
         "requestQuote": "Request a Quote",
-        "footnote": "Website technical maintenance is charged annually (€100–300 depending on project size) and includes hosting, SSL certificate, regular system updates, and basic technical support. After the completion and delivery of the base project, additional requests for functional or design changes are billed at €40/hour. For more frequent content changes, additional maintenance can be arranged.",
+        "anchorLabel": "Anchor price (10 Sep 2026)",
         "packages": [
           {
             "name": "Basic\nCustom Website",
-            "price": "250 – 350 €",
+            "price": "€400",
+            "anchor": "€400",
             "period": "",
             "note": "+ VAT",
             "description": "Landing page or simple presentation website",
             "features": [
               "Design from scratch based on client's vision",
-              "1 page",
+              "Up to 3 content pages",
               "Responsive design",
               "Basic SEO optimization",
               "Domain registration assistance",
+              "Google Maps integration and links to social media",
+              "Basic technical setup and website launch",
               "1 revision round"
             ]
           },
           {
             "name": "Standard\nCustom Website",
-            "price": "350 – 850 €",
+            "price": "€700",
+            "anchor": "€700",
             "period": "",
             "note": "+ VAT",
             "description": "Custom-built site with more content and functionality",
             "features": [
               "Design from scratch based on client's vision",
-              "Up to 5–10 pages",
+              "Up to 10 pages",
               "Responsive design",
               "Contact form and gallery",
               "Standard SEO optimization",
@@ -193,13 +198,14 @@
           },
           {
             "name": "Advanced\nCustom Website",
-            "price": "850+ €",
+            "price": "€1,200",
+            "anchor": "€1,200",
             "period": "",
             "note": "+ VAT",
-            "description": "Complex business website with advanced functionality",
+            "description": "Custom functionality, complex integrations or special requirements",
             "features": [
               "Design from scratch based on client's vision",
-              "Unlimited pages",
+              "Custom number of pages",
               "CMS for self-managed content",
               "Domain registration assistance",
               "Blog, gallery, or product catalogue",
@@ -208,7 +214,70 @@
               "3 revision rounds"
             ]
           }
-        ]
+        ],
+        "webshop": {
+          "name": "Webshop\nCustom online store",
+          "price": "€1,600",
+          "anchor": "€1,600",
+          "note": "+ VAT",
+          "description": "An online store designed from scratch, ready to sell from day one.",
+          "features": [
+            "Design from scratch based on client's vision",
+            "Product catalogue with categories and filters",
+            "Cart and checkout",
+            "Online card payments",
+            "Order and stock management",
+            "Automatic emails to customers",
+            "Shipping options and costs",
+            "CMS for products and content",
+            "Responsive design and SEO optimisation",
+            "3 revision rounds"
+          ]
+        },
+        "extras": {
+          "title": "Additional services",
+          "items": [
+            {
+              "name": "Basic maintenance",
+              "price": "€96",
+              "anchor": "€96",
+              "note": "+ VAT",
+              "period": "year",
+              "monthly": "€8 per month",
+              "description": "Hosting, SSL certificate, regular system updates and basic technical support."
+            },
+            {
+              "name": "Advanced maintenance",
+              "price": "€336",
+              "anchor": "€336",
+              "note": "+ VAT",
+              "period": "year",
+              "monthly": "€28 per month",
+              "description": "Includes basic maintenance plus up to 1 hour of minor changes per month: banners, photos and copy, opening hours and contact details, small design tweaks."
+            },
+            {
+              "name": "Hourly rate",
+              "price": "€40",
+              "anchor": "€40",
+              "note": "+ VAT",
+              "period": "hour",
+              "description": "Functional or design changes after the project is delivered, outside agreed maintenance."
+            }
+          ]
+        },
+        "csv": {
+          "label": "Download price list (CSV)",
+          "filename": "vreva-price-list.csv",
+          "separator": ",",
+          "decimal": ".",
+          "unitPackage": "package",
+          "headers": [
+            "Product or service",
+            "Unit",
+            "Price (EUR excl. VAT)",
+            "Anchor price on 10 Sep 2026 (EUR excl. VAT)"
+          ]
+        }
       },
       "featurePages": {
         "web-po-mjeri": {

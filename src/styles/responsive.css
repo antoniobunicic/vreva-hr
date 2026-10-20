@@ -27,9 +27,30 @@
     gap: 0.25rem;
   }
 
-  /* Language switcher moves into the hamburger menu on mobile */
-  .nav-actions .language-toggle {
+  /* Language switcher and contact move into the hamburger menu on mobile */
+  .nav-actions .language-switch,
+  .nav-actions .nav-cta {
     display: none;
+  }
+
+  .nav-menu > li.nav-menu-cta {
+    display: block;
+    border-bottom: none;
+    margin-top: 2rem;
+  }
+
+  .nav-menu > li.nav-menu-cta > a.btn {
+    --btn-py: 1.1rem;
+    --btn-px: 1.5rem;
+    display: block;
+    width: 100%;
+    padding: var(--btn-py) var(--btn-px);
+    border-radius: 100px;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    color: var(--color-on-accent);
+    background: var(--color-accent);
   }
 
   .mobile-menu-toggle {
@@ -137,26 +158,13 @@
     text-align: center;
   }
 
-  .nav-menu-lang .language-toggle {
-    display: inline-flex;
-    justify-content: center;
-    gap: 0.4rem;
-  }
-
-  .nav-menu-lang .language-btn {
+  /* .nav-menu button rules would stretch it into a full-width row */
+  .nav-menu-lang .language-switch {
     width: auto;
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    padding: 0.4rem 0.9rem;
-    border-radius: 100px;
-  }
-
-  /* Restore the active highlight (generic .nav-menu button.active rules flatten it) */
-  .nav-menu-lang .language-btn.active {
-    color: var(--color-accent-text);
-    background: rgba(var(--color-accent-rgb), 0.14);
+    padding: 0 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: var(--color-text-muted);
   }
 
   /* Mobile dropdown: inline, indented under parent */
@@ -213,16 +221,6 @@
   .theme-toggle {
     width: 36px;
     height: 36px;
-    margin-left: 0;
-  }
-
-  .theme-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .language-toggle {
-    margin-left: 0.5rem;
   }
 
   .language-btn {
@@ -375,16 +373,11 @@
   .theme-toggle {
     width: 32px;
     height: 32px;
-    padding: 0.4rem;
   }
 
   .theme-icon {
     width: 18px;
     height: 18px;
-  }
-
-  .language-toggle {
-    margin-left: 0.25rem;
   }
 
   .language-btn {
@@ -406,7 +399,8 @@
   }
 
   .btn {
-    padding: 0.875rem 1.75rem;
+    --btn-py: 0.875rem;
+    --btn-px: 1.75rem;
     font-size: 0.95rem;
   }
 

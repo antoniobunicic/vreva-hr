@@ -2,31 +2,28 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-function LanguageSwitcher() {
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language;
+// One quiet link to the other language ("EN" on the Croatian site, "HR" on
+// the English one). In the mobile menu it spells the language out.
+const LANGUAGES = {
+  en: { code: 'EN', name: 'English', label: 'Switch to English' },
+  hr: { code: 'HR', name: 'Hrvatski', label: 'Prebaci na hrvatski' },
+};
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+function LanguageSwitcher({ long = false }) {
+  const { i18n } = useTranslation();
+  const target = i18n.language?.startsWith('en') ? 'hr' : 'en';
+  const lang = LANGUAGES[target];
 
   return (
-    <div className="language-toggle">
-      <button
-        className={`language-btn ${currentLanguage === 'en' ? 'active' : ''}`}
-        onClick={() => changeLanguage('en')}
-        aria-label="Switch to English"
-      >
-        EN
-      </button>
-      <button
-        className={`language-btn ${currentLanguage === 'hr' ? 'active' : ''}`}
-        onClick={() => changeLanguage('hr')}
-        aria-label="Prebaci na Hrvatski"
-      >
-        HR
-      </button>
-    </div>
+    <button
+      type="button"
+      className={`language-switch${long ? ' language-switch--long' : ''}`}
+      onClick={() => i18n.changeLanguage(target)}
+      aria-label={lang.label}
+      lang={target}
+    >
+      <span className="nav-label">{long ? lang.name : lang.code}</span>
+    </button>
   );
 }
 

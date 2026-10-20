@@ -169,8 +169,25 @@
 /* Language switcher lives in the top bar on desktop; only appears inside the
    mobile menu overlay (shown via the responsive rules below). Selector matches
    the specificity of `.nav-menu > li` so this reliably wins on desktop. */
-.nav-menu > li.nav-menu-lang {
+.nav-menu > li.nav-menu-lang,
+.nav-menu > li.nav-menu-cta {
   display: none;
+}
+
+/* Contact — the one lime action in the bar */
+.nav-cta.btn {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  margin-left: 0.75rem;
+  padding: 0 1.35rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-cta.btn:hover {
+  transform: none;
 }
 
 .nav-menu button {
@@ -199,6 +216,23 @@
   align-items: center;
   line-height: 1;
   box-sizing: border-box;
+}
+
+/* Optical centering: Helvetica Neue's metrics sit capitals ~0.09em above the
+   middle of the line box. Trimming the label to cap height → baseline lets the
+   flex chip centre the letters themselves. Browsers without text-box keep the
+   old (slightly high) placement. */
+.nav-label {
+  text-box: trim-both cap alphabetic;
+}
+
+@media (min-width: 769px) {
+  .nav-menu button,
+  .nav-menu > li > a {
+    height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .nav-menu button:hover,
@@ -230,133 +264,75 @@
   background: rgba(0, 0, 0, 0.06);
 }
 
-/* Theme Toggle */
+/* Theme toggle — half-filled circle, rotates on switch */
 .theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 100px;
-  transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
   width: 40px;
   height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 100px;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 .theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme='light'] .theme-toggle:hover {
   background: rgba(0, 0, 0, 0.06);
 }
 
-[data-theme='light'] .moon-icon {
-  color: var(--color-text);
-}
-
-[data-theme='light'] .sun-icon {
-  color: var(--color-text);
-}
-
 .theme-icon {
-  position: relative;
-  width: 24px;
-  height: 24px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-.theme-icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.3s ease-in-out;
+.theme-icon.is-dark {
+  transform: rotate(180deg);
 }
 
-.sun-icon {
-  color: #e0e0e0;
-  opacity: 0;
+@media (prefers-reduced-motion: reduce) {
+  .theme-icon {
+    transition: none;
+  }
 }
 
-.moon-icon {
-  color: #ffffff;
-  opacity: 1;
-}
-
-.theme-icon.dark .sun-icon {
-  transform: rotate(180deg) scale(1);
-  opacity: 1;
-}
-
-.theme-icon.dark .moon-icon {
-  transform: rotate(90deg) scale(0);
-  opacity: 0;
-}
-
-.theme-icon.light .sun-icon {
-  transform: rotate(-90deg) scale(0);
-  opacity: 0;
-}
-
-.theme-icon.light .moon-icon {
-  transform: scale(1);
-  opacity: 1;
-}
-
-/* Language Toggle */
-.language-toggle {
-  display: flex;
+/* Language switch — a single link to the other language */
+.language-switch {
+  display: inline-flex;
   align-items: center;
-  gap: 0;
-  margin-left: 0.5rem;
-  padding: 0.2rem;
-  border-radius: 100px;
-  border: 1px solid #2a2a2a;
-}
-
-[data-theme='light'] .language-toggle {
-  border-color: rgba(0, 0, 0, 0.15);
-}
-
-.language-btn {
-  background: none;
+  justify-content: center;
+  height: 40px;
+  min-width: 40px;
+  padding: 0 0.6rem;
   border: none;
-  color: #a0a0a0;
-  font-size: 0.8rem;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
-  transition: var(--transition);
   border-radius: 100px;
+  background: none;
+  font-family: inherit;
+  font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1;
-}
-
-.language-btn:hover {
-  color: #e0e0e0;
-}
-
-.language-btn.active {
-  color: var(--color-accent-text);
-  background: rgba(var(--color-accent-rgb), 0.12);
-}
-
-[data-theme='light'] .language-btn {
   color: var(--color-text-muted);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-[data-theme='light'] .language-btn:hover {
+.language-switch:hover {
   color: var(--color-text);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-[data-theme='light'] .language-btn.active {
-  color: var(--color-accent-text);
-  background: rgba(var(--color-accent-rgb), 0.2);
+[data-theme='light'] .language-switch:hover {
+  background: rgba(0, 0, 0, 0.06);
 }
 
 /* Mobile Menu */
@@ -420,10 +396,11 @@
 }
 
 .nav-dropdown-arrow {
-  font-size: 0.65rem;
-  margin-left: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.3rem;
+  flex-shrink: 0;
   transition: transform 0.2s ease;
-  display: inline-block;
 }
 
 .nav-item-dropdown:hover .nav-dropdown-arrow {

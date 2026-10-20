@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import IndustryLabel from '../../components/IndustryLabel';
+import AnchorPrice from '../../components/AnchorPrice';
 
 // Airy, scannable layout shared by every core service page:
 // hero with one-line lead → what we offer → (why us) → how we work → (pricing)
@@ -91,6 +92,12 @@ function ServiceLandingPage({ serviceKey }) {
             <p className="sl-price">
               {d.pricingBlock.from} <span className="sl-price-note">{d.pricingBlock.note}</span>
             </p>
+            <AnchorPrice
+              label={d.pricing?.anchorLabel}
+              value={d.pricingBlock.anchor}
+              note={d.pricingBlock.note}
+              className="sl-price-anchor"
+            />
             <p className="sl-pricing-text">{d.pricingBlock.text}</p>
             <Link href={d.pricingBlock.link.href} className="sl-text-link">
               {d.pricingBlock.link.label} <span aria-hidden="true">&rarr;</span>

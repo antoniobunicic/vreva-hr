@@ -190,7 +190,6 @@ function Layout({ children }) {
     { id: 'services', label: t('nav.services', { ns: 'common' }), hasDropdown: true, href: '/usluge' },
     { id: 'projects', label: t('nav.projects', { ns: 'common' }), href: '/projekti' },
     { id: 'news', label: t('nav.news', { ns: 'common' }), href: '/aktualno' },
-    { id: 'contact', label: t('nav.contact', { ns: 'common' }), href: '/kontakt' },
   ];
 
   return (
@@ -216,11 +215,15 @@ function Layout({ children }) {
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama')) || (item.id === 'projects' && pathname.startsWith('/projekti')) || (item.id === 'news' && pathname.startsWith('/aktualno')) || (item.id === 'contact' && pathname.startsWith('/kontakt'))) ? 'active' : ''}
+                    className={(activeSection === item.id || (item.id === 'services' && pathname.startsWith('/usluge')) || (item.id === 'about' && pathname.startsWith('/o-nama')) || (item.id === 'projects' && pathname.startsWith('/projekti')) || (item.id === 'news' && pathname.startsWith('/aktualno'))) ? 'active' : ''}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item.label}
-                    {item.hasDropdown && <span className="nav-dropdown-arrow">&#9662;</span>}
+                    <span className="nav-label">{item.label}</span>
+                    {item.hasDropdown && (
+                      <svg className="nav-dropdown-arrow" viewBox="0 0 12 12" aria-hidden="true">
+                        <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )}
                   </Link>
                 ) : (
                   <button
@@ -246,14 +249,23 @@ function Layout({ children }) {
                 )}
               </li>
             ))}
+            {/* Mobile menu only: contact as a big lime button at the bottom */}
+            <li className="nav-menu-cta">
+              <Link href="/kontakt" className="btn btn-primary" onClick={() => setIsMobileMenuOpen(false)}>
+                {t('nav.contact', { ns: 'common' })}
+              </Link>
+            </li>
             <li className="nav-menu-lang">
-              <LanguageSwitcher />
+              <LanguageSwitcher long />
             </li>
           </ul>
 
           <div className="nav-actions">
             <LanguageSwitcher />
             <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleTheme} />
+            <Link href="/kontakt" className="btn btn-primary nav-cta">
+              <span className="nav-label">{t('nav.contact', { ns: 'common' })}</span>
+            </Link>
             <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label={t('nav.ariaToggleMenu', { ns: 'common' })}>
               <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
                 <span></span>

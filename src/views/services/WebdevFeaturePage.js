@@ -4,6 +4,42 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import ContactBlock from '../../components/ContactBlock';
 import PricingModal from '../../components/PricingModal';
+import AnchorPrice from '../../components/AnchorPrice';
+import { downloadPriceListCsv } from '../../utils/priceListCsv';
+
+// Webshop: one wide card under the three website packages.
+function WebshopCard({ pkg, cta, anchorLabel, active, onActivate, onSelect }) {
+  const [name, ...rest] = pkg.name.split('\n');
+  return (
+    <div
+      className={`sp-card sp-wide${active ? ' sp-card--active' : ''}`}
+      onClick={onActivate}
+      onFocus={onActivate}
+    >
+      <div className="sp-wide-main">
+        <p className="sp-name">
+          {name}
+          <span className="sp-name-sub">{rest.join(' ')}</span>
+        </p>
+        <p className="sp-price">
+          {pkg.price} <span className="sp-note">{pkg.note}</span>
+        </p>
+        <AnchorPrice label={anchorLabel} value={pkg.anchor} note={pkg.note} />
+        <p className="sp-description">{pkg.description}</p>
+        <button
+          type="button"
+          className={`btn ${active ? 'btn-primary' : 'btn-ink'} sp-cta`}
+          onClick={() => onSelect(pkg.name.replace(/\n/g, ' '))}
+        >
+          {cta}
+        </button>
+      </div>
+      <ul className="sl-list sl-list--2col sp-features">
+        {pkg.features.map((f) => <li key={f}>{f}</li>)}
+      </ul>
+    </div>
+  );
+}
 
 // Web development topic pages (web po mjeri, responzivan dizajn, cijene, …).
 // Same building blocks as the service pages: hero → titled sections on the
@@ -11,6 +47,9 @@ import PricingModal from '../../components/PricingModal';
 function WebdevFeaturePage({ featureSlug }) {
   const { t } = useTranslation(['services', 'common']);
   const [modalPackage, setModalPackage] = useState(null);
+  // Highlighted pricing card — starts on the most popular (Standardna) and
+  // follows the visitor's click; the "most popular" badge stays put.
+  const [activeCard, setActiveCard] = useState(1);
 
   const page = t(`detail.webdev.featurePages.${featureSlug}`, { returnObjects: true });
   const labels = t('detail.webdev.labels', { returnObjects: true });
@@ -33,8 +72,26 @@ function WebdevFeaturePage({ featureSlug }) {
               <li aria-current="page">{page.hero}</li>
             </ol>
           </nav>
-          <h1 className="sl-title">{page.hero}</h1>
-          <p className="sl-lead sl-lead--long">{page.intro}</p>
+          {pricing?.csv ? (
+            <div className="sp-hero-row">
+              <div>
+                <h1 className="sl-title">{page.hero}</h1>
+                <p className="sl-lead sl-lead--long">{page.intro}</p>
+              </div>
+              <button
+                type="button"
+                className="btn btn-secondary sp-download"
+                onClick={() => downloadPriceListCsv(pricing)}
+              >
+                {pricing.csv.label} <span aria-hidden="true">&darr;</span>
+              </button>
+            </div>
+          ) : (
+            <>
+              <h1 className="sl-title">{page.hero}</h1>
+              <p className="sl-lead sl-lead--long">{page.intro}</p>
+            </>
+          )}
         </header>
 
         {Array.isArray(page.sections) && page.sections.map((section) => (
@@ -56,8 +113,14 @@ function WebdevFeaturePage({ featureSlug }) {
             <div className="sp-grid">
               {pricing.packages.map((pkg, i) => {
                 const [name, ...rest] = pkg.name.split('\n');
+                const active = activeCard === i;
                 return (
-                  <div key={pkg.name} className={`sp-card${i === 1 ? ' sp-card--featured' : ''}`}>
+                  <div
+                    key={pkg.name}
+                    className={`sp-card${active ? ' sp-card--active' : ''}`}
+                    onClick={() => setActiveCard(i)}
+                    onFocus={() => setActiveCard(i)}
+                  >
                     <div className="sp-head">
                       <p className="sp-name">
                         {name}
@@ -68,13 +131,14 @@ function WebdevFeaturePage({ featureSlug }) {
                     <p className="sp-price">
                       {pkg.price} <span className="sp-note">{pkg.note}</span>
                     </p>
+                    <AnchorPrice label={pricing.anchorLabel} value={pkg.anchor} note={pkg.note} />
                     <p className="sp-description">{pkg.description}</p>
                     <ul className="sl-list sp-features">
                       {pkg.features.map((f) => <li key={f}>{f}</li>)}
                     </ul>
                     <button
                       type="button"
-                      className={`btn ${i === 1 ? 'btn-primary' : 'btn-ink'} sp-cta`}
+                      className={`btn ${active ? 'btn-primary' : 'btn-ink'} sp-cta`}
                       onClick={() => setModalPackage(pkg.name.replace(/\n/g, ' '))}
                     >
                       {pricing.requestQuote}
@@ -83,7 +147,42 @@ function WebdevFeaturePage({ featureSlug }) {
                 );
               })}
             </div>
-            <p className="sp-footnote">{pricing.footnote}</p>
+            {pricing.webshop && (
+              <WebshopCard
+                pkg={pricing.webshop}
+                cta={pricing.requestQuote}
+                anchorLabel={pricing.anchorLabel}
+                active={activeCard === pricing.packages.length}
+                onActivate={() => setActiveCard(pricing.packages.length)}
+                onSelect={setModalPackage}
+              />
+            )}
+            {pricing.extras && (
+              <div className="sp-extras">
+                <p className="sp-name">{pricing.extras.title}</p>
+                <ul className="sp-extras-list">
+                  {pricing.extras.items.map((item) => (
+                    <li key={item.name} className="sp-extra">
+                      <div>
+                        <p className="sp-extra-name">{item.name}</p>
+                        <p className="sp-extra-desc">{item.description}</p>
+                      </div>
+                      <div className="sp-extra-pricing">
+                        <p className="sp-extra-price">
+                          {item.price} <span className="sp-note">{item.note} / {item.period}</span>
+                        </p>
+                        {item.monthly && <p className="sp-extra-monthly">{item.monthly}</p>}
+                        <AnchorPrice
+                          label={pricing.anchorLabel}
+                          value={item.anchor}
+                          note={`${item.note} / ${item.period}`}
+                        />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
         )}
 

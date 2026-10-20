@@ -3,7 +3,9 @@
  * .btn-ink (black)     — navigation: see all projects, visit site, services.
  * .btn-secondary       — outline, quiet alternative. */
 .btn {
-  padding: 0.9rem 2.2rem;
+  --btn-py: 0.9rem;
+  --btn-px: 2.2rem;
+  padding: var(--btn-py) var(--btn-px);
   border-radius: 100px;
   text-decoration: none;
   font-family: inherit;
@@ -106,4 +108,34 @@
 
 .inline-link:hover {
   opacity: 0.75;
+}
+
+/* ─── Optical centering of button labels ─────────────────────
+ * Helvetica Neue's metrics sit capitals ~0.09em above the middle of the line
+ * box, so labels looked high. Trimming the text box to cap height → baseline
+ * makes the padding sit evenly around the letters; the extra 0.155em keeps
+ * the old height (48px). text-box only works on block containers, so the
+ * flex variants become inline-block (their arrows are inline text anyway).
+ * Browsers without text-box keep the previous layout untouched. */
+@supports (text-box: trim-both cap alphabetic) {
+  .btn,
+  .btn-ink,
+  .btn-secondary,
+  .featured-cta-link {
+    display: inline-block;
+    line-height: 1;
+    text-box: trim-both cap alphabetic;
+  }
+
+  .btn {
+    padding-top: calc(var(--btn-py) + 0.155em);
+    padding-bottom: calc(var(--btn-py) + 0.155em);
+  }
+
+  /* FeaturedProjects.css loads later and resets padding — out-specify it */
+  .featured-cta .featured-cta-link {
+    display: inline-block;
+    padding-top: calc(0.9rem + 0.155em);
+    padding-bottom: calc(0.9rem + 0.155em);
+  }
 }
