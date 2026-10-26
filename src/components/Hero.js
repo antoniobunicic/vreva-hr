@@ -124,6 +124,11 @@ function Hero() {
                     // the phone frame is far narrower than the showcase
                     sizes={s.type === 'phone' ? '(max-width: 768px) 40vw, 260px' : '(max-width: 768px) 85vw, 540px'}
                     priority={i === 0}
+                    // The rest mount only after page load, so fetch them now:
+                    // lazy loading would wait for them to enter the viewport,
+                    // which (parked off-screen) they never do in Safari, and
+                    // the rotation waits on them.
+                    loading={i === 0 ? undefined : 'eager'}
                     onLoad={() => loaded.current.add(i)}
                     onError={() => failed.current.add(i)}
                   />
