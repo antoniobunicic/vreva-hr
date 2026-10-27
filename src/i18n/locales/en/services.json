@@ -248,15 +248,13 @@
             },
             {
               "name": "Advanced maintenance",
-              "badge": "No commitment",
               "price": "€28",
               "anchor": "€28",
               "note": "+ VAT",
               "period": "month",
               "description": "Includes basic maintenance plus up to 1 hour of minor changes per month: banners, photos and copy, opening hours and contact details, small design tweaks.",
               "notes": [
-                "Billed monthly, no contract",
-                "Cancel anytime"
+                "Billed monthly"
               ]
             },
             {

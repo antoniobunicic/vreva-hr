@@ -248,15 +248,13 @@
             },
             {
               "name": "Napredno održavanje",
-              "badge": "Bez obveze",
               "price": "28 €",
               "anchor": "28 €",
               "note": "+ PDV",
               "period": "mjesec",
               "description": "Uključeno osnovno održavanje i do 1 sat manjih izmjena mjesečno: banneri, fotografije i tekstovi, radno vrijeme i kontakt podaci, sitne prilagodbe dizajna.",
               "notes": [
-                "Plaćanje mjesečno, bez ugovorne obveze",
-                "Otkazivanje u bilo kojem trenutku"
+                "Plaćanje mjesečno"
               ]
             },
             {
