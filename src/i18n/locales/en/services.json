@@ -156,7 +156,7 @@
       },
       "pricing": {
         "title": "Website Pricing",
-        "popularBadge": "Most Popular",
+        "popularBadge": "Recommended",
         "requestQuote": "Request a Quote",
         "anchorLabel": "Anchor price (10 Sep 2026)",
         "packages": [
@@ -243,22 +243,26 @@
               "anchor": "€96",
               "note": "+ VAT",
               "period": "year",
-              "monthly": "€8 per month",
+              "monthly": "Billed yearly (€8 per month)",
               "description": "Hosting, SSL certificate, regular system updates and basic technical support."
             },
             {
               "name": "Advanced maintenance",
-              "price": "€336",
-              "anchor": "€336",
+              "badge": "No commitment",
+              "price": "€28",
+              "anchor": "€28",
               "note": "+ VAT",
-              "period": "year",
-              "monthly": "€28 per month",
-              "description": "Includes basic maintenance plus up to 1 hour of minor changes per month: banners, photos and copy, opening hours and contact details, small design tweaks."
+              "period": "month",
+              "description": "Includes basic maintenance plus up to 1 hour of minor changes per month: banners, photos and copy, opening hours and contact details, small design tweaks.",
+              "notes": [
+                "Billed monthly, no contract",
+                "Cancel anytime"
+              ]
             },
             {
               "name": "Hourly rate",
-              "price": "€40",
-              "anchor": "€40",
+              "price": "€38",
+              "anchor": "€32",
               "note": "+ VAT",
               "period": "hour",
               "description": "Functional or design changes after the project is delivered, outside agreed maintenance."

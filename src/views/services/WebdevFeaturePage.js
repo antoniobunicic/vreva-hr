@@ -164,7 +164,10 @@ function WebdevFeaturePage({ featureSlug }) {
                   {pricing.extras.items.map((item) => (
                     <li key={item.name} className="sp-extra">
                       <div>
-                        <p className="sp-extra-name">{item.name}</p>
+                        <p className="sp-extra-name">
+                          {item.name}
+                          {item.badge && <span className="sp-badge sp-extra-badge">{item.badge}</span>}
+                        </p>
                         <p className="sp-extra-desc">{item.description}</p>
                       </div>
                       <div className="sp-extra-pricing">
@@ -172,6 +175,7 @@ function WebdevFeaturePage({ featureSlug }) {
                           {item.price} <span className="sp-note">{item.note} / {item.period}</span>
                         </p>
                         {item.monthly && <p className="sp-extra-monthly">{item.monthly}</p>}
+                        {item.notes?.map((note) => <p key={note} className="sp-extra-monthly">{note}</p>)}
                         <AnchorPrice
                           label={pricing.anchorLabel}
                           value={item.anchor}

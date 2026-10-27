@@ -732,6 +732,17 @@
   flex-shrink: 0;
 }
 
+/* "Bez obveze" beside a service name */
+.sp-extra-badge {
+  display: inline-block;
+  margin-left: 0.6rem;
+  vertical-align: 0.15em;
+}
+
+.sp-extra-monthly + .sp-extra-monthly {
+  margin-top: 0.15rem;
+}
+
 .sp-extra-monthly {
   margin-top: 0.4rem;
   font-size: 0.88rem;
